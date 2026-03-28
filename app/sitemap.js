@@ -4,7 +4,7 @@ try {
 } catch (e) {}
 
 export default function sitemap() {
-  const base = 'https://pokemon-battle.vercel.app'; // デプロイ後にドメイン変更
+  const base = 'https://www.poke-vote.com';
 
   const staticPages = [
     { url: base, lastModified: new Date(), changeFrequency: 'daily', priority: 1.0 },
