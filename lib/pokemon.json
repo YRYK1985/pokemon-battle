@@ -1,8 +1,9 @@
 [
   {
     "id": 1,
-    "name": "フシギダネ",
+    "nameJa": "フシギダネ",
     "nameEn": "Bulbasaur",
+    "genus": "たねポケモン",
     "types": [
       "grass",
       "poison"
@@ -22,8 +23,9 @@
   },
   {
     "id": 2,
-    "name": "フシギソウ",
+    "nameJa": "フシギソウ",
     "nameEn": "Ivysaur",
+    "genus": "たねポケモン",
     "types": [
       "grass",
       "poison"
@@ -43,8 +45,9 @@
   },
   {
     "id": 3,
-    "name": "フシギバナ",
+    "nameJa": "フシギバナ",
     "nameEn": "Venusaur",
+    "genus": "たねポケモン",
     "types": [
       "grass",
       "poison"
@@ -64,8 +67,9 @@
   },
   {
     "id": 4,
-    "name": "ヒトカゲ",
+    "nameJa": "ヒトカゲ",
     "nameEn": "Charmander",
+    "genus": "とかげポケモン",
     "types": [
       "fire"
     ],
@@ -84,8 +88,9 @@
   },
   {
     "id": 5,
-    "name": "リザード",
+    "nameJa": "リザード",
     "nameEn": "Charmeleon",
+    "genus": "かえんポケモン",
     "types": [
       "fire"
     ],
@@ -104,8 +109,9 @@
   },
   {
     "id": 6,
-    "name": "リザードン",
+    "nameJa": "リザードン",
     "nameEn": "Charizard",
+    "genus": "かえんポケモン",
     "types": [
       "fire",
       "flying"
@@ -125,8 +131,9 @@
   },
   {
     "id": 7,
-    "name": "ゼニガメ",
+    "nameJa": "ゼニガメ",
     "nameEn": "Squirtle",
+    "genus": "かめのこポケモン",
     "types": [
       "water"
     ],
@@ -145,8 +152,9 @@
   },
   {
     "id": 8,
-    "name": "カメール",
+    "nameJa": "カメール",
     "nameEn": "Wartortle",
+    "genus": "かめポケモン",
     "types": [
       "water"
     ],
@@ -165,8 +173,9 @@
   },
   {
     "id": 9,
-    "name": "カメックス",
+    "nameJa": "カメックス",
     "nameEn": "Blastoise",
+    "genus": "こうらポケモン",
     "types": [
       "water"
     ],
@@ -185,8 +194,9 @@
   },
   {
     "id": 10,
-    "name": "キャタピー",
+    "nameJa": "キャタピー",
     "nameEn": "Caterpie",
+    "genus": "いもむしポケモン",
     "types": [
       "bug"
     ],
@@ -205,8 +215,9 @@
   },
   {
     "id": 11,
-    "name": "トランセル",
+    "nameJa": "トランセル",
     "nameEn": "Metapod",
+    "genus": "さなぎポケモン",
     "types": [
       "bug"
     ],
@@ -225,8 +236,9 @@
   },
   {
     "id": 12,
-    "name": "バタフリー",
+    "nameJa": "バタフリー",
     "nameEn": "Butterfree",
+    "genus": "ちょうちょポケモン",
     "types": [
       "bug",
       "flying"
@@ -246,8 +258,9 @@
   },
   {
     "id": 13,
-    "name": "ビードル",
+    "nameJa": "ビードル",
     "nameEn": "Weedle",
+    "genus": "けむしポケモン",
     "types": [
       "bug",
       "poison"
@@ -267,8 +280,9 @@
   },
   {
     "id": 14,
-    "name": "コクーン",
+    "nameJa": "コクーン",
     "nameEn": "Kakuna",
+    "genus": "さなぎポケモン",
     "types": [
       "bug",
       "poison"
@@ -288,8 +302,9 @@
   },
   {
     "id": 15,
-    "name": "スピアー",
+    "nameJa": "スピアー",
     "nameEn": "Beedrill",
+    "genus": "どくばちポケモン",
     "types": [
       "bug",
       "poison"
@@ -309,8 +324,9 @@
   },
   {
     "id": 16,
-    "name": "ポッポ",
+    "nameJa": "ポッポ",
     "nameEn": "Pidgey",
+    "genus": "ことりポケモン",
     "types": [
       "normal",
       "flying"
@@ -330,8 +346,9 @@
   },
   {
     "id": 17,
-    "name": "ピジョン",
+    "nameJa": "ピジョン",
     "nameEn": "Pidgeotto",
+    "genus": "とりポケモン",
     "types": [
       "normal",
       "flying"
@@ -351,8 +368,9 @@
   },
   {
     "id": 18,
-    "name": "ピジョット",
+    "nameJa": "ピジョット",
     "nameEn": "Pidgeot",
+    "genus": "とりポケモン",
     "types": [
       "normal",
       "flying"
@@ -372,8 +390,9 @@
   },
   {
     "id": 19,
-    "name": "コラッタ",
+    "nameJa": "コラッタ",
     "nameEn": "Rattata",
+    "genus": "ねずみポケモン",
     "types": [
       "normal"
     ],
@@ -392,8 +411,9 @@
   },
   {
     "id": 20,
-    "name": "ラッタ",
+    "nameJa": "ラッタ",
     "nameEn": "Raticate",
+    "genus": "ねずみポケモン",
     "types": [
       "normal"
     ],
@@ -412,8 +432,9 @@
   },
   {
     "id": 21,
-    "name": "オニスズメ",
+    "nameJa": "オニスズメ",
     "nameEn": "Spearow",
+    "genus": "ことりポケモン",
     "types": [
       "normal",
       "flying"
@@ -433,8 +454,9 @@
   },
   {
     "id": 22,
-    "name": "オニドリル",
+    "nameJa": "オニドリル",
     "nameEn": "Fearow",
+    "genus": "くちばしポケモン",
     "types": [
       "normal",
       "flying"
@@ -454,8 +476,9 @@
   },
   {
     "id": 23,
-    "name": "アーボ",
+    "nameJa": "アーボ",
     "nameEn": "Ekans",
+    "genus": "へびポケモン",
     "types": [
       "poison"
     ],
@@ -474,8 +497,9 @@
   },
   {
     "id": 24,
-    "name": "アーボック",
+    "nameJa": "アーボック",
     "nameEn": "Arbok",
+    "genus": "コブラポケモン",
     "types": [
       "poison"
     ],
@@ -494,8 +518,9 @@
   },
   {
     "id": 25,
-    "name": "ピカチュウ",
+    "nameJa": "ピカチュウ",
     "nameEn": "Pikachu",
+    "genus": "ねずみポケモン",
     "types": [
       "electric"
     ],
@@ -514,8 +539,9 @@
   },
   {
     "id": 26,
-    "name": "ライチュウ",
+    "nameJa": "ライチュウ",
     "nameEn": "Raichu",
+    "genus": "ねずみポケモン",
     "types": [
       "electric"
     ],
@@ -534,8 +560,9 @@
   },
   {
     "id": 27,
-    "name": "サンド",
+    "nameJa": "サンド",
     "nameEn": "Sandshrew",
+    "genus": "ねずみポケモン",
     "types": [
       "ground"
     ],
@@ -554,8 +581,9 @@
   },
   {
     "id": 28,
-    "name": "サンドパン",
+    "nameJa": "サンドパン",
     "nameEn": "Sandslash",
+    "genus": "ねずみポケモン",
     "types": [
       "ground"
     ],
@@ -574,8 +602,9 @@
   },
   {
     "id": 29,
-    "name": "ニドラン♀",
+    "nameJa": "ニドラン♀",
     "nameEn": "Nidoran♀",
+    "genus": "どくばりポケモン",
     "types": [
       "poison"
     ],
@@ -594,8 +623,9 @@
   },
   {
     "id": 30,
-    "name": "ニドリーナ",
+    "nameJa": "ニドリーナ",
     "nameEn": "Nidorina",
+    "genus": "どくばりポケモン",
     "types": [
       "poison"
     ],
@@ -614,8 +644,9 @@
   },
   {
     "id": 31,
-    "name": "ニドクイン",
+    "nameJa": "ニドクイン",
     "nameEn": "Nidoqueen",
+    "genus": "ドリルポケモン",
     "types": [
       "poison",
       "ground"
@@ -635,8 +666,9 @@
   },
   {
     "id": 32,
-    "name": "ニドラン♂",
+    "nameJa": "ニドラン♂",
     "nameEn": "Nidoran♂",
+    "genus": "どくばりポケモン",
     "types": [
       "poison"
     ],
@@ -655,8 +687,9 @@
   },
   {
     "id": 33,
-    "name": "ニドリーノ",
+    "nameJa": "ニドリーノ",
     "nameEn": "Nidorino",
+    "genus": "どくばりポケモン",
     "types": [
       "poison"
     ],
@@ -675,8 +708,9 @@
   },
   {
     "id": 34,
-    "name": "ニドキング",
+    "nameJa": "ニドキング",
     "nameEn": "Nidoking",
+    "genus": "ドリルポケモン",
     "types": [
       "poison",
       "ground"
@@ -696,8 +730,9 @@
   },
   {
     "id": 35,
-    "name": "ピッピ",
+    "nameJa": "ピッピ",
     "nameEn": "Clefairy",
+    "genus": "ようせいポケモン",
     "types": [
       "fairy"
     ],
@@ -716,8 +751,9 @@
   },
   {
     "id": 36,
-    "name": "ピクシー",
+    "nameJa": "ピクシー",
     "nameEn": "Clefable",
+    "genus": "ようせいポケモン",
     "types": [
       "fairy"
     ],
@@ -736,8 +772,9 @@
   },
   {
     "id": 37,
-    "name": "ロコン",
+    "nameJa": "ロコン",
     "nameEn": "Vulpix",
+    "genus": "きつねポケモン",
     "types": [
       "fire"
     ],
@@ -756,8 +793,9 @@
   },
   {
     "id": 38,
-    "name": "キュウコン",
+    "nameJa": "キュウコン",
     "nameEn": "Ninetales",
+    "genus": "きつねポケモン",
     "types": [
       "fire"
     ],
@@ -776,8 +814,9 @@
   },
   {
     "id": 39,
-    "name": "プリン",
+    "nameJa": "プリン",
     "nameEn": "Jigglypuff",
+    "genus": "ふうせんポケモン",
     "types": [
       "normal",
       "fairy"
@@ -797,8 +836,9 @@
   },
   {
     "id": 40,
-    "name": "プクリン",
+    "nameJa": "プクリン",
     "nameEn": "Wigglytuff",
+    "genus": "ふうせんポケモン",
     "types": [
       "normal",
       "fairy"
@@ -818,8 +858,9 @@
   },
   {
     "id": 41,
-    "name": "ズバット",
+    "nameJa": "ズバット",
     "nameEn": "Zubat",
+    "genus": "こうもりポケモン",
     "types": [
       "poison",
       "flying"
@@ -839,8 +880,9 @@
   },
   {
     "id": 42,
-    "name": "ゴルバット",
+    "nameJa": "ゴルバット",
     "nameEn": "Golbat",
+    "genus": "こうもりポケモン",
     "types": [
       "poison",
       "flying"
@@ -860,8 +902,9 @@
   },
   {
     "id": 43,
-    "name": "ナゾノクサ",
+    "nameJa": "ナゾノクサ",
     "nameEn": "Oddish",
+    "genus": "ざっそうポケモン",
     "types": [
       "grass",
       "poison"
@@ -881,8 +924,9 @@
   },
   {
     "id": 44,
-    "name": "クサイハナ",
+    "nameJa": "クサイハナ",
     "nameEn": "Gloom",
+    "genus": "ざっそうポケモン",
     "types": [
       "grass",
       "poison"
@@ -902,8 +946,9 @@
   },
   {
     "id": 45,
-    "name": "ラフレシア",
+    "nameJa": "ラフレシア",
     "nameEn": "Vileplume",
+    "genus": "フラワーポケモン",
     "types": [
       "grass",
       "poison"
@@ -923,8 +968,9 @@
   },
   {
     "id": 46,
-    "name": "パラス",
+    "nameJa": "パラス",
     "nameEn": "Paras",
+    "genus": "きのこポケモン",
     "types": [
       "bug",
       "grass"
@@ -944,8 +990,9 @@
   },
   {
     "id": 47,
-    "name": "パラセクト",
+    "nameJa": "パラセクト",
     "nameEn": "Parasect",
+    "genus": "きのこポケモン",
     "types": [
       "bug",
       "grass"
@@ -965,8 +1012,9 @@
   },
   {
     "id": 48,
-    "name": "コンパン",
+    "nameJa": "コンパン",
     "nameEn": "Venonat",
+    "genus": "こんちゅうポケモン",
     "types": [
       "bug",
       "poison"
@@ -986,8 +1034,9 @@
   },
   {
     "id": 49,
-    "name": "モルフォン",
+    "nameJa": "モルフォン",
     "nameEn": "Venomoth",
+    "genus": "どくがポケモン",
     "types": [
       "bug",
       "poison"
@@ -1007,8 +1056,9 @@
   },
   {
     "id": 50,
-    "name": "ディグダ",
+    "nameJa": "ディグダ",
     "nameEn": "Diglett",
+    "genus": "もぐらポケモン",
     "types": [
       "ground"
     ],
@@ -1027,8 +1077,9 @@
   },
   {
     "id": 51,
-    "name": "ダグトリオ",
+    "nameJa": "ダグトリオ",
     "nameEn": "Dugtrio",
+    "genus": "もぐらポケモン",
     "types": [
       "ground"
     ],
@@ -1047,8 +1098,9 @@
   },
   {
     "id": 52,
-    "name": "ニャース",
+    "nameJa": "ニャース",
     "nameEn": "Meowth",
+    "genus": "ばけねこポケモン",
     "types": [
       "normal"
     ],
@@ -1067,8 +1119,9 @@
   },
   {
     "id": 53,
-    "name": "ペルシアン",
+    "nameJa": "ペルシアン",
     "nameEn": "Persian",
+    "genus": "シャムネコポケモン",
     "types": [
       "normal"
     ],
@@ -1087,8 +1140,9 @@
   },
   {
     "id": 54,
-    "name": "コダック",
+    "nameJa": "コダック",
     "nameEn": "Psyduck",
+    "genus": "あひるポケモン",
     "types": [
       "water"
     ],
@@ -1107,8 +1161,9 @@
   },
   {
     "id": 55,
-    "name": "ゴルダック",
+    "nameJa": "ゴルダック",
     "nameEn": "Golduck",
+    "genus": "あひるポケモン",
     "types": [
       "water"
     ],
@@ -1127,8 +1182,9 @@
   },
   {
     "id": 56,
-    "name": "マンキー",
+    "nameJa": "マンキー",
     "nameEn": "Mankey",
+    "genus": "ぶたざるポケモン",
     "types": [
       "fighting"
     ],
@@ -1147,8 +1203,9 @@
   },
   {
     "id": 57,
-    "name": "オコリザル",
+    "nameJa": "オコリザル",
     "nameEn": "Primeape",
+    "genus": "ぶたざるポケモン",
     "types": [
       "fighting"
     ],
@@ -1167,8 +1224,9 @@
   },
   {
     "id": 58,
-    "name": "ガーディ",
+    "nameJa": "ガーディ",
     "nameEn": "Growlithe",
+    "genus": "こいぬポケモン",
     "types": [
       "fire"
     ],
@@ -1187,8 +1245,9 @@
   },
   {
     "id": 59,
-    "name": "ウインディ",
+    "nameJa": "ウインディ",
     "nameEn": "Arcanine",
+    "genus": "でんせつポケモン",
     "types": [
       "fire"
     ],
@@ -1207,8 +1266,9 @@
   },
   {
     "id": 60,
-    "name": "ニョロモ",
+    "nameJa": "ニョロモ",
     "nameEn": "Poliwag",
+    "genus": "おたまポケモン",
     "types": [
       "water"
     ],
@@ -1227,8 +1287,9 @@
   },
   {
     "id": 61,
-    "name": "ニョロゾ",
+    "nameJa": "ニョロゾ",
     "nameEn": "Poliwhirl",
+    "genus": "おたまポケモン",
     "types": [
       "water"
     ],
@@ -1247,8 +1308,9 @@
   },
   {
     "id": 62,
-    "name": "ニョロボン",
+    "nameJa": "ニョロボン",
     "nameEn": "Poliwrath",
+    "genus": "おたまポケモン",
     "types": [
       "water",
       "fighting"
@@ -1268,8 +1330,9 @@
   },
   {
     "id": 63,
-    "name": "ケーシィ",
+    "nameJa": "ケーシィ",
     "nameEn": "Abra",
+    "genus": "ねんりきポケモン",
     "types": [
       "psychic"
     ],
@@ -1288,8 +1351,9 @@
   },
   {
     "id": 64,
-    "name": "ユンゲラー",
+    "nameJa": "ユンゲラー",
     "nameEn": "Kadabra",
+    "genus": "ねんりきポケモン",
     "types": [
       "psychic"
     ],
@@ -1308,8 +1372,9 @@
   },
   {
     "id": 65,
-    "name": "フーディン",
+    "nameJa": "フーディン",
     "nameEn": "Alakazam",
+    "genus": "ねんりきポケモン",
     "types": [
       "psychic"
     ],
@@ -1328,8 +1393,9 @@
   },
   {
     "id": 66,
-    "name": "ワンリキー",
+    "nameJa": "ワンリキー",
     "nameEn": "Machop",
+    "genus": "かいりきポケモン",
     "types": [
       "fighting"
     ],
@@ -1348,8 +1414,9 @@
   },
   {
     "id": 67,
-    "name": "ゴーリキー",
+    "nameJa": "ゴーリキー",
     "nameEn": "Machoke",
+    "genus": "かいりきポケモン",
     "types": [
       "fighting"
     ],
@@ -1368,8 +1435,9 @@
   },
   {
     "id": 68,
-    "name": "カイリキー",
+    "nameJa": "カイリキー",
     "nameEn": "Machamp",
+    "genus": "かいりきポケモン",
     "types": [
       "fighting"
     ],
@@ -1388,8 +1456,9 @@
   },
   {
     "id": 69,
-    "name": "マダツボミ",
+    "nameJa": "マダツボミ",
     "nameEn": "Bellsprout",
+    "genus": "フラワーポケモン",
     "types": [
       "grass",
       "poison"
@@ -1409,8 +1478,9 @@
   },
   {
     "id": 70,
-    "name": "ウツドン",
+    "nameJa": "ウツドン",
     "nameEn": "Weepinbell",
+    "genus": "ハエとりポケモン",
     "types": [
       "grass",
       "poison"
@@ -1430,8 +1500,9 @@
   },
   {
     "id": 71,
-    "name": "ウツボット",
+    "nameJa": "ウツボット",
     "nameEn": "Victreebel",
+    "genus": "ハエとりポケモン",
     "types": [
       "grass",
       "poison"
@@ -1451,8 +1522,9 @@
   },
   {
     "id": 72,
-    "name": "メノクラゲ",
+    "nameJa": "メノクラゲ",
     "nameEn": "Tentacool",
+    "genus": "くらげポケモン",
     "types": [
       "water",
       "poison"
@@ -1472,8 +1544,9 @@
   },
   {
     "id": 73,
-    "name": "ドククラゲ",
+    "nameJa": "ドククラゲ",
     "nameEn": "Tentacruel",
+    "genus": "くらげポケモン",
     "types": [
       "water",
       "poison"
@@ -1493,8 +1566,9 @@
   },
   {
     "id": 74,
-    "name": "イシツブテ",
+    "nameJa": "イシツブテ",
     "nameEn": "Geodude",
+    "genus": "がんせきポケモン",
     "types": [
       "rock",
       "ground"
@@ -1514,8 +1588,9 @@
   },
   {
     "id": 75,
-    "name": "ゴローン",
+    "nameJa": "ゴローン",
     "nameEn": "Graveler",
+    "genus": "がんせきポケモン",
     "types": [
       "rock",
       "ground"
@@ -1535,8 +1610,9 @@
   },
   {
     "id": 76,
-    "name": "ゴローニャ",
+    "nameJa": "ゴローニャ",
     "nameEn": "Golem",
+    "genus": "メガトンポケモン",
     "types": [
       "rock",
       "ground"
@@ -1556,8 +1632,9 @@
   },
   {
     "id": 77,
-    "name": "ポニータ",
+    "nameJa": "ポニータ",
     "nameEn": "Ponyta",
+    "genus": "ひのうまポケモン",
     "types": [
       "fire"
     ],
@@ -1576,8 +1653,9 @@
   },
   {
     "id": 78,
-    "name": "ギャロップ",
+    "nameJa": "ギャロップ",
     "nameEn": "Rapidash",
+    "genus": "ひのうまポケモン",
     "types": [
       "fire"
     ],
@@ -1596,8 +1674,9 @@
   },
   {
     "id": 79,
-    "name": "ヤドン",
+    "nameJa": "ヤドン",
     "nameEn": "Slowpoke",
+    "genus": "まぬけポケモン",
     "types": [
       "water",
       "psychic"
@@ -1617,8 +1696,9 @@
   },
   {
     "id": 80,
-    "name": "ヤドラン",
+    "nameJa": "ヤドラン",
     "nameEn": "Slowbro",
+    "genus": "やどかりポケモン",
     "types": [
       "water",
       "psychic"
@@ -1638,8 +1718,9 @@
   },
   {
     "id": 81,
-    "name": "コイル",
+    "nameJa": "コイル",
     "nameEn": "Magnemite",
+    "genus": "じしゃくポケモン",
     "types": [
       "electric",
       "steel"
@@ -1659,8 +1740,9 @@
   },
   {
     "id": 82,
-    "name": "レアコイル",
+    "nameJa": "レアコイル",
     "nameEn": "Magneton",
+    "genus": "じしゃくポケモン",
     "types": [
       "electric",
       "steel"
@@ -1680,8 +1762,9 @@
   },
   {
     "id": 83,
-    "name": "カモネギ",
+    "nameJa": "カモネギ",
     "nameEn": "Farfetch’d",
+    "genus": "かるがもポケモン",
     "types": [
       "normal",
       "flying"
@@ -1701,8 +1784,9 @@
   },
   {
     "id": 84,
-    "name": "ドードー",
+    "nameJa": "ドードー",
     "nameEn": "Doduo",
+    "genus": "ふたごどりポケモン",
     "types": [
       "normal",
       "flying"
@@ -1722,8 +1806,9 @@
   },
   {
     "id": 85,
-    "name": "ドードリオ",
+    "nameJa": "ドードリオ",
     "nameEn": "Dodrio",
+    "genus": "みつごどりポケモン",
     "types": [
       "normal",
       "flying"
@@ -1743,8 +1828,9 @@
   },
   {
     "id": 86,
-    "name": "パウワウ",
+    "nameJa": "パウワウ",
     "nameEn": "Seel",
+    "genus": "あしかポケモン",
     "types": [
       "water"
     ],
@@ -1763,8 +1849,9 @@
   },
   {
     "id": 87,
-    "name": "ジュゴン",
+    "nameJa": "ジュゴン",
     "nameEn": "Dewgong",
+    "genus": "あしかポケモン",
     "types": [
       "water",
       "ice"
@@ -1784,8 +1871,9 @@
   },
   {
     "id": 88,
-    "name": "ベトベター",
+    "nameJa": "ベトベター",
     "nameEn": "Grimer",
+    "genus": "ヘドロポケモン",
     "types": [
       "poison"
     ],
@@ -1804,8 +1892,9 @@
   },
   {
     "id": 89,
-    "name": "ベトベトン",
+    "nameJa": "ベトベトン",
     "nameEn": "Muk",
+    "genus": "ヘドロポケモン",
     "types": [
       "poison"
     ],
@@ -1824,8 +1913,9 @@
   },
   {
     "id": 90,
-    "name": "シェルダー",
+    "nameJa": "シェルダー",
     "nameEn": "Shellder",
+    "genus": "２まいがいポケモン",
     "types": [
       "water"
     ],
@@ -1844,8 +1934,9 @@
   },
   {
     "id": 91,
-    "name": "パルシェン",
+    "nameJa": "パルシェン",
     "nameEn": "Cloyster",
+    "genus": "２まいがいポケモン",
     "types": [
       "water",
       "ice"
@@ -1865,8 +1956,9 @@
   },
   {
     "id": 92,
-    "name": "ゴース",
+    "nameJa": "ゴース",
     "nameEn": "Gastly",
+    "genus": "ガスじょうポケモン",
     "types": [
       "ghost",
       "poison"
@@ -1886,8 +1978,9 @@
   },
   {
     "id": 93,
-    "name": "ゴースト",
+    "nameJa": "ゴースト",
     "nameEn": "Haunter",
+    "genus": "ガスじょうポケモン",
     "types": [
       "ghost",
       "poison"
@@ -1907,8 +2000,9 @@
   },
   {
     "id": 94,
-    "name": "ゲンガー",
+    "nameJa": "ゲンガー",
     "nameEn": "Gengar",
+    "genus": "シャドーポケモン",
     "types": [
       "ghost",
       "poison"
@@ -1928,8 +2022,9 @@
   },
   {
     "id": 95,
-    "name": "イワーク",
+    "nameJa": "イワーク",
     "nameEn": "Onix",
+    "genus": "いわへびポケモン",
     "types": [
       "rock",
       "ground"
@@ -1949,8 +2044,9 @@
   },
   {
     "id": 96,
-    "name": "スリープ",
+    "nameJa": "スリープ",
     "nameEn": "Drowzee",
+    "genus": "さいみんポケモン",
     "types": [
       "psychic"
     ],
@@ -1969,8 +2065,9 @@
   },
   {
     "id": 97,
-    "name": "スリーパー",
+    "nameJa": "スリーパー",
     "nameEn": "Hypno",
+    "genus": "さいみんポケモン",
     "types": [
       "psychic"
     ],
@@ -1989,8 +2086,9 @@
   },
   {
     "id": 98,
-    "name": "クラブ",
+    "nameJa": "クラブ",
     "nameEn": "Krabby",
+    "genus": "さわがにポケモン",
     "types": [
       "water"
     ],
@@ -2009,8 +2107,9 @@
   },
   {
     "id": 99,
-    "name": "キングラー",
+    "nameJa": "キングラー",
     "nameEn": "Kingler",
+    "genus": "はさみポケモン",
     "types": [
       "water"
     ],
@@ -2029,8 +2128,9 @@
   },
   {
     "id": 100,
-    "name": "ビリリダマ",
+    "nameJa": "ビリリダマ",
     "nameEn": "Voltorb",
+    "genus": "ボールポケモン",
     "types": [
       "electric"
     ],
@@ -2049,8 +2149,9 @@
   },
   {
     "id": 101,
-    "name": "マルマイン",
+    "nameJa": "マルマイン",
     "nameEn": "Electrode",
+    "genus": "ボールポケモン",
     "types": [
       "electric"
     ],
@@ -2069,8 +2170,9 @@
   },
   {
     "id": 102,
-    "name": "タマタマ",
+    "nameJa": "タマタマ",
     "nameEn": "Exeggcute",
+    "genus": "たまごポケモン",
     "types": [
       "grass",
       "psychic"
@@ -2090,8 +2192,9 @@
   },
   {
     "id": 103,
-    "name": "ナッシー",
+    "nameJa": "ナッシー",
     "nameEn": "Exeggutor",
+    "genus": "やしのみポケモン",
     "types": [
       "grass",
       "psychic"
@@ -2111,8 +2214,9 @@
   },
   {
     "id": 104,
-    "name": "カラカラ",
+    "nameJa": "カラカラ",
     "nameEn": "Cubone",
+    "genus": "こどくポケモン",
     "types": [
       "ground"
     ],
@@ -2131,8 +2235,9 @@
   },
   {
     "id": 105,
-    "name": "ガラガラ",
+    "nameJa": "ガラガラ",
     "nameEn": "Marowak",
+    "genus": "ほねずきポケモン",
     "types": [
       "ground"
     ],
@@ -2151,8 +2256,9 @@
   },
   {
     "id": 106,
-    "name": "サワムラー",
+    "nameJa": "サワムラー",
     "nameEn": "Hitmonlee",
+    "genus": "キックポケモン",
     "types": [
       "fighting"
     ],
@@ -2171,8 +2277,9 @@
   },
   {
     "id": 107,
-    "name": "エビワラー",
+    "nameJa": "エビワラー",
     "nameEn": "Hitmonchan",
+    "genus": "パンチポケモン",
     "types": [
       "fighting"
     ],
@@ -2191,8 +2298,9 @@
   },
   {
     "id": 108,
-    "name": "ベロリンガ",
+    "nameJa": "ベロリンガ",
     "nameEn": "Lickitung",
+    "genus": "なめまわしポケモン",
     "types": [
       "normal"
     ],
@@ -2211,8 +2319,9 @@
   },
   {
     "id": 109,
-    "name": "ドガース",
+    "nameJa": "ドガース",
     "nameEn": "Koffing",
+    "genus": "どくガスポケモン",
     "types": [
       "poison"
     ],
@@ -2231,8 +2340,9 @@
   },
   {
     "id": 110,
-    "name": "マタドガス",
+    "nameJa": "マタドガス",
     "nameEn": "Weezing",
+    "genus": "どくガスポケモン",
     "types": [
       "poison"
     ],
@@ -2251,8 +2361,9 @@
   },
   {
     "id": 111,
-    "name": "サイホーン",
+    "nameJa": "サイホーン",
     "nameEn": "Rhyhorn",
+    "genus": "とげとげポケモン",
     "types": [
       "ground",
       "rock"
@@ -2272,8 +2383,9 @@
   },
   {
     "id": 112,
-    "name": "サイドン",
+    "nameJa": "サイドン",
     "nameEn": "Rhydon",
+    "genus": "ドリルポケモン",
     "types": [
       "ground",
       "rock"
@@ -2293,8 +2405,9 @@
   },
   {
     "id": 113,
-    "name": "ラッキー",
+    "nameJa": "ラッキー",
     "nameEn": "Chansey",
+    "genus": "たまごポケモン",
     "types": [
       "normal"
     ],
@@ -2313,8 +2426,9 @@
   },
   {
     "id": 114,
-    "name": "モンジャラ",
+    "nameJa": "モンジャラ",
     "nameEn": "Tangela",
+    "genus": "ツルじょうポケモン",
     "types": [
       "grass"
     ],
@@ -2333,8 +2447,9 @@
   },
   {
     "id": 115,
-    "name": "ガルーラ",
+    "nameJa": "ガルーラ",
     "nameEn": "Kangaskhan",
+    "genus": "おやこポケモン",
     "types": [
       "normal"
     ],
@@ -2353,8 +2468,9 @@
   },
   {
     "id": 116,
-    "name": "タッツー",
+    "nameJa": "タッツー",
     "nameEn": "Horsea",
+    "genus": "ドラゴンポケモン",
     "types": [
       "water"
     ],
@@ -2373,8 +2489,9 @@
   },
   {
     "id": 117,
-    "name": "シードラ",
+    "nameJa": "シードラ",
     "nameEn": "Seadra",
+    "genus": "ドラゴンポケモン",
     "types": [
       "water"
     ],
@@ -2393,8 +2510,9 @@
   },
   {
     "id": 118,
-    "name": "トサキント",
+    "nameJa": "トサキント",
     "nameEn": "Goldeen",
+    "genus": "きんぎょポケモン",
     "types": [
       "water"
     ],
@@ -2413,8 +2531,9 @@
   },
   {
     "id": 119,
-    "name": "アズマオウ",
+    "nameJa": "アズマオウ",
     "nameEn": "Seaking",
+    "genus": "きんぎょポケモン",
     "types": [
       "water"
     ],
@@ -2433,8 +2552,9 @@
   },
   {
     "id": 120,
-    "name": "ヒトデマン",
+    "nameJa": "ヒトデマン",
     "nameEn": "Staryu",
+    "genus": "ほしがたポケモン",
     "types": [
       "water"
     ],
@@ -2453,8 +2573,9 @@
   },
   {
     "id": 121,
-    "name": "スターミー",
+    "nameJa": "スターミー",
     "nameEn": "Starmie",
+    "genus": "なぞのポケモン",
     "types": [
       "water",
       "psychic"
@@ -2474,8 +2595,9 @@
   },
   {
     "id": 122,
-    "name": "バリヤード",
+    "nameJa": "バリヤード",
     "nameEn": "Mr. Mime",
+    "genus": "バリアーポケモン",
     "types": [
       "psychic",
       "fairy"
@@ -2495,8 +2617,9 @@
   },
   {
     "id": 123,
-    "name": "ストライク",
+    "nameJa": "ストライク",
     "nameEn": "Scyther",
+    "genus": "かまきりポケモン",
     "types": [
       "bug",
       "flying"
@@ -2516,8 +2639,9 @@
   },
   {
     "id": 124,
-    "name": "ルージュラ",
+    "nameJa": "ルージュラ",
     "nameEn": "Jynx",
+    "genus": "ひとがたポケモン",
     "types": [
       "ice",
       "psychic"
@@ -2537,8 +2661,9 @@
   },
   {
     "id": 125,
-    "name": "エレブー",
+    "nameJa": "エレブー",
     "nameEn": "Electabuzz",
+    "genus": "でんげきポケモン",
     "types": [
       "electric"
     ],
@@ -2557,8 +2682,9 @@
   },
   {
     "id": 126,
-    "name": "ブーバー",
+    "nameJa": "ブーバー",
     "nameEn": "Magmar",
+    "genus": "ひふきポケモン",
     "types": [
       "fire"
     ],
@@ -2577,8 +2703,9 @@
   },
   {
     "id": 127,
-    "name": "カイロス",
+    "nameJa": "カイロス",
     "nameEn": "Pinsir",
+    "genus": "くわがたポケモン",
     "types": [
       "bug"
     ],
@@ -2597,8 +2724,9 @@
   },
   {
     "id": 128,
-    "name": "ケンタロス",
+    "nameJa": "ケンタロス",
     "nameEn": "Tauros",
+    "genus": "あばれうしポケモン",
     "types": [
       "normal"
     ],
@@ -2617,8 +2745,9 @@
   },
   {
     "id": 129,
-    "name": "コイキング",
+    "nameJa": "コイキング",
     "nameEn": "Magikarp",
+    "genus": "さかなポケモン",
     "types": [
       "water"
     ],
@@ -2637,8 +2766,9 @@
   },
   {
     "id": 130,
-    "name": "ギャラドス",
+    "nameJa": "ギャラドス",
     "nameEn": "Gyarados",
+    "genus": "きょうあくポケモン",
     "types": [
       "water",
       "flying"
@@ -2658,8 +2788,9 @@
   },
   {
     "id": 131,
-    "name": "ラプラス",
+    "nameJa": "ラプラス",
     "nameEn": "Lapras",
+    "genus": "のりものポケモン",
     "types": [
       "water",
       "ice"
@@ -2679,8 +2810,9 @@
   },
   {
     "id": 132,
-    "name": "メタモン",
+    "nameJa": "メタモン",
     "nameEn": "Ditto",
+    "genus": "へんしんポケモン",
     "types": [
       "normal"
     ],
@@ -2699,8 +2831,9 @@
   },
   {
     "id": 133,
-    "name": "イーブイ",
+    "nameJa": "イーブイ",
     "nameEn": "Eevee",
+    "genus": "しんかポケモン",
     "types": [
       "normal"
     ],
@@ -2719,8 +2852,9 @@
   },
   {
     "id": 134,
-    "name": "シャワーズ",
+    "nameJa": "シャワーズ",
     "nameEn": "Vaporeon",
+    "genus": "あわはきポケモン",
     "types": [
       "water"
     ],
@@ -2739,8 +2873,9 @@
   },
   {
     "id": 135,
-    "name": "サンダース",
+    "nameJa": "サンダース",
     "nameEn": "Jolteon",
+    "genus": "かみなりポケモン",
     "types": [
       "electric"
     ],
@@ -2759,8 +2894,9 @@
   },
   {
     "id": 136,
-    "name": "ブースター",
+    "nameJa": "ブースター",
     "nameEn": "Flareon",
+    "genus": "ほのおポケモン",
     "types": [
       "fire"
     ],
@@ -2779,8 +2915,9 @@
   },
   {
     "id": 137,
-    "name": "ポリゴン",
+    "nameJa": "ポリゴン",
     "nameEn": "Porygon",
+    "genus": "バーチャルポケモン",
     "types": [
       "normal"
     ],
@@ -2799,8 +2936,9 @@
   },
   {
     "id": 138,
-    "name": "オムナイト",
+    "nameJa": "オムナイト",
     "nameEn": "Omanyte",
+    "genus": "うずまきポケモン",
     "types": [
       "rock",
       "water"
@@ -2820,8 +2958,9 @@
   },
   {
     "id": 139,
-    "name": "オムスター",
+    "nameJa": "オムスター",
     "nameEn": "Omastar",
+    "genus": "うずまきポケモン",
     "types": [
       "rock",
       "water"
@@ -2841,8 +2980,9 @@
   },
   {
     "id": 140,
-    "name": "カブト",
+    "nameJa": "カブト",
     "nameEn": "Kabuto",
+    "genus": "こうらポケモン",
     "types": [
       "rock",
       "water"
@@ -2862,8 +3002,9 @@
   },
   {
     "id": 141,
-    "name": "カブトプス",
+    "nameJa": "カブトプス",
     "nameEn": "Kabutops",
+    "genus": "こうらポケモン",
     "types": [
       "rock",
       "water"
@@ -2883,8 +3024,9 @@
   },
   {
     "id": 142,
-    "name": "プテラ",
+    "nameJa": "プテラ",
     "nameEn": "Aerodactyl",
+    "genus": "かせきポケモン",
     "types": [
       "rock",
       "flying"
@@ -2904,8 +3046,9 @@
   },
   {
     "id": 143,
-    "name": "カビゴン",
+    "nameJa": "カビゴン",
     "nameEn": "Snorlax",
+    "genus": "いねむりポケモン",
     "types": [
       "normal"
     ],
@@ -2924,8 +3067,9 @@
   },
   {
     "id": 144,
-    "name": "フリーザー",
+    "nameJa": "フリーザー",
     "nameEn": "Articuno",
+    "genus": "れいとうポケモン",
     "types": [
       "ice",
       "flying"
@@ -2945,8 +3089,9 @@
   },
   {
     "id": 145,
-    "name": "サンダー",
+    "nameJa": "サンダー",
     "nameEn": "Zapdos",
+    "genus": "でんげきポケモン",
     "types": [
       "electric",
       "flying"
@@ -2966,8 +3111,9 @@
   },
   {
     "id": 146,
-    "name": "ファイヤー",
+    "nameJa": "ファイヤー",
     "nameEn": "Moltres",
+    "genus": "かえんポケモン",
     "types": [
       "fire",
       "flying"
@@ -2987,8 +3133,9 @@
   },
   {
     "id": 147,
-    "name": "ミニリュウ",
+    "nameJa": "ミニリュウ",
     "nameEn": "Dratini",
+    "genus": "ドラゴンポケモン",
     "types": [
       "dragon"
     ],
@@ -3007,8 +3154,9 @@
   },
   {
     "id": 148,
-    "name": "ハクリュー",
+    "nameJa": "ハクリュー",
     "nameEn": "Dragonair",
+    "genus": "ドラゴンポケモン",
     "types": [
       "dragon"
     ],
@@ -3027,8 +3175,9 @@
   },
   {
     "id": 149,
-    "name": "カイリュー",
+    "nameJa": "カイリュー",
     "nameEn": "Dragonite",
+    "genus": "ドラゴンポケモン",
     "types": [
       "dragon",
       "flying"
@@ -3048,8 +3197,9 @@
   },
   {
     "id": 150,
-    "name": "ミュウツー",
+    "nameJa": "ミュウツー",
     "nameEn": "Mewtwo",
+    "genus": "いでんしポケモン",
     "types": [
       "psychic"
     ],
@@ -3068,8 +3218,9 @@
   },
   {
     "id": 151,
-    "name": "ミュウ",
+    "nameJa": "ミュウ",
     "nameEn": "Mew",
+    "genus": "しんしゅポケモン",
     "types": [
       "psychic"
     ],
@@ -3088,8 +3239,9 @@
   },
   {
     "id": 152,
-    "name": "チコリータ",
+    "nameJa": "チコリータ",
     "nameEn": "Chikorita",
+    "genus": "はっぱポケモン",
     "types": [
       "grass"
     ],
@@ -3108,8 +3260,9 @@
   },
   {
     "id": 153,
-    "name": "ベイリーフ",
+    "nameJa": "ベイリーフ",
     "nameEn": "Bayleef",
+    "genus": "はっぱポケモン",
     "types": [
       "grass"
     ],
@@ -3128,8 +3281,9 @@
   },
   {
     "id": 154,
-    "name": "メガニウム",
+    "nameJa": "メガニウム",
     "nameEn": "Meganium",
+    "genus": "ハーブポケモン",
     "types": [
       "grass"
     ],
@@ -3148,8 +3302,9 @@
   },
   {
     "id": 155,
-    "name": "ヒノアラシ",
+    "nameJa": "ヒノアラシ",
     "nameEn": "Cyndaquil",
+    "genus": "ひねずみポケモン",
     "types": [
       "fire"
     ],
@@ -3168,8 +3323,9 @@
   },
   {
     "id": 156,
-    "name": "マグマラシ",
+    "nameJa": "マグマラシ",
     "nameEn": "Quilava",
+    "genus": "かざんポケモン",
     "types": [
       "fire"
     ],
@@ -3188,8 +3344,9 @@
   },
   {
     "id": 157,
-    "name": "バクフーン",
+    "nameJa": "バクフーン",
     "nameEn": "Typhlosion",
+    "genus": "かざんポケモン",
     "types": [
       "fire"
     ],
@@ -3208,8 +3365,9 @@
   },
   {
     "id": 158,
-    "name": "ワニノコ",
+    "nameJa": "ワニノコ",
     "nameEn": "Totodile",
+    "genus": "おおあごポケモン",
     "types": [
       "water"
     ],
@@ -3228,8 +3386,9 @@
   },
   {
     "id": 159,
-    "name": "アリゲイツ",
+    "nameJa": "アリゲイツ",
     "nameEn": "Croconaw",
+    "genus": "おおあごポケモン",
     "types": [
       "water"
     ],
@@ -3248,8 +3407,9 @@
   },
   {
     "id": 160,
-    "name": "オーダイル",
+    "nameJa": "オーダイル",
     "nameEn": "Feraligatr",
+    "genus": "おおあごポケモン",
     "types": [
       "water"
     ],
@@ -3268,8 +3428,9 @@
   },
   {
     "id": 161,
-    "name": "オタチ",
+    "nameJa": "オタチ",
     "nameEn": "Sentret",
+    "genus": "みはりポケモン",
     "types": [
       "normal"
     ],
@@ -3288,8 +3449,9 @@
   },
   {
     "id": 162,
-    "name": "オオタチ",
+    "nameJa": "オオタチ",
     "nameEn": "Furret",
+    "genus": "どうながポケモン",
     "types": [
       "normal"
     ],
@@ -3308,8 +3470,9 @@
   },
   {
     "id": 163,
-    "name": "ホーホー",
+    "nameJa": "ホーホー",
     "nameEn": "Hoothoot",
+    "genus": "ふくろうポケモン",
     "types": [
       "normal",
       "flying"
@@ -3329,8 +3492,9 @@
   },
   {
     "id": 164,
-    "name": "ヨルノズク",
+    "nameJa": "ヨルノズク",
     "nameEn": "Noctowl",
+    "genus": "ふくろうポケモン",
     "types": [
       "normal",
       "flying"
@@ -3350,8 +3514,9 @@
   },
   {
     "id": 165,
-    "name": "レディバ",
+    "nameJa": "レディバ",
     "nameEn": "Ledyba",
+    "genus": "いつつぼしポケモン",
     "types": [
       "bug",
       "flying"
@@ -3371,8 +3536,9 @@
   },
   {
     "id": 166,
-    "name": "レディアン",
+    "nameJa": "レディアン",
     "nameEn": "Ledian",
+    "genus": "いつつぼしポケモン",
     "types": [
       "bug",
       "flying"
@@ -3392,8 +3558,9 @@
   },
   {
     "id": 167,
-    "name": "イトマル",
+    "nameJa": "イトマル",
     "nameEn": "Spinarak",
+    "genus": "いとはきポケモン",
     "types": [
       "bug",
       "poison"
@@ -3413,8 +3580,9 @@
   },
   {
     "id": 168,
-    "name": "アリアドス",
+    "nameJa": "アリアドス",
     "nameEn": "Ariados",
+    "genus": "あしながポケモン",
     "types": [
       "bug",
       "poison"
@@ -3434,8 +3602,9 @@
   },
   {
     "id": 169,
-    "name": "クロバット",
+    "nameJa": "クロバット",
     "nameEn": "Crobat",
+    "genus": "こうもりポケモン",
     "types": [
       "poison",
       "flying"
@@ -3455,8 +3624,9 @@
   },
   {
     "id": 170,
-    "name": "チョンチー",
+    "nameJa": "チョンチー",
     "nameEn": "Chinchou",
+    "genus": "あんこうポケモン",
     "types": [
       "water",
       "electric"
@@ -3476,8 +3646,9 @@
   },
   {
     "id": 171,
-    "name": "ランターン",
+    "nameJa": "ランターン",
     "nameEn": "Lanturn",
+    "genus": "ライトポケモン",
     "types": [
       "water",
       "electric"
@@ -3497,8 +3668,9 @@
   },
   {
     "id": 172,
-    "name": "ピチュー",
+    "nameJa": "ピチュー",
     "nameEn": "Pichu",
+    "genus": "こねずみポケモン",
     "types": [
       "electric"
     ],
@@ -3517,8 +3689,9 @@
   },
   {
     "id": 173,
-    "name": "ピィ",
+    "nameJa": "ピィ",
     "nameEn": "Cleffa",
+    "genus": "ほしがたポケモン",
     "types": [
       "fairy"
     ],
@@ -3537,8 +3710,9 @@
   },
   {
     "id": 174,
-    "name": "ププリン",
+    "nameJa": "ププリン",
     "nameEn": "Igglybuff",
+    "genus": "ふうせんポケモン",
     "types": [
       "normal",
       "fairy"
@@ -3558,8 +3732,9 @@
   },
   {
     "id": 175,
-    "name": "トゲピー",
+    "nameJa": "トゲピー",
     "nameEn": "Togepi",
+    "genus": "はりたまポケモン",
     "types": [
       "fairy"
     ],
@@ -3578,8 +3753,9 @@
   },
   {
     "id": 176,
-    "name": "トゲチック",
+    "nameJa": "トゲチック",
     "nameEn": "Togetic",
+    "genus": "しあわせポケモン",
     "types": [
       "fairy",
       "flying"
@@ -3599,8 +3775,9 @@
   },
   {
     "id": 177,
-    "name": "ネイティ",
+    "nameJa": "ネイティ",
     "nameEn": "Natu",
+    "genus": "ことりポケモン",
     "types": [
       "psychic",
       "flying"
@@ -3620,8 +3797,9 @@
   },
   {
     "id": 178,
-    "name": "ネイティオ",
+    "nameJa": "ネイティオ",
     "nameEn": "Xatu",
+    "genus": "せいれいポケモン",
     "types": [
       "psychic",
       "flying"
@@ -3641,8 +3819,9 @@
   },
   {
     "id": 179,
-    "name": "メリープ",
+    "nameJa": "メリープ",
     "nameEn": "Mareep",
+    "genus": "わたげポケモン",
     "types": [
       "electric"
     ],
@@ -3661,8 +3840,9 @@
   },
   {
     "id": 180,
-    "name": "モココ",
+    "nameJa": "モココ",
     "nameEn": "Flaaffy",
+    "genus": "わたげポケモン",
     "types": [
       "electric"
     ],
@@ -3681,8 +3861,9 @@
   },
   {
     "id": 181,
-    "name": "デンリュウ",
+    "nameJa": "デンリュウ",
     "nameEn": "Ampharos",
+    "genus": "ライトポケモン",
     "types": [
       "electric"
     ],
@@ -3701,8 +3882,9 @@
   },
   {
     "id": 182,
-    "name": "キレイハナ",
+    "nameJa": "キレイハナ",
     "nameEn": "Bellossom",
+    "genus": "フラワーポケモン",
     "types": [
       "grass"
     ],
@@ -3721,8 +3903,9 @@
   },
   {
     "id": 183,
-    "name": "マリル",
+    "nameJa": "マリル",
     "nameEn": "Marill",
+    "genus": "みずねずみポケモン",
     "types": [
       "water",
       "fairy"
@@ -3742,8 +3925,9 @@
   },
   {
     "id": 184,
-    "name": "マリルリ",
+    "nameJa": "マリルリ",
     "nameEn": "Azumarill",
+    "genus": "みずうさぎポケモン",
     "types": [
       "water",
       "fairy"
@@ -3763,8 +3947,9 @@
   },
   {
     "id": 185,
-    "name": "ウソッキー",
+    "nameJa": "ウソッキー",
     "nameEn": "Sudowoodo",
+    "genus": "まねポケモン",
     "types": [
       "rock"
     ],
@@ -3783,8 +3968,9 @@
   },
   {
     "id": 186,
-    "name": "ニョロトノ",
+    "nameJa": "ニョロトノ",
     "nameEn": "Politoed",
+    "genus": "かえるポケモン",
     "types": [
       "water"
     ],
@@ -3803,8 +3989,9 @@
   },
   {
     "id": 187,
-    "name": "ハネッコ",
+    "nameJa": "ハネッコ",
     "nameEn": "Hoppip",
+    "genus": "わたくさポケモン",
     "types": [
       "grass",
       "flying"
@@ -3824,8 +4011,9 @@
   },
   {
     "id": 188,
-    "name": "ポポッコ",
+    "nameJa": "ポポッコ",
     "nameEn": "Skiploom",
+    "genus": "わたくさポケモン",
     "types": [
       "grass",
       "flying"
@@ -3845,8 +4033,9 @@
   },
   {
     "id": 189,
-    "name": "ワタッコ",
+    "nameJa": "ワタッコ",
     "nameEn": "Jumpluff",
+    "genus": "わたくさポケモン",
     "types": [
       "grass",
       "flying"
@@ -3866,8 +4055,9 @@
   },
   {
     "id": 190,
-    "name": "エイパム",
+    "nameJa": "エイパム",
     "nameEn": "Aipom",
+    "genus": "おながポケモン",
     "types": [
       "normal"
     ],
@@ -3886,8 +4076,9 @@
   },
   {
     "id": 191,
-    "name": "ヒマナッツ",
+    "nameJa": "ヒマナッツ",
     "nameEn": "Sunkern",
+    "genus": "たねポケモン",
     "types": [
       "grass"
     ],
@@ -3906,8 +4097,9 @@
   },
   {
     "id": 192,
-    "name": "キマワリ",
+    "nameJa": "キマワリ",
     "nameEn": "Sunflora",
+    "genus": "たいようポケモン",
     "types": [
       "grass"
     ],
@@ -3926,8 +4118,9 @@
   },
   {
     "id": 193,
-    "name": "ヤンヤンマ",
+    "nameJa": "ヤンヤンマ",
     "nameEn": "Yanma",
+    "genus": "うすばねポケモン",
     "types": [
       "bug",
       "flying"
@@ -3947,8 +4140,9 @@
   },
   {
     "id": 194,
-    "name": "ウパー",
+    "nameJa": "ウパー",
     "nameEn": "Wooper",
+    "genus": "みずうおポケモン",
     "types": [
       "water",
       "ground"
@@ -3968,8 +4162,9 @@
   },
   {
     "id": 195,
-    "name": "ヌオー",
+    "nameJa": "ヌオー",
     "nameEn": "Quagsire",
+    "genus": "みずうおポケモン",
     "types": [
       "water",
       "ground"
@@ -3989,8 +4184,9 @@
   },
   {
     "id": 196,
-    "name": "エーフィ",
+    "nameJa": "エーフィ",
     "nameEn": "Espeon",
+    "genus": "たいようポケモン",
     "types": [
       "psychic"
     ],
@@ -4009,8 +4205,9 @@
   },
   {
     "id": 197,
-    "name": "ブラッキー",
+    "nameJa": "ブラッキー",
     "nameEn": "Umbreon",
+    "genus": "げっこうポケモン",
     "types": [
       "dark"
     ],
@@ -4029,8 +4226,9 @@
   },
   {
     "id": 198,
-    "name": "ヤミカラス",
+    "nameJa": "ヤミカラス",
     "nameEn": "Murkrow",
+    "genus": "くらやみポケモン",
     "types": [
       "dark",
       "flying"
@@ -4050,8 +4248,9 @@
   },
   {
     "id": 199,
-    "name": "ヤドキング",
+    "nameJa": "ヤドキング",
     "nameEn": "Slowking",
+    "genus": "おうじゃポケモン",
     "types": [
       "water",
       "psychic"
@@ -4071,8 +4270,9 @@
   },
   {
     "id": 200,
-    "name": "ムウマ",
+    "nameJa": "ムウマ",
     "nameEn": "Misdreavus",
+    "genus": "よなきポケモン",
     "types": [
       "ghost"
     ],
@@ -4091,8 +4291,9 @@
   },
   {
     "id": 201,
-    "name": "アンノーン",
+    "nameJa": "アンノーン",
     "nameEn": "Unown",
+    "genus": "シンボルポケモン",
     "types": [
       "psychic"
     ],
@@ -4111,8 +4312,9 @@
   },
   {
     "id": 202,
-    "name": "ソーナンス",
+    "nameJa": "ソーナンス",
     "nameEn": "Wobbuffet",
+    "genus": "がまんポケモン",
     "types": [
       "psychic"
     ],
@@ -4131,8 +4333,9 @@
   },
   {
     "id": 203,
-    "name": "キリンリキ",
+    "nameJa": "キリンリキ",
     "nameEn": "Girafarig",
+    "genus": "くびながポケモン",
     "types": [
       "normal",
       "psychic"
@@ -4152,8 +4355,9 @@
   },
   {
     "id": 204,
-    "name": "クヌギダマ",
+    "nameJa": "クヌギダマ",
     "nameEn": "Pineco",
+    "genus": "みのむしポケモン",
     "types": [
       "bug"
     ],
@@ -4172,8 +4376,9 @@
   },
   {
     "id": 205,
-    "name": "フォレトス",
+    "nameJa": "フォレトス",
     "nameEn": "Forretress",
+    "genus": "みのむしポケモン",
     "types": [
       "bug",
       "steel"
@@ -4193,8 +4398,9 @@
   },
   {
     "id": 206,
-    "name": "ノコッチ",
+    "nameJa": "ノコッチ",
     "nameEn": "Dunsparce",
+    "genus": "つちへびポケモン",
     "types": [
       "normal"
     ],
@@ -4213,8 +4419,9 @@
   },
   {
     "id": 207,
-    "name": "グライガー",
+    "nameJa": "グライガー",
     "nameEn": "Gligar",
+    "genus": "とびさそりポケモン",
     "types": [
       "ground",
       "flying"
@@ -4234,8 +4441,9 @@
   },
   {
     "id": 208,
-    "name": "ハガネール",
+    "nameJa": "ハガネール",
     "nameEn": "Steelix",
+    "genus": "てつへびポケモン",
     "types": [
       "steel",
       "ground"
@@ -4255,8 +4463,9 @@
   },
   {
     "id": 209,
-    "name": "ブルー",
+    "nameJa": "ブルー",
     "nameEn": "Snubbull",
+    "genus": "ようせいポケモン",
     "types": [
       "fairy"
     ],
@@ -4275,8 +4484,9 @@
   },
   {
     "id": 210,
-    "name": "グランブル",
+    "nameJa": "グランブル",
     "nameEn": "Granbull",
+    "genus": "ようせいポケモン",
     "types": [
       "fairy"
     ],
@@ -4295,8 +4505,9 @@
   },
   {
     "id": 211,
-    "name": "ハリーセン",
+    "nameJa": "ハリーセン",
     "nameEn": "Qwilfish",
+    "genus": "ふうせんポケモン",
     "types": [
       "water",
       "poison"
@@ -4316,8 +4527,9 @@
   },
   {
     "id": 212,
-    "name": "ハッサム",
+    "nameJa": "ハッサム",
     "nameEn": "Scizor",
+    "genus": "はさみポケモン",
     "types": [
       "bug",
       "steel"
@@ -4337,8 +4549,9 @@
   },
   {
     "id": 213,
-    "name": "ツボツボ",
+    "nameJa": "ツボツボ",
     "nameEn": "Shuckle",
+    "genus": "はっこうポケモン",
     "types": [
       "bug",
       "rock"
@@ -4358,8 +4571,9 @@
   },
   {
     "id": 214,
-    "name": "ヘラクロス",
+    "nameJa": "ヘラクロス",
     "nameEn": "Heracross",
+    "genus": "１ぽんヅノポケモン",
     "types": [
       "bug",
       "fighting"
@@ -4379,8 +4593,9 @@
   },
   {
     "id": 215,
-    "name": "ニューラ",
+    "nameJa": "ニューラ",
     "nameEn": "Sneasel",
+    "genus": "かぎづめポケモン",
     "types": [
       "dark",
       "ice"
@@ -4400,8 +4615,9 @@
   },
   {
     "id": 216,
-    "name": "ヒメグマ",
+    "nameJa": "ヒメグマ",
     "nameEn": "Teddiursa",
+    "genus": "こぐまポケモン",
     "types": [
       "normal"
     ],
@@ -4420,8 +4636,9 @@
   },
   {
     "id": 217,
-    "name": "リングマ",
+    "nameJa": "リングマ",
     "nameEn": "Ursaring",
+    "genus": "とうみんポケモン",
     "types": [
       "normal"
     ],
@@ -4440,8 +4657,9 @@
   },
   {
     "id": 218,
-    "name": "マグマッグ",
+    "nameJa": "マグマッグ",
     "nameEn": "Slugma",
+    "genus": "ようがんポケモン",
     "types": [
       "fire"
     ],
@@ -4460,8 +4678,9 @@
   },
   {
     "id": 219,
-    "name": "マグカルゴ",
+    "nameJa": "マグカルゴ",
     "nameEn": "Magcargo",
+    "genus": "ようがんポケモン",
     "types": [
       "fire",
       "rock"
@@ -4481,8 +4700,9 @@
   },
   {
     "id": 220,
-    "name": "ウリムー",
+    "nameJa": "ウリムー",
     "nameEn": "Swinub",
+    "genus": "いのぶたポケモン",
     "types": [
       "ice",
       "ground"
@@ -4502,8 +4722,9 @@
   },
   {
     "id": 221,
-    "name": "イノムー",
+    "nameJa": "イノムー",
     "nameEn": "Piloswine",
+    "genus": "いのししポケモン",
     "types": [
       "ice",
       "ground"
@@ -4523,8 +4744,9 @@
   },
   {
     "id": 222,
-    "name": "サニーゴ",
+    "nameJa": "サニーゴ",
     "nameEn": "Corsola",
+    "genus": "さんごポケモン",
     "types": [
       "water",
       "rock"
@@ -4544,8 +4766,9 @@
   },
   {
     "id": 223,
-    "name": "テッポウオ",
+    "nameJa": "テッポウオ",
     "nameEn": "Remoraid",
+    "genus": "ふんしゃポケモン",
     "types": [
       "water"
     ],
@@ -4564,8 +4787,9 @@
   },
   {
     "id": 224,
-    "name": "オクタン",
+    "nameJa": "オクタン",
     "nameEn": "Octillery",
+    "genus": "ふんしゃポケモン",
     "types": [
       "water"
     ],
@@ -4584,8 +4808,9 @@
   },
   {
     "id": 225,
-    "name": "デリバード",
+    "nameJa": "デリバード",
     "nameEn": "Delibird",
+    "genus": "はこびやポケモン",
     "types": [
       "ice",
       "flying"
@@ -4605,8 +4830,9 @@
   },
   {
     "id": 226,
-    "name": "マンタイン",
+    "nameJa": "マンタイン",
     "nameEn": "Mantine",
+    "genus": "カイトポケモン",
     "types": [
       "water",
       "flying"
@@ -4626,8 +4852,9 @@
   },
   {
     "id": 227,
-    "name": "エアームド",
+    "nameJa": "エアームド",
     "nameEn": "Skarmory",
+    "genus": "よろいどりポケモン",
     "types": [
       "steel",
       "flying"
@@ -4647,8 +4874,9 @@
   },
   {
     "id": 228,
-    "name": "デルビル",
+    "nameJa": "デルビル",
     "nameEn": "Houndour",
+    "genus": "ダークポケモン",
     "types": [
       "dark",
       "fire"
@@ -4668,8 +4896,9 @@
   },
   {
     "id": 229,
-    "name": "ヘルガー",
+    "nameJa": "ヘルガー",
     "nameEn": "Houndoom",
+    "genus": "ダークポケモン",
     "types": [
       "dark",
       "fire"
@@ -4689,8 +4918,9 @@
   },
   {
     "id": 230,
-    "name": "キングドラ",
+    "nameJa": "キングドラ",
     "nameEn": "Kingdra",
+    "genus": "ドラゴンポケモン",
     "types": [
       "water",
       "dragon"
@@ -4710,8 +4940,9 @@
   },
   {
     "id": 231,
-    "name": "ゴマゾウ",
+    "nameJa": "ゴマゾウ",
     "nameEn": "Phanpy",
+    "genus": "ながはなポケモン",
     "types": [
       "ground"
     ],
@@ -4730,8 +4961,9 @@
   },
   {
     "id": 232,
-    "name": "ドンファン",
+    "nameJa": "ドンファン",
     "nameEn": "Donphan",
+    "genus": "よろいポケモン",
     "types": [
       "ground"
     ],
@@ -4750,8 +4982,9 @@
   },
   {
     "id": 233,
-    "name": "ポリゴン２",
+    "nameJa": "ポリゴン２",
     "nameEn": "Porygon2",
+    "genus": "バーチャルポケモン",
     "types": [
       "normal"
     ],
@@ -4770,8 +5003,9 @@
   },
   {
     "id": 234,
-    "name": "オドシシ",
+    "nameJa": "オドシシ",
     "nameEn": "Stantler",
+    "genus": "おおツノポケモン",
     "types": [
       "normal"
     ],
@@ -4790,8 +5024,9 @@
   },
   {
     "id": 235,
-    "name": "ドーブル",
+    "nameJa": "ドーブル",
     "nameEn": "Smeargle",
+    "genus": "えかきポケモン",
     "types": [
       "normal"
     ],
@@ -4810,8 +5045,9 @@
   },
   {
     "id": 236,
-    "name": "バルキー",
+    "nameJa": "バルキー",
     "nameEn": "Tyrogue",
+    "genus": "けんかポケモン",
     "types": [
       "fighting"
     ],
@@ -4830,8 +5066,9 @@
   },
   {
     "id": 237,
-    "name": "カポエラー",
+    "nameJa": "カポエラー",
     "nameEn": "Hitmontop",
+    "genus": "さかだちポケモン",
     "types": [
       "fighting"
     ],
@@ -4850,8 +5087,9 @@
   },
   {
     "id": 238,
-    "name": "ムチュール",
+    "nameJa": "ムチュール",
     "nameEn": "Smoochum",
+    "genus": "くちづけポケモン",
     "types": [
       "ice",
       "psychic"
@@ -4871,8 +5109,9 @@
   },
   {
     "id": 239,
-    "name": "エレキッド",
+    "nameJa": "エレキッド",
     "nameEn": "Elekid",
+    "genus": "でんきポケモン",
     "types": [
       "electric"
     ],
@@ -4891,8 +5130,9 @@
   },
   {
     "id": 240,
-    "name": "ブビィ",
+    "nameJa": "ブビィ",
     "nameEn": "Magby",
+    "genus": "ひだねポケモン",
     "types": [
       "fire"
     ],
@@ -4911,8 +5151,9 @@
   },
   {
     "id": 241,
-    "name": "ミルタンク",
+    "nameJa": "ミルタンク",
     "nameEn": "Miltank",
+    "genus": "ちちうしポケモン",
     "types": [
       "normal"
     ],
@@ -4931,8 +5172,9 @@
   },
   {
     "id": 242,
-    "name": "ハピナス",
+    "nameJa": "ハピナス",
     "nameEn": "Blissey",
+    "genus": "しあわせポケモン",
     "types": [
       "normal"
     ],
@@ -4951,8 +5193,9 @@
   },
   {
     "id": 243,
-    "name": "ライコウ",
+    "nameJa": "ライコウ",
     "nameEn": "Raikou",
+    "genus": "いかずちポケモン",
     "types": [
       "electric"
     ],
@@ -4971,8 +5214,9 @@
   },
   {
     "id": 244,
-    "name": "エンテイ",
+    "nameJa": "エンテイ",
     "nameEn": "Entei",
+    "genus": "かざんポケモン",
     "types": [
       "fire"
     ],
@@ -4991,8 +5235,9 @@
   },
   {
     "id": 245,
-    "name": "スイクン",
+    "nameJa": "スイクン",
     "nameEn": "Suicune",
+    "genus": "オーロラポケモン",
     "types": [
       "water"
     ],
@@ -5011,8 +5256,9 @@
   },
   {
     "id": 246,
-    "name": "ヨーギラス",
+    "nameJa": "ヨーギラス",
     "nameEn": "Larvitar",
+    "genus": "いわはだポケモン",
     "types": [
       "rock",
       "ground"
@@ -5032,8 +5278,9 @@
   },
   {
     "id": 247,
-    "name": "サナギラス",
+    "nameJa": "サナギラス",
     "nameEn": "Pupitar",
+    "genus": "だんがんポケモン",
     "types": [
       "rock",
       "ground"
@@ -5053,8 +5300,9 @@
   },
   {
     "id": 248,
-    "name": "バンギラス",
+    "nameJa": "バンギラス",
     "nameEn": "Tyranitar",
+    "genus": "よろいポケモン",
     "types": [
       "rock",
       "dark"
@@ -5074,8 +5322,9 @@
   },
   {
     "id": 249,
-    "name": "ルギア",
+    "nameJa": "ルギア",
     "nameEn": "Lugia",
+    "genus": "せんすいポケモン",
     "types": [
       "psychic",
       "flying"
@@ -5095,8 +5344,9 @@
   },
   {
     "id": 250,
-    "name": "ホウオウ",
+    "nameJa": "ホウオウ",
     "nameEn": "Ho-Oh",
+    "genus": "にじいろポケモン",
     "types": [
       "fire",
       "flying"
@@ -5116,8 +5366,9 @@
   },
   {
     "id": 251,
-    "name": "セレビィ",
+    "nameJa": "セレビィ",
     "nameEn": "Celebi",
+    "genus": "ときわたりポケモン",
     "types": [
       "psychic",
       "grass"
@@ -5137,8 +5388,9 @@
   },
   {
     "id": 252,
-    "name": "キモリ",
+    "nameJa": "キモリ",
     "nameEn": "Treecko",
+    "genus": "もりトカゲポケモン",
     "types": [
       "grass"
     ],
@@ -5157,8 +5409,9 @@
   },
   {
     "id": 253,
-    "name": "ジュプトル",
+    "nameJa": "ジュプトル",
     "nameEn": "Grovyle",
+    "genus": "もりトカゲポケモン",
     "types": [
       "grass"
     ],
@@ -5177,8 +5430,9 @@
   },
   {
     "id": 254,
-    "name": "ジュカイン",
+    "nameJa": "ジュカイン",
     "nameEn": "Sceptile",
+    "genus": "みつりんポケモン",
     "types": [
       "grass"
     ],
@@ -5197,8 +5451,9 @@
   },
   {
     "id": 255,
-    "name": "アチャモ",
+    "nameJa": "アチャモ",
     "nameEn": "Torchic",
+    "genus": "ひよこポケモン",
     "types": [
       "fire"
     ],
@@ -5217,8 +5472,9 @@
   },
   {
     "id": 256,
-    "name": "ワカシャモ",
+    "nameJa": "ワカシャモ",
     "nameEn": "Combusken",
+    "genus": "わかどりポケモン",
     "types": [
       "fire",
       "fighting"
@@ -5238,8 +5494,9 @@
   },
   {
     "id": 257,
-    "name": "バシャーモ",
+    "nameJa": "バシャーモ",
     "nameEn": "Blaziken",
+    "genus": "もうかポケモン",
     "types": [
       "fire",
       "fighting"
@@ -5259,8 +5516,9 @@
   },
   {
     "id": 258,
-    "name": "ミズゴロウ",
+    "nameJa": "ミズゴロウ",
     "nameEn": "Mudkip",
+    "genus": "ぬまうおポケモン",
     "types": [
       "water"
     ],
@@ -5279,8 +5537,9 @@
   },
   {
     "id": 259,
-    "name": "ヌマクロー",
+    "nameJa": "ヌマクロー",
     "nameEn": "Marshtomp",
+    "genus": "ぬまうおポケモン",
     "types": [
       "water",
       "ground"
@@ -5300,8 +5559,9 @@
   },
   {
     "id": 260,
-    "name": "ラグラージ",
+    "nameJa": "ラグラージ",
     "nameEn": "Swampert",
+    "genus": "ぬまうおポケモン",
     "types": [
       "water",
       "ground"
@@ -5321,8 +5581,9 @@
   },
   {
     "id": 261,
-    "name": "ポチエナ",
+    "nameJa": "ポチエナ",
     "nameEn": "Poochyena",
+    "genus": "かみつきポケモン",
     "types": [
       "dark"
     ],
@@ -5341,8 +5602,9 @@
   },
   {
     "id": 262,
-    "name": "グラエナ",
+    "nameJa": "グラエナ",
     "nameEn": "Mightyena",
+    "genus": "かみつきポケモン",
     "types": [
       "dark"
     ],
@@ -5361,8 +5623,9 @@
   },
   {
     "id": 263,
-    "name": "ジグザグマ",
+    "nameJa": "ジグザグマ",
     "nameEn": "Zigzagoon",
+    "genus": "まめだぬきポケモン",
     "types": [
       "normal"
     ],
@@ -5381,8 +5644,9 @@
   },
   {
     "id": 264,
-    "name": "マッスグマ",
+    "nameJa": "マッスグマ",
     "nameEn": "Linoone",
+    "genus": "とっしんポケモン",
     "types": [
       "normal"
     ],
@@ -5401,8 +5665,9 @@
   },
   {
     "id": 265,
-    "name": "ケムッソ",
+    "nameJa": "ケムッソ",
     "nameEn": "Wurmple",
+    "genus": "いもむしポケモン",
     "types": [
       "bug"
     ],
@@ -5421,8 +5686,9 @@
   },
   {
     "id": 266,
-    "name": "カラサリス",
+    "nameJa": "カラサリス",
     "nameEn": "Silcoon",
+    "genus": "さなぎポケモン",
     "types": [
       "bug"
     ],
@@ -5441,8 +5707,9 @@
   },
   {
     "id": 267,
-    "name": "アゲハント",
+    "nameJa": "アゲハント",
     "nameEn": "Beautifly",
+    "genus": "ちょうちょポケモン",
     "types": [
       "bug",
       "flying"
@@ -5462,8 +5729,9 @@
   },
   {
     "id": 268,
-    "name": "マユルド",
+    "nameJa": "マユルド",
     "nameEn": "Cascoon",
+    "genus": "さなぎポケモン",
     "types": [
       "bug"
     ],
@@ -5482,8 +5750,9 @@
   },
   {
     "id": 269,
-    "name": "ドクケイル",
+    "nameJa": "ドクケイル",
     "nameEn": "Dustox",
+    "genus": "どくがポケモン",
     "types": [
       "bug",
       "poison"
@@ -5503,8 +5772,9 @@
   },
   {
     "id": 270,
-    "name": "ハスボー",
+    "nameJa": "ハスボー",
     "nameEn": "Lotad",
+    "genus": "うきくさポケモン",
     "types": [
       "water",
       "grass"
@@ -5524,8 +5794,9 @@
   },
   {
     "id": 271,
-    "name": "ハスブレロ",
+    "nameJa": "ハスブレロ",
     "nameEn": "Lombre",
+    "genus": "ようきポケモン",
     "types": [
       "water",
       "grass"
@@ -5545,8 +5816,9 @@
   },
   {
     "id": 272,
-    "name": "ルンパッパ",
+    "nameJa": "ルンパッパ",
     "nameEn": "Ludicolo",
+    "genus": "のうてんきポケモン",
     "types": [
       "water",
       "grass"
@@ -5566,8 +5838,9 @@
   },
   {
     "id": 273,
-    "name": "タネボー",
+    "nameJa": "タネボー",
     "nameEn": "Seedot",
+    "genus": "どんぐりポケモン",
     "types": [
       "grass"
     ],
@@ -5586,8 +5859,9 @@
   },
   {
     "id": 274,
-    "name": "コノハナ",
+    "nameJa": "コノハナ",
     "nameEn": "Nuzleaf",
+    "genus": "いじわるポケモン",
     "types": [
       "grass",
       "dark"
@@ -5607,8 +5881,9 @@
   },
   {
     "id": 275,
-    "name": "ダーテング",
+    "nameJa": "ダーテング",
     "nameEn": "Shiftry",
+    "genus": "よこしまポケモン",
     "types": [
       "grass",
       "dark"
@@ -5628,8 +5903,9 @@
   },
   {
     "id": 276,
-    "name": "スバメ",
+    "nameJa": "スバメ",
     "nameEn": "Taillow",
+    "genus": "こツバメポケモン",
     "types": [
       "normal",
       "flying"
@@ -5649,8 +5925,9 @@
   },
   {
     "id": 277,
-    "name": "オオスバメ",
+    "nameJa": "オオスバメ",
     "nameEn": "Swellow",
+    "genus": "ツバメポケモン",
     "types": [
       "normal",
       "flying"
@@ -5670,8 +5947,9 @@
   },
   {
     "id": 278,
-    "name": "キャモメ",
+    "nameJa": "キャモメ",
     "nameEn": "Wingull",
+    "genus": "うみねこポケモン",
     "types": [
       "water",
       "flying"
@@ -5691,8 +5969,9 @@
   },
   {
     "id": 279,
-    "name": "ペリッパー",
+    "nameJa": "ペリッパー",
     "nameEn": "Pelipper",
+    "genus": "みずどりポケモン",
     "types": [
       "water",
       "flying"
@@ -5712,8 +5991,9 @@
   },
   {
     "id": 280,
-    "name": "ラルトス",
+    "nameJa": "ラルトス",
     "nameEn": "Ralts",
+    "genus": "きもちポケモン",
     "types": [
       "psychic",
       "fairy"
@@ -5733,8 +6013,9 @@
   },
   {
     "id": 281,
-    "name": "キルリア",
+    "nameJa": "キルリア",
     "nameEn": "Kirlia",
+    "genus": "かんじょうポケモン",
     "types": [
       "psychic",
       "fairy"
@@ -5754,8 +6035,9 @@
   },
   {
     "id": 282,
-    "name": "サーナイト",
+    "nameJa": "サーナイト",
     "nameEn": "Gardevoir",
+    "genus": "ほうようポケモン",
     "types": [
       "psychic",
       "fairy"
@@ -5775,8 +6057,9 @@
   },
   {
     "id": 283,
-    "name": "アメタマ",
+    "nameJa": "アメタマ",
     "nameEn": "Surskit",
+    "genus": "あめんぼポケモン",
     "types": [
       "bug",
       "water"
@@ -5796,8 +6079,9 @@
   },
   {
     "id": 284,
-    "name": "アメモース",
+    "nameJa": "アメモース",
     "nameEn": "Masquerain",
+    "genus": "めだまポケモン",
     "types": [
       "bug",
       "flying"
@@ -5817,8 +6101,9 @@
   },
   {
     "id": 285,
-    "name": "キノココ",
+    "nameJa": "キノココ",
     "nameEn": "Shroomish",
+    "genus": "きのこポケモン",
     "types": [
       "grass"
     ],
@@ -5837,8 +6122,9 @@
   },
   {
     "id": 286,
-    "name": "キノガッサ",
+    "nameJa": "キノガッサ",
     "nameEn": "Breloom",
+    "genus": "きのこポケモン",
     "types": [
       "grass",
       "fighting"
@@ -5858,8 +6144,9 @@
   },
   {
     "id": 287,
-    "name": "ナマケロ",
+    "nameJa": "ナマケロ",
     "nameEn": "Slakoth",
+    "genus": "なまけものポケモン",
     "types": [
       "normal"
     ],
@@ -5878,8 +6165,9 @@
   },
   {
     "id": 288,
-    "name": "ヤルキモノ",
+    "nameJa": "ヤルキモノ",
     "nameEn": "Vigoroth",
+    "genus": "あばれザルポケモン",
     "types": [
       "normal"
     ],
@@ -5898,8 +6186,9 @@
   },
   {
     "id": 289,
-    "name": "ケッキング",
+    "nameJa": "ケッキング",
     "nameEn": "Slaking",
+    "genus": "ものぐさポケモン",
     "types": [
       "normal"
     ],
@@ -5918,8 +6207,9 @@
   },
   {
     "id": 290,
-    "name": "ツチニン",
+    "nameJa": "ツチニン",
     "nameEn": "Nincada",
+    "genus": "したづみポケモン",
     "types": [
       "bug",
       "ground"
@@ -5939,8 +6229,9 @@
   },
   {
     "id": 291,
-    "name": "テッカニン",
+    "nameJa": "テッカニン",
     "nameEn": "Ninjask",
+    "genus": "しのびポケモン",
     "types": [
       "bug",
       "flying"
@@ -5960,8 +6251,9 @@
   },
   {
     "id": 292,
-    "name": "ヌケニン",
+    "nameJa": "ヌケニン",
     "nameEn": "Shedinja",
+    "genus": "ぬけがらポケモン",
     "types": [
       "bug",
       "ghost"
@@ -5981,8 +6273,9 @@
   },
   {
     "id": 293,
-    "name": "ゴニョニョ",
+    "nameJa": "ゴニョニョ",
     "nameEn": "Whismur",
+    "genus": "ささやきポケモン",
     "types": [
       "normal"
     ],
@@ -6001,8 +6294,9 @@
   },
   {
     "id": 294,
-    "name": "ドゴーム",
+    "nameJa": "ドゴーム",
     "nameEn": "Loudred",
+    "genus": "おおごえポケモン",
     "types": [
       "normal"
     ],
@@ -6021,8 +6315,9 @@
   },
   {
     "id": 295,
-    "name": "バクオング",
+    "nameJa": "バクオング",
     "nameEn": "Exploud",
+    "genus": "そうおんポケモン",
     "types": [
       "normal"
     ],
@@ -6041,8 +6336,9 @@
   },
   {
     "id": 296,
-    "name": "マクノシタ",
+    "nameJa": "マクノシタ",
     "nameEn": "Makuhita",
+    "genus": "こんじょうポケモン",
     "types": [
       "fighting"
     ],
@@ -6061,8 +6357,9 @@
   },
   {
     "id": 297,
-    "name": "ハリテヤマ",
+    "nameJa": "ハリテヤマ",
     "nameEn": "Hariyama",
+    "genus": "つっぱりポケモン",
     "types": [
       "fighting"
     ],
@@ -6081,8 +6378,9 @@
   },
   {
     "id": 298,
-    "name": "ルリリ",
+    "nameJa": "ルリリ",
     "nameEn": "Azurill",
+    "genus": "みずたまポケモン",
     "types": [
       "normal",
       "fairy"
@@ -6102,8 +6400,9 @@
   },
   {
     "id": 299,
-    "name": "ノズパス",
+    "nameJa": "ノズパス",
     "nameEn": "Nosepass",
+    "genus": "コンパスポケモン",
     "types": [
       "rock"
     ],
@@ -6122,8 +6421,9 @@
   },
   {
     "id": 300,
-    "name": "エネコ",
+    "nameJa": "エネコ",
     "nameEn": "Skitty",
+    "genus": "こねこポケモン",
     "types": [
       "normal"
     ],
@@ -6142,8 +6442,9 @@
   },
   {
     "id": 301,
-    "name": "エネコロロ",
+    "nameJa": "エネコロロ",
     "nameEn": "Delcatty",
+    "genus": "おすましポケモン",
     "types": [
       "normal"
     ],
@@ -6162,8 +6463,9 @@
   },
   {
     "id": 302,
-    "name": "ヤミラミ",
+    "nameJa": "ヤミラミ",
     "nameEn": "Sableye",
+    "genus": "くらやみポケモン",
     "types": [
       "dark",
       "ghost"
@@ -6183,8 +6485,9 @@
   },
   {
     "id": 303,
-    "name": "クチート",
+    "nameJa": "クチート",
     "nameEn": "Mawile",
+    "genus": "あざむきポケモン",
     "types": [
       "steel",
       "fairy"
@@ -6204,8 +6507,9 @@
   },
   {
     "id": 304,
-    "name": "ココドラ",
+    "nameJa": "ココドラ",
     "nameEn": "Aron",
+    "genus": "てつヨロイポケモン",
     "types": [
       "steel",
       "rock"
@@ -6225,8 +6529,9 @@
   },
   {
     "id": 305,
-    "name": "コドラ",
+    "nameJa": "コドラ",
     "nameEn": "Lairon",
+    "genus": "てつヨロイポケモン",
     "types": [
       "steel",
       "rock"
@@ -6246,8 +6551,9 @@
   },
   {
     "id": 306,
-    "name": "ボスゴドラ",
+    "nameJa": "ボスゴドラ",
     "nameEn": "Aggron",
+    "genus": "てつヨロイポケモン",
     "types": [
       "steel",
       "rock"
@@ -6267,8 +6573,9 @@
   },
   {
     "id": 307,
-    "name": "アサナン",
+    "nameJa": "アサナン",
     "nameEn": "Meditite",
+    "genus": "めいそうポケモン",
     "types": [
       "fighting",
       "psychic"
@@ -6288,8 +6595,9 @@
   },
   {
     "id": 308,
-    "name": "チャーレム",
+    "nameJa": "チャーレム",
     "nameEn": "Medicham",
+    "genus": "めいそうポケモン",
     "types": [
       "fighting",
       "psychic"
@@ -6309,8 +6617,9 @@
   },
   {
     "id": 309,
-    "name": "ラクライ",
+    "nameJa": "ラクライ",
     "nameEn": "Electrike",
+    "genus": "いなずまポケモン",
     "types": [
       "electric"
     ],
@@ -6329,8 +6638,9 @@
   },
   {
     "id": 310,
-    "name": "ライボルト",
+    "nameJa": "ライボルト",
     "nameEn": "Manectric",
+    "genus": "ほうでんポケモン",
     "types": [
       "electric"
     ],
@@ -6349,8 +6659,9 @@
   },
   {
     "id": 311,
-    "name": "プラスル",
+    "nameJa": "プラスル",
     "nameEn": "Plusle",
+    "genus": "おうえんポケモン",
     "types": [
       "electric"
     ],
@@ -6369,8 +6680,9 @@
   },
   {
     "id": 312,
-    "name": "マイナン",
+    "nameJa": "マイナン",
     "nameEn": "Minun",
+    "genus": "おうえんポケモン",
     "types": [
       "electric"
     ],
@@ -6389,8 +6701,9 @@
   },
   {
     "id": 313,
-    "name": "バルビート",
+    "nameJa": "バルビート",
     "nameEn": "Volbeat",
+    "genus": "ほたるポケモン",
     "types": [
       "bug"
     ],
@@ -6409,8 +6722,9 @@
   },
   {
     "id": 314,
-    "name": "イルミーゼ",
+    "nameJa": "イルミーゼ",
     "nameEn": "Illumise",
+    "genus": "ほたるポケモン",
     "types": [
       "bug"
     ],
@@ -6429,8 +6743,9 @@
   },
   {
     "id": 315,
-    "name": "ロゼリア",
+    "nameJa": "ロゼリア",
     "nameEn": "Roselia",
+    "genus": "いばらポケモン",
     "types": [
       "grass",
       "poison"
@@ -6450,8 +6765,9 @@
   },
   {
     "id": 316,
-    "name": "ゴクリン",
+    "nameJa": "ゴクリン",
     "nameEn": "Gulpin",
+    "genus": "いぶくろポケモン",
     "types": [
       "poison"
     ],
@@ -6470,8 +6786,9 @@
   },
   {
     "id": 317,
-    "name": "マルノーム",
+    "nameJa": "マルノーム",
     "nameEn": "Swalot",
+    "genus": "どくぶくろポケモン",
     "types": [
       "poison"
     ],
@@ -6490,8 +6807,9 @@
   },
   {
     "id": 318,
-    "name": "キバニア",
+    "nameJa": "キバニア",
     "nameEn": "Carvanha",
+    "genus": "どうもうポケモン",
     "types": [
       "water",
       "dark"
@@ -6511,8 +6829,9 @@
   },
   {
     "id": 319,
-    "name": "サメハダー",
+    "nameJa": "サメハダー",
     "nameEn": "Sharpedo",
+    "genus": "きょうぼうポケモン",
     "types": [
       "water",
       "dark"
@@ -6532,8 +6851,9 @@
   },
   {
     "id": 320,
-    "name": "ホエルコ",
+    "nameJa": "ホエルコ",
     "nameEn": "Wailmer",
+    "genus": "たまくじらポケモン",
     "types": [
       "water"
     ],
@@ -6552,8 +6872,9 @@
   },
   {
     "id": 321,
-    "name": "ホエルオー",
+    "nameJa": "ホエルオー",
     "nameEn": "Wailord",
+    "genus": "うきくじらポケモン",
     "types": [
       "water"
     ],
@@ -6572,8 +6893,9 @@
   },
   {
     "id": 322,
-    "name": "ドンメル",
+    "nameJa": "ドンメル",
     "nameEn": "Numel",
+    "genus": "どんかんポケモン",
     "types": [
       "fire",
       "ground"
@@ -6593,8 +6915,9 @@
   },
   {
     "id": 323,
-    "name": "バクーダ",
+    "nameJa": "バクーダ",
     "nameEn": "Camerupt",
+    "genus": "ふんかポケモン",
     "types": [
       "fire",
       "ground"
@@ -6614,8 +6937,9 @@
   },
   {
     "id": 324,
-    "name": "コータス",
+    "nameJa": "コータス",
     "nameEn": "Torkoal",
+    "genus": "せきたんポケモン",
     "types": [
       "fire"
     ],
@@ -6634,8 +6958,9 @@
   },
   {
     "id": 325,
-    "name": "バネブー",
+    "nameJa": "バネブー",
     "nameEn": "Spoink",
+    "genus": "とびはねポケモン",
     "types": [
       "psychic"
     ],
@@ -6654,8 +6979,9 @@
   },
   {
     "id": 326,
-    "name": "ブーピッグ",
+    "nameJa": "ブーピッグ",
     "nameEn": "Grumpig",
+    "genus": "あやつりポケモン",
     "types": [
       "psychic"
     ],
@@ -6674,8 +7000,9 @@
   },
   {
     "id": 327,
-    "name": "パッチール",
+    "nameJa": "パッチール",
     "nameEn": "Spinda",
+    "genus": "ぶちパンダポケモン",
     "types": [
       "normal"
     ],
@@ -6694,8 +7021,9 @@
   },
   {
     "id": 328,
-    "name": "ナックラー",
+    "nameJa": "ナックラー",
     "nameEn": "Trapinch",
+    "genus": "ありじごくポケモン",
     "types": [
       "ground"
     ],
@@ -6714,8 +7042,9 @@
   },
   {
     "id": 329,
-    "name": "ビブラーバ",
+    "nameJa": "ビブラーバ",
     "nameEn": "Vibrava",
+    "genus": "しんどうポケモン",
     "types": [
       "ground",
       "dragon"
@@ -6735,8 +7064,9 @@
   },
   {
     "id": 330,
-    "name": "フライゴン",
+    "nameJa": "フライゴン",
     "nameEn": "Flygon",
+    "genus": "せいれいポケモン",
     "types": [
       "ground",
       "dragon"
@@ -6756,8 +7086,9 @@
   },
   {
     "id": 331,
-    "name": "サボネア",
+    "nameJa": "サボネア",
     "nameEn": "Cacnea",
+    "genus": "サボテンポケモン",
     "types": [
       "grass"
     ],
@@ -6776,8 +7107,9 @@
   },
   {
     "id": 332,
-    "name": "ノクタス",
+    "nameJa": "ノクタス",
     "nameEn": "Cacturne",
+    "genus": "カカシぐさポケモン",
     "types": [
       "grass",
       "dark"
@@ -6797,8 +7129,9 @@
   },
   {
     "id": 333,
-    "name": "チルット",
+    "nameJa": "チルット",
     "nameEn": "Swablu",
+    "genus": "わたどりポケモン",
     "types": [
       "normal",
       "flying"
@@ -6818,8 +7151,9 @@
   },
   {
     "id": 334,
-    "name": "チルタリス",
+    "nameJa": "チルタリス",
     "nameEn": "Altaria",
+    "genus": "ハミングポケモン",
     "types": [
       "dragon",
       "flying"
@@ -6839,8 +7173,9 @@
   },
   {
     "id": 335,
-    "name": "ザングース",
+    "nameJa": "ザングース",
     "nameEn": "Zangoose",
+    "genus": "ネコイタチポケモン",
     "types": [
       "normal"
     ],
@@ -6859,8 +7194,9 @@
   },
   {
     "id": 336,
-    "name": "ハブネーク",
+    "nameJa": "ハブネーク",
     "nameEn": "Seviper",
+    "genus": "キバへびポケモン",
     "types": [
       "poison"
     ],
@@ -6879,8 +7215,9 @@
   },
   {
     "id": 337,
-    "name": "ルナトーン",
+    "nameJa": "ルナトーン",
     "nameEn": "Lunatone",
+    "genus": "いんせきポケモン",
     "types": [
       "rock",
       "psychic"
@@ -6900,8 +7237,9 @@
   },
   {
     "id": 338,
-    "name": "ソルロック",
+    "nameJa": "ソルロック",
     "nameEn": "Solrock",
+    "genus": "いんせきポケモン",
     "types": [
       "rock",
       "psychic"
@@ -6921,8 +7259,9 @@
   },
   {
     "id": 339,
-    "name": "ドジョッチ",
+    "nameJa": "ドジョッチ",
     "nameEn": "Barboach",
+    "genus": "ひげうおポケモン",
     "types": [
       "water",
       "ground"
@@ -6942,8 +7281,9 @@
   },
   {
     "id": 340,
-    "name": "ナマズン",
+    "nameJa": "ナマズン",
     "nameEn": "Whiscash",
+    "genus": "ひげうおポケモン",
     "types": [
       "water",
       "ground"
@@ -6963,8 +7303,9 @@
   },
   {
     "id": 341,
-    "name": "ヘイガニ",
+    "nameJa": "ヘイガニ",
     "nameEn": "Corphish",
+    "genus": "ごろつきポケモン",
     "types": [
       "water"
     ],
@@ -6983,8 +7324,9 @@
   },
   {
     "id": 342,
-    "name": "シザリガー",
+    "nameJa": "シザリガー",
     "nameEn": "Crawdaunt",
+    "genus": "ならずものポケモン",
     "types": [
       "water",
       "dark"
@@ -7004,8 +7346,9 @@
   },
   {
     "id": 343,
-    "name": "ヤジロン",
+    "nameJa": "ヤジロン",
     "nameEn": "Baltoy",
+    "genus": "どぐうポケモン",
     "types": [
       "ground",
       "psychic"
@@ -7025,8 +7368,9 @@
   },
   {
     "id": 344,
-    "name": "ネンドール",
+    "nameJa": "ネンドール",
     "nameEn": "Claydol",
+    "genus": "どぐうポケモン",
     "types": [
       "ground",
       "psychic"
@@ -7046,8 +7390,9 @@
   },
   {
     "id": 345,
-    "name": "リリーラ",
+    "nameJa": "リリーラ",
     "nameEn": "Lileep",
+    "genus": "ウミユリポケモン",
     "types": [
       "rock",
       "grass"
@@ -7067,8 +7412,9 @@
   },
   {
     "id": 346,
-    "name": "ユレイドル",
+    "nameJa": "ユレイドル",
     "nameEn": "Cradily",
+    "genus": "いわつぼポケモン",
     "types": [
       "rock",
       "grass"
@@ -7088,8 +7434,9 @@
   },
   {
     "id": 347,
-    "name": "アノプス",
+    "nameJa": "アノプス",
     "nameEn": "Anorith",
+    "genus": "むかしエビポケモン",
     "types": [
       "rock",
       "bug"
@@ -7109,8 +7456,9 @@
   },
   {
     "id": 348,
-    "name": "アーマルド",
+    "nameJa": "アーマルド",
     "nameEn": "Armaldo",
+    "genus": "かっちゅうポケモン",
     "types": [
       "rock",
       "bug"
@@ -7130,8 +7478,9 @@
   },
   {
     "id": 349,
-    "name": "ヒンバス",
+    "nameJa": "ヒンバス",
     "nameEn": "Feebas",
+    "genus": "さかなポケモン",
     "types": [
       "water"
     ],
@@ -7150,8 +7499,9 @@
   },
   {
     "id": 350,
-    "name": "ミロカロス",
+    "nameJa": "ミロカロス",
     "nameEn": "Milotic",
+    "genus": "いつくしみポケモン",
     "types": [
       "water"
     ],
@@ -7170,8 +7520,9 @@
   },
   {
     "id": 351,
-    "name": "ポワルン",
+    "nameJa": "ポワルン",
     "nameEn": "Castform",
+    "genus": "てんきポケモン",
     "types": [
       "normal"
     ],
@@ -7190,8 +7541,9 @@
   },
   {
     "id": 352,
-    "name": "カクレオン",
+    "nameJa": "カクレオン",
     "nameEn": "Kecleon",
+    "genus": "いろへんげポケモン",
     "types": [
       "normal"
     ],
@@ -7210,8 +7562,9 @@
   },
   {
     "id": 353,
-    "name": "カゲボウズ",
+    "nameJa": "カゲボウズ",
     "nameEn": "Shuppet",
+    "genus": "にんぎょうポケモン",
     "types": [
       "ghost"
     ],
@@ -7230,8 +7583,9 @@
   },
   {
     "id": 354,
-    "name": "ジュペッタ",
+    "nameJa": "ジュペッタ",
     "nameEn": "Banette",
+    "genus": "ぬいぐるみポケモン",
     "types": [
       "ghost"
     ],
@@ -7250,8 +7604,9 @@
   },
   {
     "id": 355,
-    "name": "ヨマワル",
+    "nameJa": "ヨマワル",
     "nameEn": "Duskull",
+    "genus": "おむかえポケモン",
     "types": [
       "ghost"
     ],
@@ -7270,8 +7625,9 @@
   },
   {
     "id": 356,
-    "name": "サマヨール",
+    "nameJa": "サマヨール",
     "nameEn": "Dusclops",
+    "genus": "てまねきポケモン",
     "types": [
       "ghost"
     ],
@@ -7290,8 +7646,9 @@
   },
   {
     "id": 357,
-    "name": "トロピウス",
+    "nameJa": "トロピウス",
     "nameEn": "Tropius",
+    "genus": "フルーツポケモン",
     "types": [
       "grass",
       "flying"
@@ -7311,8 +7668,9 @@
   },
   {
     "id": 358,
-    "name": "チリーン",
+    "nameJa": "チリーン",
     "nameEn": "Chimecho",
+    "genus": "ふうりんポケモン",
     "types": [
       "psychic"
     ],
@@ -7331,8 +7689,9 @@
   },
   {
     "id": 359,
-    "name": "アブソル",
+    "nameJa": "アブソル",
     "nameEn": "Absol",
+    "genus": "わざわいポケモン",
     "types": [
       "dark"
     ],
@@ -7351,8 +7710,9 @@
   },
   {
     "id": 360,
-    "name": "ソーナノ",
+    "nameJa": "ソーナノ",
     "nameEn": "Wynaut",
+    "genus": "ほがらかポケモン",
     "types": [
       "psychic"
     ],
@@ -7371,8 +7731,9 @@
   },
   {
     "id": 361,
-    "name": "ユキワラシ",
+    "nameJa": "ユキワラシ",
     "nameEn": "Snorunt",
+    "genus": "ゆきかさポケモン",
     "types": [
       "ice"
     ],
@@ -7391,8 +7752,9 @@
   },
   {
     "id": 362,
-    "name": "オニゴーリ",
+    "nameJa": "オニゴーリ",
     "nameEn": "Glalie",
+    "genus": "がんめんポケモン",
     "types": [
       "ice"
     ],
@@ -7411,8 +7773,9 @@
   },
   {
     "id": 363,
-    "name": "タマザラシ",
+    "nameJa": "タマザラシ",
     "nameEn": "Spheal",
+    "genus": "てたたきポケモン",
     "types": [
       "ice",
       "water"
@@ -7432,8 +7795,9 @@
   },
   {
     "id": 364,
-    "name": "トドグラー",
+    "nameJa": "トドグラー",
     "nameEn": "Sealeo",
+    "genus": "たままわしポケモン",
     "types": [
       "ice",
       "water"
@@ -7453,8 +7817,9 @@
   },
   {
     "id": 365,
-    "name": "トドゼルガ",
+    "nameJa": "トドゼルガ",
     "nameEn": "Walrein",
+    "genus": "こおりわりポケモン",
     "types": [
       "ice",
       "water"
@@ -7474,8 +7839,9 @@
   },
   {
     "id": 366,
-    "name": "パールル",
+    "nameJa": "パールル",
     "nameEn": "Clamperl",
+    "genus": "２まいがいポケモン",
     "types": [
       "water"
     ],
@@ -7494,8 +7860,9 @@
   },
   {
     "id": 367,
-    "name": "ハンテール",
+    "nameJa": "ハンテール",
     "nameEn": "Huntail",
+    "genus": "しんかいポケモン",
     "types": [
       "water"
     ],
@@ -7514,8 +7881,9 @@
   },
   {
     "id": 368,
-    "name": "サクラビス",
+    "nameJa": "サクラビス",
     "nameEn": "Gorebyss",
+    "genus": "なんかいポケモン",
     "types": [
       "water"
     ],
@@ -7534,8 +7902,9 @@
   },
   {
     "id": 369,
-    "name": "ジーランス",
+    "nameJa": "ジーランス",
     "nameEn": "Relicanth",
+    "genus": "ちょうじゅポケモン",
     "types": [
       "water",
       "rock"
@@ -7555,8 +7924,9 @@
   },
   {
     "id": 370,
-    "name": "ラブカス",
+    "nameJa": "ラブカス",
     "nameEn": "Luvdisc",
+    "genus": "ランデブーポケモン",
     "types": [
       "water"
     ],
@@ -7575,8 +7945,9 @@
   },
   {
     "id": 371,
-    "name": "タツベイ",
+    "nameJa": "タツベイ",
     "nameEn": "Bagon",
+    "genus": "いしあたまポケモン",
     "types": [
       "dragon"
     ],
@@ -7595,8 +7966,9 @@
   },
   {
     "id": 372,
-    "name": "コモルー",
+    "nameJa": "コモルー",
     "nameEn": "Shelgon",
+    "genus": "にんたいポケモン",
     "types": [
       "dragon"
     ],
@@ -7615,8 +7987,9 @@
   },
   {
     "id": 373,
-    "name": "ボーマンダ",
+    "nameJa": "ボーマンダ",
     "nameEn": "Salamence",
+    "genus": "ドラゴンポケモン",
     "types": [
       "dragon",
       "flying"
@@ -7636,8 +8009,9 @@
   },
   {
     "id": 374,
-    "name": "ダンバル",
+    "nameJa": "ダンバル",
     "nameEn": "Beldum",
+    "genus": "てっきゅうポケモン",
     "types": [
       "steel",
       "psychic"
@@ -7657,8 +8031,9 @@
   },
   {
     "id": 375,
-    "name": "メタング",
+    "nameJa": "メタング",
     "nameEn": "Metang",
+    "genus": "てつツメポケモン",
     "types": [
       "steel",
       "psychic"
@@ -7678,8 +8053,9 @@
   },
   {
     "id": 376,
-    "name": "メタグロス",
+    "nameJa": "メタグロス",
     "nameEn": "Metagross",
+    "genus": "てつあしポケモン",
     "types": [
       "steel",
       "psychic"
@@ -7699,8 +8075,9 @@
   },
   {
     "id": 377,
-    "name": "レジロック",
+    "nameJa": "レジロック",
     "nameEn": "Regirock",
+    "genus": "いわやまポケモン",
     "types": [
       "rock"
     ],
@@ -7719,8 +8096,9 @@
   },
   {
     "id": 378,
-    "name": "レジアイス",
+    "nameJa": "レジアイス",
     "nameEn": "Regice",
+    "genus": "ひょうざんポケモン",
     "types": [
       "ice"
     ],
@@ -7739,8 +8117,9 @@
   },
   {
     "id": 379,
-    "name": "レジスチル",
+    "nameJa": "レジスチル",
     "nameEn": "Registeel",
+    "genus": "くろがねポケモン",
     "types": [
       "steel"
     ],
@@ -7759,8 +8138,9 @@
   },
   {
     "id": 380,
-    "name": "ラティアス",
+    "nameJa": "ラティアス",
     "nameEn": "Latias",
+    "genus": "むげんポケモン",
     "types": [
       "dragon",
       "psychic"
@@ -7780,8 +8160,9 @@
   },
   {
     "id": 381,
-    "name": "ラティオス",
+    "nameJa": "ラティオス",
     "nameEn": "Latios",
+    "genus": "むげんポケモン",
     "types": [
       "dragon",
       "psychic"
@@ -7801,8 +8182,9 @@
   },
   {
     "id": 382,
-    "name": "カイオーガ",
+    "nameJa": "カイオーガ",
     "nameEn": "Kyogre",
+    "genus": "かいていポケモン",
     "types": [
       "water"
     ],
@@ -7821,8 +8203,9 @@
   },
   {
     "id": 383,
-    "name": "グラードン",
+    "nameJa": "グラードン",
     "nameEn": "Groudon",
+    "genus": "たいりくポケモン",
     "types": [
       "ground"
     ],
@@ -7841,8 +8224,9 @@
   },
   {
     "id": 384,
-    "name": "レックウザ",
+    "nameJa": "レックウザ",
     "nameEn": "Rayquaza",
+    "genus": "てんくうポケモン",
     "types": [
       "dragon",
       "flying"
@@ -7862,8 +8246,9 @@
   },
   {
     "id": 385,
-    "name": "ジラーチ",
+    "nameJa": "ジラーチ",
     "nameEn": "Jirachi",
+    "genus": "ねがいごとポケモン",
     "types": [
       "steel",
       "psychic"
@@ -7883,8 +8268,9 @@
   },
   {
     "id": 386,
-    "name": "デオキシス",
+    "nameJa": "デオキシス",
     "nameEn": "Deoxys",
+    "genus": "ＤＮＡポケモン",
     "types": [
       "psychic"
     ],
@@ -7903,8 +8289,9 @@
   },
   {
     "id": 387,
-    "name": "ナエトル",
+    "nameJa": "ナエトル",
     "nameEn": "Turtwig",
+    "genus": "わかばポケモン",
     "types": [
       "grass"
     ],
@@ -7923,8 +8310,9 @@
   },
   {
     "id": 388,
-    "name": "ハヤシガメ",
+    "nameJa": "ハヤシガメ",
     "nameEn": "Grotle",
+    "genus": "こだちポケモン",
     "types": [
       "grass"
     ],
@@ -7943,8 +8331,9 @@
   },
   {
     "id": 389,
-    "name": "ドダイトス",
+    "nameJa": "ドダイトス",
     "nameEn": "Torterra",
+    "genus": "たいりくポケモン",
     "types": [
       "grass",
       "ground"
@@ -7964,8 +8353,9 @@
   },
   {
     "id": 390,
-    "name": "ヒコザル",
+    "nameJa": "ヒコザル",
     "nameEn": "Chimchar",
+    "genus": "こざるポケモン",
     "types": [
       "fire"
     ],
@@ -7984,8 +8374,9 @@
   },
   {
     "id": 391,
-    "name": "モウカザル",
+    "nameJa": "モウカザル",
     "nameEn": "Monferno",
+    "genus": "やんちゃポケモン",
     "types": [
       "fire",
       "fighting"
@@ -8005,8 +8396,9 @@
   },
   {
     "id": 392,
-    "name": "ゴウカザル",
+    "nameJa": "ゴウカザル",
     "nameEn": "Infernape",
+    "genus": "かえんポケモン",
     "types": [
       "fire",
       "fighting"
@@ -8026,8 +8418,9 @@
   },
   {
     "id": 393,
-    "name": "ポッチャマ",
+    "nameJa": "ポッチャマ",
     "nameEn": "Piplup",
+    "genus": "ペンギンポケモン",
     "types": [
       "water"
     ],
@@ -8046,8 +8439,9 @@
   },
   {
     "id": 394,
-    "name": "ポッタイシ",
+    "nameJa": "ポッタイシ",
     "nameEn": "Prinplup",
+    "genus": "ペンギンポケモン",
     "types": [
       "water"
     ],
@@ -8066,8 +8460,9 @@
   },
   {
     "id": 395,
-    "name": "エンペルト",
+    "nameJa": "エンペルト",
     "nameEn": "Empoleon",
+    "genus": "こうていポケモン",
     "types": [
       "water",
       "steel"
@@ -8087,8 +8482,9 @@
   },
   {
     "id": 396,
-    "name": "ムックル",
+    "nameJa": "ムックル",
     "nameEn": "Starly",
+    "genus": "むくどりポケモン",
     "types": [
       "normal",
       "flying"
@@ -8108,8 +8504,9 @@
   },
   {
     "id": 397,
-    "name": "ムクバード",
+    "nameJa": "ムクバード",
     "nameEn": "Staravia",
+    "genus": "むくどりポケモン",
     "types": [
       "normal",
       "flying"
@@ -8129,8 +8526,9 @@
   },
   {
     "id": 398,
-    "name": "ムクホーク",
+    "nameJa": "ムクホーク",
     "nameEn": "Staraptor",
+    "genus": "もうきんポケモン",
     "types": [
       "normal",
       "flying"
@@ -8150,8 +8548,9 @@
   },
   {
     "id": 399,
-    "name": "ビッパ",
+    "nameJa": "ビッパ",
     "nameEn": "Bidoof",
+    "genus": "まるねずみポケモン",
     "types": [
       "normal"
     ],
@@ -8170,8 +8569,9 @@
   },
   {
     "id": 400,
-    "name": "ビーダル",
+    "nameJa": "ビーダル",
     "nameEn": "Bibarel",
+    "genus": "ビーバーポケモン",
     "types": [
       "normal",
       "water"
@@ -8191,8 +8591,9 @@
   },
   {
     "id": 401,
-    "name": "コロボーシ",
+    "nameJa": "コロボーシ",
     "nameEn": "Kricketot",
+    "genus": "こおろぎポケモン",
     "types": [
       "bug"
     ],
@@ -8211,8 +8612,9 @@
   },
   {
     "id": 402,
-    "name": "コロトック",
+    "nameJa": "コロトック",
     "nameEn": "Kricketune",
+    "genus": "こおろぎポケモン",
     "types": [
       "bug"
     ],
@@ -8231,8 +8633,9 @@
   },
   {
     "id": 403,
-    "name": "コリンク",
+    "nameJa": "コリンク",
     "nameEn": "Shinx",
+    "genus": "せんこうポケモン",
     "types": [
       "electric"
     ],
@@ -8251,8 +8654,9 @@
   },
   {
     "id": 404,
-    "name": "ルクシオ",
+    "nameJa": "ルクシオ",
     "nameEn": "Luxio",
+    "genus": "でんこうポケモン",
     "types": [
       "electric"
     ],
@@ -8271,8 +8675,9 @@
   },
   {
     "id": 405,
-    "name": "レントラー",
+    "nameJa": "レントラー",
     "nameEn": "Luxray",
+    "genus": "がんこうポケモン",
     "types": [
       "electric"
     ],
@@ -8291,8 +8696,9 @@
   },
   {
     "id": 406,
-    "name": "スボミー",
+    "nameJa": "スボミー",
     "nameEn": "Budew",
+    "genus": "つぼみポケモン",
     "types": [
       "grass",
       "poison"
@@ -8312,8 +8718,9 @@
   },
   {
     "id": 407,
-    "name": "ロズレイド",
+    "nameJa": "ロズレイド",
     "nameEn": "Roserade",
+    "genus": "ブーケポケモン",
     "types": [
       "grass",
       "poison"
@@ -8333,8 +8740,9 @@
   },
   {
     "id": 408,
-    "name": "ズガイドス",
+    "nameJa": "ズガイドス",
     "nameEn": "Cranidos",
+    "genus": "ずつきポケモン",
     "types": [
       "rock"
     ],
@@ -8353,8 +8761,9 @@
   },
   {
     "id": 409,
-    "name": "ラムパルド",
+    "nameJa": "ラムパルド",
     "nameEn": "Rampardos",
+    "genus": "ずつきポケモン",
     "types": [
       "rock"
     ],
@@ -8373,8 +8782,9 @@
   },
   {
     "id": 410,
-    "name": "タテトプス",
+    "nameJa": "タテトプス",
     "nameEn": "Shieldon",
+    "genus": "シールドポケモン",
     "types": [
       "rock",
       "steel"
@@ -8394,8 +8804,9 @@
   },
   {
     "id": 411,
-    "name": "トリデプス",
+    "nameJa": "トリデプス",
     "nameEn": "Bastiodon",
+    "genus": "シールドポケモン",
     "types": [
       "rock",
       "steel"
@@ -8415,8 +8826,9 @@
   },
   {
     "id": 412,
-    "name": "ミノムッチ",
+    "nameJa": "ミノムッチ",
     "nameEn": "Burmy",
+    "genus": "みのむしポケモン",
     "types": [
       "bug"
     ],
@@ -8435,8 +8847,9 @@
   },
   {
     "id": 413,
-    "name": "ミノマダム",
+    "nameJa": "ミノマダム",
     "nameEn": "Wormadam",
+    "genus": "みのむしポケモン",
     "types": [
       "bug",
       "grass"
@@ -8456,8 +8869,9 @@
   },
   {
     "id": 414,
-    "name": "ガーメイル",
+    "nameJa": "ガーメイル",
     "nameEn": "Mothim",
+    "genus": "ミノガポケモン",
     "types": [
       "bug",
       "flying"
@@ -8477,8 +8891,9 @@
   },
   {
     "id": 415,
-    "name": "ミツハニー",
+    "nameJa": "ミツハニー",
     "nameEn": "Combee",
+    "genus": "はちのこポケモン",
     "types": [
       "bug",
       "flying"
@@ -8498,8 +8913,9 @@
   },
   {
     "id": 416,
-    "name": "ビークイン",
+    "nameJa": "ビークイン",
     "nameEn": "Vespiquen",
+    "genus": "はちのすポケモン",
     "types": [
       "bug",
       "flying"
@@ -8519,8 +8935,9 @@
   },
   {
     "id": 417,
-    "name": "パチリス",
+    "nameJa": "パチリス",
     "nameEn": "Pachirisu",
+    "genus": "でんきりすポケモン",
     "types": [
       "electric"
     ],
@@ -8539,8 +8956,9 @@
   },
   {
     "id": 418,
-    "name": "ブイゼル",
+    "nameJa": "ブイゼル",
     "nameEn": "Buizel",
+    "genus": "うみイタチポケモン",
     "types": [
       "water"
     ],
@@ -8559,8 +8977,9 @@
   },
   {
     "id": 419,
-    "name": "フローゼル",
+    "nameJa": "フローゼル",
     "nameEn": "Floatzel",
+    "genus": "うみイタチポケモン",
     "types": [
       "water"
     ],
@@ -8579,8 +8998,9 @@
   },
   {
     "id": 420,
-    "name": "チェリンボ",
+    "nameJa": "チェリンボ",
     "nameEn": "Cherubi",
+    "genus": "さくらんぼポケモン",
     "types": [
       "grass"
     ],
@@ -8599,8 +9019,9 @@
   },
   {
     "id": 421,
-    "name": "チェリム",
+    "nameJa": "チェリム",
     "nameEn": "Cherrim",
+    "genus": "サクラポケモン",
     "types": [
       "grass"
     ],
@@ -8619,8 +9040,9 @@
   },
   {
     "id": 422,
-    "name": "カラナクシ",
+    "nameJa": "カラナクシ",
     "nameEn": "Shellos",
+    "genus": "ウミウシポケモン",
     "types": [
       "water"
     ],
@@ -8639,8 +9061,9 @@
   },
   {
     "id": 423,
-    "name": "トリトドン",
+    "nameJa": "トリトドン",
     "nameEn": "Gastrodon",
+    "genus": "ウミウシポケモン",
     "types": [
       "water",
       "ground"
@@ -8660,8 +9083,9 @@
   },
   {
     "id": 424,
-    "name": "エテボース",
+    "nameJa": "エテボース",
     "nameEn": "Ambipom",
+    "genus": "おながポケモン",
     "types": [
       "normal"
     ],
@@ -8680,8 +9104,9 @@
   },
   {
     "id": 425,
-    "name": "フワンテ",
+    "nameJa": "フワンテ",
     "nameEn": "Drifloon",
+    "genus": "ふうせんポケモン",
     "types": [
       "ghost",
       "flying"
@@ -8701,8 +9126,9 @@
   },
   {
     "id": 426,
-    "name": "フワライド",
+    "nameJa": "フワライド",
     "nameEn": "Drifblim",
+    "genus": "ききゅうポケモン",
     "types": [
       "ghost",
       "flying"
@@ -8722,8 +9148,9 @@
   },
   {
     "id": 427,
-    "name": "ミミロル",
+    "nameJa": "ミミロル",
     "nameEn": "Buneary",
+    "genus": "うさぎポケモン",
     "types": [
       "normal"
     ],
@@ -8742,8 +9169,9 @@
   },
   {
     "id": 428,
-    "name": "ミミロップ",
+    "nameJa": "ミミロップ",
     "nameEn": "Lopunny",
+    "genus": "うさぎポケモン",
     "types": [
       "normal"
     ],
@@ -8762,8 +9190,9 @@
   },
   {
     "id": 429,
-    "name": "ムウマージ",
+    "nameJa": "ムウマージ",
     "nameEn": "Mismagius",
+    "genus": "マジカルポケモン",
     "types": [
       "ghost"
     ],
@@ -8782,8 +9211,9 @@
   },
   {
     "id": 430,
-    "name": "ドンカラス",
+    "nameJa": "ドンカラス",
     "nameEn": "Honchkrow",
+    "genus": "おおボスポケモン",
     "types": [
       "dark",
       "flying"
@@ -8803,8 +9233,9 @@
   },
   {
     "id": 431,
-    "name": "ニャルマー",
+    "nameJa": "ニャルマー",
     "nameEn": "Glameow",
+    "genus": "ねこかぶりポケモン",
     "types": [
       "normal"
     ],
@@ -8823,8 +9254,9 @@
   },
   {
     "id": 432,
-    "name": "ブニャット",
+    "nameJa": "ブニャット",
     "nameEn": "Purugly",
+    "genus": "とらねこポケモン",
     "types": [
       "normal"
     ],
@@ -8843,8 +9275,9 @@
   },
   {
     "id": 433,
-    "name": "リーシャン",
+    "nameJa": "リーシャン",
     "nameEn": "Chingling",
+    "genus": "すずポケモン",
     "types": [
       "psychic"
     ],
@@ -8863,8 +9296,9 @@
   },
   {
     "id": 434,
-    "name": "スカンプー",
+    "nameJa": "スカンプー",
     "nameEn": "Stunky",
+    "genus": "スカンクポケモン",
     "types": [
       "poison",
       "dark"
@@ -8884,8 +9318,9 @@
   },
   {
     "id": 435,
-    "name": "スカタンク",
+    "nameJa": "スカタンク",
     "nameEn": "Skuntank",
+    "genus": "スカンクポケモン",
     "types": [
       "poison",
       "dark"
@@ -8905,8 +9340,9 @@
   },
   {
     "id": 436,
-    "name": "ドーミラー",
+    "nameJa": "ドーミラー",
     "nameEn": "Bronzor",
+    "genus": "せいどうポケモン",
     "types": [
       "steel",
       "psychic"
@@ -8926,8 +9362,9 @@
   },
   {
     "id": 437,
-    "name": "ドータクン",
+    "nameJa": "ドータクン",
     "nameEn": "Bronzong",
+    "genus": "どうたくポケモン",
     "types": [
       "steel",
       "psychic"
@@ -8947,8 +9384,9 @@
   },
   {
     "id": 438,
-    "name": "ウソハチ",
+    "nameJa": "ウソハチ",
     "nameEn": "Bonsly",
+    "genus": "ぼんさいポケモン",
     "types": [
       "rock"
     ],
@@ -8967,8 +9405,9 @@
   },
   {
     "id": 439,
-    "name": "マネネ",
+    "nameJa": "マネネ",
     "nameEn": "Mime Jr.",
+    "genus": "マイムポケモン",
     "types": [
       "psychic",
       "fairy"
@@ -8988,8 +9427,9 @@
   },
   {
     "id": 440,
-    "name": "ピンプク",
+    "nameJa": "ピンプク",
     "nameEn": "Happiny",
+    "genus": "ままごとポケモン",
     "types": [
       "normal"
     ],
@@ -9008,8 +9448,9 @@
   },
   {
     "id": 441,
-    "name": "ペラップ",
+    "nameJa": "ペラップ",
     "nameEn": "Chatot",
+    "genus": "おんぷポケモン",
     "types": [
       "normal",
       "flying"
@@ -9029,8 +9470,9 @@
   },
   {
     "id": 442,
-    "name": "ミカルゲ",
+    "nameJa": "ミカルゲ",
     "nameEn": "Spiritomb",
+    "genus": "ふういんポケモン",
     "types": [
       "ghost",
       "dark"
@@ -9050,8 +9492,9 @@
   },
   {
     "id": 443,
-    "name": "フカマル",
+    "nameJa": "フカマル",
     "nameEn": "Gible",
+    "genus": "りくザメポケモン",
     "types": [
       "dragon",
       "ground"
@@ -9071,8 +9514,9 @@
   },
   {
     "id": 444,
-    "name": "ガバイト",
+    "nameJa": "ガバイト",
     "nameEn": "Gabite",
+    "genus": "ほらあなポケモン",
     "types": [
       "dragon",
       "ground"
@@ -9092,8 +9536,9 @@
   },
   {
     "id": 445,
-    "name": "ガブリアス",
+    "nameJa": "ガブリアス",
     "nameEn": "Garchomp",
+    "genus": "マッハポケモン",
     "types": [
       "dragon",
       "ground"
@@ -9113,8 +9558,9 @@
   },
   {
     "id": 446,
-    "name": "ゴンベ",
+    "nameJa": "ゴンベ",
     "nameEn": "Munchlax",
+    "genus": "おおぐいポケモン",
     "types": [
       "normal"
     ],
@@ -9133,8 +9579,9 @@
   },
   {
     "id": 447,
-    "name": "リオル",
+    "nameJa": "リオル",
     "nameEn": "Riolu",
+    "genus": "はもんポケモン",
     "types": [
       "fighting"
     ],
@@ -9153,8 +9600,9 @@
   },
   {
     "id": 448,
-    "name": "ルカリオ",
+    "nameJa": "ルカリオ",
     "nameEn": "Lucario",
+    "genus": "はどうポケモン",
     "types": [
       "fighting",
       "steel"
@@ -9174,8 +9622,9 @@
   },
   {
     "id": 449,
-    "name": "ヒポポタス",
+    "nameJa": "ヒポポタス",
     "nameEn": "Hippopotas",
+    "genus": "カバポケモン",
     "types": [
       "ground"
     ],
@@ -9194,8 +9643,9 @@
   },
   {
     "id": 450,
-    "name": "カバルドン",
+    "nameJa": "カバルドン",
     "nameEn": "Hippowdon",
+    "genus": "じゅうりょうポケモン",
     "types": [
       "ground"
     ],
@@ -9214,8 +9664,9 @@
   },
   {
     "id": 451,
-    "name": "スコルピ",
+    "nameJa": "スコルピ",
     "nameEn": "Skorupi",
+    "genus": "さそりポケモン",
     "types": [
       "poison",
       "bug"
@@ -9235,8 +9686,9 @@
   },
   {
     "id": 452,
-    "name": "ドラピオン",
+    "nameJa": "ドラピオン",
     "nameEn": "Drapion",
+    "genus": "ばけさそりポケモン",
     "types": [
       "poison",
       "dark"
@@ -9256,8 +9708,9 @@
   },
   {
     "id": 453,
-    "name": "グレッグル",
+    "nameJa": "グレッグル",
     "nameEn": "Croagunk",
+    "genus": "どくづきポケモン",
     "types": [
       "poison",
       "fighting"
@@ -9277,8 +9730,9 @@
   },
   {
     "id": 454,
-    "name": "ドクロッグ",
+    "nameJa": "ドクロッグ",
     "nameEn": "Toxicroak",
+    "genus": "どくづきポケモン",
     "types": [
       "poison",
       "fighting"
@@ -9298,8 +9752,9 @@
   },
   {
     "id": 455,
-    "name": "マスキッパ",
+    "nameJa": "マスキッパ",
     "nameEn": "Carnivine",
+    "genus": "むしとりポケモン",
     "types": [
       "grass"
     ],
@@ -9318,8 +9773,9 @@
   },
   {
     "id": 456,
-    "name": "ケイコウオ",
+    "nameJa": "ケイコウオ",
     "nameEn": "Finneon",
+    "genus": "はねうおポケモン",
     "types": [
       "water"
     ],
@@ -9338,8 +9794,9 @@
   },
   {
     "id": 457,
-    "name": "ネオラント",
+    "nameJa": "ネオラント",
     "nameEn": "Lumineon",
+    "genus": "ネオンポケモン",
     "types": [
       "water"
     ],
@@ -9358,8 +9815,9 @@
   },
   {
     "id": 458,
-    "name": "タマンタ",
+    "nameJa": "タマンタ",
     "nameEn": "Mantyke",
+    "genus": "カイトポケモン",
     "types": [
       "water",
       "flying"
@@ -9379,8 +9837,9 @@
   },
   {
     "id": 459,
-    "name": "ユキカブリ",
+    "nameJa": "ユキカブリ",
     "nameEn": "Snover",
+    "genus": "じゅひょうポケモン",
     "types": [
       "grass",
       "ice"
@@ -9400,8 +9859,9 @@
   },
   {
     "id": 460,
-    "name": "ユキノオー",
+    "nameJa": "ユキノオー",
     "nameEn": "Abomasnow",
+    "genus": "じゅひょうポケモン",
     "types": [
       "grass",
       "ice"
@@ -9421,8 +9881,9 @@
   },
   {
     "id": 461,
-    "name": "マニューラ",
+    "nameJa": "マニューラ",
     "nameEn": "Weavile",
+    "genus": "かぎづめポケモン",
     "types": [
       "dark",
       "ice"
@@ -9442,8 +9903,9 @@
   },
   {
     "id": 462,
-    "name": "ジバコイル",
+    "nameJa": "ジバコイル",
     "nameEn": "Magnezone",
+    "genus": "じばポケモン",
     "types": [
       "electric",
       "steel"
@@ -9463,8 +9925,9 @@
   },
   {
     "id": 463,
-    "name": "ベロベルト",
+    "nameJa": "ベロベルト",
     "nameEn": "Lickilicky",
+    "genus": "なめまわしポケモン",
     "types": [
       "normal"
     ],
@@ -9483,8 +9946,9 @@
   },
   {
     "id": 464,
-    "name": "ドサイドン",
+    "nameJa": "ドサイドン",
     "nameEn": "Rhyperior",
+    "genus": "ドリルポケモン",
     "types": [
       "ground",
       "rock"
@@ -9504,8 +9968,9 @@
   },
   {
     "id": 465,
-    "name": "モジャンボ",
+    "nameJa": "モジャンボ",
     "nameEn": "Tangrowth",
+    "genus": "ツルじょうポケモン",
     "types": [
       "grass"
     ],
@@ -9524,8 +9989,9 @@
   },
   {
     "id": 466,
-    "name": "エレキブル",
+    "nameJa": "エレキブル",
     "nameEn": "Electivire",
+    "genus": "らいでんポケモン",
     "types": [
       "electric"
     ],
@@ -9544,8 +10010,9 @@
   },
   {
     "id": 467,
-    "name": "ブーバーン",
+    "nameJa": "ブーバーン",
     "nameEn": "Magmortar",
+    "genus": "ばくえんポケモン",
     "types": [
       "fire"
     ],
@@ -9564,8 +10031,9 @@
   },
   {
     "id": 468,
-    "name": "トゲキッス",
+    "nameJa": "トゲキッス",
     "nameEn": "Togekiss",
+    "genus": "しゅくふくポケモン",
     "types": [
       "fairy",
       "flying"
@@ -9585,8 +10053,9 @@
   },
   {
     "id": 469,
-    "name": "メガヤンマ",
+    "nameJa": "メガヤンマ",
     "nameEn": "Yanmega",
+    "genus": "オニトンボポケモン",
     "types": [
       "bug",
       "flying"
@@ -9606,8 +10075,9 @@
   },
   {
     "id": 470,
-    "name": "リーフィア",
+    "nameJa": "リーフィア",
     "nameEn": "Leafeon",
+    "genus": "しんりょくポケモン",
     "types": [
       "grass"
     ],
@@ -9626,8 +10096,9 @@
   },
   {
     "id": 471,
-    "name": "グレイシア",
+    "nameJa": "グレイシア",
     "nameEn": "Glaceon",
+    "genus": "しんせつポケモン",
     "types": [
       "ice"
     ],
@@ -9646,8 +10117,9 @@
   },
   {
     "id": 472,
-    "name": "グライオン",
+    "nameJa": "グライオン",
     "nameEn": "Gliscor",
+    "genus": "キバさそりポケモン",
     "types": [
       "ground",
       "flying"
@@ -9667,8 +10139,9 @@
   },
   {
     "id": 473,
-    "name": "マンムー",
+    "nameJa": "マンムー",
     "nameEn": "Mamoswine",
+    "genus": "２ほんキバポケモン",
     "types": [
       "ice",
       "ground"
@@ -9688,8 +10161,9 @@
   },
   {
     "id": 474,
-    "name": "ポリゴンＺ",
+    "nameJa": "ポリゴンＺ",
     "nameEn": "Porygon-Z",
+    "genus": "バーチャルポケモン",
     "types": [
       "normal"
     ],
@@ -9708,8 +10182,9 @@
   },
   {
     "id": 475,
-    "name": "エルレイド",
+    "nameJa": "エルレイド",
     "nameEn": "Gallade",
+    "genus": "やいばポケモン",
     "types": [
       "psychic",
       "fighting"
@@ -9729,8 +10204,9 @@
   },
   {
     "id": 476,
-    "name": "ダイノーズ",
+    "nameJa": "ダイノーズ",
     "nameEn": "Probopass",
+    "genus": "コンパスポケモン",
     "types": [
       "rock",
       "steel"
@@ -9750,8 +10226,9 @@
   },
   {
     "id": 477,
-    "name": "ヨノワール",
+    "nameJa": "ヨノワール",
     "nameEn": "Dusknoir",
+    "genus": "てづかみポケモン",
     "types": [
       "ghost"
     ],
@@ -9770,8 +10247,9 @@
   },
   {
     "id": 478,
-    "name": "ユキメノコ",
+    "nameJa": "ユキメノコ",
     "nameEn": "Froslass",
+    "genus": "ゆきぐにポケモン",
     "types": [
       "ice",
       "ghost"
@@ -9791,8 +10269,9 @@
   },
   {
     "id": 479,
-    "name": "ロトム",
+    "nameJa": "ロトム",
     "nameEn": "Rotom",
+    "genus": "プラズマポケモン",
     "types": [
       "electric",
       "ghost"
@@ -9812,8 +10291,9 @@
   },
   {
     "id": 480,
-    "name": "ユクシー",
+    "nameJa": "ユクシー",
     "nameEn": "Uxie",
+    "genus": "ちしきポケモン",
     "types": [
       "psychic"
     ],
@@ -9832,8 +10312,9 @@
   },
   {
     "id": 481,
-    "name": "エムリット",
+    "nameJa": "エムリット",
     "nameEn": "Mesprit",
+    "genus": "かんじょうポケモン",
     "types": [
       "psychic"
     ],
@@ -9852,8 +10333,9 @@
   },
   {
     "id": 482,
-    "name": "アグノム",
+    "nameJa": "アグノム",
     "nameEn": "Azelf",
+    "genus": "いしポケモン",
     "types": [
       "psychic"
     ],
@@ -9872,8 +10354,9 @@
   },
   {
     "id": 483,
-    "name": "ディアルガ",
+    "nameJa": "ディアルガ",
     "nameEn": "Dialga",
+    "genus": "じかんポケモン",
     "types": [
       "steel",
       "dragon"
@@ -9893,8 +10376,9 @@
   },
   {
     "id": 484,
-    "name": "パルキア",
+    "nameJa": "パルキア",
     "nameEn": "Palkia",
+    "genus": "くうかんポケモン",
     "types": [
       "water",
       "dragon"
@@ -9914,8 +10398,9 @@
   },
   {
     "id": 485,
-    "name": "ヒードラン",
+    "nameJa": "ヒードラン",
     "nameEn": "Heatran",
+    "genus": "かこうポケモン",
     "types": [
       "fire",
       "steel"
@@ -9935,8 +10420,9 @@
   },
   {
     "id": 486,
-    "name": "レジギガス",
+    "nameJa": "レジギガス",
     "nameEn": "Regigigas",
+    "genus": "きょだいポケモン",
     "types": [
       "normal"
     ],
@@ -9955,8 +10441,9 @@
   },
   {
     "id": 487,
-    "name": "ギラティナ",
+    "nameJa": "ギラティナ",
     "nameEn": "Giratina",
+    "genus": "はんこつポケモン",
     "types": [
       "ghost",
       "dragon"
@@ -9976,8 +10463,9 @@
   },
   {
     "id": 488,
-    "name": "クレセリア",
+    "nameJa": "クレセリア",
     "nameEn": "Cresselia",
+    "genus": "みかづきポケモン",
     "types": [
       "psychic"
     ],
@@ -9996,8 +10484,9 @@
   },
   {
     "id": 489,
-    "name": "フィオネ",
+    "nameJa": "フィオネ",
     "nameEn": "Phione",
+    "genus": "かいようポケモン",
     "types": [
       "water"
     ],
@@ -10016,8 +10505,9 @@
   },
   {
     "id": 490,
-    "name": "マナフィ",
+    "nameJa": "マナフィ",
     "nameEn": "Manaphy",
+    "genus": "かいゆうポケモン",
     "types": [
       "water"
     ],
@@ -10036,8 +10526,9 @@
   },
   {
     "id": 491,
-    "name": "ダークライ",
+    "nameJa": "ダークライ",
     "nameEn": "Darkrai",
+    "genus": "あんこくポケモン",
     "types": [
       "dark"
     ],
@@ -10056,8 +10547,9 @@
   },
   {
     "id": 492,
-    "name": "シェイミ",
+    "nameJa": "シェイミ",
     "nameEn": "Shaymin",
+    "genus": "かんしゃポケモン",
     "types": [
       "grass"
     ],
@@ -10076,8 +10568,9 @@
   },
   {
     "id": 493,
-    "name": "アルセウス",
+    "nameJa": "アルセウス",
     "nameEn": "Arceus",
+    "genus": "そうぞうポケモン",
     "types": [
       "normal"
     ],
@@ -10096,8 +10589,9 @@
   },
   {
     "id": 494,
-    "name": "ビクティニ",
+    "nameJa": "ビクティニ",
     "nameEn": "Victini",
+    "genus": "しょうりポケモン",
     "types": [
       "psychic",
       "fire"
@@ -10117,8 +10611,9 @@
   },
   {
     "id": 495,
-    "name": "ツタージャ",
+    "nameJa": "ツタージャ",
     "nameEn": "Snivy",
+    "genus": "くさへびポケモン",
     "types": [
       "grass"
     ],
@@ -10137,8 +10632,9 @@
   },
   {
     "id": 496,
-    "name": "ジャノビー",
+    "nameJa": "ジャノビー",
     "nameEn": "Servine",
+    "genus": "くさへびポケモン",
     "types": [
       "grass"
     ],
@@ -10157,8 +10653,9 @@
   },
   {
     "id": 497,
-    "name": "ジャローダ",
+    "nameJa": "ジャローダ",
     "nameEn": "Serperior",
+    "genus": "ロイヤルポケモン",
     "types": [
       "grass"
     ],
@@ -10177,8 +10674,9 @@
   },
   {
     "id": 498,
-    "name": "ポカブ",
+    "nameJa": "ポカブ",
     "nameEn": "Tepig",
+    "genus": "ひぶたポケモン",
     "types": [
       "fire"
     ],
@@ -10197,8 +10695,9 @@
   },
   {
     "id": 499,
-    "name": "チャオブー",
+    "nameJa": "チャオブー",
     "nameEn": "Pignite",
+    "genus": "ひぶたポケモン",
     "types": [
       "fire",
       "fighting"
@@ -10218,8 +10717,9 @@
   },
   {
     "id": 500,
-    "name": "エンブオー",
+    "nameJa": "エンブオー",
     "nameEn": "Emboar",
+    "genus": "おおひぶたポケモン",
     "types": [
       "fire",
       "fighting"
@@ -10239,8 +10739,9 @@
   },
   {
     "id": 501,
-    "name": "ミジュマル",
+    "nameJa": "ミジュマル",
     "nameEn": "Oshawott",
+    "genus": "ラッコポケモン",
     "types": [
       "water"
     ],
@@ -10259,8 +10760,9 @@
   },
   {
     "id": 502,
-    "name": "フタチマル",
+    "nameJa": "フタチマル",
     "nameEn": "Dewott",
+    "genus": "しゅぎょうポケモン",
     "types": [
       "water"
     ],
@@ -10279,8 +10781,9 @@
   },
   {
     "id": 503,
-    "name": "ダイケンキ",
+    "nameJa": "ダイケンキ",
     "nameEn": "Samurott",
+    "genus": "かんろくポケモン",
     "types": [
       "water"
     ],
@@ -10299,8 +10802,9 @@
   },
   {
     "id": 504,
-    "name": "ミネズミ",
+    "nameJa": "ミネズミ",
     "nameEn": "Patrat",
+    "genus": "みはりポケモン",
     "types": [
       "normal"
     ],
@@ -10319,8 +10823,9 @@
   },
   {
     "id": 505,
-    "name": "ミルホッグ",
+    "nameJa": "ミルホッグ",
     "nameEn": "Watchog",
+    "genus": "けいかいポケモン",
     "types": [
       "normal"
     ],
@@ -10339,8 +10844,9 @@
   },
   {
     "id": 506,
-    "name": "ヨーテリー",
+    "nameJa": "ヨーテリー",
     "nameEn": "Lillipup",
+    "genus": "こいぬポケモン",
     "types": [
       "normal"
     ],
@@ -10359,8 +10865,9 @@
   },
   {
     "id": 507,
-    "name": "ハーデリア",
+    "nameJa": "ハーデリア",
     "nameEn": "Herdier",
+    "genus": "ちゅうけんポケモン",
     "types": [
       "normal"
     ],
@@ -10379,8 +10886,9 @@
   },
   {
     "id": 508,
-    "name": "ムーランド",
+    "nameJa": "ムーランド",
     "nameEn": "Stoutland",
+    "genus": "かんだいポケモン",
     "types": [
       "normal"
     ],
@@ -10399,8 +10907,9 @@
   },
   {
     "id": 509,
-    "name": "チョロネコ",
+    "nameJa": "チョロネコ",
     "nameEn": "Purrloin",
+    "genus": "しょうわるポケモン",
     "types": [
       "dark"
     ],
@@ -10419,8 +10928,9 @@
   },
   {
     "id": 510,
-    "name": "レパルダス",
+    "nameJa": "レパルダス",
     "nameEn": "Liepard",
+    "genus": "れいこくポケモン",
     "types": [
       "dark"
     ],
@@ -10439,8 +10949,9 @@
   },
   {
     "id": 511,
-    "name": "ヤナップ",
+    "nameJa": "ヤナップ",
     "nameEn": "Pansage",
+    "genus": "くさざるポケモン",
     "types": [
       "grass"
     ],
@@ -10459,8 +10970,9 @@
   },
   {
     "id": 512,
-    "name": "ヤナッキー",
+    "nameJa": "ヤナッキー",
     "nameEn": "Simisage",
+    "genus": "とげざるポケモン",
     "types": [
       "grass"
     ],
@@ -10479,8 +10991,9 @@
   },
   {
     "id": 513,
-    "name": "バオップ",
+    "nameJa": "バオップ",
     "nameEn": "Pansear",
+    "genus": "こうおんポケモン",
     "types": [
       "fire"
     ],
@@ -10499,8 +11012,9 @@
   },
   {
     "id": 514,
-    "name": "バオッキー",
+    "nameJa": "バオッキー",
     "nameEn": "Simisear",
+    "genus": "ひのこポケモン",
     "types": [
       "fire"
     ],
@@ -10519,8 +11033,9 @@
   },
   {
     "id": 515,
-    "name": "ヒヤップ",
+    "nameJa": "ヒヤップ",
     "nameEn": "Panpour",
+    "genus": "みずかけポケモン",
     "types": [
       "water"
     ],
@@ -10539,8 +11054,9 @@
   },
   {
     "id": 516,
-    "name": "ヒヤッキー",
+    "nameJa": "ヒヤッキー",
     "nameEn": "Simipour",
+    "genus": "ほうすいポケモン",
     "types": [
       "water"
     ],
@@ -10559,8 +11075,9 @@
   },
   {
     "id": 517,
-    "name": "ムンナ",
+    "nameJa": "ムンナ",
     "nameEn": "Munna",
+    "genus": "ゆめくいポケモン",
     "types": [
       "psychic"
     ],
@@ -10579,8 +11096,9 @@
   },
   {
     "id": 518,
-    "name": "ムシャーナ",
+    "nameJa": "ムシャーナ",
     "nameEn": "Musharna",
+    "genus": "ゆめうつつポケモン",
     "types": [
       "psychic"
     ],
@@ -10599,8 +11117,9 @@
   },
   {
     "id": 519,
-    "name": "マメパト",
+    "nameJa": "マメパト",
     "nameEn": "Pidove",
+    "genus": "こばとポケモン",
     "types": [
       "normal",
       "flying"
@@ -10620,8 +11139,9 @@
   },
   {
     "id": 520,
-    "name": "ハトーボー",
+    "nameJa": "ハトーボー",
     "nameEn": "Tranquill",
+    "genus": "のばとポケモン",
     "types": [
       "normal",
       "flying"
@@ -10641,8 +11161,9 @@
   },
   {
     "id": 521,
-    "name": "ケンホロウ",
+    "nameJa": "ケンホロウ",
     "nameEn": "Unfezant",
+    "genus": "プライドポケモン",
     "types": [
       "normal",
       "flying"
@@ -10662,8 +11183,9 @@
   },
   {
     "id": 522,
-    "name": "シママ",
+    "nameJa": "シママ",
     "nameEn": "Blitzle",
+    "genus": "たいでんポケモン",
     "types": [
       "electric"
     ],
@@ -10682,8 +11204,9 @@
   },
   {
     "id": 523,
-    "name": "ゼブライカ",
+    "nameJa": "ゼブライカ",
     "nameEn": "Zebstrika",
+    "genus": "らいでんポケモン",
     "types": [
       "electric"
     ],
@@ -10702,8 +11225,9 @@
   },
   {
     "id": 524,
-    "name": "ダンゴロ",
+    "nameJa": "ダンゴロ",
     "nameEn": "Roggenrola",
+    "genus": "マントルポケモン",
     "types": [
       "rock"
     ],
@@ -10722,8 +11246,9 @@
   },
   {
     "id": 525,
-    "name": "ガントル",
+    "nameJa": "ガントル",
     "nameEn": "Boldore",
+    "genus": "こうせきポケモン",
     "types": [
       "rock"
     ],
@@ -10742,8 +11267,9 @@
   },
   {
     "id": 526,
-    "name": "ギガイアス",
+    "nameJa": "ギガイアス",
     "nameEn": "Gigalith",
+    "genus": "こうあつポケモン",
     "types": [
       "rock"
     ],
@@ -10762,8 +11288,9 @@
   },
   {
     "id": 527,
-    "name": "コロモリ",
+    "nameJa": "コロモリ",
     "nameEn": "Woobat",
+    "genus": "こうもりポケモン",
     "types": [
       "psychic",
       "flying"
@@ -10783,8 +11310,9 @@
   },
   {
     "id": 528,
-    "name": "ココロモリ",
+    "nameJa": "ココロモリ",
     "nameEn": "Swoobat",
+    "genus": "きゅうあいポケモン",
     "types": [
       "psychic",
       "flying"
@@ -10804,8 +11332,9 @@
   },
   {
     "id": 529,
-    "name": "モグリュー",
+    "nameJa": "モグリュー",
     "nameEn": "Drilbur",
+    "genus": "もぐらポケモン",
     "types": [
       "ground"
     ],
@@ -10824,8 +11353,9 @@
   },
   {
     "id": 530,
-    "name": "ドリュウズ",
+    "nameJa": "ドリュウズ",
     "nameEn": "Excadrill",
+    "genus": "ちていポケモン",
     "types": [
       "ground",
       "steel"
@@ -10845,8 +11375,9 @@
   },
   {
     "id": 531,
-    "name": "タブンネ",
+    "nameJa": "タブンネ",
     "nameEn": "Audino",
+    "genus": "ヒヤリングポケモン",
     "types": [
       "normal"
     ],
@@ -10865,8 +11396,9 @@
   },
   {
     "id": 532,
-    "name": "ドッコラー",
+    "nameJa": "ドッコラー",
     "nameEn": "Timburr",
+    "genus": "きんこつポケモン",
     "types": [
       "fighting"
     ],
@@ -10885,8 +11417,9 @@
   },
   {
     "id": 533,
-    "name": "ドテッコツ",
+    "nameJa": "ドテッコツ",
     "nameEn": "Gurdurr",
+    "genus": "きんこつポケモン",
     "types": [
       "fighting"
     ],
@@ -10905,8 +11438,9 @@
   },
   {
     "id": 534,
-    "name": "ローブシン",
+    "nameJa": "ローブシン",
     "nameEn": "Conkeldurr",
+    "genus": "きんこつポケモン",
     "types": [
       "fighting"
     ],
@@ -10925,8 +11459,9 @@
   },
   {
     "id": 535,
-    "name": "オタマロ",
+    "nameJa": "オタマロ",
     "nameEn": "Tympole",
+    "genus": "おたまポケモン",
     "types": [
       "water"
     ],
@@ -10945,8 +11480,9 @@
   },
   {
     "id": 536,
-    "name": "ガマガル",
+    "nameJa": "ガマガル",
     "nameEn": "Palpitoad",
+    "genus": "しんどうポケモン",
     "types": [
       "water",
       "ground"
@@ -10966,8 +11502,9 @@
   },
   {
     "id": 537,
-    "name": "ガマゲロゲ",
+    "nameJa": "ガマゲロゲ",
     "nameEn": "Seismitoad",
+    "genus": "しんどうポケモン",
     "types": [
       "water",
       "ground"
@@ -10987,8 +11524,9 @@
   },
   {
     "id": 538,
-    "name": "ナゲキ",
+    "nameJa": "ナゲキ",
     "nameEn": "Throh",
+    "genus": "じゅうどうポケモン",
     "types": [
       "fighting"
     ],
@@ -11007,8 +11545,9 @@
   },
   {
     "id": 539,
-    "name": "ダゲキ",
+    "nameJa": "ダゲキ",
     "nameEn": "Sawk",
+    "genus": "からてポケモン",
     "types": [
       "fighting"
     ],
@@ -11027,8 +11566,9 @@
   },
   {
     "id": 540,
-    "name": "クルミル",
+    "nameJa": "クルミル",
     "nameEn": "Sewaddle",
+    "genus": "さいほうポケモン",
     "types": [
       "bug",
       "grass"
@@ -11048,8 +11588,9 @@
   },
   {
     "id": 541,
-    "name": "クルマユ",
+    "nameJa": "クルマユ",
     "nameEn": "Swadloon",
+    "genus": "はごもりポケモン",
     "types": [
       "bug",
       "grass"
@@ -11069,8 +11610,9 @@
   },
   {
     "id": 542,
-    "name": "ハハコモリ",
+    "nameJa": "ハハコモリ",
     "nameEn": "Leavanny",
+    "genus": "こそだてポケモン",
     "types": [
       "bug",
       "grass"
@@ -11090,8 +11632,9 @@
   },
   {
     "id": 543,
-    "name": "フシデ",
+    "nameJa": "フシデ",
     "nameEn": "Venipede",
+    "genus": "ムカデポケモン",
     "types": [
       "bug",
       "poison"
@@ -11111,8 +11654,9 @@
   },
   {
     "id": 544,
-    "name": "ホイーガ",
+    "nameJa": "ホイーガ",
     "nameEn": "Whirlipede",
+    "genus": "まゆムカデポケモン",
     "types": [
       "bug",
       "poison"
@@ -11132,8 +11676,9 @@
   },
   {
     "id": 545,
-    "name": "ペンドラー",
+    "nameJa": "ペンドラー",
     "nameEn": "Scolipede",
+    "genus": "メガムカデポケモン",
     "types": [
       "bug",
       "poison"
@@ -11153,8 +11698,9 @@
   },
   {
     "id": 546,
-    "name": "モンメン",
+    "nameJa": "モンメン",
     "nameEn": "Cottonee",
+    "genus": "わたたまポケモン",
     "types": [
       "grass",
       "fairy"
@@ -11174,8 +11720,9 @@
   },
   {
     "id": 547,
-    "name": "エルフーン",
+    "nameJa": "エルフーン",
     "nameEn": "Whimsicott",
+    "genus": "かぜかくれポケモン",
     "types": [
       "grass",
       "fairy"
@@ -11195,8 +11742,9 @@
   },
   {
     "id": 548,
-    "name": "チュリネ",
+    "nameJa": "チュリネ",
     "nameEn": "Petilil",
+    "genus": "ねっこポケモン",
     "types": [
       "grass"
     ],
@@ -11215,8 +11763,9 @@
   },
   {
     "id": 549,
-    "name": "ドレディア",
+    "nameJa": "ドレディア",
     "nameEn": "Lilligant",
+    "genus": "はなかざりポケモン",
     "types": [
       "grass"
     ],
@@ -11235,8 +11784,9 @@
   },
   {
     "id": 550,
-    "name": "バスラオ",
+    "nameJa": "バスラオ",
     "nameEn": "Basculin",
+    "genus": "らんぼうポケモン",
     "types": [
       "water"
     ],
@@ -11255,8 +11805,9 @@
   },
   {
     "id": 551,
-    "name": "メグロコ",
+    "nameJa": "メグロコ",
     "nameEn": "Sandile",
+    "genus": "さばくワニポケモン",
     "types": [
       "ground",
       "dark"
@@ -11276,8 +11827,9 @@
   },
   {
     "id": 552,
-    "name": "ワルビル",
+    "nameJa": "ワルビル",
     "nameEn": "Krokorok",
+    "genus": "さばくワニポケモン",
     "types": [
       "ground",
       "dark"
@@ -11297,8 +11849,9 @@
   },
   {
     "id": 553,
-    "name": "ワルビアル",
+    "nameJa": "ワルビアル",
     "nameEn": "Krookodile",
+    "genus": "いかくポケモン",
     "types": [
       "ground",
       "dark"
@@ -11318,8 +11871,9 @@
   },
   {
     "id": 554,
-    "name": "ダルマッカ",
+    "nameJa": "ダルマッカ",
     "nameEn": "Darumaka",
+    "genus": "だるまポケモン",
     "types": [
       "fire"
     ],
@@ -11338,8 +11892,9 @@
   },
   {
     "id": 555,
-    "name": "ヒヒダルマ",
+    "nameJa": "ヒヒダルマ",
     "nameEn": "Darmanitan",
+    "genus": "えんじょうポケモン",
     "types": [
       "fire"
     ],
@@ -11358,8 +11913,9 @@
   },
   {
     "id": 556,
-    "name": "マラカッチ",
+    "nameJa": "マラカッチ",
     "nameEn": "Maractus",
+    "genus": "サボテンポケモン",
     "types": [
       "grass"
     ],
@@ -11378,8 +11934,9 @@
   },
   {
     "id": 557,
-    "name": "イシズマイ",
+    "nameJa": "イシズマイ",
     "nameEn": "Dwebble",
+    "genus": "いしやどポケモン",
     "types": [
       "bug",
       "rock"
@@ -11399,8 +11956,9 @@
   },
   {
     "id": 558,
-    "name": "イワパレス",
+    "nameJa": "イワパレス",
     "nameEn": "Crustle",
+    "genus": "いわやどポケモン",
     "types": [
       "bug",
       "rock"
@@ -11420,8 +11978,9 @@
   },
   {
     "id": 559,
-    "name": "ズルッグ",
+    "nameJa": "ズルッグ",
     "nameEn": "Scraggy",
+    "genus": "だっぴポケモン",
     "types": [
       "dark",
       "fighting"
@@ -11441,8 +12000,9 @@
   },
   {
     "id": 560,
-    "name": "ズルズキン",
+    "nameJa": "ズルズキン",
     "nameEn": "Scrafty",
+    "genus": "あくとうポケモン",
     "types": [
       "dark",
       "fighting"
@@ -11462,8 +12022,9 @@
   },
   {
     "id": 561,
-    "name": "シンボラー",
+    "nameJa": "シンボラー",
     "nameEn": "Sigilyph",
+    "genus": "とりもどきポケモン",
     "types": [
       "psychic",
       "flying"
@@ -11483,8 +12044,9 @@
   },
   {
     "id": 562,
-    "name": "デスマス",
+    "nameJa": "デスマス",
     "nameEn": "Yamask",
+    "genus": "たましいポケモン",
     "types": [
       "ghost"
     ],
@@ -11503,8 +12065,9 @@
   },
   {
     "id": 563,
-    "name": "デスカーン",
+    "nameJa": "デスカーン",
     "nameEn": "Cofagrigus",
+    "genus": "かんおけポケモン",
     "types": [
       "ghost"
     ],
@@ -11523,8 +12086,9 @@
   },
   {
     "id": 564,
-    "name": "プロトーガ",
+    "nameJa": "プロトーガ",
     "nameEn": "Tirtouga",
+    "genus": "こだいがめポケモン",
     "types": [
       "water",
       "rock"
@@ -11544,8 +12108,9 @@
   },
   {
     "id": 565,
-    "name": "アバゴーラ",
+    "nameJa": "アバゴーラ",
     "nameEn": "Carracosta",
+    "genus": "こだいがめポケモン",
     "types": [
       "water",
       "rock"
@@ -11565,8 +12130,9 @@
   },
   {
     "id": 566,
-    "name": "アーケン",
+    "nameJa": "アーケン",
     "nameEn": "Archen",
+    "genus": "さいこどりポケモン",
     "types": [
       "rock",
       "flying"
@@ -11586,8 +12152,9 @@
   },
   {
     "id": 567,
-    "name": "アーケオス",
+    "nameJa": "アーケオス",
     "nameEn": "Archeops",
+    "genus": "さいこどりポケモン",
     "types": [
       "rock",
       "flying"
@@ -11607,8 +12174,9 @@
   },
   {
     "id": 568,
-    "name": "ヤブクロン",
+    "nameJa": "ヤブクロン",
     "nameEn": "Trubbish",
+    "genus": "ゴミぶくろポケモン",
     "types": [
       "poison"
     ],
@@ -11627,8 +12195,9 @@
   },
   {
     "id": 569,
-    "name": "ダストダス",
+    "nameJa": "ダストダス",
     "nameEn": "Garbodor",
+    "genus": "ゴミすてばポケモン",
     "types": [
       "poison"
     ],
@@ -11647,8 +12216,9 @@
   },
   {
     "id": 570,
-    "name": "ゾロア",
+    "nameJa": "ゾロア",
     "nameEn": "Zorua",
+    "genus": "わるぎつねポケモン",
     "types": [
       "dark"
     ],
@@ -11667,8 +12237,9 @@
   },
   {
     "id": 571,
-    "name": "ゾロアーク",
+    "nameJa": "ゾロアーク",
     "nameEn": "Zoroark",
+    "genus": "ばけぎつねポケモン",
     "types": [
       "dark"
     ],
@@ -11687,8 +12258,9 @@
   },
   {
     "id": 572,
-    "name": "チラーミィ",
+    "nameJa": "チラーミィ",
     "nameEn": "Minccino",
+    "genus": "チンチラポケモン",
     "types": [
       "normal"
     ],
@@ -11707,8 +12279,9 @@
   },
   {
     "id": 573,
-    "name": "チラチーノ",
+    "nameJa": "チラチーノ",
     "nameEn": "Cinccino",
+    "genus": "スカーフポケモン",
     "types": [
       "normal"
     ],
@@ -11727,8 +12300,9 @@
   },
   {
     "id": 574,
-    "name": "ゴチム",
+    "nameJa": "ゴチム",
     "nameEn": "Gothita",
+    "genus": "ぎょうしポケモン",
     "types": [
       "psychic"
     ],
@@ -11747,8 +12321,9 @@
   },
   {
     "id": 575,
-    "name": "ゴチミル",
+    "nameJa": "ゴチミル",
     "nameEn": "Gothorita",
+    "genus": "あやつりポケモン",
     "types": [
       "psychic"
     ],
@@ -11767,8 +12342,9 @@
   },
   {
     "id": 576,
-    "name": "ゴチルゼル",
+    "nameJa": "ゴチルゼル",
     "nameEn": "Gothitelle",
+    "genus": "てんたいポケモン",
     "types": [
       "psychic"
     ],
@@ -11787,8 +12363,9 @@
   },
   {
     "id": 577,
-    "name": "ユニラン",
+    "nameJa": "ユニラン",
     "nameEn": "Solosis",
+    "genus": "さいぼうポケモン",
     "types": [
       "psychic"
     ],
@@ -11807,8 +12384,9 @@
   },
   {
     "id": 578,
-    "name": "ダブラン",
+    "nameJa": "ダブラン",
     "nameEn": "Duosion",
+    "genus": "ぶんかつポケモン",
     "types": [
       "psychic"
     ],
@@ -11827,8 +12405,9 @@
   },
   {
     "id": 579,
-    "name": "ランクルス",
+    "nameJa": "ランクルス",
     "nameEn": "Reuniclus",
+    "genus": "ぞうふくポケモン",
     "types": [
       "psychic"
     ],
@@ -11847,8 +12426,9 @@
   },
   {
     "id": 580,
-    "name": "コアルヒー",
+    "nameJa": "コアルヒー",
     "nameEn": "Ducklett",
+    "genus": "みずどりポケモン",
     "types": [
       "water",
       "flying"
@@ -11868,8 +12448,9 @@
   },
   {
     "id": 581,
-    "name": "スワンナ",
+    "nameJa": "スワンナ",
     "nameEn": "Swanna",
+    "genus": "しらとりポケモン",
     "types": [
       "water",
       "flying"
@@ -11889,8 +12470,9 @@
   },
   {
     "id": 582,
-    "name": "バニプッチ",
+    "nameJa": "バニプッチ",
     "nameEn": "Vanillite",
+    "genus": "しんせつポケモン",
     "types": [
       "ice"
     ],
@@ -11909,8 +12491,9 @@
   },
   {
     "id": 583,
-    "name": "バニリッチ",
+    "nameJa": "バニリッチ",
     "nameEn": "Vanillish",
+    "genus": "ひょうせつポケモン",
     "types": [
       "ice"
     ],
@@ -11929,8 +12512,9 @@
   },
   {
     "id": 584,
-    "name": "バイバニラ",
+    "nameJa": "バイバニラ",
     "nameEn": "Vanilluxe",
+    "genus": "ブリザードポケモン",
     "types": [
       "ice"
     ],
@@ -11949,8 +12533,9 @@
   },
   {
     "id": 585,
-    "name": "シキジカ",
+    "nameJa": "シキジカ",
     "nameEn": "Deerling",
+    "genus": "きせつポケモン",
     "types": [
       "normal",
       "grass"
@@ -11970,8 +12555,9 @@
   },
   {
     "id": 586,
-    "name": "メブキジカ",
+    "nameJa": "メブキジカ",
     "nameEn": "Sawsbuck",
+    "genus": "きせつポケモン",
     "types": [
       "normal",
       "grass"
@@ -11991,8 +12577,9 @@
   },
   {
     "id": 587,
-    "name": "エモンガ",
+    "nameJa": "エモンガ",
     "nameEn": "Emolga",
+    "genus": "モモンガポケモン",
     "types": [
       "electric",
       "flying"
@@ -12012,8 +12599,9 @@
   },
   {
     "id": 588,
-    "name": "カブルモ",
+    "nameJa": "カブルモ",
     "nameEn": "Karrablast",
+    "genus": "かぶりつきポケモン",
     "types": [
       "bug"
     ],
@@ -12032,8 +12620,9 @@
   },
   {
     "id": 589,
-    "name": "シュバルゴ",
+    "nameJa": "シュバルゴ",
     "nameEn": "Escavalier",
+    "genus": "きへいポケモン",
     "types": [
       "bug",
       "steel"
@@ -12053,8 +12642,9 @@
   },
   {
     "id": 590,
-    "name": "タマゲタケ",
+    "nameJa": "タマゲタケ",
     "nameEn": "Foongus",
+    "genus": "きのこポケモン",
     "types": [
       "grass",
       "poison"
@@ -12074,8 +12664,9 @@
   },
   {
     "id": 591,
-    "name": "モロバレル",
+    "nameJa": "モロバレル",
     "nameEn": "Amoonguss",
+    "genus": "きのこポケモン",
     "types": [
       "grass",
       "poison"
@@ -12095,8 +12686,9 @@
   },
   {
     "id": 592,
-    "name": "プルリル",
+    "nameJa": "プルリル",
     "nameEn": "Frillish",
+    "genus": "ふゆうポケモン",
     "types": [
       "water",
       "ghost"
@@ -12116,8 +12708,9 @@
   },
   {
     "id": 593,
-    "name": "ブルンゲル",
+    "nameJa": "ブルンゲル",
     "nameEn": "Jellicent",
+    "genus": "ふゆうポケモン",
     "types": [
       "water",
       "ghost"
@@ -12137,8 +12730,9 @@
   },
   {
     "id": 594,
-    "name": "ママンボウ",
+    "nameJa": "ママンボウ",
     "nameEn": "Alomomola",
+    "genus": "かいほうポケモン",
     "types": [
       "water"
     ],
@@ -12157,8 +12751,9 @@
   },
   {
     "id": 595,
-    "name": "バチュル",
+    "nameJa": "バチュル",
     "nameEn": "Joltik",
+    "genus": "くっつきポケモン",
     "types": [
       "bug",
       "electric"
@@ -12178,8 +12773,9 @@
   },
   {
     "id": 596,
-    "name": "デンチュラ",
+    "nameJa": "デンチュラ",
     "nameEn": "Galvantula",
+    "genus": "でんきグモポケモン",
     "types": [
       "bug",
       "electric"
@@ -12199,8 +12795,9 @@
   },
   {
     "id": 597,
-    "name": "テッシード",
+    "nameJa": "テッシード",
     "nameEn": "Ferroseed",
+    "genus": "とげのみポケモン",
     "types": [
       "grass",
       "steel"
@@ -12220,8 +12817,9 @@
   },
   {
     "id": 598,
-    "name": "ナットレイ",
+    "nameJa": "ナットレイ",
     "nameEn": "Ferrothorn",
+    "genus": "とげだまポケモン",
     "types": [
       "grass",
       "steel"
@@ -12241,8 +12839,9 @@
   },
   {
     "id": 599,
-    "name": "ギアル",
+    "nameJa": "ギアル",
     "nameEn": "Klink",
+    "genus": "はぐるまポケモン",
     "types": [
       "steel"
     ],
@@ -12261,8 +12860,9 @@
   },
   {
     "id": 600,
-    "name": "ギギアル",
+    "nameJa": "ギギアル",
     "nameEn": "Klang",
+    "genus": "はぐるまポケモン",
     "types": [
       "steel"
     ],
@@ -12281,8 +12881,9 @@
   },
   {
     "id": 601,
-    "name": "ギギギアル",
+    "nameJa": "ギギギアル",
     "nameEn": "Klinklang",
+    "genus": "はぐるまポケモン",
     "types": [
       "steel"
     ],
@@ -12301,8 +12902,9 @@
   },
   {
     "id": 602,
-    "name": "シビシラス",
+    "nameJa": "シビシラス",
     "nameEn": "Tynamo",
+    "genus": "でんきうおポケモン",
     "types": [
       "electric"
     ],
@@ -12321,8 +12923,9 @@
   },
   {
     "id": 603,
-    "name": "シビビール",
+    "nameJa": "シビビール",
     "nameEn": "Eelektrik",
+    "genus": "でんきうおポケモン",
     "types": [
       "electric"
     ],
@@ -12341,8 +12944,9 @@
   },
   {
     "id": 604,
-    "name": "シビルドン",
+    "nameJa": "シビルドン",
     "nameEn": "Eelektross",
+    "genus": "でんきうおポケモン",
     "types": [
       "electric"
     ],
@@ -12361,8 +12965,9 @@
   },
   {
     "id": 605,
-    "name": "リグレー",
+    "nameJa": "リグレー",
     "nameEn": "Elgyem",
+    "genus": "ブレインポケモン",
     "types": [
       "psychic"
     ],
@@ -12381,8 +12986,9 @@
   },
   {
     "id": 606,
-    "name": "オーベム",
+    "nameJa": "オーベム",
     "nameEn": "Beheeyem",
+    "genus": "ブレインポケモン",
     "types": [
       "psychic"
     ],
@@ -12401,8 +13007,9 @@
   },
   {
     "id": 607,
-    "name": "ヒトモシ",
+    "nameJa": "ヒトモシ",
     "nameEn": "Litwick",
+    "genus": "ろうそくポケモン",
     "types": [
       "ghost",
       "fire"
@@ -12422,8 +13029,9 @@
   },
   {
     "id": 608,
-    "name": "ランプラー",
+    "nameJa": "ランプラー",
     "nameEn": "Lampent",
+    "genus": "ランプポケモン",
     "types": [
       "ghost",
       "fire"
@@ -12443,8 +13051,9 @@
   },
   {
     "id": 609,
-    "name": "シャンデラ",
+    "nameJa": "シャンデラ",
     "nameEn": "Chandelure",
+    "genus": "いざないポケモン",
     "types": [
       "ghost",
       "fire"
@@ -12464,8 +13073,9 @@
   },
   {
     "id": 610,
-    "name": "キバゴ",
+    "nameJa": "キバゴ",
     "nameEn": "Axew",
+    "genus": "キバポケモン",
     "types": [
       "dragon"
     ],
@@ -12484,8 +13094,9 @@
   },
   {
     "id": 611,
-    "name": "オノンド",
+    "nameJa": "オノンド",
     "nameEn": "Fraxure",
+    "genus": "あごオノポケモン",
     "types": [
       "dragon"
     ],
@@ -12504,8 +13115,9 @@
   },
   {
     "id": 612,
-    "name": "オノノクス",
+    "nameJa": "オノノクス",
     "nameEn": "Haxorus",
+    "genus": "あごオノポケモン",
     "types": [
       "dragon"
     ],
@@ -12524,8 +13136,9 @@
   },
   {
     "id": 613,
-    "name": "クマシュン",
+    "nameJa": "クマシュン",
     "nameEn": "Cubchoo",
+    "genus": "ひょうけつポケモン",
     "types": [
       "ice"
     ],
@@ -12544,8 +13157,9 @@
   },
   {
     "id": 614,
-    "name": "ツンベアー",
+    "nameJa": "ツンベアー",
     "nameEn": "Beartic",
+    "genus": "とうけつポケモン",
     "types": [
       "ice"
     ],
@@ -12564,8 +13178,9 @@
   },
   {
     "id": 615,
-    "name": "フリージオ",
+    "nameJa": "フリージオ",
     "nameEn": "Cryogonal",
+    "genus": "けっしょうポケモン",
     "types": [
       "ice"
     ],
@@ -12584,8 +13199,9 @@
   },
   {
     "id": 616,
-    "name": "チョボマキ",
+    "nameJa": "チョボマキ",
     "nameEn": "Shelmet",
+    "genus": "マイマイポケモン",
     "types": [
       "bug"
     ],
@@ -12604,8 +13220,9 @@
   },
   {
     "id": 617,
-    "name": "アギルダー",
+    "nameJa": "アギルダー",
     "nameEn": "Accelgor",
+    "genus": "からぬけポケモン",
     "types": [
       "bug"
     ],
@@ -12624,8 +13241,9 @@
   },
   {
     "id": 618,
-    "name": "マッギョ",
+    "nameJa": "マッギョ",
     "nameEn": "Stunfisk",
+    "genus": "トラップポケモン",
     "types": [
       "ground",
       "electric"
@@ -12645,8 +13263,9 @@
   },
   {
     "id": 619,
-    "name": "コジョフー",
+    "nameJa": "コジョフー",
     "nameEn": "Mienfoo",
+    "genus": "ぶじゅつポケモン",
     "types": [
       "fighting"
     ],
@@ -12665,8 +13284,9 @@
   },
   {
     "id": 620,
-    "name": "コジョンド",
+    "nameJa": "コジョンド",
     "nameEn": "Mienshao",
+    "genus": "ぶじゅつポケモン",
     "types": [
       "fighting"
     ],
@@ -12685,8 +13305,9 @@
   },
   {
     "id": 621,
-    "name": "クリムガン",
+    "nameJa": "クリムガン",
     "nameEn": "Druddigon",
+    "genus": "ほらあなポケモン",
     "types": [
       "dragon"
     ],
@@ -12705,8 +13326,9 @@
   },
   {
     "id": 622,
-    "name": "ゴビット",
+    "nameJa": "ゴビット",
     "nameEn": "Golett",
+    "genus": "ゴーレムポケモン",
     "types": [
       "ground",
       "ghost"
@@ -12726,8 +13348,9 @@
   },
   {
     "id": 623,
-    "name": "ゴルーグ",
+    "nameJa": "ゴルーグ",
     "nameEn": "Golurk",
+    "genus": "ゴーレムポケモン",
     "types": [
       "ground",
       "ghost"
@@ -12747,8 +13370,9 @@
   },
   {
     "id": 624,
-    "name": "コマタナ",
+    "nameJa": "コマタナ",
     "nameEn": "Pawniard",
+    "genus": "はものポケモン",
     "types": [
       "dark",
       "steel"
@@ -12768,8 +13392,9 @@
   },
   {
     "id": 625,
-    "name": "キリキザン",
+    "nameJa": "キリキザン",
     "nameEn": "Bisharp",
+    "genus": "とうじんポケモン",
     "types": [
       "dark",
       "steel"
@@ -12789,8 +13414,9 @@
   },
   {
     "id": 626,
-    "name": "バッフロン",
+    "nameJa": "バッフロン",
     "nameEn": "Bouffalant",
+    "genus": "ずつきうしポケモン",
     "types": [
       "normal"
     ],
@@ -12809,8 +13435,9 @@
   },
   {
     "id": 627,
-    "name": "ワシボン",
+    "nameJa": "ワシボン",
     "nameEn": "Rufflet",
+    "genus": "ヒナわしポケモン",
     "types": [
       "normal",
       "flying"
@@ -12830,8 +13457,9 @@
   },
   {
     "id": 628,
-    "name": "ウォーグル",
+    "nameJa": "ウォーグル",
     "nameEn": "Braviary",
+    "genus": "ゆうもうポケモン",
     "types": [
       "normal",
       "flying"
@@ -12851,8 +13479,9 @@
   },
   {
     "id": 629,
-    "name": "バルチャイ",
+    "nameJa": "バルチャイ",
     "nameEn": "Vullaby",
+    "genus": "おむつポケモン",
     "types": [
       "dark",
       "flying"
@@ -12872,8 +13501,9 @@
   },
   {
     "id": 630,
-    "name": "バルジーナ",
+    "nameJa": "バルジーナ",
     "nameEn": "Mandibuzz",
+    "genus": "ほねわしポケモン",
     "types": [
       "dark",
       "flying"
@@ -12893,8 +13523,9 @@
   },
   {
     "id": 631,
-    "name": "クイタラン",
+    "nameJa": "クイタラン",
     "nameEn": "Heatmor",
+    "genus": "アリクイポケモン",
     "types": [
       "fire"
     ],
@@ -12913,8 +13544,9 @@
   },
   {
     "id": 632,
-    "name": "アイアント",
+    "nameJa": "アイアント",
     "nameEn": "Durant",
+    "genus": "てつアリポケモン",
     "types": [
       "bug",
       "steel"
@@ -12934,8 +13566,9 @@
   },
   {
     "id": 633,
-    "name": "モノズ",
+    "nameJa": "モノズ",
     "nameEn": "Deino",
+    "genus": "そぼうポケモン",
     "types": [
       "dark",
       "dragon"
@@ -12955,8 +13588,9 @@
   },
   {
     "id": 634,
-    "name": "ジヘッド",
+    "nameJa": "ジヘッド",
     "nameEn": "Zweilous",
+    "genus": "らんぼうポケモン",
     "types": [
       "dark",
       "dragon"
@@ -12976,8 +13610,9 @@
   },
   {
     "id": 635,
-    "name": "サザンドラ",
+    "nameJa": "サザンドラ",
     "nameEn": "Hydreigon",
+    "genus": "きょうぼうポケモン",
     "types": [
       "dark",
       "dragon"
@@ -12997,8 +13632,9 @@
   },
   {
     "id": 636,
-    "name": "メラルバ",
+    "nameJa": "メラルバ",
     "nameEn": "Larvesta",
+    "genus": "たいまつポケモン",
     "types": [
       "bug",
       "fire"
@@ -13018,8 +13654,9 @@
   },
   {
     "id": 637,
-    "name": "ウルガモス",
+    "nameJa": "ウルガモス",
     "nameEn": "Volcarona",
+    "genus": "たいようポケモン",
     "types": [
       "bug",
       "fire"
@@ -13039,8 +13676,9 @@
   },
   {
     "id": 638,
-    "name": "コバルオン",
+    "nameJa": "コバルオン",
     "nameEn": "Cobalion",
+    "genus": "てっしんポケモン",
     "types": [
       "steel",
       "fighting"
@@ -13060,8 +13698,9 @@
   },
   {
     "id": 639,
-    "name": "テラキオン",
+    "nameJa": "テラキオン",
     "nameEn": "Terrakion",
+    "genus": "がんくつポケモン",
     "types": [
       "rock",
       "fighting"
@@ -13081,8 +13720,9 @@
   },
   {
     "id": 640,
-    "name": "ビリジオン",
+    "nameJa": "ビリジオン",
     "nameEn": "Virizion",
+    "genus": "そうげんポケモン",
     "types": [
       "grass",
       "fighting"
@@ -13102,8 +13742,9 @@
   },
   {
     "id": 641,
-    "name": "トルネロス",
+    "nameJa": "トルネロス",
     "nameEn": "Tornadus",
+    "genus": "せんぷうポケモン",
     "types": [
       "flying"
     ],
@@ -13122,8 +13763,9 @@
   },
   {
     "id": 642,
-    "name": "ボルトロス",
+    "nameJa": "ボルトロス",
     "nameEn": "Thundurus",
+    "genus": "らいげきポケモン",
     "types": [
       "electric",
       "flying"
@@ -13143,8 +13785,9 @@
   },
   {
     "id": 643,
-    "name": "レシラム",
+    "nameJa": "レシラム",
     "nameEn": "Reshiram",
+    "genus": "はくようポケモン",
     "types": [
       "dragon",
       "fire"
@@ -13164,8 +13807,9 @@
   },
   {
     "id": 644,
-    "name": "ゼクロム",
+    "nameJa": "ゼクロム",
     "nameEn": "Zekrom",
+    "genus": "こくいんポケモン",
     "types": [
       "dragon",
       "electric"
@@ -13185,8 +13829,9 @@
   },
   {
     "id": 645,
-    "name": "ランドロス",
+    "nameJa": "ランドロス",
     "nameEn": "Landorus",
+    "genus": "ほうじょうポケモン",
     "types": [
       "ground",
       "flying"
@@ -13206,8 +13851,9 @@
   },
   {
     "id": 646,
-    "name": "キュレム",
+    "nameJa": "キュレム",
     "nameEn": "Kyurem",
+    "genus": "きょうかいポケモン",
     "types": [
       "dragon",
       "ice"
@@ -13227,8 +13873,9 @@
   },
   {
     "id": 647,
-    "name": "ケルディオ",
+    "nameJa": "ケルディオ",
     "nameEn": "Keldeo",
+    "genus": "わかごまポケモン",
     "types": [
       "water",
       "fighting"
@@ -13248,8 +13895,9 @@
   },
   {
     "id": 648,
-    "name": "メロエッタ",
+    "nameJa": "メロエッタ",
     "nameEn": "Meloetta",
+    "genus": "せんりつポケモン",
     "types": [
       "normal",
       "psychic"
@@ -13269,8 +13917,9 @@
   },
   {
     "id": 649,
-    "name": "ゲノセクト",
+    "nameJa": "ゲノセクト",
     "nameEn": "Genesect",
+    "genus": "こせいだいポケモン",
     "types": [
       "bug",
       "steel"
@@ -13290,8 +13939,9 @@
   },
   {
     "id": 650,
-    "name": "ハリマロン",
+    "nameJa": "ハリマロン",
     "nameEn": "Chespin",
+    "genus": "いがぐりポケモン",
     "types": [
       "grass"
     ],
@@ -13310,8 +13960,9 @@
   },
   {
     "id": 651,
-    "name": "ハリボーグ",
+    "nameJa": "ハリボーグ",
     "nameEn": "Quilladin",
+    "genus": "とげよろいポケモン",
     "types": [
       "grass"
     ],
@@ -13330,8 +13981,9 @@
   },
   {
     "id": 652,
-    "name": "ブリガロン",
+    "nameJa": "ブリガロン",
     "nameEn": "Chesnaught",
+    "genus": "とげよろいポケモン",
     "types": [
       "grass",
       "fighting"
@@ -13351,8 +14003,9 @@
   },
   {
     "id": 653,
-    "name": "フォッコ",
+    "nameJa": "フォッコ",
     "nameEn": "Fennekin",
+    "genus": "キツネポケモン",
     "types": [
       "fire"
     ],
@@ -13371,8 +14024,9 @@
   },
   {
     "id": 654,
-    "name": "テールナー",
+    "nameJa": "テールナー",
     "nameEn": "Braixen",
+    "genus": "キツネポケモン",
     "types": [
       "fire"
     ],
@@ -13391,8 +14045,9 @@
   },
   {
     "id": 655,
-    "name": "マフォクシー",
+    "nameJa": "マフォクシー",
     "nameEn": "Delphox",
+    "genus": "キツネポケモン",
     "types": [
       "fire",
       "psychic"
@@ -13412,8 +14067,9 @@
   },
   {
     "id": 656,
-    "name": "ケロマツ",
+    "nameJa": "ケロマツ",
     "nameEn": "Froakie",
+    "genus": "あわがえるポケモン",
     "types": [
       "water"
     ],
@@ -13432,8 +14088,9 @@
   },
   {
     "id": 657,
-    "name": "ゲコガシラ",
+    "nameJa": "ゲコガシラ",
     "nameEn": "Frogadier",
+    "genus": "あわがえるポケモン",
     "types": [
       "water"
     ],
@@ -13452,8 +14109,9 @@
   },
   {
     "id": 658,
-    "name": "ゲッコウガ",
+    "nameJa": "ゲッコウガ",
     "nameEn": "Greninja",
+    "genus": "しのびポケモン",
     "types": [
       "water",
       "dark"
@@ -13473,8 +14131,9 @@
   },
   {
     "id": 659,
-    "name": "ホルビー",
+    "nameJa": "ホルビー",
     "nameEn": "Bunnelby",
+    "genus": "あなほりポケモン",
     "types": [
       "normal"
     ],
@@ -13493,8 +14152,9 @@
   },
   {
     "id": 660,
-    "name": "ホルード",
+    "nameJa": "ホルード",
     "nameEn": "Diggersby",
+    "genus": "あなほりポケモン",
     "types": [
       "normal",
       "ground"
@@ -13514,8 +14174,9 @@
   },
   {
     "id": 661,
-    "name": "ヤヤコマ",
+    "nameJa": "ヤヤコマ",
     "nameEn": "Fletchling",
+    "genus": "コマドリポケモン",
     "types": [
       "normal",
       "flying"
@@ -13535,8 +14196,9 @@
   },
   {
     "id": 662,
-    "name": "ヒノヤコマ",
+    "nameJa": "ヒノヤコマ",
     "nameEn": "Fletchinder",
+    "genus": "ひのこポケモン",
     "types": [
       "fire",
       "flying"
@@ -13556,8 +14218,9 @@
   },
   {
     "id": 663,
-    "name": "ファイアロー",
+    "nameJa": "ファイアロー",
     "nameEn": "Talonflame",
+    "genus": "れっかポケモン",
     "types": [
       "fire",
       "flying"
@@ -13577,8 +14240,9 @@
   },
   {
     "id": 664,
-    "name": "コフキムシ",
+    "nameJa": "コフキムシ",
     "nameEn": "Scatterbug",
+    "genus": "こなふきポケモン",
     "types": [
       "bug"
     ],
@@ -13597,8 +14261,9 @@
   },
   {
     "id": 665,
-    "name": "コフーライ",
+    "nameJa": "コフーライ",
     "nameEn": "Spewpa",
+    "genus": "こなふきポケモン",
     "types": [
       "bug"
     ],
@@ -13617,8 +14282,9 @@
   },
   {
     "id": 666,
-    "name": "ビビヨン",
+    "nameJa": "ビビヨン",
     "nameEn": "Vivillon",
+    "genus": "りんぷんポケモン",
     "types": [
       "bug",
       "flying"
@@ -13638,8 +14304,9 @@
   },
   {
     "id": 667,
-    "name": "シシコ",
+    "nameJa": "シシコ",
     "nameEn": "Litleo",
+    "genus": "わかじしポケモン",
     "types": [
       "fire",
       "normal"
@@ -13659,8 +14326,9 @@
   },
   {
     "id": 668,
-    "name": "カエンジシ",
+    "nameJa": "カエンジシ",
     "nameEn": "Pyroar",
+    "genus": "おうじゃポケモン",
     "types": [
       "fire",
       "normal"
@@ -13680,8 +14348,9 @@
   },
   {
     "id": 669,
-    "name": "フラベベ",
+    "nameJa": "フラベベ",
     "nameEn": "Flabébé",
+    "genus": "いちりんポケモン",
     "types": [
       "fairy"
     ],
@@ -13700,8 +14369,9 @@
   },
   {
     "id": 670,
-    "name": "フラエッテ",
+    "nameJa": "フラエッテ",
     "nameEn": "Floette",
+    "genus": "いちりんポケモン",
     "types": [
       "fairy"
     ],
@@ -13720,8 +14390,9 @@
   },
   {
     "id": 671,
-    "name": "フラージェス",
+    "nameJa": "フラージェス",
     "nameEn": "Florges",
+    "genus": "ガーデンポケモン",
     "types": [
       "fairy"
     ],
@@ -13740,8 +14411,9 @@
   },
   {
     "id": 672,
-    "name": "メェークル",
+    "nameJa": "メェークル",
     "nameEn": "Skiddo",
+    "genus": "ライドポケモン",
     "types": [
       "grass"
     ],
@@ -13760,8 +14432,9 @@
   },
   {
     "id": 673,
-    "name": "ゴーゴート",
+    "nameJa": "ゴーゴート",
     "nameEn": "Gogoat",
+    "genus": "ライドポケモン",
     "types": [
       "grass"
     ],
@@ -13780,8 +14453,9 @@
   },
   {
     "id": 674,
-    "name": "ヤンチャム",
+    "nameJa": "ヤンチャム",
     "nameEn": "Pancham",
+    "genus": "やんちゃポケモン",
     "types": [
       "fighting"
     ],
@@ -13800,8 +14474,9 @@
   },
   {
     "id": 675,
-    "name": "ゴロンダ",
+    "nameJa": "ゴロンダ",
     "nameEn": "Pangoro",
+    "genus": "こわもてポケモン",
     "types": [
       "fighting",
       "dark"
@@ -13821,8 +14496,9 @@
   },
   {
     "id": 676,
-    "name": "トリミアン",
+    "nameJa": "トリミアン",
     "nameEn": "Furfrou",
+    "genus": "プードルポケモン",
     "types": [
       "normal"
     ],
@@ -13841,8 +14517,9 @@
   },
   {
     "id": 677,
-    "name": "ニャスパー",
+    "nameJa": "ニャスパー",
     "nameEn": "Espurr",
+    "genus": "じせいポケモン",
     "types": [
       "psychic"
     ],
@@ -13861,8 +14538,9 @@
   },
   {
     "id": 678,
-    "name": "ニャオニクス",
+    "nameJa": "ニャオニクス",
     "nameEn": "Meowstic",
+    "genus": "よくせいポケモン",
     "types": [
       "psychic"
     ],
@@ -13881,8 +14559,9 @@
   },
   {
     "id": 679,
-    "name": "ヒトツキ",
+    "nameJa": "ヒトツキ",
     "nameEn": "Honedge",
+    "genus": "とうけんポケモン",
     "types": [
       "steel",
       "ghost"
@@ -13902,8 +14581,9 @@
   },
   {
     "id": 680,
-    "name": "ニダンギル",
+    "nameJa": "ニダンギル",
     "nameEn": "Doublade",
+    "genus": "とうけんポケモン",
     "types": [
       "steel",
       "ghost"
@@ -13923,8 +14603,9 @@
   },
   {
     "id": 681,
-    "name": "ギルガルド",
+    "nameJa": "ギルガルド",
     "nameEn": "Aegislash",
+    "genus": "おうけんポケモン",
     "types": [
       "steel",
       "ghost"
@@ -13944,8 +14625,9 @@
   },
   {
     "id": 682,
-    "name": "シュシュプ",
+    "nameJa": "シュシュプ",
     "nameEn": "Spritzee",
+    "genus": "こうすいポケモン",
     "types": [
       "fairy"
     ],
@@ -13964,8 +14646,9 @@
   },
   {
     "id": 683,
-    "name": "フレフワン",
+    "nameJa": "フレフワン",
     "nameEn": "Aromatisse",
+    "genus": "ほうこうポケモン",
     "types": [
       "fairy"
     ],
@@ -13984,8 +14667,9 @@
   },
   {
     "id": 684,
-    "name": "ペロッパフ",
+    "nameJa": "ペロッパフ",
     "nameEn": "Swirlix",
+    "genus": "わたあめポケモン",
     "types": [
       "fairy"
     ],
@@ -14004,8 +14688,9 @@
   },
   {
     "id": 685,
-    "name": "ペロリーム",
+    "nameJa": "ペロリーム",
     "nameEn": "Slurpuff",
+    "genus": "ホイップポケモン",
     "types": [
       "fairy"
     ],
@@ -14024,8 +14709,9 @@
   },
   {
     "id": 686,
-    "name": "マーイーカ",
+    "nameJa": "マーイーカ",
     "nameEn": "Inkay",
+    "genus": "かいてんポケモン",
     "types": [
       "dark",
       "psychic"
@@ -14045,8 +14731,9 @@
   },
   {
     "id": 687,
-    "name": "カラマネロ",
+    "nameJa": "カラマネロ",
     "nameEn": "Malamar",
+    "genus": "ぎゃくてんポケモン",
     "types": [
       "dark",
       "psychic"
@@ -14066,8 +14753,9 @@
   },
   {
     "id": 688,
-    "name": "カメテテ",
+    "nameJa": "カメテテ",
     "nameEn": "Binacle",
+    "genus": "ふたてポケモン",
     "types": [
       "rock",
       "water"
@@ -14087,8 +14775,9 @@
   },
   {
     "id": 689,
-    "name": "ガメノデス",
+    "nameJa": "ガメノデス",
     "nameEn": "Barbaracle",
+    "genus": "しゅうごうポケモン",
     "types": [
       "rock",
       "water"
@@ -14108,8 +14797,9 @@
   },
   {
     "id": 690,
-    "name": "クズモー",
+    "nameJa": "クズモー",
     "nameEn": "Skrelp",
+    "genus": "クサモドキポケモン",
     "types": [
       "poison",
       "water"
@@ -14129,8 +14819,9 @@
   },
   {
     "id": 691,
-    "name": "ドラミドロ",
+    "nameJa": "ドラミドロ",
     "nameEn": "Dragalge",
+    "genus": "クサモドキポケモン",
     "types": [
       "poison",
       "dragon"
@@ -14150,8 +14841,9 @@
   },
   {
     "id": 692,
-    "name": "ウデッポウ",
+    "nameJa": "ウデッポウ",
     "nameEn": "Clauncher",
+    "genus": "みずでっぽうポケモン",
     "types": [
       "water"
     ],
@@ -14170,8 +14862,9 @@
   },
   {
     "id": 693,
-    "name": "ブロスター",
+    "nameJa": "ブロスター",
     "nameEn": "Clawitzer",
+    "genus": "ランチャーポケモン",
     "types": [
       "water"
     ],
@@ -14190,8 +14883,9 @@
   },
   {
     "id": 694,
-    "name": "エリキテル",
+    "nameJa": "エリキテル",
     "nameEn": "Helioptile",
+    "genus": "はつでんポケモン",
     "types": [
       "electric",
       "normal"
@@ -14211,8 +14905,9 @@
   },
   {
     "id": 695,
-    "name": "エレザード",
+    "nameJa": "エレザード",
     "nameEn": "Heliolisk",
+    "genus": "はつでんポケモン",
     "types": [
       "electric",
       "normal"
@@ -14232,8 +14927,9 @@
   },
   {
     "id": 696,
-    "name": "チゴラス",
+    "nameJa": "チゴラス",
     "nameEn": "Tyrunt",
+    "genus": "ようくんポケモン",
     "types": [
       "rock",
       "dragon"
@@ -14253,8 +14949,9 @@
   },
   {
     "id": 697,
-    "name": "ガチゴラス",
+    "nameJa": "ガチゴラス",
     "nameEn": "Tyrantrum",
+    "genus": "ぼうくんポケモン",
     "types": [
       "rock",
       "dragon"
@@ -14274,8 +14971,9 @@
   },
   {
     "id": 698,
-    "name": "アマルス",
+    "nameJa": "アマルス",
     "nameEn": "Amaura",
+    "genus": "ツンドラポケモン",
     "types": [
       "rock",
       "ice"
@@ -14295,8 +14993,9 @@
   },
   {
     "id": 699,
-    "name": "アマルルガ",
+    "nameJa": "アマルルガ",
     "nameEn": "Aurorus",
+    "genus": "ツンドラポケモン",
     "types": [
       "rock",
       "ice"
@@ -14316,8 +15015,9 @@
   },
   {
     "id": 700,
-    "name": "ニンフィア",
+    "nameJa": "ニンフィア",
     "nameEn": "Sylveon",
+    "genus": "むすびつきポケモン",
     "types": [
       "fairy"
     ],
@@ -14336,8 +15036,9 @@
   },
   {
     "id": 701,
-    "name": "ルチャブル",
+    "nameJa": "ルチャブル",
     "nameEn": "Hawlucha",
+    "genus": "レスリングポケモン",
     "types": [
       "fighting",
       "flying"
@@ -14357,8 +15058,9 @@
   },
   {
     "id": 702,
-    "name": "デデンネ",
+    "nameJa": "デデンネ",
     "nameEn": "Dedenne",
+    "genus": "アンテナポケモン",
     "types": [
       "electric",
       "fairy"
@@ -14378,8 +15080,9 @@
   },
   {
     "id": 703,
-    "name": "メレシー",
+    "nameJa": "メレシー",
     "nameEn": "Carbink",
+    "genus": "ほうせきポケモン",
     "types": [
       "rock",
       "fairy"
@@ -14399,8 +15102,9 @@
   },
   {
     "id": 704,
-    "name": "ヌメラ",
+    "nameJa": "ヌメラ",
     "nameEn": "Goomy",
+    "genus": "なんたいポケモン",
     "types": [
       "dragon"
     ],
@@ -14419,8 +15123,9 @@
   },
   {
     "id": 705,
-    "name": "ヌメイル",
+    "nameJa": "ヌメイル",
     "nameEn": "Sliggoo",
+    "genus": "なんたいポケモン",
     "types": [
       "dragon"
     ],
@@ -14439,8 +15144,9 @@
   },
   {
     "id": 706,
-    "name": "ヌメルゴン",
+    "nameJa": "ヌメルゴン",
     "nameEn": "Goodra",
+    "genus": "ドラゴンポケモン",
     "types": [
       "dragon"
     ],
@@ -14459,8 +15165,9 @@
   },
   {
     "id": 707,
-    "name": "クレッフィ",
+    "nameJa": "クレッフィ",
     "nameEn": "Klefki",
+    "genus": "かぎたばポケモン",
     "types": [
       "steel",
       "fairy"
@@ -14480,8 +15187,9 @@
   },
   {
     "id": 708,
-    "name": "ボクレー",
+    "nameJa": "ボクレー",
     "nameEn": "Phantump",
+    "genus": "きりかぶポケモン",
     "types": [
       "ghost",
       "grass"
@@ -14501,8 +15209,9 @@
   },
   {
     "id": 709,
-    "name": "オーロット",
+    "nameJa": "オーロット",
     "nameEn": "Trevenant",
+    "genus": "ろうぼくポケモン",
     "types": [
       "ghost",
       "grass"
@@ -14522,8 +15231,9 @@
   },
   {
     "id": 710,
-    "name": "バケッチャ",
+    "nameJa": "バケッチャ",
     "nameEn": "Pumpkaboo",
+    "genus": "かぼちゃポケモン",
     "types": [
       "ghost",
       "grass"
@@ -14543,8 +15253,9 @@
   },
   {
     "id": 711,
-    "name": "パンプジン",
+    "nameJa": "パンプジン",
     "nameEn": "Gourgeist",
+    "genus": "かぼちゃポケモン",
     "types": [
       "ghost",
       "grass"
@@ -14564,8 +15275,9 @@
   },
   {
     "id": 712,
-    "name": "カチコール",
+    "nameJa": "カチコール",
     "nameEn": "Bergmite",
+    "genus": "ひょうかいポケモン",
     "types": [
       "ice"
     ],
@@ -14584,8 +15296,9 @@
   },
   {
     "id": 713,
-    "name": "クレベース",
+    "nameJa": "クレベース",
     "nameEn": "Avalugg",
+    "genus": "ひょうざんポケモン",
     "types": [
       "ice"
     ],
@@ -14604,8 +15317,9 @@
   },
   {
     "id": 714,
-    "name": "オンバット",
+    "nameJa": "オンバット",
     "nameEn": "Noibat",
+    "genus": "おんぱポケモン",
     "types": [
       "flying",
       "dragon"
@@ -14625,8 +15339,9 @@
   },
   {
     "id": 715,
-    "name": "オンバーン",
+    "nameJa": "オンバーン",
     "nameEn": "Noivern",
+    "genus": "おんぱポケモン",
     "types": [
       "flying",
       "dragon"
@@ -14646,8 +15361,9 @@
   },
   {
     "id": 716,
-    "name": "ゼルネアス",
+    "nameJa": "ゼルネアス",
     "nameEn": "Xerneas",
+    "genus": "せいめいポケモン",
     "types": [
       "fairy"
     ],
@@ -14666,8 +15382,9 @@
   },
   {
     "id": 717,
-    "name": "イベルタル",
+    "nameJa": "イベルタル",
     "nameEn": "Yveltal",
+    "genus": "はかいポケモン",
     "types": [
       "dark",
       "flying"
@@ -14687,8 +15404,9 @@
   },
   {
     "id": 718,
-    "name": "ジガルデ",
+    "nameJa": "ジガルデ",
     "nameEn": "Zygarde",
+    "genus": "ちつじょポケモン",
     "types": [
       "dragon",
       "ground"
@@ -14708,8 +15426,9 @@
   },
   {
     "id": 719,
-    "name": "ディアンシー",
+    "nameJa": "ディアンシー",
     "nameEn": "Diancie",
+    "genus": "ほうせきポケモン",
     "types": [
       "rock",
       "fairy"
@@ -14729,8 +15448,9 @@
   },
   {
     "id": 720,
-    "name": "フーパ",
+    "nameJa": "フーパ",
     "nameEn": "Hoopa",
+    "genus": "いたずらポケモン",
     "types": [
       "psychic",
       "ghost"
@@ -14750,8 +15470,9 @@
   },
   {
     "id": 721,
-    "name": "ボルケニオン",
+    "nameJa": "ボルケニオン",
     "nameEn": "Volcanion",
+    "genus": "スチームポケモン",
     "types": [
       "fire",
       "water"
@@ -14771,8 +15492,9 @@
   },
   {
     "id": 722,
-    "name": "モクロー",
+    "nameJa": "モクロー",
     "nameEn": "Rowlet",
+    "genus": "くさばねポケモン",
     "types": [
       "grass",
       "flying"
@@ -14792,8 +15514,9 @@
   },
   {
     "id": 723,
-    "name": "フクスロー",
+    "nameJa": "フクスロー",
     "nameEn": "Dartrix",
+    "genus": "はばねポケモン",
     "types": [
       "grass",
       "flying"
@@ -14813,8 +15536,9 @@
   },
   {
     "id": 724,
-    "name": "ジュナイパー",
+    "nameJa": "ジュナイパー",
     "nameEn": "Decidueye",
+    "genus": "やばねポケモン",
     "types": [
       "grass",
       "ghost"
@@ -14834,8 +15558,9 @@
   },
   {
     "id": 725,
-    "name": "ニャビー",
+    "nameJa": "ニャビー",
     "nameEn": "Litten",
+    "genus": "ひねこポケモン",
     "types": [
       "fire"
     ],
@@ -14854,8 +15579,9 @@
   },
   {
     "id": 726,
-    "name": "ニャヒート",
+    "nameJa": "ニャヒート",
     "nameEn": "Torracat",
+    "genus": "ひねこポケモン",
     "types": [
       "fire"
     ],
@@ -14874,8 +15600,9 @@
   },
   {
     "id": 727,
-    "name": "ガオガエン",
+    "nameJa": "ガオガエン",
     "nameEn": "Incineroar",
+    "genus": "ヒールポケモン",
     "types": [
       "fire",
       "dark"
@@ -14895,8 +15622,9 @@
   },
   {
     "id": 728,
-    "name": "アシマリ",
+    "nameJa": "アシマリ",
     "nameEn": "Popplio",
+    "genus": "あしかポケモン",
     "types": [
       "water"
     ],
@@ -14915,8 +15643,9 @@
   },
   {
     "id": 729,
-    "name": "オシャマリ",
+    "nameJa": "オシャマリ",
     "nameEn": "Brionne",
+    "genus": "アイドルポケモン",
     "types": [
       "water"
     ],
@@ -14935,8 +15664,9 @@
   },
   {
     "id": 730,
-    "name": "アシレーヌ",
+    "nameJa": "アシレーヌ",
     "nameEn": "Primarina",
+    "genus": "ソリストポケモン",
     "types": [
       "water",
       "fairy"
@@ -14956,8 +15686,9 @@
   },
   {
     "id": 731,
-    "name": "ツツケラ",
+    "nameJa": "ツツケラ",
     "nameEn": "Pikipek",
+    "genus": "きつつきポケモン",
     "types": [
       "normal",
       "flying"
@@ -14977,8 +15708,9 @@
   },
   {
     "id": 732,
-    "name": "ケララッパ",
+    "nameJa": "ケララッパ",
     "nameEn": "Trumbeak",
+    "genus": "ラッパぐちポケモン",
     "types": [
       "normal",
       "flying"
@@ -14998,8 +15730,9 @@
   },
   {
     "id": 733,
-    "name": "ドデカバシ",
+    "nameJa": "ドデカバシ",
     "nameEn": "Toucannon",
+    "genus": "おおづつポケモン",
     "types": [
       "normal",
       "flying"
@@ -15019,8 +15752,9 @@
   },
   {
     "id": 734,
-    "name": "ヤングース",
+    "nameJa": "ヤングース",
     "nameEn": "Yungoos",
+    "genus": "うろつきポケモン",
     "types": [
       "normal"
     ],
@@ -15039,8 +15773,9 @@
   },
   {
     "id": 735,
-    "name": "デカグース",
+    "nameJa": "デカグース",
     "nameEn": "Gumshoos",
+    "genus": "はりこみポケモン",
     "types": [
       "normal"
     ],
@@ -15059,8 +15794,9 @@
   },
   {
     "id": 736,
-    "name": "アゴジムシ",
+    "nameJa": "アゴジムシ",
     "nameEn": "Grubbin",
+    "genus": "ようちゅうポケモン",
     "types": [
       "bug"
     ],
@@ -15079,8 +15815,9 @@
   },
   {
     "id": 737,
-    "name": "デンヂムシ",
+    "nameJa": "デンヂムシ",
     "nameEn": "Charjabug",
+    "genus": "バッテリーポケモン",
     "types": [
       "bug",
       "electric"
@@ -15100,8 +15837,9 @@
   },
   {
     "id": 738,
-    "name": "クワガノン",
+    "nameJa": "クワガノン",
     "nameEn": "Vikavolt",
+    "genus": "くわがたポケモン",
     "types": [
       "bug",
       "electric"
@@ -15121,8 +15859,9 @@
   },
   {
     "id": 739,
-    "name": "マケンカニ",
+    "nameJa": "マケンカニ",
     "nameEn": "Crabrawler",
+    "genus": "けんとうポケモン",
     "types": [
       "fighting"
     ],
@@ -15141,8 +15880,9 @@
   },
   {
     "id": 740,
-    "name": "ケケンカニ",
+    "nameJa": "ケケンカニ",
     "nameEn": "Crabominable",
+    "genus": "けがにポケモン",
     "types": [
       "fighting",
       "ice"
@@ -15162,8 +15902,9 @@
   },
   {
     "id": 741,
-    "name": "オドリドリ",
+    "nameJa": "オドリドリ",
     "nameEn": "Oricorio",
+    "genus": "ダンスポケモン",
     "types": [
       "fire",
       "flying"
@@ -15183,8 +15924,9 @@
   },
   {
     "id": 742,
-    "name": "アブリー",
+    "nameJa": "アブリー",
     "nameEn": "Cutiefly",
+    "genus": "ツリアブポケモン",
     "types": [
       "bug",
       "fairy"
@@ -15204,8 +15946,9 @@
   },
   {
     "id": 743,
-    "name": "アブリボン",
+    "nameJa": "アブリボン",
     "nameEn": "Ribombee",
+    "genus": "ツリアブポケモン",
     "types": [
       "bug",
       "fairy"
@@ -15225,8 +15968,9 @@
   },
   {
     "id": 744,
-    "name": "イワンコ",
+    "nameJa": "イワンコ",
     "nameEn": "Rockruff",
+    "genus": "こいぬポケモン",
     "types": [
       "rock"
     ],
@@ -15245,8 +15989,9 @@
   },
   {
     "id": 745,
-    "name": "ルガルガン",
+    "nameJa": "ルガルガン",
     "nameEn": "Lycanroc",
+    "genus": "オオカミポケモン",
     "types": [
       "rock"
     ],
@@ -15265,8 +16010,9 @@
   },
   {
     "id": 746,
-    "name": "ヨワシ",
+    "nameJa": "ヨワシ",
     "nameEn": "Wishiwashi",
+    "genus": "こざかなポケモン",
     "types": [
       "water"
     ],
@@ -15285,8 +16031,9 @@
   },
   {
     "id": 747,
-    "name": "ヒドイデ",
+    "nameJa": "ヒドイデ",
     "nameEn": "Mareanie",
+    "genus": "ヒトデナシポケモン",
     "types": [
       "poison",
       "water"
@@ -15306,8 +16053,9 @@
   },
   {
     "id": 748,
-    "name": "ドヒドイデ",
+    "nameJa": "ドヒドイデ",
     "nameEn": "Toxapex",
+    "genus": "ヒトデナシポケモン",
     "types": [
       "poison",
       "water"
@@ -15327,8 +16075,9 @@
   },
   {
     "id": 749,
-    "name": "ドロバンコ",
+    "nameJa": "ドロバンコ",
     "nameEn": "Mudbray",
+    "genus": "うさぎうまポケモン",
     "types": [
       "ground"
     ],
@@ -15347,8 +16096,9 @@
   },
   {
     "id": 750,
-    "name": "バンバドロ",
+    "nameJa": "バンバドロ",
     "nameEn": "Mudsdale",
+    "genus": "ばんばポケモン",
     "types": [
       "ground"
     ],
@@ -15367,8 +16117,9 @@
   },
   {
     "id": 751,
-    "name": "シズクモ",
+    "nameJa": "シズクモ",
     "nameEn": "Dewpider",
+    "genus": "すいほうポケモン",
     "types": [
       "water",
       "bug"
@@ -15388,8 +16139,9 @@
   },
   {
     "id": 752,
-    "name": "オニシズクモ",
+    "nameJa": "オニシズクモ",
     "nameEn": "Araquanid",
+    "genus": "すいほうポケモン",
     "types": [
       "water",
       "bug"
@@ -15409,8 +16161,9 @@
   },
   {
     "id": 753,
-    "name": "カリキリ",
+    "nameJa": "カリキリ",
     "nameEn": "Fomantis",
+    "genus": "かまくさポケモン",
     "types": [
       "grass"
     ],
@@ -15429,8 +16182,9 @@
   },
   {
     "id": 754,
-    "name": "ラランテス",
+    "nameJa": "ラランテス",
     "nameEn": "Lurantis",
+    "genus": "はなかまポケモン",
     "types": [
       "grass"
     ],
@@ -15449,8 +16203,9 @@
   },
   {
     "id": 755,
-    "name": "ネマシュ",
+    "nameJa": "ネマシュ",
     "nameEn": "Morelull",
+    "genus": "はっこうポケモン",
     "types": [
       "grass",
       "fairy"
@@ -15470,8 +16225,9 @@
   },
   {
     "id": 756,
-    "name": "マシェード",
+    "nameJa": "マシェード",
     "nameEn": "Shiinotic",
+    "genus": "はっこうポケモン",
     "types": [
       "grass",
       "fairy"
@@ -15491,8 +16247,9 @@
   },
   {
     "id": 757,
-    "name": "ヤトウモリ",
+    "nameJa": "ヤトウモリ",
     "nameEn": "Salandit",
+    "genus": "どくトカゲポケモン",
     "types": [
       "poison",
       "fire"
@@ -15512,8 +16269,9 @@
   },
   {
     "id": 758,
-    "name": "エンニュート",
+    "nameJa": "エンニュート",
     "nameEn": "Salazzle",
+    "genus": "どくトカゲポケモン",
     "types": [
       "poison",
       "fire"
@@ -15533,8 +16291,9 @@
   },
   {
     "id": 759,
-    "name": "ヌイコグマ",
+    "nameJa": "ヌイコグマ",
     "nameEn": "Stufful",
+    "genus": "じたばたポケモン",
     "types": [
       "normal",
       "fighting"
@@ -15554,8 +16313,9 @@
   },
   {
     "id": 760,
-    "name": "キテルグマ",
+    "nameJa": "キテルグマ",
     "nameEn": "Bewear",
+    "genus": "ごうわんポケモン",
     "types": [
       "normal",
       "fighting"
@@ -15575,8 +16335,9 @@
   },
   {
     "id": 761,
-    "name": "アマカジ",
+    "nameJa": "アマカジ",
     "nameEn": "Bounsweet",
+    "genus": "フルーツポケモン",
     "types": [
       "grass"
     ],
@@ -15595,8 +16356,9 @@
   },
   {
     "id": 762,
-    "name": "アママイコ",
+    "nameJa": "アママイコ",
     "nameEn": "Steenee",
+    "genus": "フルーツポケモン",
     "types": [
       "grass"
     ],
@@ -15615,8 +16377,9 @@
   },
   {
     "id": 763,
-    "name": "アマージョ",
+    "nameJa": "アマージョ",
     "nameEn": "Tsareena",
+    "genus": "フルーツポケモン",
     "types": [
       "grass"
     ],
@@ -15635,8 +16398,9 @@
   },
   {
     "id": 764,
-    "name": "キュワワー",
+    "nameJa": "キュワワー",
     "nameEn": "Comfey",
+    "genus": "はなつみポケモン",
     "types": [
       "fairy"
     ],
@@ -15655,8 +16419,9 @@
   },
   {
     "id": 765,
-    "name": "ヤレユータン",
+    "nameJa": "ヤレユータン",
     "nameEn": "Oranguru",
+    "genus": "けんじゃポケモン",
     "types": [
       "normal",
       "psychic"
@@ -15676,8 +16441,9 @@
   },
   {
     "id": 766,
-    "name": "ナゲツケサル",
+    "nameJa": "ナゲツケサル",
     "nameEn": "Passimian",
+    "genus": "れんけいポケモン",
     "types": [
       "fighting"
     ],
@@ -15696,8 +16462,9 @@
   },
   {
     "id": 767,
-    "name": "コソクムシ",
+    "nameJa": "コソクムシ",
     "nameEn": "Wimpod",
+    "genus": "そうこうポケモン",
     "types": [
       "bug",
       "water"
@@ -15717,8 +16484,9 @@
   },
   {
     "id": 768,
-    "name": "グソクムシャ",
+    "nameJa": "グソクムシャ",
     "nameEn": "Golisopod",
+    "genus": "そうこうポケモン",
     "types": [
       "bug",
       "water"
@@ -15738,8 +16506,9 @@
   },
   {
     "id": 769,
-    "name": "スナバァ",
+    "nameJa": "スナバァ",
     "nameEn": "Sandygast",
+    "genus": "すなやまポケモン",
     "types": [
       "ghost",
       "ground"
@@ -15759,8 +16528,9 @@
   },
   {
     "id": 770,
-    "name": "シロデスナ",
+    "nameJa": "シロデスナ",
     "nameEn": "Palossand",
+    "genus": "すなのしろポケモン",
     "types": [
       "ghost",
       "ground"
@@ -15780,8 +16550,9 @@
   },
   {
     "id": 771,
-    "name": "ナマコブシ",
+    "nameJa": "ナマコブシ",
     "nameEn": "Pyukumuku",
+    "genus": "なまこポケモン",
     "types": [
       "water"
     ],
@@ -15800,8 +16571,9 @@
   },
   {
     "id": 772,
-    "name": "タイプ：ヌル",
+    "nameJa": "タイプ：ヌル",
     "nameEn": "Type: Null",
+    "genus": "じんこうポケモン",
     "types": [
       "normal"
     ],
@@ -15820,8 +16592,9 @@
   },
   {
     "id": 773,
-    "name": "シルヴァディ",
+    "nameJa": "シルヴァディ",
     "nameEn": "Silvally",
+    "genus": "じんこうポケモン",
     "types": [
       "normal"
     ],
@@ -15840,8 +16613,9 @@
   },
   {
     "id": 774,
-    "name": "メテノ",
+    "nameJa": "メテノ",
     "nameEn": "Minior",
+    "genus": "ながれぼしポケモン",
     "types": [
       "rock",
       "flying"
@@ -15861,8 +16635,9 @@
   },
   {
     "id": 775,
-    "name": "ネッコアラ",
+    "nameJa": "ネッコアラ",
     "nameEn": "Komala",
+    "genus": "ゆめうつつポケモン",
     "types": [
       "normal"
     ],
@@ -15881,8 +16656,9 @@
   },
   {
     "id": 776,
-    "name": "バクガメス",
+    "nameJa": "バクガメス",
     "nameEn": "Turtonator",
+    "genus": "ばくはつがめポケモン",
     "types": [
       "fire",
       "dragon"
@@ -15902,8 +16678,9 @@
   },
   {
     "id": 777,
-    "name": "トゲデマル",
+    "nameJa": "トゲデマル",
     "nameEn": "Togedemaru",
+    "genus": "まるまりポケモン",
     "types": [
       "electric",
       "steel"
@@ -15923,8 +16700,9 @@
   },
   {
     "id": 778,
-    "name": "ミミッキュ",
+    "nameJa": "ミミッキュ",
     "nameEn": "Mimikyu",
+    "genus": "ばけのかわポケモン",
     "types": [
       "ghost",
       "fairy"
@@ -15944,8 +16722,9 @@
   },
   {
     "id": 779,
-    "name": "ハギギシリ",
+    "nameJa": "ハギギシリ",
     "nameEn": "Bruxish",
+    "genus": "はぎしりポケモン",
     "types": [
       "water",
       "psychic"
@@ -15965,8 +16744,9 @@
   },
   {
     "id": 780,
-    "name": "ジジーロン",
+    "nameJa": "ジジーロン",
     "nameEn": "Drampa",
+    "genus": "ゆうゆうポケモン",
     "types": [
       "normal",
       "dragon"
@@ -15986,8 +16766,9 @@
   },
   {
     "id": 781,
-    "name": "ダダリン",
+    "nameJa": "ダダリン",
     "nameEn": "Dhelmise",
+    "genus": "もくずポケモン",
     "types": [
       "ghost",
       "grass"
@@ -16007,8 +16788,9 @@
   },
   {
     "id": 782,
-    "name": "ジャラコ",
+    "nameJa": "ジャラコ",
     "nameEn": "Jangmo-o",
+    "genus": "うろこポケモン",
     "types": [
       "dragon"
     ],
@@ -16027,8 +16809,9 @@
   },
   {
     "id": 783,
-    "name": "ジャランゴ",
+    "nameJa": "ジャランゴ",
     "nameEn": "Hakamo-o",
+    "genus": "うろこポケモン",
     "types": [
       "dragon",
       "fighting"
@@ -16048,8 +16831,9 @@
   },
   {
     "id": 784,
-    "name": "ジャラランガ",
+    "nameJa": "ジャラランガ",
     "nameEn": "Kommo-o",
+    "genus": "うろこポケモン",
     "types": [
       "dragon",
       "fighting"
@@ -16069,8 +16853,9 @@
   },
   {
     "id": 785,
-    "name": "カプ・コケコ",
+    "nameJa": "カプ・コケコ",
     "nameEn": "Tapu Koko",
+    "genus": "とちがみポケモン",
     "types": [
       "electric",
       "fairy"
@@ -16090,8 +16875,9 @@
   },
   {
     "id": 786,
-    "name": "カプ・テテフ",
+    "nameJa": "カプ・テテフ",
     "nameEn": "Tapu Lele",
+    "genus": "とちがみポケモン",
     "types": [
       "psychic",
       "fairy"
@@ -16111,8 +16897,9 @@
   },
   {
     "id": 787,
-    "name": "カプ・ブルル",
+    "nameJa": "カプ・ブルル",
     "nameEn": "Tapu Bulu",
+    "genus": "とちがみポケモン",
     "types": [
       "grass",
       "fairy"
@@ -16132,8 +16919,9 @@
   },
   {
     "id": 788,
-    "name": "カプ・レヒレ",
+    "nameJa": "カプ・レヒレ",
     "nameEn": "Tapu Fini",
+    "genus": "とちがみポケモン",
     "types": [
       "water",
       "fairy"
@@ -16153,8 +16941,9 @@
   },
   {
     "id": 789,
-    "name": "コスモッグ",
+    "nameJa": "コスモッグ",
     "nameEn": "Cosmog",
+    "genus": "せいうんポケモン",
     "types": [
       "psychic"
     ],
@@ -16173,8 +16962,9 @@
   },
   {
     "id": 790,
-    "name": "コスモウム",
+    "nameJa": "コスモウム",
     "nameEn": "Cosmoem",
+    "genus": "げんしせいポケモン",
     "types": [
       "psychic"
     ],
@@ -16193,8 +16983,9 @@
   },
   {
     "id": 791,
-    "name": "ソルガレオ",
+    "nameJa": "ソルガレオ",
     "nameEn": "Solgaleo",
+    "genus": "にちりんポケモン",
     "types": [
       "psychic",
       "steel"
@@ -16214,8 +17005,9 @@
   },
   {
     "id": 792,
-    "name": "ルナアーラ",
+    "nameJa": "ルナアーラ",
     "nameEn": "Lunala",
+    "genus": "がちりんポケモン",
     "types": [
       "psychic",
       "ghost"
@@ -16235,8 +17027,9 @@
   },
   {
     "id": 793,
-    "name": "ウツロイド",
+    "nameJa": "ウツロイド",
     "nameEn": "Nihilego",
+    "genus": "きせいポケモン",
     "types": [
       "rock",
       "poison"
@@ -16256,8 +17049,9 @@
   },
   {
     "id": 794,
-    "name": "マッシブーン",
+    "nameJa": "マッシブーン",
     "nameEn": "Buzzwole",
+    "genus": "ぼうちょうポケモン",
     "types": [
       "bug",
       "fighting"
@@ -16277,8 +17071,9 @@
   },
   {
     "id": 795,
-    "name": "フェローチェ",
+    "nameJa": "フェローチェ",
     "nameEn": "Pheromosa",
+    "genus": "えんびポケモン",
     "types": [
       "bug",
       "fighting"
@@ -16298,8 +17093,9 @@
   },
   {
     "id": 796,
-    "name": "デンジュモク",
+    "nameJa": "デンジュモク",
     "nameEn": "Xurkitree",
+    "genus": "でんしょくポケモン",
     "types": [
       "electric"
     ],
@@ -16318,8 +17114,9 @@
   },
   {
     "id": 797,
-    "name": "テッカグヤ",
+    "nameJa": "テッカグヤ",
     "nameEn": "Celesteela",
+    "genus": "うちあげポケモン",
     "types": [
       "steel",
       "flying"
@@ -16339,8 +17136,9 @@
   },
   {
     "id": 798,
-    "name": "カミツルギ",
+    "nameJa": "カミツルギ",
     "nameEn": "Kartana",
+    "genus": "ばっとうポケモン",
     "types": [
       "grass",
       "steel"
@@ -16360,8 +17158,9 @@
   },
   {
     "id": 799,
-    "name": "アクジキング",
+    "nameJa": "アクジキング",
     "nameEn": "Guzzlord",
+    "genus": "あくじきポケモン",
     "types": [
       "dark",
       "dragon"
@@ -16381,8 +17180,9 @@
   },
   {
     "id": 800,
-    "name": "ネクロズマ",
+    "nameJa": "ネクロズマ",
     "nameEn": "Necrozma",
+    "genus": "プリズムポケモン",
     "types": [
       "psychic"
     ],
@@ -16401,8 +17201,9 @@
   },
   {
     "id": 801,
-    "name": "マギアナ",
+    "nameJa": "マギアナ",
     "nameEn": "Magearna",
+    "genus": "じんぞうポケモン",
     "types": [
       "steel",
       "fairy"
@@ -16422,8 +17223,9 @@
   },
   {
     "id": 802,
-    "name": "マーシャドー",
+    "nameJa": "マーシャドー",
     "nameEn": "Marshadow",
+    "genus": "かげすみポケモン",
     "types": [
       "fighting",
       "ghost"
@@ -16443,8 +17245,9 @@
   },
   {
     "id": 803,
-    "name": "ベベノム",
+    "nameJa": "ベベノム",
     "nameEn": "Poipole",
+    "genus": "どくばりポケモン",
     "types": [
       "poison"
     ],
@@ -16463,8 +17266,9 @@
   },
   {
     "id": 804,
-    "name": "アーゴヨン",
+    "nameJa": "アーゴヨン",
     "nameEn": "Naganadel",
+    "genus": "どくばりポケモン",
     "types": [
       "poison",
       "dragon"
@@ -16484,8 +17288,9 @@
   },
   {
     "id": 805,
-    "name": "ツンデツンデ",
+    "nameJa": "ツンデツンデ",
     "nameEn": "Stakataka",
+    "genus": "いしがきポケモン",
     "types": [
       "rock",
       "steel"
@@ -16505,8 +17310,9 @@
   },
   {
     "id": 806,
-    "name": "ズガドーン",
+    "nameJa": "ズガドーン",
     "nameEn": "Blacephalon",
+    "genus": "はなびポケモン",
     "types": [
       "fire",
       "ghost"
@@ -16526,8 +17332,9 @@
   },
   {
     "id": 807,
-    "name": "ゼラオラ",
+    "nameJa": "ゼラオラ",
     "nameEn": "Zeraora",
+    "genus": "じんらいポケモン",
     "types": [
       "electric"
     ],
@@ -16546,8 +17353,9 @@
   },
   {
     "id": 808,
-    "name": "メルタン",
+    "nameJa": "メルタン",
     "nameEn": "Meltan",
+    "genus": "ナットポケモン",
     "types": [
       "steel"
     ],
@@ -16566,8 +17374,9 @@
   },
   {
     "id": 809,
-    "name": "メルメタル",
+    "nameJa": "メルメタル",
     "nameEn": "Melmetal",
+    "genus": "ナットポケモン",
     "types": [
       "steel"
     ],
@@ -16586,8 +17395,9 @@
   },
   {
     "id": 810,
-    "name": "サルノリ",
+    "nameJa": "サルノリ",
     "nameEn": "Grookey",
+    "genus": "こざるポケモン",
     "types": [
       "grass"
     ],
@@ -16606,8 +17416,9 @@
   },
   {
     "id": 811,
-    "name": "バチンキー",
+    "nameJa": "バチンキー",
     "nameEn": "Thwackey",
+    "genus": "ビートポケモン",
     "types": [
       "grass"
     ],
@@ -16626,8 +17437,9 @@
   },
   {
     "id": 812,
-    "name": "ゴリランダー",
+    "nameJa": "ゴリランダー",
     "nameEn": "Rillaboom",
+    "genus": "ドラマーポケモン",
     "types": [
       "grass"
     ],
@@ -16646,8 +17458,9 @@
   },
   {
     "id": 813,
-    "name": "ヒバニー",
+    "nameJa": "ヒバニー",
     "nameEn": "Scorbunny",
+    "genus": "うさぎポケモン",
     "types": [
       "fire"
     ],
@@ -16666,8 +17479,9 @@
   },
   {
     "id": 814,
-    "name": "ラビフット",
+    "nameJa": "ラビフット",
     "nameEn": "Raboot",
+    "genus": "うさぎポケモン",
     "types": [
       "fire"
     ],
@@ -16686,8 +17500,9 @@
   },
   {
     "id": 815,
-    "name": "エースバーン",
+    "nameJa": "エースバーン",
     "nameEn": "Cinderace",
+    "genus": "ストライカーポケモン",
     "types": [
       "fire"
     ],
@@ -16706,8 +17521,9 @@
   },
   {
     "id": 816,
-    "name": "メッソン",
+    "nameJa": "メッソン",
     "nameEn": "Sobble",
+    "genus": "みずとかげポケモン",
     "types": [
       "water"
     ],
@@ -16726,8 +17542,9 @@
   },
   {
     "id": 817,
-    "name": "ジメレオン",
+    "nameJa": "ジメレオン",
     "nameEn": "Drizzile",
+    "genus": "みずとかげポケモン",
     "types": [
       "water"
     ],
@@ -16746,8 +17563,9 @@
   },
   {
     "id": 818,
-    "name": "インテレオン",
+    "nameJa": "インテレオン",
     "nameEn": "Inteleon",
+    "genus": "エージェントポケモン",
     "types": [
       "water"
     ],
@@ -16766,8 +17584,9 @@
   },
   {
     "id": 819,
-    "name": "ホシガリス",
+    "nameJa": "ホシガリス",
     "nameEn": "Skwovet",
+    "genus": "ほおばりポケモン",
     "types": [
       "normal"
     ],
@@ -16786,8 +17605,9 @@
   },
   {
     "id": 820,
-    "name": "ヨクバリス",
+    "nameJa": "ヨクバリス",
     "nameEn": "Greedent",
+    "genus": "よくばりポケモン",
     "types": [
       "normal"
     ],
@@ -16806,8 +17626,9 @@
   },
   {
     "id": 821,
-    "name": "ココガラ",
+    "nameJa": "ココガラ",
     "nameEn": "Rookidee",
+    "genus": "ことりポケモン",
     "types": [
       "flying"
     ],
@@ -16826,8 +17647,9 @@
   },
   {
     "id": 822,
-    "name": "アオガラス",
+    "nameJa": "アオガラス",
     "nameEn": "Corvisquire",
+    "genus": "カラスポケモン",
     "types": [
       "flying"
     ],
@@ -16846,8 +17668,9 @@
   },
   {
     "id": 823,
-    "name": "アーマーガア",
+    "nameJa": "アーマーガア",
     "nameEn": "Corviknight",
+    "genus": "カラスポケモン",
     "types": [
       "flying",
       "steel"
@@ -16867,8 +17690,9 @@
   },
   {
     "id": 824,
-    "name": "サッチムシ",
+    "nameJa": "サッチムシ",
     "nameEn": "Blipbug",
+    "genus": "ようちゅうポケモン",
     "types": [
       "bug"
     ],
@@ -16887,8 +17711,9 @@
   },
   {
     "id": 825,
-    "name": "レドームシ",
+    "nameJa": "レドームシ",
     "nameEn": "Dottler",
+    "genus": "レドームポケモン",
     "types": [
       "bug",
       "psychic"
@@ -16908,8 +17733,9 @@
   },
   {
     "id": 826,
-    "name": "イオルブ",
+    "nameJa": "イオルブ",
     "nameEn": "Orbeetle",
+    "genus": "ななほしポケモン",
     "types": [
       "bug",
       "psychic"
@@ -16929,8 +17755,9 @@
   },
   {
     "id": 827,
-    "name": "クスネ",
+    "nameJa": "クスネ",
     "nameEn": "Nickit",
+    "genus": "きつねポケモン",
     "types": [
       "dark"
     ],
@@ -16949,8 +17776,9 @@
   },
   {
     "id": 828,
-    "name": "フォクスライ",
+    "nameJa": "フォクスライ",
     "nameEn": "Thievul",
+    "genus": "きつねポケモン",
     "types": [
       "dark"
     ],
@@ -16969,8 +17797,9 @@
   },
   {
     "id": 829,
-    "name": "ヒメンカ",
+    "nameJa": "ヒメンカ",
     "nameEn": "Gossifleur",
+    "genus": "はなかざりポケモン",
     "types": [
       "grass"
     ],
@@ -16989,8 +17818,9 @@
   },
   {
     "id": 830,
-    "name": "ワタシラガ",
+    "nameJa": "ワタシラガ",
     "nameEn": "Eldegoss",
+    "genus": "わたかざりポケモン",
     "types": [
       "grass"
     ],
@@ -17009,8 +17839,9 @@
   },
   {
     "id": 831,
-    "name": "ウールー",
+    "nameJa": "ウールー",
     "nameEn": "Wooloo",
+    "genus": "ひつじポケモン",
     "types": [
       "normal"
     ],
@@ -17029,8 +17860,9 @@
   },
   {
     "id": 832,
-    "name": "バイウールー",
+    "nameJa": "バイウールー",
     "nameEn": "Dubwool",
+    "genus": "ひつじポケモン",
     "types": [
       "normal"
     ],
@@ -17049,8 +17881,9 @@
   },
   {
     "id": 833,
-    "name": "カムカメ",
+    "nameJa": "カムカメ",
     "nameEn": "Chewtle",
+    "genus": "くいつきポケモン",
     "types": [
       "water"
     ],
@@ -17069,8 +17902,9 @@
   },
   {
     "id": 834,
-    "name": "カジリガメ",
+    "nameJa": "カジリガメ",
     "nameEn": "Drednaw",
+    "genus": "かみつきポケモン",
     "types": [
       "water",
       "rock"
@@ -17090,8 +17924,9 @@
   },
   {
     "id": 835,
-    "name": "ワンパチ",
+    "nameJa": "ワンパチ",
     "nameEn": "Yamper",
+    "genus": "こいぬポケモン",
     "types": [
       "electric"
     ],
@@ -17110,8 +17945,9 @@
   },
   {
     "id": 836,
-    "name": "パルスワン",
+    "nameJa": "パルスワン",
     "nameEn": "Boltund",
+    "genus": "いぬポケモン",
     "types": [
       "electric"
     ],
@@ -17130,8 +17966,9 @@
   },
   {
     "id": 837,
-    "name": "タンドン",
+    "nameJa": "タンドン",
     "nameEn": "Rolycoly",
+    "genus": "せきたんポケモン",
     "types": [
       "rock"
     ],
@@ -17150,8 +17987,9 @@
   },
   {
     "id": 838,
-    "name": "トロッゴン",
+    "nameJa": "トロッゴン",
     "nameEn": "Carkol",
+    "genus": "せきたんポケモン",
     "types": [
       "rock",
       "fire"
@@ -17171,8 +18009,9 @@
   },
   {
     "id": 839,
-    "name": "セキタンザン",
+    "nameJa": "セキタンザン",
     "nameEn": "Coalossal",
+    "genus": "せきたんポケモン",
     "types": [
       "rock",
       "fire"
@@ -17192,8 +18031,9 @@
   },
   {
     "id": 840,
-    "name": "カジッチュ",
+    "nameJa": "カジッチュ",
     "nameEn": "Applin",
+    "genus": "りんごぐらしポケモン",
     "types": [
       "grass",
       "dragon"
@@ -17213,8 +18053,9 @@
   },
   {
     "id": 841,
-    "name": "アップリュー",
+    "nameJa": "アップリュー",
     "nameEn": "Flapple",
+    "genus": "りんごはねポケモン",
     "types": [
       "grass",
       "dragon"
@@ -17234,8 +18075,9 @@
   },
   {
     "id": 842,
-    "name": "タルップル",
+    "nameJa": "タルップル",
     "nameEn": "Appletun",
+    "genus": "りんごじるポケモン",
     "types": [
       "grass",
       "dragon"
@@ -17255,8 +18097,9 @@
   },
   {
     "id": 843,
-    "name": "スナヘビ",
+    "nameJa": "スナヘビ",
     "nameEn": "Silicobra",
+    "genus": "すなへびポケモン",
     "types": [
       "ground"
     ],
@@ -17275,8 +18118,9 @@
   },
   {
     "id": 844,
-    "name": "サダイジャ",
+    "nameJa": "サダイジャ",
     "nameEn": "Sandaconda",
+    "genus": "すなへびポケモン",
     "types": [
       "ground"
     ],
@@ -17295,8 +18139,9 @@
   },
   {
     "id": 845,
-    "name": "ウッウ",
+    "nameJa": "ウッウ",
     "nameEn": "Cramorant",
+    "genus": "うのみポケモン",
     "types": [
       "flying",
       "water"
@@ -17316,8 +18161,9 @@
   },
   {
     "id": 846,
-    "name": "サシカマス",
+    "nameJa": "サシカマス",
     "nameEn": "Arrokuda",
+    "genus": "とつげきポケモン",
     "types": [
       "water"
     ],
@@ -17336,8 +18182,9 @@
   },
   {
     "id": 847,
-    "name": "カマスジョー",
+    "nameJa": "カマスジョー",
     "nameEn": "Barraskewda",
+    "genus": "くしざしポケモン",
     "types": [
       "water"
     ],
@@ -17356,8 +18203,9 @@
   },
   {
     "id": 848,
-    "name": "エレズン",
+    "nameJa": "エレズン",
     "nameEn": "Toxel",
+    "genus": "あかごポケモン",
     "types": [
       "electric",
       "poison"
@@ -17377,8 +18225,9 @@
   },
   {
     "id": 849,
-    "name": "ストリンダー",
+    "nameJa": "ストリンダー",
     "nameEn": "Toxtricity",
+    "genus": "パンクポケモン",
     "types": [
       "electric",
       "poison"
@@ -17398,8 +18247,9 @@
   },
   {
     "id": 850,
-    "name": "ヤクデ",
+    "nameJa": "ヤクデ",
     "nameEn": "Sizzlipede",
+    "genus": "はつねつポケモン",
     "types": [
       "fire",
       "bug"
@@ -17419,8 +18269,9 @@
   },
   {
     "id": 851,
-    "name": "マルヤクデ",
+    "nameJa": "マルヤクデ",
     "nameEn": "Centiskorch",
+    "genus": "はつねつポケモン",
     "types": [
       "fire",
       "bug"
@@ -17440,8 +18291,9 @@
   },
   {
     "id": 852,
-    "name": "タタッコ",
+    "nameJa": "タタッコ",
     "nameEn": "Clobbopus",
+    "genus": "だだっこポケモン",
     "types": [
       "fighting"
     ],
@@ -17460,8 +18312,9 @@
   },
   {
     "id": 853,
-    "name": "オトスパス",
+    "nameJa": "オトスパス",
     "nameEn": "Grapploct",
+    "genus": "じゅうじゅつポケモン",
     "types": [
       "fighting"
     ],
@@ -17480,8 +18333,9 @@
   },
   {
     "id": 854,
-    "name": "ヤバチャ",
+    "nameJa": "ヤバチャ",
     "nameEn": "Sinistea",
+    "genus": "こうちゃポケモン",
     "types": [
       "ghost"
     ],
@@ -17500,8 +18354,9 @@
   },
   {
     "id": 855,
-    "name": "ポットデス",
+    "nameJa": "ポットデス",
     "nameEn": "Polteageist",
+    "genus": "こうちゃポケモン",
     "types": [
       "ghost"
     ],
@@ -17520,8 +18375,9 @@
   },
   {
     "id": 856,
-    "name": "ミブリム",
+    "nameJa": "ミブリム",
     "nameEn": "Hatenna",
+    "genus": "おだやかポケモン",
     "types": [
       "psychic"
     ],
@@ -17540,8 +18396,9 @@
   },
   {
     "id": 857,
-    "name": "テブリム",
+    "nameJa": "テブリム",
     "nameEn": "Hattrem",
+    "genus": "せいしゅくポケモン",
     "types": [
       "psychic"
     ],
@@ -17560,8 +18417,9 @@
   },
   {
     "id": 858,
-    "name": "ブリムオン",
+    "nameJa": "ブリムオン",
     "nameEn": "Hatterene",
+    "genus": "せいじゃくポケモン",
     "types": [
       "psychic",
       "fairy"
@@ -17581,8 +18439,9 @@
   },
   {
     "id": 859,
-    "name": "ベロバー",
+    "nameJa": "ベロバー",
     "nameEn": "Impidimp",
+    "genus": "いじわるポケモン",
     "types": [
       "dark",
       "fairy"
@@ -17602,8 +18461,9 @@
   },
   {
     "id": 860,
-    "name": "ギモー",
+    "nameJa": "ギモー",
     "nameEn": "Morgrem",
+    "genus": "しょうわるポケモン",
     "types": [
       "dark",
       "fairy"
@@ -17623,8 +18483,9 @@
   },
   {
     "id": 861,
-    "name": "オーロンゲ",
+    "nameJa": "オーロンゲ",
     "nameEn": "Grimmsnarl",
+    "genus": "ビルドアップポケモン",
     "types": [
       "dark",
       "fairy"
@@ -17644,8 +18505,9 @@
   },
   {
     "id": 862,
-    "name": "タチフサグマ",
+    "nameJa": "タチフサグマ",
     "nameEn": "Obstagoon",
+    "genus": "ていしポケモン",
     "types": [
       "dark",
       "normal"
@@ -17665,8 +18527,9 @@
   },
   {
     "id": 863,
-    "name": "ニャイキング",
+    "nameJa": "ニャイキング",
     "nameEn": "Perrserker",
+    "genus": "バイキングポケモン",
     "types": [
       "steel"
     ],
@@ -17685,8 +18548,9 @@
   },
   {
     "id": 864,
-    "name": "サニゴーン",
+    "nameJa": "サニゴーン",
     "nameEn": "Cursola",
+    "genus": "さんごポケモン",
     "types": [
       "ghost"
     ],
@@ -17705,8 +18569,9 @@
   },
   {
     "id": 865,
-    "name": "ネギガナイト",
+    "nameJa": "ネギガナイト",
     "nameEn": "Sirfetch’d",
+    "genus": "かるがもポケモン",
     "types": [
       "fighting"
     ],
@@ -17725,8 +18590,9 @@
   },
   {
     "id": 866,
-    "name": "バリコオル",
+    "nameJa": "バリコオル",
     "nameEn": "Mr. Rime",
+    "genus": "コメディアンポケモン",
     "types": [
       "ice",
       "psychic"
@@ -17746,8 +18612,9 @@
   },
   {
     "id": 867,
-    "name": "デスバーン",
+    "nameJa": "デスバーン",
     "nameEn": "Runerigus",
+    "genus": "おんねんポケモン",
     "types": [
       "ground",
       "ghost"
@@ -17767,8 +18634,9 @@
   },
   {
     "id": 868,
-    "name": "マホミル",
+    "nameJa": "マホミル",
     "nameEn": "Milcery",
+    "genus": "クリームポケモン",
     "types": [
       "fairy"
     ],
@@ -17787,8 +18655,9 @@
   },
   {
     "id": 869,
-    "name": "マホイップ",
+    "nameJa": "マホイップ",
     "nameEn": "Alcremie",
+    "genus": "クリームポケモン",
     "types": [
       "fairy"
     ],
@@ -17807,8 +18676,9 @@
   },
   {
     "id": 870,
-    "name": "タイレーツ",
+    "nameJa": "タイレーツ",
     "nameEn": "Falinks",
+    "genus": "じんけいポケモン",
     "types": [
       "fighting"
     ],
@@ -17827,8 +18697,9 @@
   },
   {
     "id": 871,
-    "name": "バチンウニ",
+    "nameJa": "バチンウニ",
     "nameEn": "Pincurchin",
+    "genus": "うにポケモン",
     "types": [
       "electric"
     ],
@@ -17847,8 +18718,9 @@
   },
   {
     "id": 872,
-    "name": "ユキハミ",
+    "nameJa": "ユキハミ",
     "nameEn": "Snom",
+    "genus": "いもむしポケモン",
     "types": [
       "ice",
       "bug"
@@ -17868,8 +18740,9 @@
   },
   {
     "id": 873,
-    "name": "モスノウ",
+    "nameJa": "モスノウ",
     "nameEn": "Frosmoth",
+    "genus": "こおりがポケモン",
     "types": [
       "ice",
       "bug"
@@ -17889,8 +18762,9 @@
   },
   {
     "id": 874,
-    "name": "イシヘンジン",
+    "nameJa": "イシヘンジン",
     "nameEn": "Stonjourner",
+    "genus": "きょせきポケモン",
     "types": [
       "rock"
     ],
@@ -17909,8 +18783,9 @@
   },
   {
     "id": 875,
-    "name": "コオリッポ",
+    "nameJa": "コオリッポ",
     "nameEn": "Eiscue",
+    "genus": "ペンギンポケモン",
     "types": [
       "ice"
     ],
@@ -17929,8 +18804,9 @@
   },
   {
     "id": 876,
-    "name": "イエッサン",
+    "nameJa": "イエッサン",
     "nameEn": "Indeedee",
+    "genus": "かんじょうポケモン",
     "types": [
       "psychic",
       "normal"
@@ -17950,8 +18826,9 @@
   },
   {
     "id": 877,
-    "name": "モルペコ",
+    "nameJa": "モルペコ",
     "nameEn": "Morpeko",
+    "genus": "にめんポケモン",
     "types": [
       "electric",
       "dark"
@@ -17971,8 +18848,9 @@
   },
   {
     "id": 878,
-    "name": "ゾウドウ",
+    "nameJa": "ゾウドウ",
     "nameEn": "Cufant",
+    "genus": "どうぞうポケモン",
     "types": [
       "steel"
     ],
@@ -17991,8 +18869,9 @@
   },
   {
     "id": 879,
-    "name": "ダイオウドウ",
+    "nameJa": "ダイオウドウ",
     "nameEn": "Copperajah",
+    "genus": "どうぞうポケモン",
     "types": [
       "steel"
     ],
@@ -18011,8 +18890,9 @@
   },
   {
     "id": 880,
-    "name": "パッチラゴン",
+    "nameJa": "パッチラゴン",
     "nameEn": "Dracozolt",
+    "genus": "かせきポケモン",
     "types": [
       "electric",
       "dragon"
@@ -18032,8 +18912,9 @@
   },
   {
     "id": 881,
-    "name": "パッチルドン",
+    "nameJa": "パッチルドン",
     "nameEn": "Arctozolt",
+    "genus": "かせきポケモン",
     "types": [
       "electric",
       "ice"
@@ -18053,8 +18934,9 @@
   },
   {
     "id": 882,
-    "name": "ウオノラゴン",
+    "nameJa": "ウオノラゴン",
     "nameEn": "Dracovish",
+    "genus": "かせきポケモン",
     "types": [
       "water",
       "dragon"
@@ -18074,8 +18956,9 @@
   },
   {
     "id": 883,
-    "name": "ウオチルドン",
+    "nameJa": "ウオチルドン",
     "nameEn": "Arctovish",
+    "genus": "かせきポケモン",
     "types": [
       "water",
       "ice"
@@ -18095,8 +18978,9 @@
   },
   {
     "id": 884,
-    "name": "ジュラルドン",
+    "nameJa": "ジュラルドン",
     "nameEn": "Duraludon",
+    "genus": "ごうきんポケモン",
     "types": [
       "steel",
       "dragon"
@@ -18116,8 +19000,9 @@
   },
   {
     "id": 885,
-    "name": "ドラメシヤ",
+    "nameJa": "ドラメシヤ",
     "nameEn": "Dreepy",
+    "genus": "うらめしポケモン",
     "types": [
       "dragon",
       "ghost"
@@ -18137,8 +19022,9 @@
   },
   {
     "id": 886,
-    "name": "ドロンチ",
+    "nameJa": "ドロンチ",
     "nameEn": "Drakloak",
+    "genus": "せわやくポケモン",
     "types": [
       "dragon",
       "ghost"
@@ -18158,8 +19044,9 @@
   },
   {
     "id": 887,
-    "name": "ドラパルト",
+    "nameJa": "ドラパルト",
     "nameEn": "Dragapult",
+    "genus": "ステルスポケモン",
     "types": [
       "dragon",
       "ghost"
@@ -18179,8 +19066,9 @@
   },
   {
     "id": 888,
-    "name": "ザシアン",
+    "nameJa": "ザシアン",
     "nameEn": "Zacian",
+    "genus": "つわものポケモン",
     "types": [
       "fairy"
     ],
@@ -18199,8 +19087,9 @@
   },
   {
     "id": 889,
-    "name": "ザマゼンタ",
+    "nameJa": "ザマゼンタ",
     "nameEn": "Zamazenta",
+    "genus": "つわものポケモン",
     "types": [
       "fighting"
     ],
@@ -18219,8 +19108,9 @@
   },
   {
     "id": 890,
-    "name": "ムゲンダイナ",
+    "nameJa": "ムゲンダイナ",
     "nameEn": "Eternatus",
+    "genus": "キョダイポケモン",
     "types": [
       "poison",
       "dragon"
@@ -18240,8 +19130,9 @@
   },
   {
     "id": 891,
-    "name": "ダクマ",
+    "nameJa": "ダクマ",
     "nameEn": "Kubfu",
+    "genus": "けんぽうポケモン",
     "types": [
       "fighting"
     ],
@@ -18260,8 +19151,9 @@
   },
   {
     "id": 892,
-    "name": "ウーラオス",
+    "nameJa": "ウーラオス",
     "nameEn": "Urshifu",
+    "genus": "けんぽうポケモン",
     "types": [
       "fighting",
       "dark"
@@ -18281,8 +19173,9 @@
   },
   {
     "id": 893,
-    "name": "ザルード",
+    "nameJa": "ザルード",
     "nameEn": "Zarude",
+    "genus": "わるざるポケモン",
     "types": [
       "dark",
       "grass"
@@ -18302,8 +19195,9 @@
   },
   {
     "id": 894,
-    "name": "レジエレキ",
+    "nameJa": "レジエレキ",
     "nameEn": "Regieleki",
+    "genus": "エレクトロンポケモン",
     "types": [
       "electric"
     ],
@@ -18322,8 +19216,9 @@
   },
   {
     "id": 895,
-    "name": "レジドラゴ",
+    "nameJa": "レジドラゴ",
     "nameEn": "Regidrago",
+    "genus": "りゅうぎょくポケモン",
     "types": [
       "dragon"
     ],
@@ -18342,8 +19237,9 @@
   },
   {
     "id": 896,
-    "name": "ブリザポス",
+    "nameJa": "ブリザポス",
     "nameEn": "Glastrier",
+    "genus": "あばれうまポケモン",
     "types": [
       "ice"
     ],
@@ -18362,8 +19258,9 @@
   },
   {
     "id": 897,
-    "name": "レイスポス",
+    "nameJa": "レイスポス",
     "nameEn": "Spectrier",
+    "genus": "しゅんばポケモン",
     "types": [
       "ghost"
     ],
@@ -18382,8 +19279,9 @@
   },
   {
     "id": 898,
-    "name": "バドレックス",
+    "nameJa": "バドレックス",
     "nameEn": "Calyrex",
+    "genus": "キングポケモン",
     "types": [
       "psychic",
       "grass"
@@ -18403,8 +19301,9 @@
   },
   {
     "id": 899,
-    "name": "アヤシシ",
+    "nameJa": "アヤシシ",
     "nameEn": "Wyrdeer",
+    "genus": "おおツノポケモン",
     "types": [
       "normal",
       "psychic"
@@ -18424,8 +19323,9 @@
   },
   {
     "id": 900,
-    "name": "バサギリ",
+    "nameJa": "バサギリ",
     "nameEn": "Kleavor",
+    "genus": "まさかりポケモン",
     "types": [
       "bug",
       "rock"
@@ -18445,8 +19345,9 @@
   },
   {
     "id": 901,
-    "name": "ガチグマ",
+    "nameJa": "ガチグマ",
     "nameEn": "Ursaluna",
+    "genus": "でいたんポケモン",
     "types": [
       "ground",
       "normal"
@@ -18466,8 +19367,9 @@
   },
   {
     "id": 902,
-    "name": "イダイトウ",
+    "nameJa": "イダイトウ",
     "nameEn": "Basculegion",
+    "genus": "おおうおポケモン",
     "types": [
       "water",
       "ghost"
@@ -18487,8 +19389,9 @@
   },
   {
     "id": 903,
-    "name": "オオニューラ",
+    "nameJa": "オオニューラ",
     "nameEn": "Sneasler",
+    "genus": "クライミングポケモン",
     "types": [
       "fighting",
       "poison"
@@ -18508,8 +19411,9 @@
   },
   {
     "id": 904,
-    "name": "ハリーマン",
+    "nameJa": "ハリーマン",
     "nameEn": "Overqwil",
+    "genus": "けんざんポケモン",
     "types": [
       "dark",
       "poison"
@@ -18529,8 +19433,9 @@
   },
   {
     "id": 905,
-    "name": "ラブトロス",
+    "nameJa": "ラブトロス",
     "nameEn": "Enamorus",
+    "genus": "あいぞうポケモン",
     "types": [
       "fairy",
       "flying"
@@ -18550,8 +19455,9 @@
   },
   {
     "id": 906,
-    "name": "ニャオハ",
+    "nameJa": "ニャオハ",
     "nameEn": "Sprigatito",
+    "genus": "",
     "types": [
       "grass"
     ],
@@ -18570,8 +19476,9 @@
   },
   {
     "id": 907,
-    "name": "ニャローテ",
+    "nameJa": "ニャローテ",
     "nameEn": "Floragato",
+    "genus": "",
     "types": [
       "grass"
     ],
@@ -18590,8 +19497,9 @@
   },
   {
     "id": 908,
-    "name": "マスカーニャ",
+    "nameJa": "マスカーニャ",
     "nameEn": "Meowscarada",
+    "genus": "",
     "types": [
       "grass",
       "dark"
@@ -18611,8 +19519,9 @@
   },
   {
     "id": 909,
-    "name": "ホゲータ",
+    "nameJa": "ホゲータ",
     "nameEn": "Fuecoco",
+    "genus": "",
     "types": [
       "fire"
     ],
@@ -18631,8 +19540,9 @@
   },
   {
     "id": 910,
-    "name": "アチゲータ",
+    "nameJa": "アチゲータ",
     "nameEn": "Crocalor",
+    "genus": "",
     "types": [
       "fire"
     ],
@@ -18651,8 +19561,9 @@
   },
   {
     "id": 911,
-    "name": "ラウドボーン",
+    "nameJa": "ラウドボーン",
     "nameEn": "Skeledirge",
+    "genus": "",
     "types": [
       "fire",
       "ghost"
@@ -18672,8 +19583,9 @@
   },
   {
     "id": 912,
-    "name": "クワッス",
+    "nameJa": "クワッス",
     "nameEn": "Quaxly",
+    "genus": "",
     "types": [
       "water"
     ],
@@ -18692,8 +19604,9 @@
   },
   {
     "id": 913,
-    "name": "ウェルカモ",
+    "nameJa": "ウェルカモ",
     "nameEn": "Quaxwell",
+    "genus": "",
     "types": [
       "water"
     ],
@@ -18712,8 +19625,9 @@
   },
   {
     "id": 914,
-    "name": "ウェーニバル",
+    "nameJa": "ウェーニバル",
     "nameEn": "Quaquaval",
+    "genus": "",
     "types": [
       "water",
       "fighting"
@@ -18733,8 +19647,9 @@
   },
   {
     "id": 915,
-    "name": "グルトン",
+    "nameJa": "グルトン",
     "nameEn": "Lechonk",
+    "genus": "",
     "types": [
       "normal"
     ],
@@ -18753,8 +19668,9 @@
   },
   {
     "id": 916,
-    "name": "パフュートン",
+    "nameJa": "パフュートン",
     "nameEn": "Oinkologne",
+    "genus": "",
     "types": [
       "normal"
     ],
@@ -18773,8 +19689,9 @@
   },
   {
     "id": 917,
-    "name": "タマンチュラ",
+    "nameJa": "タマンチュラ",
     "nameEn": "Tarountula",
+    "genus": "",
     "types": [
       "bug"
     ],
@@ -18793,8 +19710,9 @@
   },
   {
     "id": 918,
-    "name": "ワナイダー",
+    "nameJa": "ワナイダー",
     "nameEn": "Spidops",
+    "genus": "",
     "types": [
       "bug"
     ],
@@ -18813,8 +19731,9 @@
   },
   {
     "id": 919,
-    "name": "マメバッタ",
+    "nameJa": "マメバッタ",
     "nameEn": "Nymble",
+    "genus": "",
     "types": [
       "bug"
     ],
@@ -18833,8 +19752,9 @@
   },
   {
     "id": 920,
-    "name": "エクスレッグ",
+    "nameJa": "エクスレッグ",
     "nameEn": "Lokix",
+    "genus": "",
     "types": [
       "bug",
       "dark"
@@ -18854,8 +19774,9 @@
   },
   {
     "id": 921,
-    "name": "パモ",
+    "nameJa": "パモ",
     "nameEn": "Pawmi",
+    "genus": "",
     "types": [
       "electric"
     ],
@@ -18874,8 +19795,9 @@
   },
   {
     "id": 922,
-    "name": "パモット",
+    "nameJa": "パモット",
     "nameEn": "Pawmo",
+    "genus": "",
     "types": [
       "electric",
       "fighting"
@@ -18895,8 +19817,9 @@
   },
   {
     "id": 923,
-    "name": "パーモット",
+    "nameJa": "パーモット",
     "nameEn": "Pawmot",
+    "genus": "",
     "types": [
       "electric",
       "fighting"
@@ -18916,8 +19839,9 @@
   },
   {
     "id": 924,
-    "name": "ワッカネズミ",
+    "nameJa": "ワッカネズミ",
     "nameEn": "Tandemaus",
+    "genus": "",
     "types": [
       "normal"
     ],
@@ -18936,8 +19860,9 @@
   },
   {
     "id": 925,
-    "name": "イッカネズミ",
+    "nameJa": "イッカネズミ",
     "nameEn": "Maushold",
+    "genus": "",
     "types": [
       "normal"
     ],
@@ -18956,8 +19881,9 @@
   },
   {
     "id": 926,
-    "name": "パピモッチ",
+    "nameJa": "パピモッチ",
     "nameEn": "Fidough",
+    "genus": "",
     "types": [
       "fairy"
     ],
@@ -18976,8 +19902,9 @@
   },
   {
     "id": 927,
-    "name": "バウッツェル",
+    "nameJa": "バウッツェル",
     "nameEn": "Dachsbun",
+    "genus": "",
     "types": [
       "fairy"
     ],
@@ -18996,8 +19923,9 @@
   },
   {
     "id": 928,
-    "name": "ミニーブ",
+    "nameJa": "ミニーブ",
     "nameEn": "Smoliv",
+    "genus": "",
     "types": [
       "grass",
       "normal"
@@ -19017,8 +19945,9 @@
   },
   {
     "id": 929,
-    "name": "オリーニョ",
+    "nameJa": "オリーニョ",
     "nameEn": "Dolliv",
+    "genus": "",
     "types": [
       "grass",
       "normal"
@@ -19038,8 +19967,9 @@
   },
   {
     "id": 930,
-    "name": "オリーヴァ",
+    "nameJa": "オリーヴァ",
     "nameEn": "Arboliva",
+    "genus": "",
     "types": [
       "grass",
       "normal"
@@ -19059,8 +19989,9 @@
   },
   {
     "id": 931,
-    "name": "イキリンコ",
+    "nameJa": "イキリンコ",
     "nameEn": "Squawkabilly",
+    "genus": "",
     "types": [
       "normal",
       "flying"
@@ -19080,8 +20011,9 @@
   },
   {
     "id": 932,
-    "name": "コジオ",
+    "nameJa": "コジオ",
     "nameEn": "Nacli",
+    "genus": "",
     "types": [
       "rock"
     ],
@@ -19100,8 +20032,9 @@
   },
   {
     "id": 933,
-    "name": "ジオヅム",
+    "nameJa": "ジオヅム",
     "nameEn": "Naclstack",
+    "genus": "",
     "types": [
       "rock"
     ],
@@ -19120,8 +20053,9 @@
   },
   {
     "id": 934,
-    "name": "キョジオーン",
+    "nameJa": "キョジオーン",
     "nameEn": "Garganacl",
+    "genus": "",
     "types": [
       "rock"
     ],
@@ -19140,8 +20074,9 @@
   },
   {
     "id": 935,
-    "name": "カルボウ",
+    "nameJa": "カルボウ",
     "nameEn": "Charcadet",
+    "genus": "",
     "types": [
       "fire"
     ],
@@ -19160,8 +20095,9 @@
   },
   {
     "id": 936,
-    "name": "グレンアルマ",
+    "nameJa": "グレンアルマ",
     "nameEn": "Armarouge",
+    "genus": "",
     "types": [
       "fire",
       "psychic"
@@ -19181,8 +20117,9 @@
   },
   {
     "id": 937,
-    "name": "ソウブレイズ",
+    "nameJa": "ソウブレイズ",
     "nameEn": "Ceruledge",
+    "genus": "",
     "types": [
       "fire",
       "ghost"
@@ -19202,8 +20139,9 @@
   },
   {
     "id": 938,
-    "name": "ズピカ",
+    "nameJa": "ズピカ",
     "nameEn": "Tadbulb",
+    "genus": "",
     "types": [
       "electric"
     ],
@@ -19222,8 +20160,9 @@
   },
   {
     "id": 939,
-    "name": "ハラバリー",
+    "nameJa": "ハラバリー",
     "nameEn": "Bellibolt",
+    "genus": "",
     "types": [
       "electric"
     ],
@@ -19242,8 +20181,9 @@
   },
   {
     "id": 940,
-    "name": "カイデン",
+    "nameJa": "カイデン",
     "nameEn": "Wattrel",
+    "genus": "",
     "types": [
       "electric",
       "flying"
@@ -19263,8 +20203,9 @@
   },
   {
     "id": 941,
-    "name": "タイカイデン",
+    "nameJa": "タイカイデン",
     "nameEn": "Kilowattrel",
+    "genus": "",
     "types": [
       "electric",
       "flying"
@@ -19284,8 +20225,9 @@
   },
   {
     "id": 942,
-    "name": "オラチフ",
+    "nameJa": "オラチフ",
     "nameEn": "Maschiff",
+    "genus": "",
     "types": [
       "dark"
     ],
@@ -19304,8 +20246,9 @@
   },
   {
     "id": 943,
-    "name": "マフィティフ",
+    "nameJa": "マフィティフ",
     "nameEn": "Mabosstiff",
+    "genus": "",
     "types": [
       "dark"
     ],
@@ -19324,8 +20267,9 @@
   },
   {
     "id": 944,
-    "name": "シルシュルー",
+    "nameJa": "シルシュルー",
     "nameEn": "Shroodle",
+    "genus": "",
     "types": [
       "poison",
       "normal"
@@ -19345,8 +20289,9 @@
   },
   {
     "id": 945,
-    "name": "タギングル",
+    "nameJa": "タギングル",
     "nameEn": "Grafaiai",
+    "genus": "",
     "types": [
       "poison",
       "normal"
@@ -19366,8 +20311,9 @@
   },
   {
     "id": 946,
-    "name": "アノクサ",
+    "nameJa": "アノクサ",
     "nameEn": "Bramblin",
+    "genus": "",
     "types": [
       "grass",
       "ghost"
@@ -19387,8 +20333,9 @@
   },
   {
     "id": 947,
-    "name": "アノホラグサ",
+    "nameJa": "アノホラグサ",
     "nameEn": "Brambleghast",
+    "genus": "",
     "types": [
       "grass",
       "ghost"
@@ -19408,8 +20355,9 @@
   },
   {
     "id": 948,
-    "name": "ノノクラゲ",
+    "nameJa": "ノノクラゲ",
     "nameEn": "Toedscool",
+    "genus": "",
     "types": [
       "ground",
       "grass"
@@ -19429,8 +20377,9 @@
   },
   {
     "id": 949,
-    "name": "リククラゲ",
+    "nameJa": "リククラゲ",
     "nameEn": "Toedscruel",
+    "genus": "",
     "types": [
       "ground",
       "grass"
@@ -19450,8 +20399,9 @@
   },
   {
     "id": 950,
-    "name": "ガケガニ",
+    "nameJa": "ガケガニ",
     "nameEn": "Klawf",
+    "genus": "",
     "types": [
       "rock"
     ],
@@ -19470,8 +20420,9 @@
   },
   {
     "id": 951,
-    "name": "カプサイジ",
+    "nameJa": "カプサイジ",
     "nameEn": "Capsakid",
+    "genus": "",
     "types": [
       "grass"
     ],
@@ -19490,8 +20441,9 @@
   },
   {
     "id": 952,
-    "name": "スコヴィラン",
+    "nameJa": "スコヴィラン",
     "nameEn": "Scovillain",
+    "genus": "",
     "types": [
       "grass",
       "fire"
@@ -19511,8 +20463,9 @@
   },
   {
     "id": 953,
-    "name": "シガロコ",
+    "nameJa": "シガロコ",
     "nameEn": "Rellor",
+    "genus": "",
     "types": [
       "bug"
     ],
@@ -19531,8 +20484,9 @@
   },
   {
     "id": 954,
-    "name": "ベラカス",
+    "nameJa": "ベラカス",
     "nameEn": "Rabsca",
+    "genus": "",
     "types": [
       "bug",
       "psychic"
@@ -19552,8 +20506,9 @@
   },
   {
     "id": 955,
-    "name": "ヒラヒナ",
+    "nameJa": "ヒラヒナ",
     "nameEn": "Flittle",
+    "genus": "",
     "types": [
       "psychic"
     ],
@@ -19572,8 +20527,9 @@
   },
   {
     "id": 956,
-    "name": "クエスパトラ",
+    "nameJa": "クエスパトラ",
     "nameEn": "Espathra",
+    "genus": "",
     "types": [
       "psychic"
     ],
@@ -19592,8 +20548,9 @@
   },
   {
     "id": 957,
-    "name": "カヌチャン",
+    "nameJa": "カヌチャン",
     "nameEn": "Tinkatink",
+    "genus": "",
     "types": [
       "fairy",
       "steel"
@@ -19613,8 +20570,9 @@
   },
   {
     "id": 958,
-    "name": "ナカヌチャン",
+    "nameJa": "ナカヌチャン",
     "nameEn": "Tinkatuff",
+    "genus": "",
     "types": [
       "fairy",
       "steel"
@@ -19634,8 +20592,9 @@
   },
   {
     "id": 959,
-    "name": "デカヌチャン",
+    "nameJa": "デカヌチャン",
     "nameEn": "Tinkaton",
+    "genus": "",
     "types": [
       "fairy",
       "steel"
@@ -19655,8 +20614,9 @@
   },
   {
     "id": 960,
-    "name": "ウミディグダ",
+    "nameJa": "ウミディグダ",
     "nameEn": "Wiglett",
+    "genus": "",
     "types": [
       "water"
     ],
@@ -19675,8 +20635,9 @@
   },
   {
     "id": 961,
-    "name": "ウミトリオ",
+    "nameJa": "ウミトリオ",
     "nameEn": "Wugtrio",
+    "genus": "",
     "types": [
       "water"
     ],
@@ -19695,8 +20656,9 @@
   },
   {
     "id": 962,
-    "name": "オトシドリ",
+    "nameJa": "オトシドリ",
     "nameEn": "Bombirdier",
+    "genus": "",
     "types": [
       "flying",
       "dark"
@@ -19716,8 +20678,9 @@
   },
   {
     "id": 963,
-    "name": "ナミイルカ",
+    "nameJa": "ナミイルカ",
     "nameEn": "Finizen",
+    "genus": "",
     "types": [
       "water"
     ],
@@ -19736,8 +20699,9 @@
   },
   {
     "id": 964,
-    "name": "イルカマン",
+    "nameJa": "イルカマン",
     "nameEn": "Palafin",
+    "genus": "",
     "types": [
       "water"
     ],
@@ -19756,8 +20720,9 @@
   },
   {
     "id": 965,
-    "name": "ブロロン",
+    "nameJa": "ブロロン",
     "nameEn": "Varoom",
+    "genus": "",
     "types": [
       "steel",
       "poison"
@@ -19777,8 +20742,9 @@
   },
   {
     "id": 966,
-    "name": "ブロロローム",
+    "nameJa": "ブロロローム",
     "nameEn": "Revavroom",
+    "genus": "",
     "types": [
       "steel",
       "poison"
@@ -19798,8 +20764,9 @@
   },
   {
     "id": 967,
-    "name": "モトトカゲ",
+    "nameJa": "モトトカゲ",
     "nameEn": "Cyclizar",
+    "genus": "",
     "types": [
       "dragon",
       "normal"
@@ -19819,8 +20786,9 @@
   },
   {
     "id": 968,
-    "name": "ミミズズ",
+    "nameJa": "ミミズズ",
     "nameEn": "Orthworm",
+    "genus": "",
     "types": [
       "steel"
     ],
@@ -19839,8 +20807,9 @@
   },
   {
     "id": 969,
-    "name": "キラーメ",
+    "nameJa": "キラーメ",
     "nameEn": "Glimmet",
+    "genus": "",
     "types": [
       "rock",
       "poison"
@@ -19860,8 +20829,9 @@
   },
   {
     "id": 970,
-    "name": "キラフロル",
+    "nameJa": "キラフロル",
     "nameEn": "Glimmora",
+    "genus": "",
     "types": [
       "rock",
       "poison"
@@ -19881,8 +20851,9 @@
   },
   {
     "id": 971,
-    "name": "ボチ",
+    "nameJa": "ボチ",
     "nameEn": "Greavard",
+    "genus": "",
     "types": [
       "ghost"
     ],
@@ -19901,8 +20872,9 @@
   },
   {
     "id": 972,
-    "name": "ハカドッグ",
+    "nameJa": "ハカドッグ",
     "nameEn": "Houndstone",
+    "genus": "",
     "types": [
       "ghost"
     ],
@@ -19921,8 +20893,9 @@
   },
   {
     "id": 973,
-    "name": "カラミンゴ",
+    "nameJa": "カラミンゴ",
     "nameEn": "Flamigo",
+    "genus": "",
     "types": [
       "flying",
       "fighting"
@@ -19942,8 +20915,9 @@
   },
   {
     "id": 974,
-    "name": "アルクジラ",
+    "nameJa": "アルクジラ",
     "nameEn": "Cetoddle",
+    "genus": "",
     "types": [
       "ice"
     ],
@@ -19962,8 +20936,9 @@
   },
   {
     "id": 975,
-    "name": "ハルクジラ",
+    "nameJa": "ハルクジラ",
     "nameEn": "Cetitan",
+    "genus": "",
     "types": [
       "ice"
     ],
@@ -19982,8 +20957,9 @@
   },
   {
     "id": 976,
-    "name": "ミガルーサ",
+    "nameJa": "ミガルーサ",
     "nameEn": "Veluza",
+    "genus": "",
     "types": [
       "water",
       "psychic"
@@ -20003,8 +20979,9 @@
   },
   {
     "id": 977,
-    "name": "ヘイラッシャ",
+    "nameJa": "ヘイラッシャ",
     "nameEn": "Dondozo",
+    "genus": "",
     "types": [
       "water"
     ],
@@ -20023,8 +21000,9 @@
   },
   {
     "id": 978,
-    "name": "シャリタツ",
+    "nameJa": "シャリタツ",
     "nameEn": "Tatsugiri",
+    "genus": "",
     "types": [
       "dragon",
       "water"
@@ -20044,8 +21022,9 @@
   },
   {
     "id": 979,
-    "name": "コノヨザル",
+    "nameJa": "コノヨザル",
     "nameEn": "Annihilape",
+    "genus": "",
     "types": [
       "fighting",
       "ghost"
@@ -20065,8 +21044,9 @@
   },
   {
     "id": 980,
-    "name": "ドオー",
+    "nameJa": "ドオー",
     "nameEn": "Clodsire",
+    "genus": "",
     "types": [
       "poison",
       "ground"
@@ -20086,8 +21066,9 @@
   },
   {
     "id": 981,
-    "name": "リキキリン",
+    "nameJa": "リキキリン",
     "nameEn": "Farigiraf",
+    "genus": "",
     "types": [
       "normal",
       "psychic"
@@ -20107,8 +21088,9 @@
   },
   {
     "id": 982,
-    "name": "ノココッチ",
+    "nameJa": "ノココッチ",
     "nameEn": "Dudunsparce",
+    "genus": "",
     "types": [
       "normal"
     ],
@@ -20127,8 +21109,9 @@
   },
   {
     "id": 983,
-    "name": "ドドゲザン",
+    "nameJa": "ドドゲザン",
     "nameEn": "Kingambit",
+    "genus": "",
     "types": [
       "dark",
       "steel"
@@ -20148,8 +21131,9 @@
   },
   {
     "id": 984,
-    "name": "イダイナキバ",
+    "nameJa": "イダイナキバ",
     "nameEn": "Great Tusk",
+    "genus": "",
     "types": [
       "ground",
       "fighting"
@@ -20169,8 +21153,9 @@
   },
   {
     "id": 985,
-    "name": "サケブシッポ",
+    "nameJa": "サケブシッポ",
     "nameEn": "Scream Tail",
+    "genus": "",
     "types": [
       "fairy",
       "psychic"
@@ -20190,8 +21175,9 @@
   },
   {
     "id": 986,
-    "name": "アラブルタケ",
+    "nameJa": "アラブルタケ",
     "nameEn": "Brute Bonnet",
+    "genus": "",
     "types": [
       "grass",
       "dark"
@@ -20211,8 +21197,9 @@
   },
   {
     "id": 987,
-    "name": "ハバタクカミ",
+    "nameJa": "ハバタクカミ",
     "nameEn": "Flutter Mane",
+    "genus": "",
     "types": [
       "ghost",
       "fairy"
@@ -20232,8 +21219,9 @@
   },
   {
     "id": 988,
-    "name": "チヲハウハネ",
+    "nameJa": "チヲハウハネ",
     "nameEn": "Slither Wing",
+    "genus": "",
     "types": [
       "bug",
       "fighting"
@@ -20253,8 +21241,9 @@
   },
   {
     "id": 989,
-    "name": "スナノケガワ",
+    "nameJa": "スナノケガワ",
     "nameEn": "Sandy Shocks",
+    "genus": "",
     "types": [
       "electric",
       "ground"
@@ -20274,8 +21263,9 @@
   },
   {
     "id": 990,
-    "name": "テツノワダチ",
+    "nameJa": "テツノワダチ",
     "nameEn": "Iron Treads",
+    "genus": "",
     "types": [
       "ground",
       "steel"
@@ -20295,8 +21285,9 @@
   },
   {
     "id": 991,
-    "name": "テツノツツミ",
+    "nameJa": "テツノツツミ",
     "nameEn": "Iron Bundle",
+    "genus": "",
     "types": [
       "ice",
       "water"
@@ -20316,8 +21307,9 @@
   },
   {
     "id": 992,
-    "name": "テツノカイナ",
+    "nameJa": "テツノカイナ",
     "nameEn": "Iron Hands",
+    "genus": "",
     "types": [
       "fighting",
       "electric"
@@ -20337,8 +21329,9 @@
   },
   {
     "id": 993,
-    "name": "テツノコウベ",
+    "nameJa": "テツノコウベ",
     "nameEn": "Iron Jugulis",
+    "genus": "",
     "types": [
       "dark",
       "flying"
@@ -20358,8 +21351,9 @@
   },
   {
     "id": 994,
-    "name": "テツノドクガ",
+    "nameJa": "テツノドクガ",
     "nameEn": "Iron Moth",
+    "genus": "",
     "types": [
       "fire",
       "poison"
@@ -20379,8 +21373,9 @@
   },
   {
     "id": 995,
-    "name": "テツノイバラ",
+    "nameJa": "テツノイバラ",
     "nameEn": "Iron Thorns",
+    "genus": "",
     "types": [
       "rock",
       "electric"
@@ -20400,8 +21395,9 @@
   },
   {
     "id": 996,
-    "name": "セビエ",
+    "nameJa": "セビエ",
     "nameEn": "Frigibax",
+    "genus": "",
     "types": [
       "dragon",
       "ice"
@@ -20421,8 +21417,9 @@
   },
   {
     "id": 997,
-    "name": "セゴール",
+    "nameJa": "セゴール",
     "nameEn": "Arctibax",
+    "genus": "",
     "types": [
       "dragon",
       "ice"
@@ -20442,8 +21439,9 @@
   },
   {
     "id": 998,
-    "name": "セグレイブ",
+    "nameJa": "セグレイブ",
     "nameEn": "Baxcalibur",
+    "genus": "",
     "types": [
       "dragon",
       "ice"
@@ -20463,8 +21461,9 @@
   },
   {
     "id": 999,
-    "name": "コレクレー",
+    "nameJa": "コレクレー",
     "nameEn": "Gimmighoul",
+    "genus": "",
     "types": [
       "ghost"
     ],
@@ -20483,8 +21482,9 @@
   },
   {
     "id": 1000,
-    "name": "サーフゴー",
+    "nameJa": "サーフゴー",
     "nameEn": "Gholdengo",
+    "genus": "",
     "types": [
       "steel",
       "ghost"
@@ -20504,8 +21504,9 @@
   },
   {
     "id": 1001,
-    "name": "チオンジェン",
+    "nameJa": "チオンジェン",
     "nameEn": "Wo-Chien",
+    "genus": "",
     "types": [
       "dark",
       "grass"
@@ -20525,8 +21526,9 @@
   },
   {
     "id": 1002,
-    "name": "パオジアン",
+    "nameJa": "パオジアン",
     "nameEn": "Chien-Pao",
+    "genus": "",
     "types": [
       "dark",
       "ice"
@@ -20546,8 +21548,9 @@
   },
   {
     "id": 1003,
-    "name": "ディンルー",
+    "nameJa": "ディンルー",
     "nameEn": "Ting-Lu",
+    "genus": "",
     "types": [
       "dark",
       "ground"
@@ -20567,8 +21570,9 @@
   },
   {
     "id": 1004,
-    "name": "イーユイ",
+    "nameJa": "イーユイ",
     "nameEn": "Chi-Yu",
+    "genus": "",
     "types": [
       "dark",
       "fire"
@@ -20588,8 +21592,9 @@
   },
   {
     "id": 1005,
-    "name": "トドロクツキ",
+    "nameJa": "トドロクツキ",
     "nameEn": "Roaring Moon",
+    "genus": "",
     "types": [
       "dragon",
       "dark"
@@ -20609,8 +21614,9 @@
   },
   {
     "id": 1006,
-    "name": "テツノブジン",
+    "nameJa": "テツノブジン",
     "nameEn": "Iron Valiant",
+    "genus": "",
     "types": [
       "fairy",
       "fighting"
@@ -20630,8 +21636,9 @@
   },
   {
     "id": 1007,
-    "name": "コライドン",
+    "nameJa": "コライドン",
     "nameEn": "Koraidon",
+    "genus": "",
     "types": [
       "fighting",
       "dragon"
@@ -20651,8 +21658,9 @@
   },
   {
     "id": 1008,
-    "name": "ミライドン",
+    "nameJa": "ミライドン",
     "nameEn": "Miraidon",
+    "genus": "",
     "types": [
       "electric",
       "dragon"
@@ -20672,8 +21680,9 @@
   },
   {
     "id": 1009,
-    "name": "ウネルミナモ",
+    "nameJa": "ウネルミナモ",
     "nameEn": "Walking Wake",
+    "genus": "",
     "types": [
       "water",
       "dragon"
@@ -20693,8 +21702,9 @@
   },
   {
     "id": 1010,
-    "name": "テツノイサハ",
+    "nameJa": "テツノイサハ",
     "nameEn": "Iron Leaves",
+    "genus": "",
     "types": [
       "grass",
       "psychic"
@@ -20714,8 +21724,9 @@
   },
   {
     "id": 1011,
-    "name": "カミッチュ",
+    "nameJa": "カミッチュ",
     "nameEn": "Dipplin",
+    "genus": "",
     "types": [
       "grass",
       "dragon"
@@ -20735,8 +21746,9 @@
   },
   {
     "id": 1012,
-    "name": "チャデス",
+    "nameJa": "チャデス",
     "nameEn": "Poltchageist",
+    "genus": "",
     "types": [
       "grass",
       "ghost"
@@ -20756,8 +21768,9 @@
   },
   {
     "id": 1013,
-    "name": "ヤバソチャ",
+    "nameJa": "ヤバソチャ",
     "nameEn": "Sinistcha",
+    "genus": "",
     "types": [
       "grass",
       "ghost"
@@ -20777,8 +21790,9 @@
   },
   {
     "id": 1014,
-    "name": "イイネイヌ",
+    "nameJa": "イイネイヌ",
     "nameEn": "Okidogi",
+    "genus": "",
     "types": [
       "poison",
       "fighting"
@@ -20798,8 +21812,9 @@
   },
   {
     "id": 1015,
-    "name": "マシマシラ",
+    "nameJa": "マシマシラ",
     "nameEn": "Munkidori",
+    "genus": "",
     "types": [
       "poison",
       "psychic"
@@ -20819,8 +21834,9 @@
   },
   {
     "id": 1016,
-    "name": "キチキギス",
+    "nameJa": "キチキギス",
     "nameEn": "Fezandipiti",
+    "genus": "",
     "types": [
       "poison",
       "fairy"
@@ -20840,8 +21856,9 @@
   },
   {
     "id": 1017,
-    "name": "オーガポン",
+    "nameJa": "オーガポン",
     "nameEn": "Ogerpon",
+    "genus": "",
     "types": [
       "grass"
     ],
@@ -20860,8 +21877,9 @@
   },
   {
     "id": 1018,
-    "name": "ブリジュラス",
+    "nameJa": "ブリジュラス",
     "nameEn": "Archaludon",
+    "genus": "ごうきんポケモン",
     "types": [
       "steel",
       "dragon"
@@ -20881,8 +21899,9 @@
   },
   {
     "id": 1019,
-    "name": "カミツオロチ",
+    "nameJa": "カミツオロチ",
     "nameEn": "Hydrapple",
+    "genus": "りんごオロチポケモン",
     "types": [
       "grass",
       "dragon"
@@ -20902,8 +21921,9 @@
   },
   {
     "id": 1020,
-    "name": "ウガツホムラ",
+    "nameJa": "ウガツホムラ",
     "nameEn": "Gouging Fire",
+    "genus": "パラドックスポケモン",
     "types": [
       "fire",
       "dragon"
@@ -20923,8 +21943,9 @@
   },
   {
     "id": 1021,
-    "name": "タケルライコ",
+    "nameJa": "タケルライコ",
     "nameEn": "Raging Bolt",
+    "genus": "パラドックスポケモン",
     "types": [
       "electric",
       "dragon"
@@ -20944,8 +21965,9 @@
   },
   {
     "id": 1022,
-    "name": "テツノイワオ",
+    "nameJa": "テツノイワオ",
     "nameEn": "Iron Boulder",
+    "genus": "パラドックスポケモン",
     "types": [
       "rock",
       "psychic"
@@ -20965,8 +21987,9 @@
   },
   {
     "id": 1023,
-    "name": "テツノカシラ",
+    "nameJa": "テツノカシラ",
     "nameEn": "Iron Crown",
+    "genus": "パラドックスポケモン",
     "types": [
       "steel",
       "psychic"
@@ -20986,8 +22009,9 @@
   },
   {
     "id": 1024,
-    "name": "テラパゴス",
+    "nameJa": "テラパゴス",
     "nameEn": "Terapagos",
+    "genus": "テラスタルポケモン",
     "types": [
       "normal"
     ],
@@ -21006,8 +22030,9 @@
   },
   {
     "id": 1025,
-    "name": "モモワロウ",
+    "nameJa": "モモワロウ",
     "nameEn": "Pecharunt",
+    "genus": "しはいポケモン",
     "types": [
       "poison",
       "ghost"

@@ -9,7 +9,7 @@ export default function AboutPage() {
       minHeight: '100vh',
       background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)',
       color: '#e0e0e0',
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      fontFamily: "'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
       padding: '20px',
     },
     container: {
@@ -53,6 +53,7 @@ export default function AboutPage() {
   return (
     <div style={s.page}>
       <div style={s.container}>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800&display=swap" rel="stylesheet" />
         <a href="/" style={s.backLink}>← トップに戻る</a>
 
         <div style={s.card}>

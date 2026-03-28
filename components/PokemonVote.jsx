@@ -49,6 +49,8 @@ const GEN_NAMES = {
   5: "イッシュ", 6: "カロス", 7: "アローラ", 8: "ガラル", 9: "パルデア",
 };
 
+const FONT = "'M PLUS Rounded 1c', 'Kosugi Maru', system-ui, sans-serif";
+
 export default function PokemonVote() {
   const [ratings, setRatings] = useState(() => {
     const r = {};
@@ -146,7 +148,7 @@ export default function PokemonVote() {
 
   if (POKEMON.length === 0) {
     return (
-      <div style={{ minHeight: "100vh", background: "#1a1a2e", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: "system-ui" }}>
+      <div style={{ minHeight: "100vh", background: "#1a1a2e", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT }}>
         <div style={{ textAlign: "center" }}>
           <h1>ポケモンデータが見つかりません</h1>
           <p style={{ color: "#888" }}>node fetch-pokemon.js を実行してデータを生成してください</p>
@@ -159,29 +161,31 @@ export default function PokemonVote() {
   if (showRanking) {
     const limit = rankGen === 'all' ? 200 : 50;
     return (
-      <div style={{ minHeight: "100vh", background: "linear-gradient(135deg,#1a0a2e,#1c1c42,#0a2848)", color: "#fff", fontFamily: "'Kosugi Maru', system-ui, sans-serif", padding: 0, margin: 0, paddingBottom: '80px' }}>
-        <div style={{ textAlign: "center", padding: "24px 16px 4px" }}>
-          <h1 style={{ fontSize: "26px", fontWeight: 800, background: "linear-gradient(180deg,#ff6b6b,#ffd93d,#6bcb77,#4d96ff)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", margin: 0 }}>
+      <div style={{ minHeight: "100vh", background: "linear-gradient(135deg,#1a0a2e,#1c1c42,#0a2848)", color: "#fff", fontFamily: FONT, padding: 0, margin: 0, paddingBottom: '80px' }}>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
+
+        <div style={{ textAlign: "center", padding: "28px 16px 4px" }}>
+          <h1 style={{ fontSize: "30px", fontWeight: 900, background: "linear-gradient(180deg,#ff6b6b,#ffd93d,#6bcb77,#4d96ff)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", margin: 0 }}>
             ポケモン人気ランキング {rankGen === 'all' ? `TOP${limit}` : `${GEN_NAMES[rankGen] || `第${rankGen}世代`} TOP${limit}`}
           </h1>
-          <p style={{ color: "#999", fontSize: "13px", marginTop: "6px" }}>ユーザー{formatNum(Math.floor(matchCount / 5))}人 全{formatNum(matchCount)}票 の投票に基づく</p>
+          <p style={{ color: "#999", fontSize: "14px", marginTop: "8px" }}>ユーザー{formatNum(Math.floor(matchCount / 5))}人 全{formatNum(matchCount)}票 の投票に基づく</p>
         </div>
         <div style={{ padding: "8px 16px 16px" }}>
           <button
-            style={{ display: "block", margin: "0 auto 12px", padding: "10px 28px", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "30px", color: "#fff", fontSize: "14px", cursor: "pointer" }}
+            style={{ display: "block", margin: "0 auto 16px", padding: "12px 32px", background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "30px", color: "#fff", fontSize: "15px", cursor: "pointer", fontFamily: FONT }}
             onClick={() => setShowRanking(false)}
           >← 投票に戻る</button>
 
           <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", justifyContent: "center", padding: "0 0 16px", maxWidth: "700px", margin: "0 auto" }}>
             <button
               onClick={() => setRankGen('all')}
-              style={{ padding: "6px 14px", borderRadius: "20px", border: "none", fontSize: "12px", fontWeight: 600, cursor: "pointer", background: rankGen === 'all' ? "rgba(100,210,255,0.85)" : "rgba(255,255,255,0.08)", color: rankGen === 'all' ? "#fff" : "#aaa" }}
+              style={{ padding: "7px 16px", borderRadius: "20px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", background: rankGen === 'all' ? "rgba(100,210,255,0.85)" : "rgba(255,255,255,0.08)", color: rankGen === 'all' ? "#fff" : "#aaa", fontFamily: FONT }}
             >全世代</button>
             {availableGens.map(g => (
               <button
                 key={g}
                 onClick={() => setRankGen(g)}
-                style={{ padding: "6px 14px", borderRadius: "20px", border: "none", fontSize: "12px", fontWeight: 600, cursor: "pointer", background: rankGen === g ? "rgba(100,210,255,0.85)" : "rgba(255,255,255,0.08)", color: rankGen === g ? "#fff" : "#aaa" }}
+                style={{ padding: "7px 16px", borderRadius: "20px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", background: rankGen === g ? "rgba(100,210,255,0.85)" : "rgba(255,255,255,0.08)", color: rankGen === g ? "#fff" : "#aaa", fontFamily: FONT }}
               >{GEN_NAMES[g] || `第${g}世代`}</button>
             ))}
           </div>
@@ -190,24 +194,24 @@ export default function PokemonVote() {
             const adPositions = rankGen === 'all' ? [5, 20, 50, 100, 150] : [5, 20, 50];
             return (
               <div key={p.id}>
-                <a href={`/pokemon/${p.id}`} style={{ display: "flex", alignItems: "center", gap: "10px", padding: "10px 14px", background: "rgba(255,255,255,0.09)", borderRadius: "12px", marginBottom: "6px", maxWidth: "700px", marginLeft: "auto", marginRight: "auto", textDecoration: "none", color: "inherit" }}>
-                  <span style={{ fontWeight: 900, fontSize: "18px", width: "32px", textAlign: "center", flexShrink: 0, color: i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : i === 2 ? "#cd7f32" : i <= 4 ? "#88c8e8" : "#666" }}>
+                <a href={`/pokemon/${p.id}`} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "12px 16px", background: "rgba(255,255,255,0.09)", borderRadius: "12px", marginBottom: "6px", maxWidth: "700px", marginLeft: "auto", marginRight: "auto", textDecoration: "none", color: "inherit" }}>
+                  <span style={{ fontWeight: 900, fontSize: "20px", width: "36px", textAlign: "center", flexShrink: 0, color: i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : i === 2 ? "#cd7f32" : i <= 4 ? "#88c8e8" : "#666" }}>
                     {i + 1}
                   </span>
                   <img
                     src={p.image}
                     alt={p.nameJa}
-                    style={{ width: "40px", height: "40px", objectFit: "contain", flexShrink: 0, background: "rgba(255,255,255,0.05)", borderRadius: "8px" }}
+                    style={{ width: "48px", height: "48px", objectFit: "contain", flexShrink: 0, background: "rgba(255,255,255,0.05)", borderRadius: "8px" }}
                   />
                   <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontSize: "13px", fontWeight: 600, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                    <div style={{ fontSize: "15px", fontWeight: 700, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
                       {p.nameJa}
-                      <span style={{ color: "#666", fontWeight: 400, marginLeft: "6px", fontSize: "11px" }}>No.{p.id}</span>
+                      <span style={{ color: "#666", fontWeight: 400, marginLeft: "8px", fontSize: "12px" }}>No.{p.id}</span>
                     </div>
-                    <div style={{ fontSize: "11px", color: "#888", marginTop: "2px", display: "flex", gap: "4px", alignItems: "center" }}>
+                    <div style={{ fontSize: "12px", color: "#888", marginTop: "3px", display: "flex", gap: "5px", alignItems: "center" }}>
                       Elo {p.elo}
                       {p.types.map(t => (
-                        <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: "1px 6px", borderRadius: "4px", fontSize: "10px" }}>
+                        <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: "1px 7px", borderRadius: "4px", fontSize: "10px" }}>
                           {TYPE_MAP[t]?.ja || t}
                         </span>
                       ))}
@@ -228,7 +232,7 @@ export default function PokemonVote() {
           </div>
 
           <button
-            style={{ display: "block", margin: "24px auto 16px", padding: "14px 32px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "30px", color: "#ccc", fontSize: "15px", fontWeight: 600, cursor: "pointer", transition: "background 0.2s" }}
+            style={{ display: "block", margin: "24px auto 16px", padding: "14px 32px", background: "rgba(255,255,255,0.08)", border: "1px solid rgba(255,255,255,0.2)", borderRadius: "30px", color: "#ccc", fontSize: "15px", fontWeight: 700, cursor: "pointer", transition: "background 0.2s", fontFamily: FONT }}
             onClick={() => {
               const pool = rankGen === 'all' ? POKEMON : POKEMON.filter(p => p.generation === rankGen);
               const p = pool[Math.floor(Math.random() * pool.length)];
@@ -241,7 +245,7 @@ export default function PokemonVote() {
           </button>
 
           <div style={{ maxWidth: "700px", margin: "0 auto 24px", padding: "16px 18px", background: "rgba(255,255,255,0.04)", borderRadius: "12px", lineHeight: "1.9" }}>
-            <p style={{ color: "#888", fontSize: "12px", margin: 0 }}>
+            <p style={{ color: "#888", fontSize: "13px", margin: 0 }}>
               「ポケモン 人気バトル」は、全{POKEMON.length}体のポケモンをファン投票で順位付けするランキングサイトです。
               投票にはEloレーティングシステムを採用しており、2体のポケモンを比較する形式で「どっちが好き？」を繰り返すことで、統計的に信頼性の高い順位を算出しています。
               5回投票すると全体のランキング結果を閲覧でき、全世代ランキングと世代別ランキングを切り替えて楽しめます。
@@ -277,10 +281,10 @@ export default function PokemonVote() {
 
   const cardStyle = (isWinner, isLoser, isHovered) => ({
     flex: 1,
-    minWidth: isSmallScreen ? "auto" : "280px",
-    maxWidth: "400px",
+    minWidth: isSmallScreen ? "auto" : "320px",
+    maxWidth: "460px",
     background: "rgba(255,255,255,0.06)",
-    borderRadius: "16px",
+    borderRadius: "20px",
     overflow: "hidden",
     cursor: phase !== 'idle' ? "default" : "pointer",
     transition: "transform 0.35s ease, opacity 0.35s ease, border-color 0.35s ease, box-shadow 0.2s ease",
@@ -288,28 +292,27 @@ export default function PokemonVote() {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    padding: "24px 16px",
+    padding: isSmallScreen ? "20px 16px" : "32px 24px",
     transform: isWinner ? "scale(1.03)" : isLoser ? "scale(0.97)" : (!isSmallScreen && isHovered) ? "translateY(-7px) scale(1.02)" : "none",
     opacity: isLoser ? 0.4 : 1,
     boxShadow: (!isSmallScreen && isHovered && phase === 'idle') ? "0 20px 48px rgba(0,0,0,0.45)" : "none",
   });
 
   return (
-    <div style={{ minHeight: "100vh", background: "linear-gradient(135deg,#1a0a2e,#1c1c42,#0a2848)", color: "#fff", fontFamily: "'Kosugi Maru', system-ui, sans-serif", padding: 0, margin: 0, paddingBottom: '80px', display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
-      {/* Google Fonts */}
-      <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet" />
+    <div style={{ minHeight: "100vh", background: "linear-gradient(135deg,#1a0a2e,#1c1c42,#0a2848)", color: "#fff", fontFamily: FONT, padding: 0, margin: 0, paddingBottom: '80px', display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
+      <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
 
-      <div style={{ textAlign: "center", padding: isSmallScreen ? "64px 12px 0" : "56px 16px 0" }}>
-        <h1 style={{ fontSize: isSmallScreen ? "32px" : "42px", fontWeight: 900, letterSpacing: "0.08em", margin: 0, lineHeight: "1.4" }}>
-          <span style={{ background: "linear-gradient(180deg,#ff6b6b,#ffd93d,#6bcb77,#4d96ff)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent", textShadow: "none" }}>ポケモン 人気バトル</span>
+      <div style={{ textAlign: "center", padding: isSmallScreen ? "56px 12px 0" : "48px 16px 0" }}>
+        <h1 style={{ fontSize: isSmallScreen ? "34px" : "48px", fontWeight: 900, letterSpacing: "0.06em", margin: 0, lineHeight: "1.3" }}>
+          <span style={{ background: "linear-gradient(180deg,#ff6b6b,#ffd93d,#6bcb77,#4d96ff)", WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}>ポケモン 人気バトル</span>
         </h1>
-        <p style={{ color: "#ff9944", fontSize: isSmallScreen ? "15px" : "17px", fontWeight: 700, letterSpacing: "0.05em", marginTop: "12px", lineHeight: "1.6" }}>どっちが好き？タップで投票！</p>
-        <p style={{ color: "#aaa", fontSize: isSmallScreen ? "13px" : "14px", marginTop: "12px", lineHeight: "1.6" }}>
+        <p style={{ color: "#ff9944", fontSize: isSmallScreen ? "16px" : "19px", fontWeight: 700, letterSpacing: "0.05em", marginTop: "12px", lineHeight: "1.6" }}>どっちが好き？タップで投票！</p>
+        <p style={{ color: "#aaa", fontSize: isSmallScreen ? "13px" : "15px", marginTop: "12px", lineHeight: "1.6" }}>
           あなた {myVoteCount.toLocaleString()}回投票済み ・ 全体 {formatNum(matchCount)}票 ・ {POKEMON.length}体のポケモン
         </p>
       </div>
 
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "stretch", gap: isSmallScreen ? "8px" : "24px", padding: "16px 16px 12px", maxWidth: "900px", margin: "0 auto", opacity: phase === 'exit' ? 0 : 1, transition: "opacity 0.15s ease", flexDirection: "row" }}>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "stretch", gap: isSmallScreen ? "8px" : "28px", padding: "20px 16px 12px", maxWidth: "1000px", margin: "0 auto", opacity: phase === 'exit' ? 0 : 1, transition: "opacity 0.15s ease", flexDirection: "row" }}>
         {[a, b].map((pokemon, idx) => {
           const isWinner = phase === 'voted' && votedState?.winnerId === pokemon.id;
           const isLoser = phase === 'voted' && votedState?.loserId === pokemon.id;
@@ -325,13 +328,16 @@ export default function PokemonVote() {
               <img
                 src={pokemon.image}
                 alt={pokemon.nameJa}
-                style={{ width: isSmallScreen ? "120px" : "160px", height: isSmallScreen ? "120px" : "160px", objectFit: "contain", marginBottom: "12px" }}
+                style={{ width: isSmallScreen ? "130px" : "200px", height: isSmallScreen ? "130px" : "200px", objectFit: "contain", marginBottom: "14px" }}
               />
-              <div style={{ fontSize: isSmallScreen ? "18px" : "22px", fontWeight: 700, marginBottom: "4px" }}>{pokemon.nameJa}</div>
-              <div style={{ fontSize: "12px", color: "#888", marginBottom: "8px" }}>No.{pokemon.id} ・ {GEN_NAMES[pokemon.generation] || `第${pokemon.generation}世代`}</div>
-              <div style={{ display: "flex", gap: "6px" }}>
+              <div style={{ fontSize: isSmallScreen ? "20px" : "26px", fontWeight: 800, marginBottom: "4px" }}>{pokemon.nameJa}</div>
+              {pokemon.genus && (
+                <div style={{ fontSize: isSmallScreen ? "11px" : "13px", color: "#aaa", marginBottom: "4px" }}>{pokemon.genus}</div>
+              )}
+              <div style={{ fontSize: isSmallScreen ? "12px" : "14px", color: "#888", marginBottom: "10px" }}>No.{pokemon.id} ・ {GEN_NAMES[pokemon.generation] || `第${pokemon.generation}世代`}</div>
+              <div style={{ display: "flex", gap: "8px" }}>
                 {pokemon.types.map(t => (
-                  <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: "3px 10px", borderRadius: "6px", fontSize: "12px", fontWeight: 600 }}>
+                  <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: isSmallScreen ? "3px 10px" : "4px 14px", borderRadius: "8px", fontSize: isSmallScreen ? "12px" : "14px", fontWeight: 700 }}>
                     {TYPE_MAP[t]?.ja || t}
                   </span>
                 ))}
@@ -341,9 +347,9 @@ export default function PokemonVote() {
         })}
       </div>
 
-      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "12px", padding: "4px 0 24px" }}>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "14px", padding: "8px 0 24px" }}>
         <button
-          style={{ padding: "8px 24px", background: "none", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "20px", color: "#888", fontSize: "14px", cursor: phase !== 'idle' ? "default" : "pointer", opacity: phase !== 'idle' ? 0.4 : 1 }}
+          style={{ padding: "10px 28px", background: "none", border: "1px solid rgba(255,255,255,0.15)", borderRadius: "20px", color: "#888", fontSize: "15px", cursor: phase !== 'idle' ? "default" : "pointer", opacity: phase !== 'idle' ? 0.4 : 1, fontFamily: FONT }}
           onClick={() => { if (phase === 'idle') pickPair(); }}
         >
           この組み合わせをスキップ
@@ -355,7 +361,7 @@ export default function PokemonVote() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setLastVote(null)}
-            style={{ display: "inline-flex", alignItems: "center", gap: "6px", padding: "8px 20px", background: "#000", border: "1px solid #333", borderRadius: "20px", color: "#fff", fontSize: "13px", fontWeight: 600, textDecoration: "none", transition: "background 0.15s" }}
+            style={{ display: "inline-flex", alignItems: "center", gap: "6px", padding: "10px 24px", background: "#000", border: "1px solid #333", borderRadius: "20px", color: "#fff", fontSize: "14px", fontWeight: 700, textDecoration: "none", transition: "background 0.15s", fontFamily: FONT }}
             onMouseEnter={(e) => e.currentTarget.style.background = "#1a1a1a"}
             onMouseLeave={(e) => e.currentTarget.style.background = "#000"}
           >
@@ -366,18 +372,18 @@ export default function PokemonVote() {
 
         {myVoteCount < 5 ? (
           <>
-            <p style={{ textAlign: "center", color: "#bbb", fontSize: isSmallScreen ? "14px" : "15px", margin: 0, lineHeight: "1.6" }}>
+            <p style={{ textAlign: "center", color: "#bbb", fontSize: isSmallScreen ? "15px" : "16px", margin: 0, lineHeight: "1.6", fontWeight: 700 }}>
               あと{5 - myVoteCount}回投票すると詳しいランキングが見られます
             </p>
             {matchCount > 0 && (
-              <div style={{ margin: "6px auto 0", padding: "0 16px" }}>
-                <p style={{ textAlign: "center", color: "#888", fontSize: "11px", marginBottom: "8px" }}>現在のTOP3</p>
-                <div style={{ display: "flex", justifyContent: "center", gap: "12px" }}>
+              <div style={{ margin: "8px auto 0", padding: "0 16px" }}>
+                <p style={{ textAlign: "center", color: "#888", fontSize: "12px", marginBottom: "10px" }}>現在のTOP3</p>
+                <div style={{ display: "flex", justifyContent: "center", gap: "16px" }}>
                   {ranking.slice(0, 3).map((p, i) => (
-                    <div key={p.id} style={{ position: "relative", width: isSmallScreen ? "25vw" : "100px", textAlign: "center" }}>
-                      <div style={{ position: "absolute", top: "-6px", left: "-4px", zIndex: 1, width: "22px", height: "22px", borderRadius: "50%", background: i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : "#cd7f32", color: "#000", fontSize: "12px", fontWeight: 800, display: "flex", alignItems: "center", justifyContent: "center" }}>{i + 1}</div>
-                      <img src={p.image} alt={p.nameJa} style={{ width: "64px", height: "64px", objectFit: "contain" }} />
-                      <div style={{ fontSize: "11px", color: "#aaa", marginTop: "2px" }}>{p.nameJa}</div>
+                    <div key={p.id} style={{ position: "relative", width: isSmallScreen ? "25vw" : "110px", textAlign: "center" }}>
+                      <div style={{ position: "absolute", top: "-6px", left: "-4px", zIndex: 1, width: "24px", height: "24px", borderRadius: "50%", background: i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : "#cd7f32", color: "#000", fontSize: "13px", fontWeight: 900, display: "flex", alignItems: "center", justifyContent: "center" }}>{i + 1}</div>
+                      <img src={p.image} alt={p.nameJa} style={{ width: isSmallScreen ? "60px" : "80px", height: isSmallScreen ? "60px" : "80px", objectFit: "contain" }} />
+                      <div style={{ fontSize: "12px", color: "#aaa", marginTop: "4px", fontWeight: 700 }}>{p.nameJa}</div>
                     </div>
                   ))}
                 </div>
@@ -386,7 +392,7 @@ export default function PokemonVote() {
           </>
         ) : (
           <button
-            style={{ padding: "12px 32px", background: "linear-gradient(135deg,#ff6b6b,#ffd93d,#6bcb77,#4d96ff)", border: "none", borderRadius: "30px", color: "#1a0a2e", fontSize: "16px", fontWeight: 700, cursor: "pointer", boxShadow: "0 4px 20px rgba(255,107,107,0.3)" }}
+            style={{ padding: "14px 36px", background: "linear-gradient(135deg,#ff6b6b,#ffd93d,#6bcb77,#4d96ff)", border: "none", borderRadius: "30px", color: "#1a0a2e", fontSize: "17px", fontWeight: 900, cursor: "pointer", boxShadow: "0 4px 20px rgba(255,107,107,0.3)", fontFamily: FONT }}
             onClick={() => {
               fetch('/api/ratings').then(r => r.json()).then(data => {
                 if (data.ratings && Object.keys(data.ratings).length > 0) {
@@ -402,17 +408,15 @@ export default function PokemonVote() {
         )}
       </div>
 
-      {/* フッター */}
-      <div style={{ textAlign: "center", padding: "32px 16px 100px", color: "#888", fontSize: "13px", lineHeight: "1.8" }}>
+      <div style={{ textAlign: "center", padding: "32px 16px 100px", color: "#888", fontSize: "14px", lineHeight: "1.8" }}>
         <p style={{ margin: "0 0 8px" }}>全{POKEMON.length}体のポケモンから、好きなポケモンを選んで投票できる人気ランキングサイトです。</p>
         <p style={{ margin: "12px 0 0" }}>
-          <a href="/about" style={{ color: "#666", textDecoration: "none", fontSize: "12px" }}>このサイトについて</a>
+          <a href="/about" style={{ color: "#666", textDecoration: "none", fontSize: "13px" }}>このサイトについて</a>
           <span style={{ color: "#444", margin: "0 8px" }}>|</span>
-          <a href="/privacy" style={{ color: "#666", textDecoration: "none", fontSize: "12px" }}>プライバシーポリシー</a>
+          <a href="/privacy" style={{ color: "#666", textDecoration: "none", fontSize: "13px" }}>プライバシーポリシー</a>
         </p>
       </div>
 
-      {/* 固定広告バー */}
       <div style={{
         position: 'fixed', bottom: 0, left: 0, right: 0,
         height: '60px', background: 'rgba(20,20,40,0.95)',

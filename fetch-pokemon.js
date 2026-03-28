@@ -27,14 +27,17 @@ async function fetchPokemon(id) {
   ]);
 
   // 日本語名を取得
-  const jaName = species.names.find(n => n.language.name === 'ja')?.name
+  const nameJa = species.names.find(n => n.language.name === 'ja')?.name
     || species.names.find(n => n.language.name === 'ja-Hrkt')?.name
     || pokemon.name;
 
   // 英語名
-  const enName = species.names.find(n => n.language.name === 'en')?.name || pokemon.name;
+  const nameEn = species.names.find(n => n.language.name === 'en')?.name || pokemon.name;
 
-  // タイプの日本語名は別途APIが必要なので英語のまま
+  // 分類（たねポケモン、とかげポケモン等）
+  const genus = species.genera.find(g => g.language.name === 'ja')?.genus || '';
+
+  // タイプ
   const types = pokemon.types.map(t => t.type.name);
 
   // ステータス
@@ -51,12 +54,13 @@ async function fetchPokemon(id) {
 
   return {
     id: pokemon.id,
-    name: jaName,
-    nameEn: enName,
+    nameJa,
+    nameEn,
+    genus,
     types,
     stats,
-    height: pokemon.height, // デシメートル (÷10 でメートル)
-    weight: pokemon.weight, // ヘクトグラム (÷10 でキログラム)
+    height: pokemon.height,
+    weight: pokemon.weight,
     generation,
     image: pokemon.sprites.other['official-artwork'].front_default,
   };
@@ -82,7 +86,6 @@ async function main() {
 
   console.log('\n完了！pokemon.json に保存中...');
 
-  // IDでソート
   results.sort((a, b) => a.id - b.id);
 
   fs.writeFileSync('lib/pokemon.json', JSON.stringify(results, null, 2));

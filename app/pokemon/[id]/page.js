@@ -105,7 +105,7 @@ export default async function PokemonPage({ params }) {
       minHeight: '100vh',
       background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)',
       color: '#e0e0e0',
-      fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif',
+      fontFamily: "'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
       padding: '20px',
     },
     container: {
@@ -253,6 +253,7 @@ export default async function PokemonPage({ params }) {
 
   return (
     <div style={s.page}>
+      <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
       <div style={s.container}>
         <a href="/" style={s.backLink}>← ポケモン 人気バトルに戻る</a>
 
@@ -271,6 +272,9 @@ export default async function PokemonPage({ params }) {
                   </span>
                 ))}
               </div>
+              {pokemon.genus && (
+                <div style={{ fontSize: 13, color: '#ccc', marginBottom: 4 }}>{pokemon.genus}</div>
+              )}
               <div style={{ fontSize: 13, color: '#aaa' }}>
                 第{pokemon.generation}世代 / {GEN_NAMES[pokemon.generation] || ''}地方
               </div>
