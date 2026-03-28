@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useMemo, useRef } from "react";
+import React, { useState, useEffect, useCallback, useMemo, useRef } from "react";
 
 let POKEMON = [];
 try {
@@ -171,14 +171,14 @@ export default function PokemonVote() {
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
 
         <div style={{ textAlign: "center", padding: "28px 16px 4px" }}>
-          <h1 style={{ fontSize: "30px", fontWeight: 900, color: "#3B4CCA", margin: 0 }}>
+          <h1 style={{ fontSize: "30px", fontWeight: 900, color: "#CC3333", margin: 0 }}>
             ポケモン人気ランキング {rankGen === 'all' ? `TOP${limit}` : `${GEN_NAMES[rankGen] || `第${rankGen}世代`} TOP${limit}`}
           </h1>
           <p style={{ color: "#8B7B5E", fontSize: "14px", marginTop: "8px" }}>ユーザー{formatNum(Math.floor(matchCount / 5))}人 全{formatNum(matchCount)}票 の投票に基づく</p>
         </div>
         <div style={{ padding: "8px 16px 16px" }}>
           <button
-            style={{ display: "block", margin: "0 auto 16px", padding: "12px 32px", background: "#fff", border: "1px solid #E8D89C", borderRadius: "30px", color: "#3B4CCA", fontSize: "15px", cursor: "pointer", fontFamily: FONT, fontWeight: 700 }}
+            style={{ display: "block", margin: "0 auto 16px", padding: "12px 32px", background: "#fff", border: "1px solid #E8D89C", borderRadius: "30px", color: "#CC3333", fontSize: "15px", cursor: "pointer", fontFamily: FONT, fontWeight: 700 }}
             onClick={() => setShowRanking(false)}
           >← 投票に戻る</button>
 
@@ -196,49 +196,56 @@ export default function PokemonVote() {
             ))}
           </div>
 
-          {ranking.slice(0, limit).map((p, i) => {
-            const adPositions = rankGen === 'all' ? [5, 20, 50, 100, 150] : [5, 20, 50];
-            return (
-              <div key={p.id}>
-                <a href={`/pokemon/${p.id}`} style={{ display: "flex", alignItems: "center", gap: "10px", padding: "10px 14px", background: "#fff", borderRadius: "12px", marginBottom: "6px", maxWidth: "600px", marginLeft: "auto", marginRight: "auto", textDecoration: "none", color: "inherit", boxShadow: "0 1px 4px rgba(0,0,0,0.06)", border: "1px solid rgba(255,203,5,0.2)" }}>
-                  <span style={{ fontWeight: 900, fontSize: "20px", width: "36px", textAlign: "center", flexShrink: 0, color: i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : i === 2 ? "#cd7f32" : i <= 4 ? "#3B4CCA" : "#5B8BA8" }}>
-                    {i + 1}
-                  </span>
-                  <img
-                    src={p.image}
-                    alt={p.nameJa}
-                    style={{ width: "48px", height: "48px", objectFit: "contain", flexShrink: 0, background: "rgba(255,255,255,0.05)", borderRadius: "8px" }}
-                  />
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontSize: "15px", fontWeight: 700, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", color: "#2D3748" }}>
-                      {p.nameJa}
-                      <span style={{ color: "#8B7B5E", fontWeight: 400, marginLeft: "8px", fontSize: "12px" }}>No.{p.id}</span>
-                    </div>
-                    <div style={{ fontSize: "12px", color: "#8B7B5E", marginTop: "3px", display: "flex", gap: "5px", alignItems: "center" }}>
-                      Elo {p.elo}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px", maxWidth: "600px", margin: "0 auto" }}>
+            {ranking.slice(0, limit).map((p, i) => {
+              const adPositions = rankGen === 'all' ? [5, 20, 50, 100, 150] : [5, 20, 50];
+              const rankColor = i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : i === 2 ? "#cd7f32" : i <= 4 ? "#CC3333" : "#8B7B5E";
+              return (
+                <React.Fragment key={p.id}>
+                  <a href={`/pokemon/${p.id}`} style={{
+                    display: "flex", flexDirection: "column", alignItems: "center",
+                    padding: "14px 8px 12px", background: "#fff", borderRadius: "16px",
+                    textDecoration: "none", color: "inherit",
+                    boxShadow: "0 1px 6px rgba(0,0,0,0.06)",
+                    border: i < 3 ? `2px solid ${rankColor}33` : "1px solid rgba(255,203,5,0.2)",
+                    position: "relative",
+                  }}>
+                    <div style={{
+                      position: "absolute", top: "-8px", left: "50%", transform: "translateX(-50%)",
+                      background: rankColor, color: i < 3 ? "#000" : "#fff",
+                      fontSize: "12px", fontWeight: 900, width: "24px", height: "24px",
+                      borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
+                    }}>{i + 1}</div>
+                    <img
+                      src={p.image} alt={p.nameJa}
+                      style={{ width: "64px", height: "64px", objectFit: "contain", marginTop: "8px" }}
+                    />
+                    <div style={{ fontSize: "13px", fontWeight: 800, color: "#2D3748", marginTop: "6px", textAlign: "center", lineHeight: "1.3" }}>{p.nameJa}</div>
+                    <div style={{ fontSize: "11px", color: "#3B4CCA", fontWeight: 700, marginTop: "4px" }}>Elo {p.elo}</div>
+                    <div style={{ display: "flex", gap: "3px", marginTop: "4px", flexWrap: "wrap", justifyContent: "center" }}>
                       {p.types.map(t => (
-                        <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: "1px 7px", borderRadius: "4px", fontSize: "10px" }}>
+                        <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: "1px 6px", borderRadius: "4px", fontSize: "9px", fontWeight: 700 }}>
                           {TYPE_MAP[t]?.ja || t}
                         </span>
                       ))}
                     </div>
-                  </div>
-                </a>
-                {adPositions.includes(i + 1) && (
-                  <div className="ad-slot" style={{ maxWidth: "600px", marginLeft: "auto", marginRight: "auto", marginBottom: "6px", padding: "12px", background: "rgba(255,203,5,0.04)", borderRadius: "12px", textAlign: "center", minHeight: i + 1 === 5 ? "90px" : "250px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,203,5,0.08)" }}>
-                    <span style={{ color: "#C4B08A", fontSize: "11px" }}>広告スペース{i + 1 === 5 ? "（横長バナー）" : "（レスポンシブ）"}</span>
-                  </div>
-                )}
-              </div>
-            );
-          })}
+                  </a>
+                  {adPositions.includes(i + 1) && (
+                    <div className="ad-slot" style={{ gridColumn: "1 / -1", padding: "12px", background: "rgba(255,203,5,0.04)", borderRadius: "12px", textAlign: "center", minHeight: i + 1 === 5 ? "90px" : "250px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,203,5,0.08)" }}>
+                      <span style={{ color: "#C4B08A", fontSize: "11px" }}>広告スペース{i + 1 === 5 ? "（横長バナー）" : "（レスポンシブ）"}</span>
+                    </div>
+                  )}
+                </React.Fragment>
+              );
+            })}
+          </div>
 
           <div className="ad-slot" style={{ maxWidth: "600px", marginLeft: "auto", marginRight: "auto", marginTop: "16px", marginBottom: "16px", padding: "12px", background: "rgba(255,203,5,0.04)", borderRadius: "12px", textAlign: "center", minHeight: "250px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,203,5,0.08)" }}>
             <span style={{ color: "#C4B08A", fontSize: "11px" }}>広告スペース（レスポンシブ）</span>
           </div>
 
           <button
-            style={{ display: "block", margin: "24px auto 16px", padding: "14px 32px", background: "#fff", border: "1px solid #E8D89C", borderRadius: "30px", color: "#3B4CCA", fontSize: "15px", fontWeight: 700, cursor: "pointer", transition: "background 0.2s", fontFamily: FONT }}
+            style={{ display: "block", margin: "24px auto 16px", padding: "14px 32px", background: "#fff", border: "1px solid #E8D89C", borderRadius: "30px", color: "#CC3333", fontSize: "15px", fontWeight: 700, cursor: "pointer", transition: "background 0.2s", fontFamily: FONT }}
             onClick={() => {
               const pool = rankGen === 'all' ? POKEMON : POKEMON.filter(p => p.generation === rankGen);
               const p = pool[Math.floor(Math.random() * pool.length)];
@@ -310,9 +317,9 @@ export default function PokemonVote() {
 
       <div style={{ textAlign: "center", padding: isSmallScreen ? "56px 12px 0" : "48px 16px 0" }}>
         <h1 style={{ fontSize: isSmallScreen ? "34px" : "48px", fontWeight: 900, letterSpacing: "0.06em", margin: 0, lineHeight: "1.3" }}>
-          <span style={{ color: "#3B4CCA" }}>ポケモン 人気バトル</span>
+          <span style={{ color: "#CC3333" }}>ポケモン 人気バトル</span>
         </h1>
-        <p style={{ color: "#FFCB05", fontSize: isSmallScreen ? "16px" : "19px", fontWeight: 700, letterSpacing: "0.05em", marginTop: "12px", lineHeight: "1.6", textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>どっちが好き？タップで投票！</p>
+        <p style={{ color: "#3B4CCA", fontSize: isSmallScreen ? "16px" : "19px", fontWeight: 700, letterSpacing: "0.05em", marginTop: "12px", lineHeight: "1.6" }}>どっちが好き？タップで投票！</p>
         <p style={{ color: "#8B7B5E", fontSize: isSmallScreen ? "13px" : "15px", marginTop: "12px", lineHeight: "1.6" }}>
           あなた {myVoteCount.toLocaleString()}回投票済み ・ 全体 {formatNum(matchCount)}票 ・ {POKEMON.length}体のポケモン
         </p>
@@ -354,6 +361,24 @@ export default function PokemonVote() {
       </div>
 
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "14px", padding: "8px 0 24px" }}>
+        {/* 5回投票後: ランキングボタンをスキップより上に表示 */}
+        {myVoteCount >= 5 && (
+          <button
+            style={{ padding: "14px 36px", background: "#FFCB05", border: "none", borderRadius: "30px", color: "#2D3748", fontSize: "17px", fontWeight: 900, cursor: "pointer", boxShadow: "0 4px 20px rgba(255,203,5,0.35)", fontFamily: FONT }}
+            onClick={() => {
+              fetch('/api/ratings').then(r => r.json()).then(data => {
+                if (data.ratings && Object.keys(data.ratings).length > 0) {
+                  setRatings(prev => ({ ...prev, ...data.ratings }));
+                }
+                if (data.matchCount) setMatchCount(data.matchCount);
+              }).catch(() => {});
+              setShowRanking(true);
+            }}
+          >
+            🏆 ランキングを見る
+          </button>
+        )}
+
         <button
           style={{ padding: "10px 28px", background: "#fff", border: "2px solid #E8D89C", borderRadius: "20px", color: "#8B7B5E", fontSize: "15px", cursor: phase !== 'idle' ? "default" : "pointer", opacity: phase !== 'idle' ? 0.4 : 1, fontFamily: FONT, fontWeight: 700 }}
           onClick={() => { if (phase === 'idle') pickPair(); }}
@@ -376,7 +401,7 @@ export default function PokemonVote() {
           </a>
         )}
 
-        {myVoteCount < 5 ? (
+        {myVoteCount < 5 && (
           <>
             <p style={{ textAlign: "center", color: "#2D3748", fontSize: isSmallScreen ? "15px" : "16px", margin: 0, lineHeight: "1.6", fontWeight: 700 }}>
               あと{5 - myVoteCount}回投票すると詳しいランキングが見られます
@@ -396,21 +421,6 @@ export default function PokemonVote() {
               </div>
             )}
           </>
-        ) : (
-          <button
-            style={{ padding: "14px 36px", background: "#FFCB05", border: "none", borderRadius: "30px", color: "#2D3748", fontSize: "17px", fontWeight: 900, cursor: "pointer", boxShadow: "0 4px 20px rgba(255,203,5,0.35)", fontFamily: FONT }}
-            onClick={() => {
-              fetch('/api/ratings').then(r => r.json()).then(data => {
-                if (data.ratings && Object.keys(data.ratings).length > 0) {
-                  setRatings(prev => ({ ...prev, ...data.ratings }));
-                }
-                if (data.matchCount) setMatchCount(data.matchCount);
-              }).catch(() => {});
-              setShowRanking(true);
-            }}
-          >
-            🏆 ランキングを見る
-          </button>
         )}
       </div>
 
