@@ -204,45 +204,74 @@ export default function PokemonVote() {
             ))}
           </div>
 
-          {/* TOP5 大きいカード */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "10px", maxWidth: "600px", margin: "0 auto 10px" }}>
-            {ranking.slice(0, Math.min(5, limit)).map((p, i) => {
-              const rankColor = i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : i === 2 ? "#cd7f32" : "#8B7B5E";
-              const isTop3 = i < 3;
+          {/* TOP5 大きいカード: 1位=全幅, 2-5位=半幅(2列) */}
+          <div style={{ maxWidth: "600px", margin: "0 auto 10px" }}>
+            {/* 1位 - 全幅 */}
+            {ranking.length > 0 && (() => {
+              const p = ranking[0];
               return (
-                <a key={p.id} href={`/pokemon/${p.id}`} style={{
+                <a href={`/pokemon/${p.id}`} style={{
                   display: "flex", flexDirection: "column", alignItems: "center",
-                  padding: isTop3 ? "18px 8px 14px" : "14px 6px 12px", background: "#fff", borderRadius: "16px",
+                  padding: "24px 16px 18px", background: "#fff", borderRadius: "20px",
                   textDecoration: "none", color: "inherit",
-                  boxShadow: isTop3 ? "0 2px 12px rgba(0,0,0,0.1)" : "0 1px 6px rgba(0,0,0,0.06)",
-                  border: isTop3 ? `2px solid ${rankColor}44` : "1px solid rgba(255,203,5,0.2)",
-                  position: "relative",
-                  gridRow: isTop3 ? "1" : "2",
-                  gridColumn: isTop3 ? undefined : (i === 3 ? "2" : "4"),
+                  boxShadow: "0 3px 16px rgba(0,0,0,0.1)",
+                  border: "2px solid rgba(255,215,0,0.4)",
+                  position: "relative", marginBottom: "10px",
                 }}>
                   <div style={{
-                    position: "absolute", top: "-10px", left: "50%", transform: "translateX(-50%)",
-                    background: rankColor, color: isTop3 ? "#000" : "#fff",
-                    fontSize: isTop3 ? "14px" : "12px", fontWeight: 900,
-                    width: isTop3 ? "28px" : "24px", height: isTop3 ? "28px" : "24px",
+                    position: "absolute", top: "-12px", left: "50%", transform: "translateX(-50%)",
+                    background: "#ffd700", color: "#000",
+                    fontSize: "18px", fontWeight: 900, width: "34px", height: "34px",
                     borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
-                  }}>{i + 1}</div>
-                  <img
-                    src={p.image} alt={p.nameJa}
-                    style={{ width: isTop3 ? "80px" : "64px", height: isTop3 ? "80px" : "64px", objectFit: "contain", marginTop: "8px" }}
-                  />
-                  <div style={{ fontSize: isTop3 ? "14px" : "12px", fontWeight: 800, color: "#2D3748", marginTop: "6px", textAlign: "center", lineHeight: "1.3" }}>{p.nameJa}</div>
-                  <div style={{ fontSize: isTop3 ? "12px" : "10px", color: "#3B4CCA", fontWeight: 700, marginTop: "4px" }}>Elo {p.elo}</div>
-                  <div style={{ display: "flex", gap: "3px", marginTop: "4px", flexWrap: "wrap", justifyContent: "center" }}>
+                  }}>1</div>
+                  <img src={p.image} alt={p.nameJa} style={{ width: "120px", height: "120px", objectFit: "contain", marginTop: "10px" }} />
+                  <div style={{ fontSize: "20px", fontWeight: 900, color: "#2D3748", marginTop: "8px" }}>{p.nameJa}</div>
+                  <div style={{ fontSize: "14px", color: "#3B4CCA", fontWeight: 700, marginTop: "4px" }}>Elo {p.elo}</div>
+                  <div style={{ display: "flex", gap: "4px", marginTop: "6px", flexWrap: "wrap", justifyContent: "center" }}>
                     {p.types.map(t => (
-                      <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: "1px 6px", borderRadius: "4px", fontSize: "9px", fontWeight: 700 }}>
+                      <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: "2px 10px", borderRadius: "6px", fontSize: "12px", fontWeight: 700 }}>
                         {TYPE_MAP[t]?.ja || t}
                       </span>
                     ))}
                   </div>
                 </a>
               );
-            })}
+            })()}
+
+            {/* 2-5位 - 2列グリッド */}
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "10px" }}>
+              {ranking.slice(1, Math.min(5, limit)).map((p, i) => {
+                const rank = i + 2;
+                const rankColor = rank === 2 ? "#c0c0c0" : rank === 3 ? "#cd7f32" : "#8B7B5E";
+                return (
+                  <a key={p.id} href={`/pokemon/${p.id}`} style={{
+                    display: "flex", flexDirection: "column", alignItems: "center",
+                    padding: "18px 10px 14px", background: "#fff", borderRadius: "16px",
+                    textDecoration: "none", color: "inherit",
+                    boxShadow: "0 2px 10px rgba(0,0,0,0.07)",
+                    border: rank <= 3 ? `2px solid ${rankColor}44` : "1px solid rgba(255,203,5,0.2)",
+                    position: "relative",
+                  }}>
+                    <div style={{
+                      position: "absolute", top: "-10px", left: "50%", transform: "translateX(-50%)",
+                      background: rankColor, color: rank <= 3 ? "#000" : "#fff",
+                      fontSize: "14px", fontWeight: 900, width: "28px", height: "28px",
+                      borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
+                    }}>{rank}</div>
+                    <img src={p.image} alt={p.nameJa} style={{ width: "80px", height: "80px", objectFit: "contain", marginTop: "8px" }} />
+                    <div style={{ fontSize: "15px", fontWeight: 800, color: "#2D3748", marginTop: "6px", textAlign: "center" }}>{p.nameJa}</div>
+                    <div style={{ fontSize: "12px", color: "#3B4CCA", fontWeight: 700, marginTop: "4px" }}>Elo {p.elo}</div>
+                    <div style={{ display: "flex", gap: "3px", marginTop: "4px", flexWrap: "wrap", justifyContent: "center" }}>
+                      {p.types.map(t => (
+                        <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: "1px 8px", borderRadius: "4px", fontSize: "10px", fontWeight: 700 }}>
+                          {TYPE_MAP[t]?.ja || t}
+                        </span>
+                      ))}
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
           </div>
 
           {/* 5位の後の広告 */}
