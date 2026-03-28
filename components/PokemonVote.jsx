@@ -67,6 +67,7 @@ export default function PokemonVote() {
   const [phase, setPhase] = useState('idle');
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [rankGen, setRankGen] = useState('all');
+  const [voteGen, setVoteGen] = useState('all');
 
   const voteCountRef = useRef(0);
 
@@ -74,8 +75,15 @@ export default function PokemonVote() {
 
   const pickPair = useCallback(() => {
     if (POKEMON.length < 2) return;
-    // 1戦目はカントー地方（第1世代）限定
-    const pool = isFirstBattle.current ? POKEMON.filter(p => p.generation === 1) : POKEMON;
+    let pool;
+    if (isFirstBattle.current && voteGen === 'all') {
+      // 1戦目はカントー地方（第1世代）限定（全世代モード時のみ）
+      pool = POKEMON.filter(p => p.generation === 1);
+    } else if (voteGen === 'all') {
+      pool = POKEMON;
+    } else {
+      pool = POKEMON.filter(p => p.generation === voteGen);
+    }
     isFirstBattle.current = false;
     const effectivePool = pool.length >= 2 ? pool : POKEMON;
     const i = Math.floor(Math.random() * effectivePool.length);
@@ -85,7 +93,7 @@ export default function PokemonVote() {
     setPair(Math.random() < 0.5 ? [a, b] : [b, a]);
     setVotedState(null);
     setPhase('idle');
-  }, []);
+  }, [voteGen]);
 
   useEffect(() => { pickPair(); }, [pickPair]);
 
@@ -321,8 +329,21 @@ export default function PokemonVote() {
         </h1>
         <p style={{ color: "#3B4CCA", fontSize: isSmallScreen ? "16px" : "19px", fontWeight: 700, letterSpacing: "0.05em", marginTop: "12px", lineHeight: "1.6" }}>どっちが好き？タップで投票！</p>
         <p style={{ color: "#8B7B5E", fontSize: isSmallScreen ? "13px" : "15px", marginTop: "12px", lineHeight: "1.6" }}>
-          あなた {myVoteCount.toLocaleString()}回投票済み ・ 全体 {formatNum(matchCount)}票 ・ {POKEMON.length}体のポケモン
+          あなた {myVoteCount.toLocaleString()}回投票済み ・ 全体 {formatNum(matchCount)}票 ・ {voteGen === 'all' ? `${POKEMON.length}体のポケモン` : `${GEN_NAMES[voteGen]}地方 ${POKEMON.filter(p => p.generation === voteGen).length}体`}
         </p>
+        <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", justifyContent: "center", marginTop: "12px", padding: "0 8px" }}>
+          <button
+            onClick={() => setVoteGen('all')}
+            style={{ padding: isSmallScreen ? "5px 12px" : "6px 14px", borderRadius: "16px", border: "none", fontSize: isSmallScreen ? "11px" : "12px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: voteGen === 'all' ? "#3B4CCA" : "#fff", color: voteGen === 'all' ? "#fff" : "#8B7B5E", boxShadow: voteGen === 'all' ? "0 2px 8px rgba(59,76,202,0.3)" : "0 1px 4px rgba(0,0,0,0.06)", transition: "all 0.2s" }}
+          >全世代</button>
+          {availableGens.map(g => (
+            <button
+              key={g}
+              onClick={() => setVoteGen(g)}
+              style={{ padding: isSmallScreen ? "5px 12px" : "6px 14px", borderRadius: "16px", border: "none", fontSize: isSmallScreen ? "11px" : "12px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: voteGen === g ? "#3B4CCA" : "#fff", color: voteGen === g ? "#fff" : "#8B7B5E", boxShadow: voteGen === g ? "0 2px 8px rgba(59,76,202,0.3)" : "0 1px 4px rgba(0,0,0,0.06)", transition: "all 0.2s" }}
+            >{GEN_NAMES[g] || `第${g}世代`}</button>
+          ))}
+        </div>
       </div>
 
       <div style={{ display: "flex", justifyContent: "center", alignItems: "stretch", gap: isSmallScreen ? "8px" : "28px", padding: "20px 16px 12px", maxWidth: "1000px", margin: "0 auto", opacity: phase === 'exit' ? 0 : 1, transition: "opacity 0.15s ease", flexDirection: "row" }}>
