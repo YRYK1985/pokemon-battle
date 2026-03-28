@@ -70,12 +70,18 @@ export default function PokemonVote() {
 
   const voteCountRef = useRef(0);
 
+  const isFirstBattle = useRef(true);
+
   const pickPair = useCallback(() => {
     if (POKEMON.length < 2) return;
-    const i = Math.floor(Math.random() * POKEMON.length);
-    let j = Math.floor(Math.random() * (POKEMON.length - 1));
+    // 1戦目はカントー地方（第1世代）限定
+    const pool = isFirstBattle.current ? POKEMON.filter(p => p.generation === 1) : POKEMON;
+    isFirstBattle.current = false;
+    const effectivePool = pool.length >= 2 ? pool : POKEMON;
+    const i = Math.floor(Math.random() * effectivePool.length);
+    let j = Math.floor(Math.random() * (effectivePool.length - 1));
     if (j >= i) j++;
-    const a = POKEMON[i], b = POKEMON[j];
+    const a = effectivePool[i], b = effectivePool[j];
     setPair(Math.random() < 0.5 ? [a, b] : [b, a]);
     setVotedState(null);
     setPhase('idle');
@@ -148,10 +154,10 @@ export default function PokemonVote() {
 
   if (POKEMON.length === 0) {
     return (
-      <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#E8F4FD,#D0EBFF)", color: "#1A3A50", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT }}>
+      <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1,#FFF3C4)", color: "#2D3748", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT }}>
         <div style={{ textAlign: "center" }}>
           <h1>ポケモンデータが見つかりません</h1>
-          <p style={{ color: "#5B8BA8" }}>node fetch-pokemon.js を実行してデータを生成してください</p>
+          <p style={{ color: "#8B7B5E" }}>node fetch-pokemon.js を実行してデータを生成してください</p>
         </div>
       </div>
     );
@@ -161,31 +167,31 @@ export default function PokemonVote() {
   if (showRanking) {
     const limit = rankGen === 'all' ? 200 : 50;
     return (
-      <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#E8F4FD,#D0EBFF)", color: "#1A3A50", fontFamily: FONT, padding: 0, margin: 0, paddingBottom: '80px' }}>
+      <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1,#FFF3C4)", color: "#2D3748", fontFamily: FONT, padding: 0, margin: 0, paddingBottom: '80px' }}>
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
 
         <div style={{ textAlign: "center", padding: "28px 16px 4px" }}>
-          <h1 style={{ fontSize: "30px", fontWeight: 900, color: "#3B82F6", margin: 0 }}>
+          <h1 style={{ fontSize: "30px", fontWeight: 900, color: "#3B4CCA", margin: 0 }}>
             ポケモン人気ランキング {rankGen === 'all' ? `TOP${limit}` : `${GEN_NAMES[rankGen] || `第${rankGen}世代`} TOP${limit}`}
           </h1>
-          <p style={{ color: "#5B8BA8", fontSize: "14px", marginTop: "8px" }}>ユーザー{formatNum(Math.floor(matchCount / 5))}人 全{formatNum(matchCount)}票 の投票に基づく</p>
+          <p style={{ color: "#8B7B5E", fontSize: "14px", marginTop: "8px" }}>ユーザー{formatNum(Math.floor(matchCount / 5))}人 全{formatNum(matchCount)}票 の投票に基づく</p>
         </div>
         <div style={{ padding: "8px 16px 16px" }}>
           <button
-            style={{ display: "block", margin: "0 auto 16px", padding: "12px 32px", background: "#fff", border: "1px solid #B8D8F0", borderRadius: "30px", color: "#3B82F6", fontSize: "15px", cursor: "pointer", fontFamily: FONT, fontWeight: 700 }}
+            style={{ display: "block", margin: "0 auto 16px", padding: "12px 32px", background: "#fff", border: "1px solid #E8D89C", borderRadius: "30px", color: "#3B4CCA", fontSize: "15px", cursor: "pointer", fontFamily: FONT, fontWeight: 700 }}
             onClick={() => setShowRanking(false)}
           >← 投票に戻る</button>
 
-          <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", justifyContent: "center", padding: "0 0 16px", maxWidth: "700px", margin: "0 auto" }}>
+          <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", justifyContent: "center", padding: "0 0 16px", maxWidth: "600px", margin: "0 auto" }}>
             <button
               onClick={() => setRankGen('all')}
-              style={{ padding: "7px 16px", borderRadius: "20px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", background: rankGen === 'all' ? "#3B82F6" : "#fff", color: rankGen === 'all' ? "#fff" : "#5B8BA8", fontFamily: FONT, boxShadow: rankGen === 'all' ? "none" : "0 1px 4px rgba(0,0,0,0.06)" }}
+              style={{ padding: "7px 16px", borderRadius: "20px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", background: rankGen === 'all' ? "#3B4CCA" : "#fff", color: rankGen === 'all' ? "#fff" : "#5B8BA8", fontFamily: FONT, boxShadow: rankGen === 'all' ? "none" : "0 1px 4px rgba(0,0,0,0.06)" }}
             >全世代</button>
             {availableGens.map(g => (
               <button
                 key={g}
                 onClick={() => setRankGen(g)}
-                style={{ padding: "7px 16px", borderRadius: "20px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", background: rankGen === g ? "#3B82F6" : "#fff", color: rankGen === g ? "#fff" : "#5B8BA8", fontFamily: FONT, boxShadow: rankGen === g ? "none" : "0 1px 4px rgba(0,0,0,0.06)" }}
+                style={{ padding: "7px 16px", borderRadius: "20px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", background: rankGen === g ? "#3B4CCA" : "#fff", color: rankGen === g ? "#fff" : "#5B8BA8", fontFamily: FONT, boxShadow: rankGen === g ? "none" : "0 1px 4px rgba(0,0,0,0.06)" }}
               >{GEN_NAMES[g] || `第${g}世代`}</button>
             ))}
           </div>
@@ -194,8 +200,8 @@ export default function PokemonVote() {
             const adPositions = rankGen === 'all' ? [5, 20, 50, 100, 150] : [5, 20, 50];
             return (
               <div key={p.id}>
-                <a href={`/pokemon/${p.id}`} style={{ display: "flex", alignItems: "center", gap: "12px", padding: "12px 16px", background: "#fff", borderRadius: "12px", marginBottom: "6px", maxWidth: "700px", marginLeft: "auto", marginRight: "auto", textDecoration: "none", color: "inherit", boxShadow: "0 1px 4px rgba(0,0,0,0.06)", border: "1px solid rgba(59,130,246,0.08)" }}>
-                  <span style={{ fontWeight: 900, fontSize: "20px", width: "36px", textAlign: "center", flexShrink: 0, color: i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : i === 2 ? "#cd7f32" : i <= 4 ? "#3B82F6" : "#5B8BA8" }}>
+                <a href={`/pokemon/${p.id}`} style={{ display: "flex", alignItems: "center", gap: "10px", padding: "10px 14px", background: "#fff", borderRadius: "12px", marginBottom: "6px", maxWidth: "600px", marginLeft: "auto", marginRight: "auto", textDecoration: "none", color: "inherit", boxShadow: "0 1px 4px rgba(0,0,0,0.06)", border: "1px solid rgba(255,203,5,0.2)" }}>
+                  <span style={{ fontWeight: 900, fontSize: "20px", width: "36px", textAlign: "center", flexShrink: 0, color: i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : i === 2 ? "#cd7f32" : i <= 4 ? "#3B4CCA" : "#5B8BA8" }}>
                     {i + 1}
                   </span>
                   <img
@@ -204,11 +210,11 @@ export default function PokemonVote() {
                     style={{ width: "48px", height: "48px", objectFit: "contain", flexShrink: 0, background: "rgba(255,255,255,0.05)", borderRadius: "8px" }}
                   />
                   <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontSize: "15px", fontWeight: 700, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", color: "#1A3A50" }}>
+                    <div style={{ fontSize: "15px", fontWeight: 700, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", color: "#2D3748" }}>
                       {p.nameJa}
-                      <span style={{ color: "#5B8BA8", fontWeight: 400, marginLeft: "8px", fontSize: "12px" }}>No.{p.id}</span>
+                      <span style={{ color: "#8B7B5E", fontWeight: 400, marginLeft: "8px", fontSize: "12px" }}>No.{p.id}</span>
                     </div>
-                    <div style={{ fontSize: "12px", color: "#5B8BA8", marginTop: "3px", display: "flex", gap: "5px", alignItems: "center" }}>
+                    <div style={{ fontSize: "12px", color: "#8B7B5E", marginTop: "3px", display: "flex", gap: "5px", alignItems: "center" }}>
                       Elo {p.elo}
                       {p.types.map(t => (
                         <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: "1px 7px", borderRadius: "4px", fontSize: "10px" }}>
@@ -219,55 +225,55 @@ export default function PokemonVote() {
                   </div>
                 </a>
                 {adPositions.includes(i + 1) && (
-                  <div className="ad-slot" style={{ maxWidth: "700px", marginLeft: "auto", marginRight: "auto", marginBottom: "6px", padding: "12px", background: "rgba(59,130,246,0.04)", borderRadius: "12px", textAlign: "center", minHeight: i + 1 === 5 ? "90px" : "250px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(59,130,246,0.08)" }}>
-                    <span style={{ color: "#93B8D0", fontSize: "11px" }}>広告スペース{i + 1 === 5 ? "（横長バナー）" : "（レスポンシブ）"}</span>
+                  <div className="ad-slot" style={{ maxWidth: "600px", marginLeft: "auto", marginRight: "auto", marginBottom: "6px", padding: "12px", background: "rgba(255,203,5,0.04)", borderRadius: "12px", textAlign: "center", minHeight: i + 1 === 5 ? "90px" : "250px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,203,5,0.08)" }}>
+                    <span style={{ color: "#C4B08A", fontSize: "11px" }}>広告スペース{i + 1 === 5 ? "（横長バナー）" : "（レスポンシブ）"}</span>
                   </div>
                 )}
               </div>
             );
           })}
 
-          <div className="ad-slot" style={{ maxWidth: "700px", marginLeft: "auto", marginRight: "auto", marginTop: "16px", marginBottom: "16px", padding: "12px", background: "rgba(59,130,246,0.04)", borderRadius: "12px", textAlign: "center", minHeight: "250px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(59,130,246,0.08)" }}>
-            <span style={{ color: "#93B8D0", fontSize: "11px" }}>広告スペース（レスポンシブ）</span>
+          <div className="ad-slot" style={{ maxWidth: "600px", marginLeft: "auto", marginRight: "auto", marginTop: "16px", marginBottom: "16px", padding: "12px", background: "rgba(255,203,5,0.04)", borderRadius: "12px", textAlign: "center", minHeight: "250px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,203,5,0.08)" }}>
+            <span style={{ color: "#C4B08A", fontSize: "11px" }}>広告スペース（レスポンシブ）</span>
           </div>
 
           <button
-            style={{ display: "block", margin: "24px auto 16px", padding: "14px 32px", background: "#fff", border: "1px solid #B8D8F0", borderRadius: "30px", color: "#3B82F6", fontSize: "15px", fontWeight: 700, cursor: "pointer", transition: "background 0.2s", fontFamily: FONT }}
+            style={{ display: "block", margin: "24px auto 16px", padding: "14px 32px", background: "#fff", border: "1px solid #E8D89C", borderRadius: "30px", color: "#3B4CCA", fontSize: "15px", fontWeight: 700, cursor: "pointer", transition: "background 0.2s", fontFamily: FONT }}
             onClick={() => {
               const pool = rankGen === 'all' ? POKEMON : POKEMON.filter(p => p.generation === rankGen);
               const p = pool[Math.floor(Math.random() * pool.length)];
               window.open(`/pokemon/${p.id}`, '_blank');
             }}
-            onMouseEnter={(e) => e.target.style.background = "#f0f7ff"}
+            onMouseEnter={(e) => e.target.style.background = "#FFF8E1"}
             onMouseLeave={(e) => e.target.style.background = "#fff"}
           >
             🎲 ランダムで{rankGen === 'all' ? '' : `${GEN_NAMES[rankGen]}の`}ポケモンを見る
           </button>
 
-          <div style={{ maxWidth: "700px", margin: "0 auto 24px", padding: "16px 18px", background: "rgba(255,255,255,0.6)", borderRadius: "12px", lineHeight: "1.9", border: "1px solid rgba(59,130,246,0.08)" }}>
-            <p style={{ color: "#5B8BA8", fontSize: "13px", margin: 0 }}>
+          <div style={{ maxWidth: "600px", margin: "0 auto 24px", padding: "16px 18px", background: "rgba(255,255,255,0.6)", borderRadius: "12px", lineHeight: "1.9", border: "1px solid rgba(255,203,5,0.08)" }}>
+            <p style={{ color: "#8B7B5E", fontSize: "13px", margin: 0 }}>
               「ポケモン 人気バトル」は、全{POKEMON.length}体のポケモンをファン投票で順位付けするランキングサイトです。
               投票にはEloレーティングシステムを採用しており、2体のポケモンを比較する形式で「どっちが好き？」を繰り返すことで、統計的に信頼性の高い順位を算出しています。
               5回投票すると全体のランキング結果を閲覧でき、全世代ランキングと世代別ランキングを切り替えて楽しめます。
             </p>
           </div>
 
-          <div style={{ textAlign: "center", padding: "16px 16px 100px", color: "#5B8BA8", fontSize: "13px", lineHeight: "1.8" }}>
+          <div style={{ textAlign: "center", padding: "16px 16px 100px", color: "#8B7B5E", fontSize: "13px", lineHeight: "1.8" }}>
             <p style={{ margin: "0 0 8px" }}>全{POKEMON.length}体のポケモンから、好きなポケモンを選んで投票できる人気ランキングサイトです。</p>
             <p style={{ margin: "12px 0 0" }}>
-              <a href="/about" style={{ color: "#7BAAC4", textDecoration: "none", fontSize: "12px" }}>このサイトについて</a>
-              <span style={{ color: "#B8D8F0", margin: "0 8px" }}>|</span>
-              <a href="/privacy" style={{ color: "#7BAAC4", textDecoration: "none", fontSize: "12px" }}>プライバシーポリシー</a>
+              <a href="/about" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>このサイトについて</a>
+              <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
+              <a href="/privacy" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>プライバシーポリシー</a>
             </p>
           </div>
         </div>
 
         <div style={{
           position: 'fixed', bottom: 0, left: 0, right: 0,
-          height: '60px', background: 'rgba(232,244,253,0.97)',
-          borderTop: '1px solid #B8D8F0',
+          height: '60px', background: 'rgba(255,248,225,0.97)',
+          borderTop: '1px solid #E8D89C',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          color: '#93B8D0', fontSize: '12px', zIndex: 100,
+          color: '#C4B08A', fontSize: '12px', zIndex: 100,
         }}>
           広告スペース
         </div>
@@ -288,26 +294,26 @@ export default function PokemonVote() {
     overflow: "hidden",
     cursor: phase !== 'idle' ? "default" : "pointer",
     transition: "transform 0.35s ease, opacity 0.35s ease, border-color 0.35s ease, box-shadow 0.2s ease",
-    border: isWinner ? "2px solid #FFCB05" : (!isSmallScreen && isHovered) ? "2px solid #3B82F6" : "2px solid rgba(59,130,246,0.12)",
+    border: isWinner ? "2px solid #FFCB05" : (!isSmallScreen && isHovered) ? "2px solid #3B4CCA" : "2px solid rgba(255,203,5,0.25)",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     padding: isSmallScreen ? "20px 16px" : "32px 24px",
     transform: isWinner ? "scale(1.03)" : isLoser ? "scale(0.97)" : (!isSmallScreen && isHovered) ? "translateY(-7px) scale(1.02)" : "none",
     opacity: isLoser ? 0.4 : 1,
-    boxShadow: (!isSmallScreen && isHovered && phase === 'idle') ? "0 20px 48px rgba(59,130,246,0.15)" : "0 2px 12px rgba(59,130,246,0.08)",
+    boxShadow: (!isSmallScreen && isHovered && phase === 'idle') ? "0 20px 48px rgba(255,203,5,0.15)" : "0 2px 12px rgba(255,203,5,0.08)",
   });
 
   return (
-    <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#E8F4FD,#D0EBFF)", color: "#1A3A50", fontFamily: FONT, padding: 0, margin: 0, paddingBottom: '80px', display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
+    <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1,#FFF3C4)", color: "#2D3748", fontFamily: FONT, padding: 0, margin: 0, paddingBottom: '80px', display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
       <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
 
       <div style={{ textAlign: "center", padding: isSmallScreen ? "56px 12px 0" : "48px 16px 0" }}>
         <h1 style={{ fontSize: isSmallScreen ? "34px" : "48px", fontWeight: 900, letterSpacing: "0.06em", margin: 0, lineHeight: "1.3" }}>
-          <span style={{ color: "#3B82F6" }}>ポケモン 人気バトル</span>
+          <span style={{ color: "#3B4CCA" }}>ポケモン 人気バトル</span>
         </h1>
         <p style={{ color: "#FFCB05", fontSize: isSmallScreen ? "16px" : "19px", fontWeight: 700, letterSpacing: "0.05em", marginTop: "12px", lineHeight: "1.6", textShadow: "0 1px 2px rgba(0,0,0,0.1)" }}>どっちが好き？タップで投票！</p>
-        <p style={{ color: "#5B8BA8", fontSize: isSmallScreen ? "13px" : "15px", marginTop: "12px", lineHeight: "1.6" }}>
+        <p style={{ color: "#8B7B5E", fontSize: isSmallScreen ? "13px" : "15px", marginTop: "12px", lineHeight: "1.6" }}>
           あなた {myVoteCount.toLocaleString()}回投票済み ・ 全体 {formatNum(matchCount)}票 ・ {POKEMON.length}体のポケモン
         </p>
       </div>
@@ -330,11 +336,11 @@ export default function PokemonVote() {
                 alt={pokemon.nameJa}
                 style={{ width: isSmallScreen ? "130px" : "200px", height: isSmallScreen ? "130px" : "200px", objectFit: "contain", marginBottom: "14px" }}
               />
-              <div style={{ fontSize: isSmallScreen ? "20px" : "26px", fontWeight: 800, marginBottom: "4px", color: "#1A3A50" }}>{pokemon.nameJa}</div>
+              <div style={{ fontSize: isSmallScreen ? "20px" : "26px", fontWeight: 800, marginBottom: "4px", color: "#2D3748" }}>{pokemon.nameJa}</div>
               {pokemon.genus && (
-                <div style={{ fontSize: isSmallScreen ? "11px" : "13px", color: "#5B8BA8", marginBottom: "4px" }}>{pokemon.genus}</div>
+                <div style={{ fontSize: isSmallScreen ? "11px" : "13px", color: "#8B7B5E", marginBottom: "4px" }}>{pokemon.genus}</div>
               )}
-              <div style={{ fontSize: isSmallScreen ? "12px" : "14px", color: "#7BAAC4", marginBottom: "10px" }}>No.{pokemon.id} ・ {GEN_NAMES[pokemon.generation] || `第${pokemon.generation}世代`}</div>
+              <div style={{ fontSize: isSmallScreen ? "12px" : "14px", color: "#9B8B6E", marginBottom: "10px" }}>No.{pokemon.id} ・ {GEN_NAMES[pokemon.generation] || `第${pokemon.generation}世代`}</div>
               <div style={{ display: "flex", gap: "8px" }}>
                 {pokemon.types.map(t => (
                   <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: isSmallScreen ? "3px 10px" : "4px 14px", borderRadius: "8px", fontSize: isSmallScreen ? "12px" : "14px", fontWeight: 700 }}>
@@ -349,7 +355,7 @@ export default function PokemonVote() {
 
       <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "14px", padding: "8px 0 24px" }}>
         <button
-          style={{ padding: "10px 28px", background: "#fff", border: "2px solid #B8D8F0", borderRadius: "20px", color: "#5B8BA8", fontSize: "15px", cursor: phase !== 'idle' ? "default" : "pointer", opacity: phase !== 'idle' ? 0.4 : 1, fontFamily: FONT, fontWeight: 700 }}
+          style={{ padding: "10px 28px", background: "#fff", border: "2px solid #E8D89C", borderRadius: "20px", color: "#8B7B5E", fontSize: "15px", cursor: phase !== 'idle' ? "default" : "pointer", opacity: phase !== 'idle' ? 0.4 : 1, fontFamily: FONT, fontWeight: 700 }}
           onClick={() => { if (phase === 'idle') pickPair(); }}
         >
           この組み合わせをスキップ
@@ -361,9 +367,9 @@ export default function PokemonVote() {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setLastVote(null)}
-            style={{ display: "inline-flex", alignItems: "center", gap: "6px", padding: "10px 24px", background: "#1A3A50", border: "1px solid #1A3A50", borderRadius: "20px", color: "#fff", fontSize: "14px", fontWeight: 700, textDecoration: "none", transition: "background 0.15s", fontFamily: FONT }}
-            onMouseEnter={(e) => e.currentTarget.style.background = "#254A62"}
-            onMouseLeave={(e) => e.currentTarget.style.background = "#1A3A50"}
+            style={{ display: "inline-flex", alignItems: "center", gap: "6px", padding: "10px 24px", background: "#2D3748", border: "1px solid #2D3748", borderRadius: "20px", color: "#fff", fontSize: "14px", fontWeight: 700, textDecoration: "none", transition: "background 0.15s", fontFamily: FONT }}
+            onMouseEnter={(e) => e.currentTarget.style.background = "#3D4758"}
+            onMouseLeave={(e) => e.currentTarget.style.background = "#2D3748"}
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
             この投票をXでシェアする
@@ -372,18 +378,18 @@ export default function PokemonVote() {
 
         {myVoteCount < 5 ? (
           <>
-            <p style={{ textAlign: "center", color: "#1A3A50", fontSize: isSmallScreen ? "15px" : "16px", margin: 0, lineHeight: "1.6", fontWeight: 700 }}>
+            <p style={{ textAlign: "center", color: "#2D3748", fontSize: isSmallScreen ? "15px" : "16px", margin: 0, lineHeight: "1.6", fontWeight: 700 }}>
               あと{5 - myVoteCount}回投票すると詳しいランキングが見られます
             </p>
             {matchCount > 0 && (
               <div style={{ margin: "8px auto 0", padding: "0 16px" }}>
-                <p style={{ textAlign: "center", color: "#5B8BA8", fontSize: "12px", marginBottom: "10px" }}>現在のTOP3</p>
+                <p style={{ textAlign: "center", color: "#8B7B5E", fontSize: "12px", marginBottom: "10px" }}>現在のTOP3</p>
                 <div style={{ display: "flex", justifyContent: "center", gap: "16px" }}>
                   {ranking.slice(0, 3).map((p, i) => (
                     <div key={p.id} style={{ position: "relative", width: isSmallScreen ? "25vw" : "110px", textAlign: "center" }}>
                       <div style={{ position: "absolute", top: "-6px", left: "-4px", zIndex: 1, width: "24px", height: "24px", borderRadius: "50%", background: i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : "#cd7f32", color: "#000", fontSize: "13px", fontWeight: 900, display: "flex", alignItems: "center", justifyContent: "center" }}>{i + 1}</div>
                       <img src={p.image} alt={p.nameJa} style={{ width: isSmallScreen ? "60px" : "80px", height: isSmallScreen ? "60px" : "80px", objectFit: "contain" }} />
-                      <div style={{ fontSize: "12px", color: "#1A3A50", marginTop: "4px", fontWeight: 700 }}>{p.nameJa}</div>
+                      <div style={{ fontSize: "12px", color: "#2D3748", marginTop: "4px", fontWeight: 700 }}>{p.nameJa}</div>
                     </div>
                   ))}
                 </div>
@@ -392,7 +398,7 @@ export default function PokemonVote() {
           </>
         ) : (
           <button
-            style={{ padding: "14px 36px", background: "#FFCB05", border: "none", borderRadius: "30px", color: "#1A3A50", fontSize: "17px", fontWeight: 900, cursor: "pointer", boxShadow: "0 4px 20px rgba(255,203,5,0.35)", fontFamily: FONT }}
+            style={{ padding: "14px 36px", background: "#FFCB05", border: "none", borderRadius: "30px", color: "#2D3748", fontSize: "17px", fontWeight: 900, cursor: "pointer", boxShadow: "0 4px 20px rgba(255,203,5,0.35)", fontFamily: FONT }}
             onClick={() => {
               fetch('/api/ratings').then(r => r.json()).then(data => {
                 if (data.ratings && Object.keys(data.ratings).length > 0) {
@@ -408,21 +414,21 @@ export default function PokemonVote() {
         )}
       </div>
 
-      <div style={{ textAlign: "center", padding: "32px 16px 100px", color: "#5B8BA8", fontSize: "14px", lineHeight: "1.8" }}>
+      <div style={{ textAlign: "center", padding: "32px 16px 100px", color: "#8B7B5E", fontSize: "14px", lineHeight: "1.8" }}>
         <p style={{ margin: "0 0 8px" }}>全{POKEMON.length}体のポケモンから、好きなポケモンを選んで投票できる人気ランキングサイトです。</p>
         <p style={{ margin: "12px 0 0" }}>
-          <a href="/about" style={{ color: "#7BAAC4", textDecoration: "none", fontSize: "13px" }}>このサイトについて</a>
-          <span style={{ color: "#B8D8F0", margin: "0 8px" }}>|</span>
-          <a href="/privacy" style={{ color: "#7BAAC4", textDecoration: "none", fontSize: "13px" }}>プライバシーポリシー</a>
+          <a href="/about" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>このサイトについて</a>
+          <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
+          <a href="/privacy" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>プライバシーポリシー</a>
         </p>
       </div>
 
       <div style={{
         position: 'fixed', bottom: 0, left: 0, right: 0,
-        height: '60px', background: 'rgba(232,244,253,0.97)',
-        borderTop: '1px solid #B8D8F0',
+        height: '60px', background: 'rgba(255,248,225,0.97)',
+        borderTop: '1px solid #E8D89C',
         display: 'flex', alignItems: 'center', justifyContent: 'center',
-        color: '#93B8D0', fontSize: '12px', zIndex: 100,
+        color: '#C4B08A', fontSize: '12px', zIndex: 100,
       }}>
         広告スペース
       </div>

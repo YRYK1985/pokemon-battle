@@ -103,8 +103,8 @@ export default async function PokemonPage({ params }) {
   const s = {
     page: {
       minHeight: '100vh',
-      background: 'linear-gradient(180deg, #E8F4FD 0%, #D0EBFF 100%)',
-      color: '#1A3A50',
+      background: 'linear-gradient(180deg, #FFF8E1 0%, #FFF3C4 100%)',
+      color: '#2D3748',
       fontFamily: "'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
       padding: '20px',
     },
@@ -114,7 +114,7 @@ export default async function PokemonPage({ params }) {
     },
     backLink: {
       display: 'inline-block',
-      color: '#3B82F6',
+      color: '#3B4CCA',
       textDecoration: 'none',
       marginBottom: 20,
       fontSize: 14,
@@ -125,8 +125,8 @@ export default async function PokemonPage({ params }) {
       borderRadius: 16,
       padding: 24,
       marginBottom: 16,
-      border: '1px solid rgba(59,130,246,0.12)',
-      boxShadow: '0 2px 12px rgba(59,130,246,0.08)',
+      border: '1px solid rgba(255,203,5,0.25)',
+      boxShadow: '0 2px 12px rgba(255,203,5,0.1)',
     },
     header: {
       display: 'flex',
@@ -138,22 +138,22 @@ export default async function PokemonPage({ params }) {
       width: 140,
       height: 140,
       objectFit: 'contain',
-      filter: 'drop-shadow(0 4px 12px rgba(59,130,246,0.2))',
+      filter: 'drop-shadow(0 4px 12px rgba(255,203,5,0.2))',
     },
     name: {
       fontSize: 28,
       fontWeight: 800,
-      color: '#1A3A50',
+      color: '#2D3748',
       margin: '0 0 4px 0',
     },
     nameEn: {
       fontSize: 14,
-      color: '#5B8BA8',
+      color: '#8B7B5E',
       marginBottom: 8,
     },
     no: {
       fontSize: 14,
-      color: '#3B82F6',
+      color: '#3B4CCA',
       marginBottom: 8,
     },
     typeBadge: (color) => ({
@@ -169,10 +169,10 @@ export default async function PokemonPage({ params }) {
     sectionTitle: {
       fontSize: 16,
       fontWeight: 700,
-      color: '#3B82F6',
+      color: '#3B4CCA',
       marginBottom: 12,
       paddingBottom: 8,
-      borderBottom: '1px solid rgba(59,130,246,0.15)',
+      borderBottom: '1px solid rgba(59,76,202,0.15)',
     },
     grid: {
       display: 'grid',
@@ -180,24 +180,24 @@ export default async function PokemonPage({ params }) {
       gap: 12,
     },
     dataItem: {
-      background: 'rgba(59,130,246,0.04)',
+      background: 'rgba(255,203,5,0.06)',
       borderRadius: 10,
       padding: '12px 16px',
     },
     dataLabel: {
       fontSize: 11,
-      color: '#5B8BA8',
+      color: '#8B7B5E',
       marginBottom: 4,
     },
     dataValue: {
       fontSize: 20,
       fontWeight: 700,
-      color: '#1A3A50',
+      color: '#2D3748',
     },
     statBar: (val, max, color) => ({
       height: 8,
       borderRadius: 4,
-      background: 'rgba(59,130,246,0.08)',
+      background: 'rgba(255,203,5,0.12)',
       overflow: 'hidden',
       position: 'relative',
     }),
@@ -216,14 +216,14 @@ export default async function PokemonPage({ params }) {
     statLabel: {
       width: 45,
       fontSize: 12,
-      color: '#5B8BA8',
+      color: '#8B7B5E',
       textAlign: 'right',
     },
     statValue: {
       width: 35,
       fontSize: 13,
       fontWeight: 700,
-      color: '#1A3A50',
+      color: '#2D3748',
       textAlign: 'right',
     },
     navLink: {
@@ -231,10 +231,10 @@ export default async function PokemonPage({ params }) {
       alignItems: 'center',
       gap: 10,
       padding: '12px 16px',
-      background: 'rgba(59,130,246,0.04)',
+      background: 'rgba(255,203,5,0.06)',
       borderRadius: 10,
       textDecoration: 'none',
-      color: '#1A3A50',
+      color: '#2D3748',
       transition: 'background 0.2s',
     },
     navImg: {
@@ -275,9 +275,9 @@ export default async function PokemonPage({ params }) {
                 ))}
               </div>
               {pokemon.genus && (
-                <div style={{ fontSize: 13, color: '#5B8BA8', marginBottom: 4 }}>{pokemon.genus}</div>
+                <div style={{ fontSize: 13, color: '#8B7B5E', marginBottom: 4 }}>{pokemon.genus}</div>
               )}
-              <div style={{ fontSize: 13, color: '#7BAAC4' }}>
+              <div style={{ fontSize: 13, color: '#A0926E' }}>
                 第{pokemon.generation}世代 / {GEN_NAMES[pokemon.generation] || ''}地方
               </div>
             </div>
@@ -293,16 +293,16 @@ export default async function PokemonPage({ params }) {
               <div style={s.dataValue}>{elo}</div>
             </div>
             <div style={s.dataItem}>
+              <div style={s.dataLabel}>勝率</div>
+              <div style={s.dataValue}>{winRate !== null ? `${winRate}%` : '-'}</div>
+            </div>
+            <div style={s.dataItem}>
               <div style={s.dataLabel}>全体ランキング</div>
-              <div style={s.dataValue}>{overallRank}<span style={{ fontSize: 13, color: '#5B8BA8' }}>/{POKEMON.length}</span></div>
+              <div style={s.dataValue}>{overallRank}<span style={{ fontSize: 13, color: '#8B7B5E' }}>/{POKEMON.length}</span></div>
             </div>
             <div style={s.dataItem}>
               <div style={s.dataLabel}>世代別ランキング</div>
-              <div style={s.dataValue}>{genRank}<span style={{ fontSize: 13, color: '#5B8BA8' }}>/{genPokemon.length}</span></div>
-            </div>
-            <div style={s.dataItem}>
-              <div style={s.dataLabel}>勝率</div>
-              <div style={s.dataValue}>{winRate !== null ? `${winRate}%` : '-'}</div>
+              <div style={s.dataValue}>{genRank}<span style={{ fontSize: 13, color: '#8B7B5E' }}>/{genPokemon.length}</span></div>
             </div>
           </div>
         </div>
@@ -342,29 +342,29 @@ export default async function PokemonPage({ params }) {
           <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
             {prevPokemon && (
               <a href={`/pokemon/${prevPokemon.id}`} style={s.navLink}>
-                <span style={{ color: '#3B82F6', fontWeight: 700, width: 30 }}>▲{idx}</span>
+                <span style={{ color: '#3B4CCA', fontWeight: 700, width: 30 }}>▲{idx}</span>
                 <img src={prevPokemon.image} alt={prevPokemon.nameJa} style={s.navImg} />
                 <div>
-                  <div style={{ fontWeight: 600, color: '#1A3A50' }}>{prevPokemon.nameJa}</div>
-                  <div style={{ fontSize: 12, color: '#5B8BA8' }}>Elo {prevPokemon.elo}</div>
+                  <div style={{ fontWeight: 600, color: '#2D3748' }}>{prevPokemon.nameJa}</div>
+                  <div style={{ fontSize: 12, color: '#8B7B5E' }}>Elo {prevPokemon.elo}</div>
                 </div>
               </a>
             )}
-            <div style={{ ...s.navLink, background: 'rgba(255,203,5,0.12)', border: '1px solid rgba(255,203,5,0.4)' }}>
+            <div style={{ ...s.navLink, background: 'rgba(255,203,5,0.15)', border: '1px solid rgba(255,203,5,0.5)' }}>
               <span style={{ color: '#D4A005', fontWeight: 700, width: 30 }}>{overallRank}</span>
               <img src={pokemon.image} alt={pokemon.nameJa} style={s.navImg} />
               <div>
-                <div style={{ fontWeight: 600, color: '#1A3A50' }}>{pokemon.nameJa}</div>
+                <div style={{ fontWeight: 600, color: '#2D3748' }}>{pokemon.nameJa}</div>
                 <div style={{ fontSize: 12, color: '#D4A005' }}>Elo {elo}</div>
               </div>
             </div>
             {nextPokemon && (
               <a href={`/pokemon/${nextPokemon.id}`} style={s.navLink}>
-                <span style={{ color: '#3B82F6', fontWeight: 700, width: 30 }}>▼{idx + 2}</span>
+                <span style={{ color: '#3B4CCA', fontWeight: 700, width: 30 }}>▼{idx + 2}</span>
                 <img src={nextPokemon.image} alt={nextPokemon.nameJa} style={s.navImg} />
                 <div>
-                  <div style={{ fontWeight: 600, color: '#1A3A50' }}>{nextPokemon.nameJa}</div>
-                  <div style={{ fontSize: 12, color: '#5B8BA8' }}>Elo {nextPokemon.elo}</div>
+                  <div style={{ fontWeight: 600, color: '#2D3748' }}>{nextPokemon.nameJa}</div>
+                  <div style={{ fontSize: 12, color: '#8B7B5E' }}>Elo {nextPokemon.elo}</div>
                 </div>
               </a>
             )}
@@ -372,7 +372,7 @@ export default async function PokemonPage({ params }) {
         </div>
 
         {/* フッター */}
-        <div style={{ textAlign: 'center', padding: '24px 0', fontSize: 12, color: '#7BAAC4' }}>
+        <div style={{ textAlign: 'center', padding: '24px 0', fontSize: 12, color: '#A0926E' }}>
           ポケモン 人気バトル - ファンの投票だけで決まるランキング
         </div>
       </div>
