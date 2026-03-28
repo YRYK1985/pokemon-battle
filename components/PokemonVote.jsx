@@ -165,14 +165,14 @@ export default function PokemonVote() {
 
   // ---- Ranking ----
   if (showRanking) {
-    const limit = rankGen === 'all' ? 200 : 50;
+    const limit = rankGen === 'all' ? 100 : Infinity;
     return (
       <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1,#FFF3C4)", color: "#2D3748", fontFamily: FONT, padding: 0, margin: 0, paddingBottom: '80px' }}>
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
 
         <div style={{ textAlign: "center", padding: "28px 16px 4px" }}>
           <h1 style={{ fontSize: "30px", fontWeight: 900, color: "#CC3333", margin: 0 }}>
-            ポケモン人気ランキング {rankGen === 'all' ? `TOP${limit}` : `${GEN_NAMES[rankGen] || `第${rankGen}世代`} TOP${limit}`}
+            ポケモン人気ランキング {rankGen === 'all' ? 'TOP100' : `${GEN_NAMES[rankGen] || `第${rankGen}世代`}`}
           </h1>
           <p style={{ color: "#8B7B5E", fontSize: "14px", marginTop: "8px" }}>ユーザー{formatNum(Math.floor(matchCount / 5))}人 全{formatNum(matchCount)}票 の投票に基づく</p>
         </div>
