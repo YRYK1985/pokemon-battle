@@ -285,7 +285,8 @@ export default function PokemonVote() {
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px", maxWidth: "600px", margin: "0 auto" }}>
             {ranking.slice(5, limit).map((p, i) => {
               const actualRank = i + 6;
-              const adPositions = rankGen === 'all' ? [20, 50, 100, 150] : [20, 50];
+              const genCount = rankGen !== 'all' ? POKEMON.filter(p => p.generation === rankGen).length : 0;
+              const adPositions = rankGen === 'all' ? [20, 50, 100, 150] : genCount > 100 ? [20, 50, 101] : [20, 50];
               const rankColor = "#8B7B5E";
               return (
                 <React.Fragment key={p.id}>
