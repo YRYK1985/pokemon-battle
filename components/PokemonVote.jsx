@@ -204,10 +204,60 @@ export default function PokemonVote() {
             ))}
           </div>
 
+          {/* TOP5 大きいカード */}
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: "10px", maxWidth: "600px", margin: "0 auto 10px" }}>
+            {ranking.slice(0, Math.min(5, limit)).map((p, i) => {
+              const rankColor = i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : i === 2 ? "#cd7f32" : "#8B7B5E";
+              const isTop3 = i < 3;
+              return (
+                <a key={p.id} href={`/pokemon/${p.id}`} style={{
+                  display: "flex", flexDirection: "column", alignItems: "center",
+                  padding: isTop3 ? "18px 8px 14px" : "14px 6px 12px", background: "#fff", borderRadius: "16px",
+                  textDecoration: "none", color: "inherit",
+                  boxShadow: isTop3 ? "0 2px 12px rgba(0,0,0,0.1)" : "0 1px 6px rgba(0,0,0,0.06)",
+                  border: isTop3 ? `2px solid ${rankColor}44` : "1px solid rgba(255,203,5,0.2)",
+                  position: "relative",
+                  gridRow: isTop3 ? "1" : "2",
+                  gridColumn: isTop3 ? undefined : (i === 3 ? "2" : "4"),
+                }}>
+                  <div style={{
+                    position: "absolute", top: "-10px", left: "50%", transform: "translateX(-50%)",
+                    background: rankColor, color: isTop3 ? "#000" : "#fff",
+                    fontSize: isTop3 ? "14px" : "12px", fontWeight: 900,
+                    width: isTop3 ? "28px" : "24px", height: isTop3 ? "28px" : "24px",
+                    borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
+                  }}>{i + 1}</div>
+                  <img
+                    src={p.image} alt={p.nameJa}
+                    style={{ width: isTop3 ? "80px" : "64px", height: isTop3 ? "80px" : "64px", objectFit: "contain", marginTop: "8px" }}
+                  />
+                  <div style={{ fontSize: isTop3 ? "14px" : "12px", fontWeight: 800, color: "#2D3748", marginTop: "6px", textAlign: "center", lineHeight: "1.3" }}>{p.nameJa}</div>
+                  <div style={{ fontSize: isTop3 ? "12px" : "10px", color: "#3B4CCA", fontWeight: 700, marginTop: "4px" }}>Elo {p.elo}</div>
+                  <div style={{ display: "flex", gap: "3px", marginTop: "4px", flexWrap: "wrap", justifyContent: "center" }}>
+                    {p.types.map(t => (
+                      <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: "1px 6px", borderRadius: "4px", fontSize: "9px", fontWeight: 700 }}>
+                        {TYPE_MAP[t]?.ja || t}
+                      </span>
+                    ))}
+                  </div>
+                </a>
+              );
+            })}
+          </div>
+
+          {/* 5位の後の広告 */}
+          {limit > 5 && (
+            <div className="ad-slot" style={{ maxWidth: "600px", margin: "0 auto 10px", padding: "12px", background: "rgba(255,203,5,0.04)", borderRadius: "12px", textAlign: "center", minHeight: "90px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,203,5,0.08)" }}>
+              <span style={{ color: "#C4B08A", fontSize: "11px" }}>広告スペース（横長バナー）</span>
+            </div>
+          )}
+
+          {/* 6位以下 3列グリッド */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px", maxWidth: "600px", margin: "0 auto" }}>
-            {ranking.slice(0, limit).map((p, i) => {
-              const adPositions = rankGen === 'all' ? [5, 20, 50, 100, 150] : [5, 20, 50];
-              const rankColor = i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : i === 2 ? "#cd7f32" : i <= 4 ? "#CC3333" : "#8B7B5E";
+            {ranking.slice(5, limit).map((p, i) => {
+              const actualRank = i + 6;
+              const adPositions = rankGen === 'all' ? [20, 50, 100, 150] : [20, 50];
+              const rankColor = "#8B7B5E";
               return (
                 <React.Fragment key={p.id}>
                   <a href={`/pokemon/${p.id}`} style={{
@@ -215,15 +265,15 @@ export default function PokemonVote() {
                     padding: "14px 8px 12px", background: "#fff", borderRadius: "16px",
                     textDecoration: "none", color: "inherit",
                     boxShadow: "0 1px 6px rgba(0,0,0,0.06)",
-                    border: i < 3 ? `2px solid ${rankColor}33` : "1px solid rgba(255,203,5,0.2)",
+                    border: "1px solid rgba(255,203,5,0.2)",
                     position: "relative",
                   }}>
                     <div style={{
                       position: "absolute", top: "-8px", left: "50%", transform: "translateX(-50%)",
-                      background: rankColor, color: i < 3 ? "#000" : "#fff",
+                      background: rankColor, color: "#fff",
                       fontSize: "12px", fontWeight: 900, width: "24px", height: "24px",
                       borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
-                    }}>{i + 1}</div>
+                    }}>{actualRank}</div>
                     <img
                       src={p.image} alt={p.nameJa}
                       style={{ width: "64px", height: "64px", objectFit: "contain", marginTop: "8px" }}
@@ -238,9 +288,9 @@ export default function PokemonVote() {
                       ))}
                     </div>
                   </a>
-                  {adPositions.includes(i + 1) && (
-                    <div className="ad-slot" style={{ gridColumn: "1 / -1", padding: "12px", background: "rgba(255,203,5,0.04)", borderRadius: "12px", textAlign: "center", minHeight: i + 1 === 5 ? "90px" : "250px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,203,5,0.08)" }}>
-                      <span style={{ color: "#C4B08A", fontSize: "11px" }}>広告スペース{i + 1 === 5 ? "（横長バナー）" : "（レスポンシブ）"}</span>
+                  {adPositions.includes(actualRank) && (
+                    <div className="ad-slot" style={{ gridColumn: "1 / -1", padding: "12px", background: "rgba(255,203,5,0.04)", borderRadius: "12px", textAlign: "center", minHeight: "250px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,203,5,0.08)" }}>
+                      <span style={{ color: "#C4B08A", fontSize: "11px" }}>広告スペース（レスポンシブ）</span>
                     </div>
                   )}
                 </React.Fragment>
