@@ -13,6 +13,9 @@ export const metadata = {
     description: '全1025体のポケモンから「どっちが好き？」を選んで投票！',
     images: ['https://www.poke-vote.com/ogp.png'],
   },
+  icons: {
+    icon: '/favicon.svg',
+  },
 };
 
 export default function RootLayout({ children }) {
