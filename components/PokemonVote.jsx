@@ -344,9 +344,7 @@ export default function PokemonVote() {
                 style={{ width: isSmallScreen ? "130px" : "200px", height: isSmallScreen ? "130px" : "200px", objectFit: "contain", marginBottom: "14px" }}
               />
               <div style={{ fontSize: isSmallScreen ? "20px" : "26px", fontWeight: 800, marginBottom: "4px", color: "#2D3748" }}>{pokemon.nameJa}</div>
-              {pokemon.genus && (
-                <div style={{ fontSize: isSmallScreen ? "11px" : "13px", color: "#8B7B5E", marginBottom: "4px" }}>{pokemon.genus}</div>
-              )}
+              <div style={{ fontSize: isSmallScreen ? "11px" : "13px", color: "#8B7B5E", marginBottom: "4px", minHeight: isSmallScreen ? "14px" : "17px" }}>{pokemon.genus || "\u00A0"}</div>
               <div style={{ fontSize: isSmallScreen ? "12px" : "14px", color: "#9B8B6E", marginBottom: "10px" }}>No.{pokemon.id} ・ {GEN_NAMES[pokemon.generation] || `第${pokemon.generation}世代`}</div>
               <div style={{ display: "flex", gap: "8px" }}>
                 {pokemon.types.map(t => (
