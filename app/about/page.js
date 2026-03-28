@@ -7,8 +7,8 @@ export default function AboutPage() {
   const s = {
     page: {
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)',
-      color: '#e0e0e0',
+      background: 'linear-gradient(180deg, #E8F4FD 0%, #D0EBFF 100%)',
+      color: '#1A3A50',
       fontFamily: "'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
       padding: '20px',
     },
@@ -18,35 +18,37 @@ export default function AboutPage() {
     },
     backLink: {
       display: 'inline-block',
-      color: '#ffd700',
+      color: '#3B82F6',
       textDecoration: 'none',
       marginBottom: 20,
       fontSize: 14,
+      fontWeight: 700,
     },
     card: {
-      background: 'rgba(255,255,255,0.06)',
+      background: '#fff',
       borderRadius: 16,
       padding: 24,
       marginBottom: 16,
-      border: '1px solid rgba(255,255,255,0.1)',
+      border: '1px solid rgba(59,130,246,0.12)',
+      boxShadow: '0 2px 12px rgba(59,130,246,0.08)',
     },
     title: {
       fontSize: 24,
       fontWeight: 800,
-      color: '#ffd700',
+      color: '#3B82F6',
       marginBottom: 16,
     },
     sectionTitle: {
       fontSize: 18,
       fontWeight: 700,
-      color: '#ffd700',
+      color: '#3B82F6',
       marginBottom: 12,
       marginTop: 20,
     },
     text: {
       fontSize: 14,
       lineHeight: 1.8,
-      color: '#ccc',
+      color: '#3A5A70',
     },
   };
 
@@ -91,7 +93,7 @@ export default function AboutPage() {
           </p>
         </div>
 
-        <div style={{ textAlign: 'center', padding: '24px 0', fontSize: 12, color: '#555' }}>
+        <div style={{ textAlign: 'center', padding: '24px 0', fontSize: 12, color: '#7BAAC4' }}>
           最終更新: 2026年3月28日
         </div>
       </div>

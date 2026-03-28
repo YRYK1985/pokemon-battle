@@ -7,17 +7,17 @@ export default function PrivacyPage() {
   const s = {
     page: {
       minHeight: '100vh',
-      background: 'linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%)',
-      color: '#e0e0e0',
+      background: 'linear-gradient(180deg, #E8F4FD 0%, #D0EBFF 100%)',
+      color: '#1A3A50',
       fontFamily: "'M PLUS Rounded 1c', system-ui, sans-serif",
       padding: '20px',
     },
     container: { maxWidth: 700, margin: '0 auto' },
-    backLink: { display: 'inline-block', color: '#ffd700', textDecoration: 'none', marginBottom: 20, fontSize: 14 },
-    card: { background: 'rgba(255,255,255,0.06)', borderRadius: 16, padding: 24, marginBottom: 16, border: '1px solid rgba(255,255,255,0.1)' },
-    title: { fontSize: 24, fontWeight: 800, color: '#ffd700', marginBottom: 16 },
-    sectionTitle: { fontSize: 18, fontWeight: 700, color: '#ffd700', marginBottom: 12, marginTop: 24 },
-    text: { fontSize: 14, lineHeight: 1.8, color: '#ccc' },
+    backLink: { display: 'inline-block', color: '#3B82F6', textDecoration: 'none', marginBottom: 20, fontSize: 14, fontWeight: 700 },
+    card: { background: '#fff', borderRadius: 16, padding: 24, marginBottom: 16, border: '1px solid rgba(59,130,246,0.12)', boxShadow: '0 2px 12px rgba(59,130,246,0.08)' },
+    title: { fontSize: 24, fontWeight: 800, color: '#3B82F6', marginBottom: 16 },
+    sectionTitle: { fontSize: 18, fontWeight: 700, color: '#3B82F6', marginBottom: 12, marginTop: 24 },
+    text: { fontSize: 14, lineHeight: 1.8, color: '#3A5A70' },
   };
 
   return (
@@ -80,7 +80,7 @@ export default function PrivacyPage() {
             変更後のポリシーは当ページに掲載された時点で効力を持ちます。
           </p>
         </div>
-        <div style={{ textAlign: 'center', padding: '24px 0', fontSize: 12, color: '#555' }}>
+        <div style={{ textAlign: 'center', padding: '24px 0', fontSize: 12, color: '#7BAAC4' }}>
           最終更新: 2026年3月28日
         </div>
       </div>
