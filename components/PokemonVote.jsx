@@ -623,8 +623,8 @@ export default function PokemonVote() {
         )}
       </div>
 
-      <div style={{ textAlign: "center", padding: "32px 16px 100px", color: "#8B7B5E", fontSize: "14px", lineHeight: "1.8" }}>
-        <p style={{ margin: "0 0 8px" }}>{t.footerDescription.replace('{count}', POKEMON.length)}</p>
+      <div style={{ textAlign: "center", padding: "32px 16px 100px", color: "#8B7B5E", fontSize: "13px", lineHeight: "1.8" }}>
+        <p style={{ margin: "0 0 12px", maxWidth: "600px", marginLeft: "auto", marginRight: "auto", textAlign: "left" }}>{t.siteDescription.replace('{count}', POKEMON.length)}</p>
         <p style={{ margin: "12px 0 0" }}>
           <a href="/about" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>{t.about}</a>
           <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
