@@ -1,9 +1,19 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function PrivacyPage() {
   const [lang, setLang] = useState('ja');
+
+  useEffect(() => {
+    const saved = localStorage.getItem('poke-lang');
+    if (saved === 'en') setLang('en');
+  }, []);
+
+  const changeLang = (l) => {
+    setLang(l);
+    localStorage.setItem('poke-lang', l);
+  };
 
   const FONT = "'M PLUS Rounded 1c', system-ui, sans-serif";
 
@@ -99,13 +109,13 @@ export default function PrivacyPage() {
       {/* Language Toggle */}
       <div style={s.langToggle}>
         <button
-          onClick={() => setLang('ja')}
+          onClick={() => changeLang('ja')}
           style={s.langButton(lang === 'ja')}
         >
           🇯🇵 JA
         </button>
         <button
-          onClick={() => setLang('en')}
+          onClick={() => changeLang('en')}
           style={s.langButton(lang === 'en')}
         >
           🇺🇸 EN

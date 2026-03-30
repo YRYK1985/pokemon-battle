@@ -139,6 +139,16 @@ export default function PokemonVote() {
   const [voteGen, setVoteGen] = useState('all');
   const [lang, setLang] = useState('ja');
 
+  useEffect(() => {
+    const saved = localStorage.getItem('poke-lang');
+    if (saved === 'en') setLang('en');
+  }, []);
+
+  const changeLang = (l) => {
+    setLang(l);
+    localStorage.setItem('poke-lang', l);
+  };
+
   const t = T[lang];
 
   const voteCountRef = useRef(0);
@@ -267,11 +277,11 @@ export default function PokemonVote() {
         {/* Language Toggle Button */}
         <div style={{ position: "fixed", top: "16px", right: "16px", zIndex: 100, display: "flex", gap: "2px", background: "#fff", borderRadius: "20px", padding: "2px", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}>
           <button
-            onClick={() => setLang('ja')}
+            onClick={() => changeLang('ja')}
             style={{ padding: "6px 14px", borderRadius: "18px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'ja' ? "#3B4CCA" : "transparent", color: lang === 'ja' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
           >🇯🇵 JA</button>
           <button
-            onClick={() => setLang('en')}
+            onClick={() => changeLang('en')}
             style={{ padding: "6px 14px", borderRadius: "18px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'en' ? "#3B4CCA" : "transparent", color: lang === 'en' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
           >🇺🇸 EN</button>
         </div>
@@ -483,11 +493,11 @@ export default function PokemonVote() {
       {/* Language Toggle Button */}
       <div style={{ position: "fixed", top: "16px", right: "16px", zIndex: 100, display: "flex", gap: "2px", background: "#fff", borderRadius: "20px", padding: "2px", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}>
         <button
-          onClick={() => setLang('ja')}
+          onClick={() => changeLang('ja')}
           style={{ padding: "6px 14px", borderRadius: "18px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'ja' ? "#3B4CCA" : "transparent", color: lang === 'ja' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
         >🇯🇵 JA</button>
         <button
-          onClick={() => setLang('en')}
+          onClick={() => changeLang('en')}
           style={{ padding: "6px 14px", borderRadius: "18px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'en' ? "#3B4CCA" : "transparent", color: lang === 'en' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
         >🇺🇸 EN</button>
       </div>
