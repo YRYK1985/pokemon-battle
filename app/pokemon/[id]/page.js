@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import { kv } from '@vercel/kv';
+import PokemonDetailClient from './PokemonDetailClient';
 
 let POKEMON = [];
 try {
@@ -7,29 +8,36 @@ try {
 } catch (e) {}
 
 const TYPE_MAP = {
-  normal: { ja: "ノーマル", color: "#A8A878" },
-  fire: { ja: "ほのお", color: "#F08030" },
-  water: { ja: "みず", color: "#6890F0" },
-  electric: { ja: "でんき", color: "#F8D030" },
-  grass: { ja: "くさ", color: "#78C850" },
-  ice: { ja: "こおり", color: "#98D8D8" },
-  fighting: { ja: "かくとう", color: "#C03028" },
-  poison: { ja: "どく", color: "#A040A0" },
-  ground: { ja: "じめん", color: "#E0C068" },
-  flying: { ja: "ひこう", color: "#A890F0" },
-  psychic: { ja: "エスパー", color: "#F85888" },
-  bug: { ja: "むし", color: "#A8B820" },
-  rock: { ja: "いわ", color: "#B8A038" },
-  ghost: { ja: "ゴースト", color: "#705898" },
-  dragon: { ja: "ドラゴン", color: "#7038F8" },
-  dark: { ja: "あく", color: "#705848" },
-  steel: { ja: "はがね", color: "#B8B8D0" },
-  fairy: { ja: "フェアリー", color: "#EE99AC" },
+  normal: { ja: "ノーマル", en: "Normal", color: "#A8A878" },
+  fire: { ja: "ほのお", en: "Fire", color: "#F08030" },
+  water: { ja: "みず", en: "Water", color: "#6890F0" },
+  electric: { ja: "でんき", en: "Electric", color: "#F8D030" },
+  grass: { ja: "くさ", en: "Grass", color: "#78C850" },
+  ice: { ja: "こおり", en: "Ice", color: "#98D8D8" },
+  fighting: { ja: "かくとう", en: "Fighting", color: "#C03028" },
+  poison: { ja: "どく", en: "Poison", color: "#A040A0" },
+  ground: { ja: "じめん", en: "Ground", color: "#E0C068" },
+  flying: { ja: "ひこう", en: "Flying", color: "#A890F0" },
+  psychic: { ja: "エスパー", en: "Psychic", color: "#F85888" },
+  bug: { ja: "むし", en: "Bug", color: "#A8B820" },
+  rock: { ja: "いわ", en: "Rock", color: "#B8A038" },
+  ghost: { ja: "ゴースト", en: "Ghost", color: "#705898" },
+  dragon: { ja: "ドラゴン", en: "Dragon", color: "#7038F8" },
+  dark: { ja: "あく", en: "Dark", color: "#705848" },
+  steel: { ja: "はがね", en: "Steel", color: "#B8B8D0" },
+  fairy: { ja: "フェアリー", en: "Fairy", color: "#EE99AC" },
 };
 
 const GEN_NAMES = {
-  1: "カントー", 2: "ジョウト", 3: "ホウエン", 4: "シンオウ",
-  5: "イッシュ", 6: "カロス", 7: "アローラ", 8: "ガラル", 9: "パルデア",
+  1: { ja: "カントー", en: "Kanto" },
+  2: { ja: "ジョウト", en: "Johto" },
+  3: { ja: "ホウエン", en: "Hoenn" },
+  4: { ja: "シンオウ", en: "Sinnoh" },
+  5: { ja: "イッシュ", en: "Unova" },
+  6: { ja: "カロス", en: "Kalos" },
+  7: { ja: "アローラ", en: "Alola" },
+  8: { ja: "ガラル", en: "Galar" },
+  9: { ja: "パルデア", en: "Paldea" },
 };
 
 export const dynamicParams = true;
@@ -100,285 +108,36 @@ export default async function PokemonPage({ params }) {
     ? Object.values(pokemon.stats).reduce((a, b) => a + b, 0)
     : 0;
 
-  const s = {
-    page: {
-      minHeight: '100vh',
-      background: 'linear-gradient(180deg, #FFF8E1 0%, #FFF3C4 100%)',
-      color: '#2D3748',
-      fontFamily: "'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
-      padding: '20px',
-    },
-    container: {
-      maxWidth: 700,
-      margin: '0 auto',
-    },
-    backLink: {
-      display: 'inline-block',
-      color: '#3B4CCA',
-      textDecoration: 'none',
-      marginBottom: 20,
-      fontSize: 14,
-      fontWeight: 700,
-    },
-    card: {
-      background: '#fff',
-      borderRadius: 16,
-      padding: 24,
-      marginBottom: 16,
-      border: '1px solid rgba(255,203,5,0.25)',
-      boxShadow: '0 2px 12px rgba(255,203,5,0.1)',
-    },
-    header: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: 20,
-      flexWrap: 'wrap',
-    },
-    image: {
-      width: 140,
-      height: 140,
-      objectFit: 'contain',
-      filter: 'drop-shadow(0 4px 12px rgba(255,203,5,0.2))',
-    },
-    name: {
-      fontSize: 28,
-      fontWeight: 800,
-      color: '#2D3748',
-      margin: '0 0 4px 0',
-    },
-    nameEn: {
-      fontSize: 14,
-      color: '#8B7B5E',
-      marginBottom: 8,
-    },
-    no: {
-      fontSize: 14,
-      color: '#3B4CCA',
-      marginBottom: 8,
-    },
-    typeBadge: (color) => ({
-      display: 'inline-block',
-      padding: '3px 10px',
-      borderRadius: 12,
-      fontSize: 12,
-      fontWeight: 600,
-      color: '#fff',
-      background: color,
-      marginRight: 6,
-    }),
-    sectionTitle: {
-      fontSize: 16,
-      fontWeight: 700,
-      color: '#3B4CCA',
-      marginBottom: 12,
-      paddingBottom: 8,
-      borderBottom: '1px solid rgba(59,76,202,0.15)',
-    },
-    grid: {
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: 12,
-    },
-    dataItem: {
-      background: 'rgba(255,203,5,0.06)',
-      borderRadius: 10,
-      padding: '12px 16px',
-    },
-    dataLabel: {
-      fontSize: 11,
-      color: '#8B7B5E',
-      marginBottom: 4,
-    },
-    dataValue: {
-      fontSize: 20,
-      fontWeight: 700,
-      color: '#2D3748',
-    },
-    statBar: (val, max, color) => ({
-      height: 8,
-      borderRadius: 4,
-      background: 'rgba(255,203,5,0.12)',
-      overflow: 'hidden',
-      position: 'relative',
-    }),
-    statFill: (val, max, color) => ({
-      height: '100%',
-      borderRadius: 4,
-      width: `${Math.min((val / max) * 100, 100)}%`,
-      background: color,
-    }),
-    statRow: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: 10,
-      marginBottom: 8,
-    },
-    statLabel: {
-      width: 45,
-      fontSize: 12,
-      color: '#8B7B5E',
-      textAlign: 'right',
-    },
-    statValue: {
-      width: 35,
-      fontSize: 13,
-      fontWeight: 700,
-      color: '#2D3748',
-      textAlign: 'right',
-    },
-    navLink: {
-      display: 'flex',
-      alignItems: 'center',
-      gap: 10,
-      padding: '12px 16px',
-      background: 'rgba(255,203,5,0.06)',
-      borderRadius: 10,
-      textDecoration: 'none',
-      color: '#2D3748',
-      transition: 'background 0.2s',
-    },
-    navImg: {
-      width: 40,
-      height: 40,
-      objectFit: 'contain',
-    },
+  const STAT_NAMES = {
+    hp: { ja: 'HP', en: 'HP', color: '#ff5555' },
+    attack: { ja: '攻撃', en: 'Attack', color: '#f08030' },
+    defense: { ja: '防御', en: 'Defense', color: '#f8d030' },
+    'special-attack': { ja: '特攻', en: 'Sp. Atk', color: '#6890f0' },
+    'special-defense': { ja: '特防', en: 'Sp. Def', color: '#78c850' },
+    speed: { ja: '素早', en: 'Speed', color: '#f85888' },
   };
 
-  const STAT_NAMES = {
-    hp: { label: 'HP', color: '#ff5555' },
-    attack: { label: '攻撃', color: '#f08030' },
-    defense: { label: '防御', color: '#f8d030' },
-    'special-attack': { label: '特攻', color: '#6890f0' },
-    'special-defense': { label: '特防', color: '#78c850' },
-    speed: { label: '素早', color: '#f85888' },
+  // Pass all computed data to client component
+  const pageData = {
+    pokemon,
+    elo,
+    pokemonWins,
+    pokemonMatches,
+    winRate,
+    overallRank,
+    genRank,
+    genPokemon,
+    prevPokemon,
+    nextPokemon,
+    totalStats,
+    sorted,
+    TYPE_MAP,
+    GEN_NAMES,
+    STAT_NAMES,
+    POKEMON,
   };
 
   return (
-    <div style={s.page}>
-      <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
-      <div style={s.container}>
-        <div style={{ display: 'flex', gap: 16, marginBottom: 20 }}>
-          <a href="/" style={{ color: '#3B4CCA', textDecoration: 'none', fontSize: 14, fontWeight: 700 }}>← 投票に戻る</a>
-          <a href="/#ranking" style={{ color: '#CC3333', textDecoration: 'none', fontSize: 14, fontWeight: 700 }}>🏆 ランキングに戻る</a>
-        </div>
-
-        {/* ヘッダーカード */}
-        <div style={s.card}>
-          <div style={s.header}>
-            <img src={pokemon.image} alt={pokemon.nameJa} style={s.image} />
-            <div>
-              <div style={s.no}>No.{pokemon.id}</div>
-              <h1 style={s.name}>{pokemon.nameJa}</h1>
-              <div style={s.nameEn}>{pokemon.nameEn}</div>
-              <div style={{ marginBottom: 8 }}>
-                {pokemon.types && pokemon.types.map((t) => (
-                  <span key={t} style={s.typeBadge(TYPE_MAP[t]?.color || '#888')}>
-                    {TYPE_MAP[t]?.ja || t}
-                  </span>
-                ))}
-              </div>
-              {pokemon.genus && (
-                <div style={{ fontSize: 13, color: '#8B7B5E', marginBottom: 4 }}>{pokemon.genus}</div>
-              )}
-              <div style={{ fontSize: 13, color: '#A0926E' }}>
-                第{pokemon.generation}世代 / {GEN_NAMES[pokemon.generation] || ''}地方
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* ランキングデータ */}
-        <div style={s.card}>
-          <div style={s.sectionTitle}>ランキングデータ</div>
-          <div style={s.grid}>
-            <div style={s.dataItem}>
-              <div style={s.dataLabel}>Eloレーティング</div>
-              <div style={s.dataValue}>{elo}</div>
-            </div>
-            <div style={s.dataItem}>
-              <div style={s.dataLabel}>勝率</div>
-              <div style={s.dataValue}>{winRate !== null ? `${winRate}%` : '-'}</div>
-            </div>
-            <div style={s.dataItem}>
-              <div style={s.dataLabel}>全体ランキング</div>
-              <div style={s.dataValue}>{overallRank}<span style={{ fontSize: 13, color: '#8B7B5E' }}>/{POKEMON.length}</span></div>
-            </div>
-            <div style={s.dataItem}>
-              <div style={s.dataLabel}>世代別ランキング</div>
-              <div style={s.dataValue}>{genRank}<span style={{ fontSize: 13, color: '#8B7B5E' }}>/{genPokemon.length}</span></div>
-            </div>
-          </div>
-        </div>
-
-        {/* 種族値 */}
-        <div style={s.card}>
-          <div style={s.sectionTitle}>種族値（合計: {totalStats}）</div>
-          {pokemon.stats && Object.entries(STAT_NAMES).map(([key, { label, color }]) => (
-            <div key={key} style={s.statRow}>
-              <div style={s.statLabel}>{label}</div>
-              <div style={s.statValue}>{pokemon.stats[key] || 0}</div>
-              <div style={{ flex: 1, ...s.statBar(pokemon.stats[key] || 0, 255, color) }}>
-                <div style={s.statFill(pokemon.stats[key] || 0, 255, color)} />
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* ポケモン情報 */}
-        <div style={s.card}>
-          <div style={s.sectionTitle}>ポケモン情報</div>
-          <div style={s.grid}>
-            <div style={s.dataItem}>
-              <div style={s.dataLabel}>高さ</div>
-              <div style={{ ...s.dataValue, fontSize: 16 }}>{(pokemon.height / 10).toFixed(1)} m</div>
-            </div>
-            <div style={s.dataItem}>
-              <div style={s.dataLabel}>重さ</div>
-              <div style={{ ...s.dataValue, fontSize: 16 }}>{(pokemon.weight / 10).toFixed(1)} kg</div>
-            </div>
-          </div>
-        </div>
-
-        {/* 前後のランキング */}
-        <div style={s.card}>
-          <div style={s.sectionTitle}>前後のランキング</div>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
-            {prevPokemon && (
-              <a href={`/pokemon/${prevPokemon.id}`} style={s.navLink}>
-                <span style={{ color: '#3B4CCA', fontWeight: 700, width: 30 }}>▲{idx}</span>
-                <img src={prevPokemon.image} alt={prevPokemon.nameJa} style={s.navImg} />
-                <div>
-                  <div style={{ fontWeight: 600, color: '#2D3748' }}>{prevPokemon.nameJa}</div>
-                  <div style={{ fontSize: 12, color: '#8B7B5E' }}>Elo {prevPokemon.elo}</div>
-                </div>
-              </a>
-            )}
-            <div style={{ ...s.navLink, background: 'rgba(255,203,5,0.15)', border: '1px solid rgba(255,203,5,0.5)' }}>
-              <span style={{ color: '#D4A005', fontWeight: 700, width: 30 }}>{overallRank}</span>
-              <img src={pokemon.image} alt={pokemon.nameJa} style={s.navImg} />
-              <div>
-                <div style={{ fontWeight: 600, color: '#2D3748' }}>{pokemon.nameJa}</div>
-                <div style={{ fontSize: 12, color: '#D4A005' }}>Elo {elo}</div>
-              </div>
-            </div>
-            {nextPokemon && (
-              <a href={`/pokemon/${nextPokemon.id}`} style={s.navLink}>
-                <span style={{ color: '#3B4CCA', fontWeight: 700, width: 30 }}>▼{idx + 2}</span>
-                <img src={nextPokemon.image} alt={nextPokemon.nameJa} style={s.navImg} />
-                <div>
-                  <div style={{ fontWeight: 600, color: '#2D3748' }}>{nextPokemon.nameJa}</div>
-                  <div style={{ fontSize: 12, color: '#8B7B5E' }}>Elo {nextPokemon.elo}</div>
-                </div>
-              </a>
-            )}
-          </div>
-        </div>
-
-        {/* フッター */}
-        <div style={{ textAlign: 'center', padding: '24px 0', fontSize: 12, color: '#A0926E' }}>
-          ポケモン 人気バトル - ファンの投票だけで決まるランキング
-        </div>
-      </div>
-    </div>
+    <PokemonDetailClient data={pageData} />
   );
 }
