@@ -39,13 +39,14 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
-      <Script
-        async
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9862215132601373"
-        crossOrigin="anonymous"
-        strategy="afterInteractive"
-      />
-      <body style={{ margin: 0, padding: 0 }}>{children}</body>
+      <body style={{ margin: 0, padding: 0 }}>
+        {children}
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9862215132601373"
+          crossOrigin="anonymous"
+        />
+      </body>
     </html>
   );
 }
