@@ -1,24 +1,49 @@
 import Script from 'next/script';
+import { headers } from 'next/headers';
 
-export const metadata = {
-  title: 'ポケモン 人気バトル',
-  description: '全1025体のポケモンから「どっちが好き？」を選んで投票！ファンの投票だけで決まるEloレーティングランキング。',
-  openGraph: {
-    title: 'ポケモン 人気バトル',
-    description: '全1025体のポケモンから「どっちが好き？」を選んで投票！',
-    type: 'website',
-    images: [{ url: 'https://www.poke-vote.com/ogp.png', width: 1200, height: 630 }],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'ポケモン 人気バトル',
-    description: '全1025体のポケモンから「どっちが好き？」を選んで投票！',
-    images: ['https://www.poke-vote.com/ogp.png'],
-  },
-  icons: {
-    icon: '/favicon.svg',
-  },
-};
+export async function generateMetadata() {
+  const headersList = await headers();
+  const acceptLang = headersList.get('accept-language') || '';
+  const isJa = acceptLang.toLowerCase().startsWith('ja');
+
+  if (isJa) {
+    return {
+      title: 'ポケモン 人気バトル',
+      description: '全1025体のポケモンから「どっちが好き？」を選んで投票！ファンの投票だけで決まるEloレーティングランキング。',
+      openGraph: {
+        title: 'ポケモン 人気バトル',
+        description: '全1025体のポケモンから「どっちが好き？」を選んで投票！',
+        type: 'website',
+        images: [{ url: 'https://www.poke-vote.com/ogp.png', width: 1200, height: 630 }],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title: 'ポケモン 人気バトル',
+        description: '全1025体のポケモンから「どっちが好き？」を選んで投票！',
+        images: ['https://www.poke-vote.com/ogp.png'],
+      },
+      icons: { icon: '/favicon.svg' },
+    };
+  }
+
+  return {
+    title: 'Pokémon Popularity Battle',
+    description: 'Vote for your favorite Pokémon! Fan-driven Elo rating rankings for all 1025 Pokémon.',
+    openGraph: {
+      title: 'Pokémon Popularity Battle',
+      description: 'Which Pokémon do you prefer? Tap to vote!',
+      type: 'website',
+      images: [{ url: 'https://www.poke-vote.com/ogp-en.png', width: 1200, height: 630 }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: 'Pokémon Popularity Battle',
+      description: 'Which Pokémon do you prefer? Tap to vote!',
+      images: ['https://www.poke-vote.com/ogp-en.png'],
+    },
+    icons: { icon: '/favicon.svg' },
+  };
+}
 
 export default function RootLayout({ children }) {
   return (
