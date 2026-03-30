@@ -271,7 +271,6 @@ export default function PokemonDetailClient({ data }) {
             <div>
               <div style={s.no}>No.{pokemon.id}</div>
               <h1 style={s.name}>{lang === 'ja' ? pokemon.nameJa : pokemon.nameEn}</h1>
-              {lang === 'ja' && <div style={s.nameEn}>{pokemon.nameEn}</div>}
               <div style={{ marginBottom: 8 }}>
                 {pokemon.types && pokemon.types.map((t) => (
                   <span key={t} style={s.typeBadge(TYPE_MAP[t]?.color || '#888')}>
