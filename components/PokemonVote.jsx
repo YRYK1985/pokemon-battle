@@ -276,19 +276,19 @@ export default function PokemonVote() {
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
 
         {/* Language Toggle Button */}
-        <div style={{ position: "fixed", top: "16px", right: "16px", zIndex: 100, display: "flex", gap: "2px", background: "#fff", borderRadius: "20px", padding: "2px", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}>
+        <div style={{ position: "absolute", top: "12px", right: "12px", zIndex: 100, display: "flex", gap: "2px", background: "#fff", borderRadius: "16px", padding: "2px", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}>
           <button
             onClick={() => changeLang('ja')}
-            style={{ padding: "6px 14px", borderRadius: "18px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'ja' ? "#3B4CCA" : "transparent", color: lang === 'ja' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
+            style={{ padding: isSmallScreen ? "4px 10px" : "6px 14px", borderRadius: "14px", border: "none", fontSize: isSmallScreen ? "11px" : "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'ja' ? "#3B4CCA" : "transparent", color: lang === 'ja' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
           >🇯🇵 JA</button>
           <button
             onClick={() => changeLang('en')}
-            style={{ padding: "6px 14px", borderRadius: "18px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'en' ? "#3B4CCA" : "transparent", color: lang === 'en' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
+            style={{ padding: isSmallScreen ? "4px 10px" : "6px 14px", borderRadius: "14px", border: "none", fontSize: isSmallScreen ? "11px" : "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'en' ? "#3B4CCA" : "transparent", color: lang === 'en' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
           >🇺🇸 EN</button>
         </div>
 
-        <div style={{ textAlign: "center", padding: "28px 16px 4px" }}>
-          <h1 style={{ fontSize: "30px", fontWeight: 900, color: "#CC3333", margin: 0 }}>
+        <div style={{ textAlign: "center", padding: isSmallScreen ? "40px 16px 4px" : "28px 16px 4px" }}>
+          <h1 style={{ fontSize: isSmallScreen ? "24px" : "30px", fontWeight: 900, color: "#CC3333", margin: 0 }}>
             {t.rankingTitle(rankGen)}
           </h1>
           <p style={{ color: "#8B7B5E", fontSize: "14px", marginTop: "8px" }}>{t.usersAndVotes(formatNum(Math.floor(matchCount / 5), lang), formatNum(matchCount, lang))}</p>
@@ -492,14 +492,14 @@ export default function PokemonVote() {
       <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
 
       {/* Language Toggle Button */}
-      <div style={{ position: "fixed", top: "16px", right: "16px", zIndex: 100, display: "flex", gap: "2px", background: "#fff", borderRadius: "20px", padding: "2px", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}>
+      <div style={{ position: "absolute", top: "12px", right: "12px", zIndex: 100, display: "flex", gap: "2px", background: "#fff", borderRadius: "16px", padding: "2px", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}>
         <button
           onClick={() => changeLang('ja')}
-          style={{ padding: "6px 14px", borderRadius: "18px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'ja' ? "#3B4CCA" : "transparent", color: lang === 'ja' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
+          style={{ padding: isSmallScreen ? "4px 10px" : "6px 14px", borderRadius: "14px", border: "none", fontSize: isSmallScreen ? "11px" : "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'ja' ? "#3B4CCA" : "transparent", color: lang === 'ja' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
         >🇯🇵 JA</button>
         <button
           onClick={() => changeLang('en')}
-          style={{ padding: "6px 14px", borderRadius: "18px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'en' ? "#3B4CCA" : "transparent", color: lang === 'en' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
+          style={{ padding: isSmallScreen ? "4px 10px" : "6px 14px", borderRadius: "14px", border: "none", fontSize: isSmallScreen ? "11px" : "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'en' ? "#3B4CCA" : "transparent", color: lang === 'en' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
         >🇺🇸 EN</button>
       </div>
 
