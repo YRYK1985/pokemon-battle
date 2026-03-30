@@ -137,12 +137,12 @@ export default function PokemonVote() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [rankGen, setRankGen] = useState('all');
   const [voteGen, setVoteGen] = useState('all');
-  const [lang, setLang] = useState('ja');
-
-  useEffect(() => {
-    const saved = localStorage.getItem('poke-lang');
-    if (saved === 'en') setLang('en');
-  }, []);
+  const [lang, setLang] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('poke-lang') || 'ja';
+    }
+    return 'ja';
+  });
 
   const changeLang = (l) => {
     setLang(l);

@@ -1,14 +1,14 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 
 export default function PrivacyPage() {
-  const [lang, setLang] = useState('ja');
-
-  useEffect(() => {
-    const saved = localStorage.getItem('poke-lang');
-    if (saved === 'en') setLang('en');
-  }, []);
+  const [lang, setLang] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('poke-lang') || 'ja';
+    }
+    return 'ja';
+  });
 
   const changeLang = (l) => {
     setLang(l);
