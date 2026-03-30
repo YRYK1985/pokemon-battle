@@ -135,7 +135,7 @@ export default function PokemonVote() {
   const [lastVote, setLastVote] = useState(null);
   const [phase, setPhase] = useState('idle');
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-  const [rankGen, setRankGen] = useState('all');
+  const [rankGen, setRankGen] = useState(1);
   const [voteGen, setVoteGen] = useState(1);
   const [lang, setLang] = useState(() => {
     if (typeof window !== 'undefined') {
