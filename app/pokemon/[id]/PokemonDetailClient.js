@@ -58,6 +58,8 @@ export default function PokemonDetailClient({ data }) {
       weight: '重さ',
       neighboringRanks: '前後のランキング',
       footer: 'ポケモン 人気バトル - ファンの投票だけで決まるランキング',
+      description: (name, id, year, total) =>
+        `「ポケモン 人気バトル」は、全${total}体のポケモンをファン投票で順位付けするランキングサイトです。投票にはEloレーティングシステムを採用しており、2体のポケモンを比較する形式で「どっちが好き？」を繰り返すことで、統計的に信頼性の高い順位を算出しています。このページでは${name}（No.${id}）のランキング情報をご覧いただけます。データはリアルタイムの投票結果に基づいて更新されます。`,
     },
     en: {
       backToVoting: '← Back to Voting',
@@ -73,6 +75,8 @@ export default function PokemonDetailClient({ data }) {
       weight: 'Weight',
       neighboringRanks: 'Neighboring Rankings',
       footer: 'Pokémon Popularity Battle - Rankings decided by fan voting',
+      description: (name, id, year, total) =>
+        `Pokémon Popularity Battle is a fan-driven ranking site for all ${total} Pokémon. It uses the Elo rating system, where fans repeatedly choose between two Pokémon in a "Which do you prefer?" format to produce statistically reliable rankings. This page shows ranking data for ${name} (No.${id}). Data is updated in real-time based on voting results.`,
     },
   };
 
@@ -377,6 +381,11 @@ export default function PokemonDetailClient({ data }) {
               </a>
             )}
           </div>
+        </div>
+
+        {/* Description for SEO / AdSense */}
+        <div style={{ padding: '20px 24px', fontSize: 13, lineHeight: 1.8, color: '#8B7B5E' }}>
+          {c.description(lang === 'ja' ? pokemon.nameJa : pokemon.nameEn, pokemon.id, null, POKEMON.length)}
         </div>
 
         {/* Footer */}
