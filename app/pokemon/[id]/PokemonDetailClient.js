@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function PokemonDetailClient({ data }) {
   const [lang, setLang] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('poke-lang') || 'ja';
+      const saved = localStorage.getItem('poke-lang');
+      if (saved) return saved;
+      return navigator.language?.startsWith('ja') ? 'ja' : 'en';
     }
     return 'ja';
   });
@@ -14,6 +16,13 @@ export default function PokemonDetailClient({ data }) {
     setLang(l);
     localStorage.setItem('poke-lang', l);
   };
+
+  useEffect(() => {
+    const name = lang === 'ja' ? data.pokemon.nameJa : data.pokemon.nameEn;
+    document.title = lang === 'ja'
+      ? `${name}（No.${data.pokemon.id}）のランキング | ポケモン 人気バトル`
+      : `${name} (No.${data.pokemon.id}) Rankings | Pokémon Popularity Battle`;
+  }, [lang, data.pokemon]);
 
   const {
     pokemon,

@@ -1,11 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function PrivacyPage() {
   const [lang, setLang] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('poke-lang') || 'ja';
+      const saved = localStorage.getItem('poke-lang');
+      if (saved) return saved;
+      return navigator.language?.startsWith('ja') ? 'ja' : 'en';
     }
     return 'ja';
   });
@@ -14,6 +16,10 @@ export default function PrivacyPage() {
     setLang(l);
     localStorage.setItem('poke-lang', l);
   };
+
+  useEffect(() => {
+    document.title = lang === 'ja' ? 'プライバシーポリシー | ポケモン 人気バトル' : 'Privacy Policy | Pokémon Popularity Battle';
+  }, [lang]);
 
   const FONT = "'M PLUS Rounded 1c', system-ui, sans-serif";
 

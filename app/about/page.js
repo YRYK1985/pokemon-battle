@@ -1,11 +1,13 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function AboutPage() {
   const [lang, setLang] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('poke-lang') || 'ja';
+      const saved = localStorage.getItem('poke-lang');
+      if (saved) return saved;
+      return navigator.language?.startsWith('ja') ? 'ja' : 'en';
     }
     return 'ja';
   });
@@ -14,6 +16,10 @@ export default function AboutPage() {
     setLang(l);
     localStorage.setItem('poke-lang', l);
   };
+
+  useEffect(() => {
+    document.title = lang === 'ja' ? 'このサイトについて | ポケモン 人気バトル' : 'About | Pokémon Popularity Battle';
+  }, [lang]);
 
   const FONT = "'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif";
 

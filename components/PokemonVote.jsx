@@ -139,7 +139,10 @@ export default function PokemonVote() {
   const [voteGen, setVoteGen] = useState('all');
   const [lang, setLang] = useState(() => {
     if (typeof window !== 'undefined') {
-      return localStorage.getItem('poke-lang') || 'ja';
+      const saved = localStorage.getItem('poke-lang');
+      if (saved) return saved;
+      const isJa = navigator.language?.startsWith('ja');
+      return isJa ? 'ja' : 'en';
     }
     return 'ja';
   });
@@ -148,6 +151,10 @@ export default function PokemonVote() {
     setLang(l);
     localStorage.setItem('poke-lang', l);
   };
+
+  useEffect(() => {
+    document.title = lang === 'ja' ? 'ポケモン 人気バトル' : 'Pokémon Popularity Battle';
+  }, [lang]);
 
   const t = T[lang];
 
