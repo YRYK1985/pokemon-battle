@@ -257,7 +257,10 @@ export default async function PokemonPage({ params }) {
     <div style={s.page}>
       <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
       <div style={s.container}>
-        <a href="/" style={s.backLink}>← ポケモン 人気バトルに戻る</a>
+        <div style={{ display: 'flex', gap: 16, marginBottom: 20 }}>
+          <a href="/" style={{ color: '#3B4CCA', textDecoration: 'none', fontSize: 14, fontWeight: 700 }}>← 投票に戻る</a>
+          <a href="/#ranking" style={{ color: '#CC3333', textDecoration: 'none', fontSize: 14, fontWeight: 700 }}>🏆 ランキングに戻る</a>
+        </div>
 
         {/* ヘッダーカード */}
         <div style={s.card}>

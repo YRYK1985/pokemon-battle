@@ -97,6 +97,19 @@ export default function PokemonVote() {
 
   useEffect(() => { pickPair(); }, [pickPair]);
 
+  // ハッシュ #ranking でランキング直接表示
+  useEffect(() => {
+    const checkHash = () => {
+      if (window.location.hash === '#ranking') {
+        setShowRanking(true);
+        window.history.replaceState(null, '', '/');
+      }
+    };
+    checkHash();
+    window.addEventListener('hashchange', checkHash);
+    return () => window.removeEventListener('hashchange', checkHash);
+  }, []);
+
   useEffect(() => {
     fetch('/api/ratings')
       .then(r => r.json())
