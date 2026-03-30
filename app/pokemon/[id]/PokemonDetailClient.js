@@ -391,6 +391,11 @@ export default function PokemonDetailClient({ data }) {
         <div style={{ textAlign: 'center', padding: '24px 0', fontSize: 12, color: '#A0926E' }}>
           {c.footer}
         </div>
+        <div style={{ textAlign: 'center', paddingBottom: 24, display: 'flex', justifyContent: 'center', gap: 16 }}>
+          <a href="/about" style={{ color: '#9B8B6E', textDecoration: 'none', fontSize: 12 }}>{lang === 'ja' ? 'このサイトについて' : 'About'}</a>
+          <span style={{ color: '#9B8B6E', fontSize: 12 }}>|</span>
+          <a href="/privacy" style={{ color: '#9B8B6E', textDecoration: 'none', fontSize: 12 }}>{lang === 'ja' ? 'プライバシーポリシー' : 'Privacy Policy'}</a>
+        </div>
       </div>
     </div>
   );
