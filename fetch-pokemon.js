@@ -36,6 +36,7 @@ async function fetchPokemon(id) {
 
   // 分類（たねポケモン、とかげポケモン等）
   const genus = species.genera.find(g => g.language.name === 'ja')?.genus || '';
+  const genusEn = species.genera.find(g => g.language.name === 'en')?.genus || '';
 
   // タイプ
   const types = pokemon.types.map(t => t.type.name);
@@ -57,6 +58,7 @@ async function fetchPokemon(id) {
     nameJa,
     nameEn,
     genus,
+    genusEn,
     types,
     stats,
     height: pokemon.height,

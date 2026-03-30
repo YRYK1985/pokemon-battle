@@ -256,8 +256,8 @@ export default function PokemonDetailClient({ data }) {
                   </span>
                 ))}
               </div>
-              {pokemon.genus && lang === 'ja' && (
-                <div style={{ fontSize: 13, color: '#8B7B5E', marginBottom: 4 }}>{pokemon.genus}</div>
+              {(lang === 'ja' ? pokemon.genus : pokemon.genusEn) && (
+                <div style={{ fontSize: 13, color: '#8B7B5E', marginBottom: 4 }}>{lang === 'ja' ? pokemon.genus : pokemon.genusEn}</div>
               )}
               <div style={{ fontSize: 13, color: '#A0926E' }}>
                 {lang === 'ja' ? (
