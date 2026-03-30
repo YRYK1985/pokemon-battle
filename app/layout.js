@@ -1,4 +1,5 @@
 import Script from 'next/script';
+// AdSense審査用スクリプト（広告スロットは審査通過後に追加）
 
 export const metadata = {
   title: 'ポケモン 人気バトル | Pokémon Popularity Battle',
@@ -38,6 +39,12 @@ export default function RootLayout({ children }) {
           `}
         </Script>
       </head>
+      <Script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9862215132601373"
+        crossOrigin="anonymous"
+        strategy="afterInteractive"
+      />
       <body style={{ margin: 0, padding: 0 }}>{children}</body>
     </html>
   );
