@@ -287,12 +287,7 @@ export default function PokemonVote() {
             </div>
           </div>
 
-          {/* 5位の後の広告 */}
-          {limit > 5 && (
-            <div className="ad-slot" style={{ maxWidth: "600px", margin: "0 auto 10px", padding: "12px", background: "rgba(255,203,5,0.04)", borderRadius: "12px", textAlign: "center", minHeight: "90px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,203,5,0.08)" }}>
-              <span style={{ color: "#C4B08A", fontSize: "11px" }}>広告スペース（横長バナー）</span>
-            </div>
-          )}
+          {/* 広告スロット一時停止（AdSense審査対策） */}
 
           {/* 6位以下 3列グリッド */}
           <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px", maxWidth: "600px", margin: "0 auto" }}>
@@ -331,19 +326,13 @@ export default function PokemonVote() {
                       ))}
                     </div>
                   </a>
-                  {adPositions.includes(actualRank) && (
-                    <div className="ad-slot" style={{ gridColumn: "1 / -1", padding: "12px", background: "rgba(255,203,5,0.04)", borderRadius: "12px", textAlign: "center", minHeight: "250px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,203,5,0.08)" }}>
-                      <span style={{ color: "#C4B08A", fontSize: "11px" }}>広告スペース（レスポンシブ）</span>
-                    </div>
-                  )}
+                  {/* 広告スロット一時停止（AdSense審査対策） */}
                 </React.Fragment>
               );
             })}
           </div>
 
-          <div className="ad-slot" style={{ maxWidth: "600px", marginLeft: "auto", marginRight: "auto", marginTop: "16px", marginBottom: "16px", padding: "12px", background: "rgba(255,203,5,0.04)", borderRadius: "12px", textAlign: "center", minHeight: "250px", display: "flex", alignItems: "center", justifyContent: "center", border: "1px solid rgba(255,203,5,0.08)" }}>
-            <span style={{ color: "#C4B08A", fontSize: "11px" }}>広告スペース（レスポンシブ）</span>
-          </div>
+          {/* ランキング終わりの広告 — 一時停止（AdSense審査対策） */}
 
           <button
             style={{ display: "block", margin: "24px auto 16px", padding: "14px 32px", background: "#fff", border: "1px solid #E8D89C", borderRadius: "30px", color: "#CC3333", fontSize: "15px", fontWeight: 700, cursor: "pointer", transition: "background 0.2s", fontFamily: FONT }}
@@ -376,15 +365,7 @@ export default function PokemonVote() {
           </div>
         </div>
 
-        <div style={{
-          position: 'fixed', bottom: 0, left: 0, right: 0,
-          height: '60px', background: 'rgba(255,248,225,0.97)',
-          borderTop: '1px solid #E8D89C',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          color: '#C4B08A', fontSize: '12px', zIndex: 100,
-        }}>
-          広告スペース
-        </div>
+        {/* 下固定バナー — 一時停止（AdSense審査対策） */}
       </div>
     );
   }
@@ -545,15 +526,7 @@ export default function PokemonVote() {
         </p>
       </div>
 
-      <div style={{
-        position: 'fixed', bottom: 0, left: 0, right: 0,
-        height: '60px', background: 'rgba(255,248,225,0.97)',
-        borderTop: '1px solid #E8D89C',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        color: '#C4B08A', fontSize: '12px', zIndex: 100,
-      }}>
-        広告スペース
-      </div>
+      {/* 下固定バナー — 一時停止（AdSense審査対策） */}
     </div>
   );
 }
