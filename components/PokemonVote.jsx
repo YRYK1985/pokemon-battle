@@ -287,7 +287,7 @@ export default function PokemonVote() {
           >🇺🇸 EN</button>
         </div>
 
-        <div style={{ textAlign: "center", padding: isSmallScreen ? "40px 16px 4px" : "28px 16px 4px" }}>
+        <div style={{ textAlign: "center", padding: isSmallScreen ? "48px 16px 4px" : "28px 16px 4px" }}>
           <h1 style={{ fontSize: isSmallScreen ? "24px" : "30px", fontWeight: 900, color: "#CC3333", margin: 0 }}>
             {t.rankingTitle(rankGen)}
           </h1>
