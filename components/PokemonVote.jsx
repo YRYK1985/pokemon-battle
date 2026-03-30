@@ -136,7 +136,7 @@ export default function PokemonVote() {
   const [phase, setPhase] = useState('idle');
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [rankGen, setRankGen] = useState('all');
-  const [voteGen, setVoteGen] = useState('all');
+  const [voteGen, setVoteGen] = useState(1);
   const [lang, setLang] = useState(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('poke-lang');
@@ -160,20 +160,14 @@ export default function PokemonVote() {
 
   const voteCountRef = useRef(0);
 
-  const isFirstBattle = useRef(true);
-
   const pickPair = useCallback(() => {
     if (POKEMON.length < 2) return;
     let pool;
-    if (isFirstBattle.current && voteGen === 'all') {
-      // 1戦目はカントー地方（第1世代）限定（全世代モード時のみ）
-      pool = POKEMON.filter(p => p.generation === 1);
-    } else if (voteGen === 'all') {
+    if (voteGen === 'all') {
       pool = POKEMON;
     } else {
       pool = POKEMON.filter(p => p.generation === voteGen);
     }
-    isFirstBattle.current = false;
     const effectivePool = pool.length >= 2 ? pool : POKEMON;
     const i = Math.floor(Math.random() * effectivePool.length);
     let j = Math.floor(Math.random() * (effectivePool.length - 1));
