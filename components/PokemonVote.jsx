@@ -17,39 +17,108 @@ function updateElo(winner, loser) {
   return [Math.round(winner + K * (1 - eW)), Math.round(loser + K * (0 - eL))];
 }
 
-function formatNum(n) {
-  if (n >= 100000000) return Math.floor(n / 100000000) + "億";
-  if (n >= 10000) return Math.floor(n / 10000) + "万";
-  return n.toLocaleString();
+function formatNum(n, lang = 'ja') {
+  if (lang === 'ja') {
+    if (n >= 100000000) return Math.floor(n / 100000000) + "億";
+    if (n >= 10000) return Math.floor(n / 10000) + "万";
+    return n.toLocaleString();
+  } else {
+    // English: use K for thousands, M for millions
+    if (n >= 1000000) return (n / 1000000).toFixed(1) + "M";
+    if (n >= 1000) return (n / 1000).toFixed(1) + "K";
+    return n.toLocaleString();
+  }
 }
 
 const TYPE_MAP = {
-  normal: { ja: "ノーマル", color: "#A8A878" },
-  fire: { ja: "ほのお", color: "#F08030" },
-  water: { ja: "みず", color: "#6890F0" },
-  electric: { ja: "でんき", color: "#F8D030" },
-  grass: { ja: "くさ", color: "#78C850" },
-  ice: { ja: "こおり", color: "#98D8D8" },
-  fighting: { ja: "かくとう", color: "#C03028" },
-  poison: { ja: "どく", color: "#A040A0" },
-  ground: { ja: "じめん", color: "#E0C068" },
-  flying: { ja: "ひこう", color: "#A890F0" },
-  psychic: { ja: "エスパー", color: "#F85888" },
-  bug: { ja: "むし", color: "#A8B820" },
-  rock: { ja: "いわ", color: "#B8A038" },
-  ghost: { ja: "ゴースト", color: "#705898" },
-  dragon: { ja: "ドラゴン", color: "#7038F8" },
-  dark: { ja: "あく", color: "#705848" },
-  steel: { ja: "はがね", color: "#B8B8D0" },
-  fairy: { ja: "フェアリー", color: "#EE99AC" },
+  normal: { ja: "ノーマル", en: "Normal", color: "#A8A878" },
+  fire: { ja: "ほのお", en: "Fire", color: "#F08030" },
+  water: { ja: "みず", en: "Water", color: "#6890F0" },
+  electric: { ja: "でんき", en: "Electric", color: "#F8D030" },
+  grass: { ja: "くさ", en: "Grass", color: "#78C850" },
+  ice: { ja: "こおり", en: "Ice", color: "#98D8D8" },
+  fighting: { ja: "かくとう", en: "Fighting", color: "#C03028" },
+  poison: { ja: "どく", en: "Poison", color: "#A040A0" },
+  ground: { ja: "じめん", en: "Ground", color: "#E0C068" },
+  flying: { ja: "ひこう", en: "Flying", color: "#A890F0" },
+  psychic: { ja: "エスパー", en: "Psychic", color: "#F85888" },
+  bug: { ja: "むし", en: "Bug", color: "#A8B820" },
+  rock: { ja: "いわ", en: "Rock", color: "#B8A038" },
+  ghost: { ja: "ゴースト", en: "Ghost", color: "#705898" },
+  dragon: { ja: "ドラゴン", en: "Dragon", color: "#7038F8" },
+  dark: { ja: "あく", en: "Dark", color: "#705848" },
+  steel: { ja: "はがね", en: "Steel", color: "#B8B8D0" },
+  fairy: { ja: "フェアリー", en: "Fairy", color: "#EE99AC" },
 };
 
 const GEN_NAMES = {
-  1: "カントー", 2: "ジョウト", 3: "ホウエン", 4: "シンオウ",
-  5: "イッシュ", 6: "カロス", 7: "アローラ", 8: "ガラル", 9: "パルデア",
+  1: { ja: "カントー", en: "Kanto" },
+  2: { ja: "ジョウト", en: "Johto" },
+  3: { ja: "ホウエン", en: "Hoenn" },
+  4: { ja: "シンオウ", en: "Sinnoh" },
+  5: { ja: "イッシュ", en: "Unova" },
+  6: { ja: "カロス", en: "Kalos" },
+  7: { ja: "アローラ", en: "Alola" },
+  8: { ja: "ガラル", en: "Galar" },
+  9: { ja: "パルデア", en: "Paldea" },
 };
 
 const FONT = "'M PLUS Rounded 1c', 'Kosugi Maru', system-ui, sans-serif";
+
+const T = {
+  ja: {
+    title: "ポケモン 人気バトル",
+    subtitle: "どっちが好き？タップで投票！",
+    voteCount: (count) => `あなた ${count}回投票済み`,
+    totalVotes: (count) => `全体 ${count}票`,
+    pokemonCount: (count) => `${count}体のポケモン`,
+    regionLabel: (gen, count) => `${GEN_NAMES[gen]?.ja || `第${gen}世代`}地方 ${count}体`,
+    allGens: "全世代",
+    genLabel: (gen) => GEN_NAMES[gen]?.ja || `第${gen}世代`,
+    rankingTitle: (gen) => gen === 'all' ? "ポケモン人気ランキング TOP100" : `ポケモン人気ランキング ${GEN_NAMES[gen]?.ja || `第${gen}世代`}`,
+    usersAndVotes: (users, votes) => `ユーザー${users}人 全${votes}票 の投票に基づく`,
+    backToVoting: "← 投票に戻る",
+    viewRankings: "🏆 ランキングを見る",
+    skipMatchup: "この組み合わせをスキップ",
+    shareOnX: "この投票をXでシェアする",
+    votesRemaining: (count) => `あと${count}回投票すると詳しいランキングが見られます`,
+    currentTop3: "現在のTOP3",
+    viewRandomPokemon: (gen) => gen === 'all' ? "🎲 ランダムでポケモンを見る" : `🎲 ランダムで${GEN_NAMES[gen]?.ja}のポケモンを見る`,
+    about: "このサイトについて",
+    privacy: "プライバシーポリシー",
+    siteDescription: "「ポケモン 人気バトル」は、全{count}体のポケモンをファン投票で順位付けするランキングサイトです。投票にはEloレーティングシステムを採用しており、2体のポケモンを比較する形式で「どっちが好き？」を繰り返すことで、統計的に信頼性の高い順位を算出しています。5回投票すると全体のランキング結果を閲覧でき、全世代ランキングと世代別ランキングを切り替えて楽しめます。",
+    footerDescription: "全{count}体のポケモンから、好きなポケモンを選んで投票できる人気ランキングサイトです。",
+    pokemonNotFound: "ポケモンデータが見つかりません",
+    fetchCommand: "node fetch-pokemon.js を実行してデータを生成してください",
+    shareText: (name) => `🔥 ポケモン 人気バトル 🔥\n私は「${name}」に投票！`,
+  },
+  en: {
+    title: "Pokémon Popularity Battle",
+    subtitle: "Which do you prefer? Tap to vote!",
+    voteCount: (count) => `You voted ${count} times`,
+    totalVotes: (count) => `Total ${count} votes`,
+    pokemonCount: (count) => `${count} Pokémon`,
+    regionLabel: (gen, count) => `${GEN_NAMES[gen]?.en || `Gen ${gen}`} ${count} Pokémon`,
+    allGens: "All Gens",
+    genLabel: (gen) => GEN_NAMES[gen]?.en || `Gen ${gen}`,
+    rankingTitle: (gen) => gen === 'all' ? "Pokémon Popularity Ranking TOP100" : `Pokémon Popularity Ranking ${GEN_NAMES[gen]?.en || `Gen ${gen}`}`,
+    usersAndVotes: (users, votes) => `Based on ${users} users, ${votes} total votes`,
+    backToVoting: "← Back to Voting",
+    viewRankings: "🏆 View Rankings",
+    skipMatchup: "Skip this matchup",
+    shareOnX: "Share this vote on X",
+    votesRemaining: (count) => `Vote ${count} more times to see full rankings`,
+    currentTop3: "Current TOP 3",
+    viewRandomPokemon: (gen) => gen === 'all' ? "🎲 View Random Pokémon" : `🎲 View Random ${GEN_NAMES[gen]?.en} Pokémon`,
+    about: "About",
+    privacy: "Privacy Policy",
+    siteDescription: "Pokémon Popularity Battle is a ranking site that uses fan voting to rank all {count} Pokémon. We use the Elo rating system for voting, where you repeatedly compare two Pokémon to determine \"which do you prefer?\" This produces statistically reliable rankings. After 5 votes, you can view the full ranking results and switch between all-generation and generation-specific rankings.",
+    footerDescription: "A popularity ranking site where you can select your favorite Pokémon from {count} total and vote.",
+    pokemonNotFound: "Pokémon data not found",
+    fetchCommand: "Run node fetch-pokemon.js to generate data",
+    shareText: (name) => `🔥 Pokémon Popularity Battle 🔥\nI voted for "${name}"!`,
+  },
+};
 
 export default function PokemonVote() {
   const [ratings, setRatings] = useState(() => {
@@ -68,6 +137,9 @@ export default function PokemonVote() {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
   const [rankGen, setRankGen] = useState('all');
   const [voteGen, setVoteGen] = useState('all');
+  const [lang, setLang] = useState('ja');
+
+  const t = T[lang];
 
   const voteCountRef = useRef(0);
 
@@ -147,7 +219,8 @@ export default function PokemonVote() {
       body: JSON.stringify({ winnerId: String(winnerId), loserId: String(loserId) }),
     }).catch(() => {});
 
-    const winnerName = pair.find(p => p.id === winnerId)?.nameJa;
+    const winnerPokemon = pair.find(p => p.id === winnerId);
+    const winnerName = lang === 'ja' ? winnerPokemon?.nameJa : winnerPokemon?.nameEn;
     setVotedState({ winnerId, loserId });
     setPhase('voted');
     if (myVoteCount === 0) {
@@ -177,8 +250,8 @@ export default function PokemonVote() {
     return (
       <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1,#FFF3C4)", color: "#2D3748", display: "flex", alignItems: "center", justifyContent: "center", fontFamily: FONT }}>
         <div style={{ textAlign: "center" }}>
-          <h1>ポケモンデータが見つかりません</h1>
-          <p style={{ color: "#8B7B5E" }}>node fetch-pokemon.js を実行してデータを生成してください</p>
+          <h1>{t.pokemonNotFound}</h1>
+          <p style={{ color: "#8B7B5E" }}>{t.fetchCommand}</p>
         </div>
       </div>
     );
@@ -188,32 +261,44 @@ export default function PokemonVote() {
   if (showRanking) {
     const limit = rankGen === 'all' ? 100 : Infinity;
     return (
-      <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1,#FFF3C4)", color: "#2D3748", fontFamily: FONT, padding: 0, margin: 0, paddingBottom: '80px' }}>
+      <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1,#FFF3C4)", color: "#2D3748", fontFamily: FONT, padding: 0, margin: 0, paddingBottom: '80px', position: "relative" }}>
         <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
+
+        {/* Language Toggle Button */}
+        <div style={{ position: "fixed", top: "16px", right: "16px", zIndex: 100, display: "flex", gap: "2px", background: "#fff", borderRadius: "20px", padding: "2px", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}>
+          <button
+            onClick={() => setLang('ja')}
+            style={{ padding: "6px 14px", borderRadius: "18px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'ja' ? "#3B4CCA" : "transparent", color: lang === 'ja' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
+          >🇯🇵 JA</button>
+          <button
+            onClick={() => setLang('en')}
+            style={{ padding: "6px 14px", borderRadius: "18px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'en' ? "#3B4CCA" : "transparent", color: lang === 'en' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
+          >🇺🇸 EN</button>
+        </div>
 
         <div style={{ textAlign: "center", padding: "28px 16px 4px" }}>
           <h1 style={{ fontSize: "30px", fontWeight: 900, color: "#CC3333", margin: 0 }}>
-            ポケモン人気ランキング {rankGen === 'all' ? 'TOP100' : `${GEN_NAMES[rankGen] || `第${rankGen}世代`}`}
+            {t.rankingTitle(rankGen)}
           </h1>
-          <p style={{ color: "#8B7B5E", fontSize: "14px", marginTop: "8px" }}>ユーザー{formatNum(Math.floor(matchCount / 5))}人 全{formatNum(matchCount)}票 の投票に基づく</p>
+          <p style={{ color: "#8B7B5E", fontSize: "14px", marginTop: "8px" }}>{t.usersAndVotes(formatNum(Math.floor(matchCount / 5), lang), formatNum(matchCount, lang))}</p>
         </div>
         <div style={{ padding: "8px 16px 16px" }}>
           <button
             style={{ display: "block", margin: "0 auto 16px", padding: "12px 32px", background: "#fff", border: "1px solid #E8D89C", borderRadius: "30px", color: "#CC3333", fontSize: "15px", cursor: "pointer", fontFamily: FONT, fontWeight: 700 }}
             onClick={() => setShowRanking(false)}
-          >← 投票に戻る</button>
+          >{t.backToVoting}</button>
 
           <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", justifyContent: "center", padding: "0 0 16px", maxWidth: "600px", margin: "0 auto" }}>
             <button
               onClick={() => setRankGen('all')}
               style={{ padding: "7px 16px", borderRadius: "20px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", background: rankGen === 'all' ? "#3B4CCA" : "#fff", color: rankGen === 'all' ? "#fff" : "#5B8BA8", fontFamily: FONT, boxShadow: rankGen === 'all' ? "none" : "0 1px 4px rgba(0,0,0,0.06)" }}
-            >全世代</button>
+            >{t.allGens}</button>
             {availableGens.map(g => (
               <button
                 key={g}
                 onClick={() => setRankGen(g)}
                 style={{ padding: "7px 16px", borderRadius: "20px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", background: rankGen === g ? "#3B4CCA" : "#fff", color: rankGen === g ? "#fff" : "#5B8BA8", fontFamily: FONT, boxShadow: rankGen === g ? "none" : "0 1px 4px rgba(0,0,0,0.06)" }}
-              >{GEN_NAMES[g] || `第${g}世代`}</button>
+              >{t.genLabel(g)}</button>
             ))}
           </div>
 
@@ -237,13 +322,13 @@ export default function PokemonVote() {
                     fontSize: "18px", fontWeight: 900, width: "34px", height: "34px",
                     borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
                   }}>1</div>
-                  <img src={p.image} alt={p.nameJa} style={{ width: "120px", height: "120px", objectFit: "contain", marginTop: "10px" }} />
-                  <div style={{ fontSize: "20px", fontWeight: 900, color: "#2D3748", marginTop: "8px" }}>{p.nameJa}</div>
+                  <img src={p.image} alt={lang === 'ja' ? p.nameJa : p.nameEn} style={{ width: "120px", height: "120px", objectFit: "contain", marginTop: "10px" }} />
+                  <div style={{ fontSize: "20px", fontWeight: 900, color: "#2D3748", marginTop: "8px" }}>{lang === 'ja' ? p.nameJa : p.nameEn}</div>
                   <div style={{ fontSize: "14px", color: "#3B4CCA", fontWeight: 700, marginTop: "4px" }}>Elo {p.elo}</div>
                   <div style={{ display: "flex", gap: "4px", marginTop: "6px", flexWrap: "wrap", justifyContent: "center" }}>
-                    {p.types.map(t => (
-                      <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: "2px 10px", borderRadius: "6px", fontSize: "12px", fontWeight: 700 }}>
-                        {TYPE_MAP[t]?.ja || t}
+                    {p.types.map(typeKey => (
+                      <span key={typeKey} style={{ background: TYPE_MAP[typeKey]?.color || "#888", color: "#fff", padding: "2px 10px", borderRadius: "6px", fontSize: "12px", fontWeight: 700 }}>
+                        {lang === 'ja' ? TYPE_MAP[typeKey]?.ja : TYPE_MAP[typeKey]?.en}
                       </span>
                     ))}
                   </div>
@@ -271,13 +356,13 @@ export default function PokemonVote() {
                       fontSize: "14px", fontWeight: 900, width: "28px", height: "28px",
                       borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
                     }}>{rank}</div>
-                    <img src={p.image} alt={p.nameJa} style={{ width: "80px", height: "80px", objectFit: "contain", marginTop: "8px" }} />
-                    <div style={{ fontSize: "15px", fontWeight: 800, color: "#2D3748", marginTop: "6px", textAlign: "center" }}>{p.nameJa}</div>
+                    <img src={p.image} alt={lang === 'ja' ? p.nameJa : p.nameEn} style={{ width: "80px", height: "80px", objectFit: "contain", marginTop: "8px" }} />
+                    <div style={{ fontSize: "15px", fontWeight: 800, color: "#2D3748", marginTop: "6px", textAlign: "center" }}>{lang === 'ja' ? p.nameJa : p.nameEn}</div>
                     <div style={{ fontSize: "12px", color: "#3B4CCA", fontWeight: 700, marginTop: "4px" }}>Elo {p.elo}</div>
                     <div style={{ display: "flex", gap: "3px", marginTop: "4px", flexWrap: "wrap", justifyContent: "center" }}>
-                      {p.types.map(t => (
-                        <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: "1px 8px", borderRadius: "4px", fontSize: "10px", fontWeight: 700 }}>
-                          {TYPE_MAP[t]?.ja || t}
+                      {p.types.map(typeKey => (
+                        <span key={typeKey} style={{ background: TYPE_MAP[typeKey]?.color || "#888", color: "#fff", padding: "1px 8px", borderRadius: "4px", fontSize: "10px", fontWeight: 700 }}>
+                          {lang === 'ja' ? TYPE_MAP[typeKey]?.ja : TYPE_MAP[typeKey]?.en}
                         </span>
                       ))}
                     </div>
@@ -313,15 +398,15 @@ export default function PokemonVote() {
                       borderRadius: "50%", display: "flex", alignItems: "center", justifyContent: "center",
                     }}>{actualRank}</div>
                     <img
-                      src={p.image} alt={p.nameJa}
+                      src={p.image} alt={lang === 'ja' ? p.nameJa : p.nameEn}
                       style={{ width: "64px", height: "64px", objectFit: "contain", marginTop: "8px" }}
                     />
-                    <div style={{ fontSize: "13px", fontWeight: 800, color: "#2D3748", marginTop: "6px", textAlign: "center", lineHeight: "1.3" }}>{p.nameJa}</div>
+                    <div style={{ fontSize: "13px", fontWeight: 800, color: "#2D3748", marginTop: "6px", textAlign: "center", lineHeight: "1.3" }}>{lang === 'ja' ? p.nameJa : p.nameEn}</div>
                     <div style={{ fontSize: "11px", color: "#3B4CCA", fontWeight: 700, marginTop: "4px" }}>Elo {p.elo}</div>
                     <div style={{ display: "flex", gap: "3px", marginTop: "4px", flexWrap: "wrap", justifyContent: "center" }}>
-                      {p.types.map(t => (
-                        <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: "1px 6px", borderRadius: "4px", fontSize: "9px", fontWeight: 700 }}>
-                          {TYPE_MAP[t]?.ja || t}
+                      {p.types.map(typeKey => (
+                        <span key={typeKey} style={{ background: TYPE_MAP[typeKey]?.color || "#888", color: "#fff", padding: "1px 6px", borderRadius: "4px", fontSize: "9px", fontWeight: 700 }}>
+                          {lang === 'ja' ? TYPE_MAP[typeKey]?.ja : TYPE_MAP[typeKey]?.en}
                         </span>
                       ))}
                     </div>
@@ -344,23 +429,21 @@ export default function PokemonVote() {
             onMouseEnter={(e) => e.target.style.background = "#FFF8E1"}
             onMouseLeave={(e) => e.target.style.background = "#fff"}
           >
-            🎲 ランダムで{rankGen === 'all' ? '' : `${GEN_NAMES[rankGen]}の`}ポケモンを見る
+            {t.viewRandomPokemon(rankGen)}
           </button>
 
           <div style={{ maxWidth: "600px", margin: "0 auto 24px", padding: "16px 18px", background: "rgba(255,255,255,0.6)", borderRadius: "12px", lineHeight: "1.9", border: "1px solid rgba(255,203,5,0.08)" }}>
             <p style={{ color: "#8B7B5E", fontSize: "13px", margin: 0 }}>
-              「ポケモン 人気バトル」は、全{POKEMON.length}体のポケモンをファン投票で順位付けするランキングサイトです。
-              投票にはEloレーティングシステムを採用しており、2体のポケモンを比較する形式で「どっちが好き？」を繰り返すことで、統計的に信頼性の高い順位を算出しています。
-              5回投票すると全体のランキング結果を閲覧でき、全世代ランキングと世代別ランキングを切り替えて楽しめます。
+              {t.siteDescription.replace('{count}', POKEMON.length)}
             </p>
           </div>
 
           <div style={{ textAlign: "center", padding: "16px 16px 100px", color: "#8B7B5E", fontSize: "13px", lineHeight: "1.8" }}>
-            <p style={{ margin: "0 0 8px" }}>全{POKEMON.length}体のポケモンから、好きなポケモンを選んで投票できる人気ランキングサイトです。</p>
+            <p style={{ margin: "0 0 8px" }}>{t.footerDescription.replace('{count}', POKEMON.length)}</p>
             <p style={{ margin: "12px 0 0" }}>
-              <a href="/about" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>このサイトについて</a>
+              <a href="/about" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{t.about}</a>
               <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
-              <a href="/privacy" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>プライバシーポリシー</a>
+              <a href="/privacy" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{t.privacy}</a>
             </p>
           </div>
         </div>
@@ -394,28 +477,40 @@ export default function PokemonVote() {
   });
 
   return (
-    <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1,#FFF3C4)", color: "#2D3748", fontFamily: FONT, padding: 0, margin: 0, paddingBottom: '80px', display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
+    <div style={{ minHeight: "100vh", background: "linear-gradient(180deg,#FFF8E1,#FFF3C4)", color: "#2D3748", fontFamily: FONT, padding: 0, margin: 0, paddingBottom: '80px', display: "flex", flexDirection: "column", justifyContent: "flex-start", position: "relative" }}>
       <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700;800;900&display=swap" rel="stylesheet" />
+
+      {/* Language Toggle Button */}
+      <div style={{ position: "fixed", top: "16px", right: "16px", zIndex: 100, display: "flex", gap: "2px", background: "#fff", borderRadius: "20px", padding: "2px", boxShadow: "0 2px 8px rgba(0,0,0,0.1)" }}>
+        <button
+          onClick={() => setLang('ja')}
+          style={{ padding: "6px 14px", borderRadius: "18px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'ja' ? "#3B4CCA" : "transparent", color: lang === 'ja' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
+        >🇯🇵 JA</button>
+        <button
+          onClick={() => setLang('en')}
+          style={{ padding: "6px 14px", borderRadius: "18px", border: "none", fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: lang === 'en' ? "#3B4CCA" : "transparent", color: lang === 'en' ? "#fff" : "#8B7B5E", transition: "all 0.2s" }}
+        >🇺🇸 EN</button>
+      </div>
 
       <div style={{ textAlign: "center", padding: isSmallScreen ? "56px 12px 0" : "48px 16px 0" }}>
         <h1 style={{ fontSize: isSmallScreen ? "34px" : "48px", fontWeight: 900, letterSpacing: "0.06em", margin: 0, lineHeight: "1.3" }}>
-          <span style={{ color: "#CC3333" }}>ポケモン 人気バトル</span>
+          <span style={{ color: "#CC3333" }}>{t.title}</span>
         </h1>
-        <p style={{ color: "#3B4CCA", fontSize: isSmallScreen ? "16px" : "19px", fontWeight: 700, letterSpacing: "0.05em", marginTop: "12px", lineHeight: "1.6" }}>どっちが好き？タップで投票！</p>
+        <p style={{ color: "#3B4CCA", fontSize: isSmallScreen ? "16px" : "19px", fontWeight: 700, letterSpacing: "0.05em", marginTop: "12px", lineHeight: "1.6" }}>{t.subtitle}</p>
         <p style={{ color: "#8B7B5E", fontSize: isSmallScreen ? "13px" : "15px", marginTop: "12px", lineHeight: "1.6" }}>
-          あなた {myVoteCount.toLocaleString()}回投票済み ・ 全体 {formatNum(matchCount)}票 ・ {voteGen === 'all' ? `${POKEMON.length}体のポケモン` : `${GEN_NAMES[voteGen]}地方 ${POKEMON.filter(p => p.generation === voteGen).length}体`}
+          {t.voteCount(myVoteCount.toLocaleString())} ・ {t.totalVotes(formatNum(matchCount, lang))} ・ {voteGen === 'all' ? t.pokemonCount(POKEMON.length) : t.regionLabel(voteGen, POKEMON.filter(p => p.generation === voteGen).length)}
         </p>
         <div style={{ display: "flex", gap: "6px", flexWrap: "wrap", justifyContent: "center", marginTop: "12px", padding: "0 8px" }}>
           <button
             onClick={() => setVoteGen('all')}
             style={{ padding: isSmallScreen ? "5px 12px" : "6px 14px", borderRadius: "16px", border: "none", fontSize: isSmallScreen ? "11px" : "12px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: voteGen === 'all' ? "#3B4CCA" : "#fff", color: voteGen === 'all' ? "#fff" : "#8B7B5E", boxShadow: voteGen === 'all' ? "0 2px 8px rgba(59,76,202,0.3)" : "0 1px 4px rgba(0,0,0,0.06)", transition: "all 0.2s" }}
-          >全世代</button>
+          >{t.allGens}</button>
           {availableGens.map(g => (
             <button
               key={g}
               onClick={() => setVoteGen(g)}
               style={{ padding: isSmallScreen ? "5px 12px" : "6px 14px", borderRadius: "16px", border: "none", fontSize: isSmallScreen ? "11px" : "12px", fontWeight: 700, cursor: "pointer", fontFamily: FONT, background: voteGen === g ? "#3B4CCA" : "#fff", color: voteGen === g ? "#fff" : "#8B7B5E", boxShadow: voteGen === g ? "0 2px 8px rgba(59,76,202,0.3)" : "0 1px 4px rgba(0,0,0,0.06)", transition: "all 0.2s" }}
-            >{GEN_NAMES[g] || `第${g}世代`}</button>
+            >{t.genLabel(g)}</button>
           ))}
         </div>
       </div>
@@ -435,16 +530,16 @@ export default function PokemonVote() {
             >
               <img
                 src={pokemon.image}
-                alt={pokemon.nameJa}
+                alt={lang === 'ja' ? pokemon.nameJa : pokemon.nameEn}
                 style={{ width: isSmallScreen ? "130px" : "200px", height: isSmallScreen ? "130px" : "200px", objectFit: "contain", marginBottom: "14px" }}
               />
-              <div style={{ fontSize: isSmallScreen ? "20px" : "26px", fontWeight: 800, marginBottom: "4px", color: "#2D3748" }}>{pokemon.nameJa}</div>
+              <div style={{ fontSize: isSmallScreen ? "20px" : "26px", fontWeight: 800, marginBottom: "4px", color: "#2D3748" }}>{lang === 'ja' ? pokemon.nameJa : pokemon.nameEn}</div>
               <div style={{ fontSize: isSmallScreen ? "11px" : "13px", color: "#8B7B5E", marginBottom: "4px", minHeight: isSmallScreen ? "14px" : "17px" }}>{pokemon.genus || "\u00A0"}</div>
-              <div style={{ fontSize: isSmallScreen ? "12px" : "14px", color: "#9B8B6E", marginBottom: "10px" }}>No.{pokemon.id} ・ {GEN_NAMES[pokemon.generation] || `第${pokemon.generation}世代`}</div>
+              <div style={{ fontSize: isSmallScreen ? "12px" : "14px", color: "#9B8B6E", marginBottom: "10px" }}>No.{pokemon.id} ・ {t.genLabel(pokemon.generation)}</div>
               <div style={{ display: "flex", gap: "8px" }}>
-                {pokemon.types.map(t => (
-                  <span key={t} style={{ background: TYPE_MAP[t]?.color || "#888", color: "#fff", padding: isSmallScreen ? "3px 10px" : "4px 14px", borderRadius: "8px", fontSize: isSmallScreen ? "12px" : "14px", fontWeight: 700 }}>
-                    {TYPE_MAP[t]?.ja || t}
+                {pokemon.types.map(typeKey => (
+                  <span key={typeKey} style={{ background: TYPE_MAP[typeKey]?.color || "#888", color: "#fff", padding: isSmallScreen ? "3px 10px" : "4px 14px", borderRadius: "8px", fontSize: isSmallScreen ? "12px" : "14px", fontWeight: 700 }}>
+                    {lang === 'ja' ? TYPE_MAP[typeKey]?.ja : TYPE_MAP[typeKey]?.en}
                   </span>
                 ))}
               </div>
@@ -468,7 +563,7 @@ export default function PokemonVote() {
               setShowRanking(true);
             }}
           >
-            🏆 ランキングを見る
+            {t.viewRankings}
           </button>
         )}
 
@@ -476,12 +571,12 @@ export default function PokemonVote() {
           style={{ padding: "10px 28px", background: "#fff", border: "2px solid #E8D89C", borderRadius: "20px", color: "#8B7B5E", fontSize: "15px", cursor: phase !== 'idle' ? "default" : "pointer", opacity: phase !== 'idle' ? 0.4 : 1, fontFamily: FONT, fontWeight: 700 }}
           onClick={() => { if (phase === 'idle') pickPair(); }}
         >
-          この組み合わせをスキップ
+          {t.skipMatchup}
         </button>
 
         {lastVote && myVoteCount >= 5 && (
           <a
-            href={`https://x.com/intent/tweet?text=${encodeURIComponent(`🔥 ポケモン 人気バトル 🔥\n私は「${lastVote.winnerName}」に投票！\nhttps://www.poke-vote.com`)}`}
+            href={`https://x.com/intent/tweet?text=${encodeURIComponent(t.shareText(lastVote.winnerName) + '\nhttps://www.poke-vote.com')}`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setLastVote(null)}
@@ -490,24 +585,24 @@ export default function PokemonVote() {
             onMouseLeave={(e) => e.currentTarget.style.background = "#2D3748"}
           >
             <svg width="14" height="14" viewBox="0 0 24 24" fill="#fff"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            この投票をXでシェアする
+            {t.shareOnX}
           </a>
         )}
 
         {myVoteCount < 5 && (
           <>
             <p style={{ textAlign: "center", color: "#2D3748", fontSize: isSmallScreen ? "15px" : "16px", margin: 0, lineHeight: "1.6", fontWeight: 700 }}>
-              あと{5 - myVoteCount}回投票すると詳しいランキングが見られます
+              {t.votesRemaining(5 - myVoteCount)}
             </p>
             {matchCount > 0 && (
               <div style={{ margin: "8px auto 0", padding: "0 16px" }}>
-                <p style={{ textAlign: "center", color: "#8B7B5E", fontSize: "12px", marginBottom: "10px" }}>現在のTOP3</p>
+                <p style={{ textAlign: "center", color: "#8B7B5E", fontSize: "12px", marginBottom: "10px" }}>{t.currentTop3}</p>
                 <div style={{ display: "flex", justifyContent: "center", gap: "16px" }}>
                   {ranking.slice(0, 3).map((p, i) => (
                     <div key={p.id} style={{ position: "relative", width: isSmallScreen ? "25vw" : "110px", textAlign: "center" }}>
                       <div style={{ position: "absolute", top: "-6px", left: "-4px", zIndex: 1, width: "24px", height: "24px", borderRadius: "50%", background: i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : "#cd7f32", color: "#000", fontSize: "13px", fontWeight: 900, display: "flex", alignItems: "center", justifyContent: "center" }}>{i + 1}</div>
-                      <img src={p.image} alt={p.nameJa} style={{ width: isSmallScreen ? "60px" : "80px", height: isSmallScreen ? "60px" : "80px", objectFit: "contain" }} />
-                      <div style={{ fontSize: "12px", color: "#2D3748", marginTop: "4px", fontWeight: 700 }}>{p.nameJa}</div>
+                      <img src={p.image} alt={lang === 'ja' ? p.nameJa : p.nameEn} style={{ width: isSmallScreen ? "60px" : "80px", height: isSmallScreen ? "60px" : "80px", objectFit: "contain" }} />
+                      <div style={{ fontSize: "12px", color: "#2D3748", marginTop: "4px", fontWeight: 700 }}>{lang === 'ja' ? p.nameJa : p.nameEn}</div>
                     </div>
                   ))}
                 </div>
@@ -518,11 +613,11 @@ export default function PokemonVote() {
       </div>
 
       <div style={{ textAlign: "center", padding: "32px 16px 100px", color: "#8B7B5E", fontSize: "14px", lineHeight: "1.8" }}>
-        <p style={{ margin: "0 0 8px" }}>全{POKEMON.length}体のポケモンから、好きなポケモンを選んで投票できる人気ランキングサイトです。</p>
+        <p style={{ margin: "0 0 8px" }}>{t.footerDescription.replace('{count}', POKEMON.length)}</p>
         <p style={{ margin: "12px 0 0" }}>
-          <a href="/about" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>このサイトについて</a>
+          <a href="/about" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>{t.about}</a>
           <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
-          <a href="/privacy" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>プライバシーポリシー</a>
+          <a href="/privacy" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>{t.privacy}</a>
         </p>
       </div>
 
