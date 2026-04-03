@@ -138,6 +138,13 @@ export default async function PokemonPage({ params }) {
   };
 
   return (
-    <PokemonDetailClient data={pageData} />
+    <>
+      <script
+        async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9862215132601373"
+        crossOrigin="anonymous"
+      />
+      <PokemonDetailClient data={pageData} />
+    </>
   );
 }
