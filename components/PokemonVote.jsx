@@ -483,7 +483,7 @@ export default function PokemonVote() {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    padding: isSmallScreen ? "20px 16px" : "32px 24px",
+    padding: isSmallScreen ? "14px 16px" : "22px 24px",
     transform: isWinner ? "scale(1.03)" : isLoser ? "scale(0.97)" : (!isSmallScreen && isHovered) ? "translateY(-7px) scale(1.02)" : "none",
     opacity: isLoser ? 0.4 : 1,
     boxShadow: (!isSmallScreen && isHovered && phase === 'idle') ? "0 20px 48px rgba(255,203,5,0.15)" : "0 2px 12px rgba(255,203,5,0.08)",
@@ -563,7 +563,7 @@ export default function PokemonVote() {
                 {expandedCard ? (lang === 'ja' ? '▲ 閉じる' : '▲ Close') : (lang === 'ja' ? '▼ 詳しい情報' : '▼ Details')}
               </button>
               {expandedCard && (
-                <div style={{ marginTop: "14px", width: "100%", textAlign: "left" }} onClick={(e) => e.stopPropagation()}>
+                <div style={{ marginTop: "14px", marginBottom: "-4px", width: "100%", textAlign: "left" }} onClick={(e) => e.stopPropagation()}>
                   {/* 分類 */}
                   {(lang === 'ja' ? pokemon.genus : pokemon.genusEn) && (
                     <div style={{ fontSize: "14px", color: "#8B7B5E", marginBottom: "12px", fontWeight: 600 }}>
