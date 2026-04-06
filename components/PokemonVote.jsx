@@ -547,7 +547,6 @@ export default function PokemonVote() {
                 style={{ width: isSmallScreen ? "130px" : "200px", height: isSmallScreen ? "130px" : "200px", objectFit: "contain", marginBottom: "14px" }}
               />
               <div style={{ fontSize: isSmallScreen ? "20px" : "26px", fontWeight: 800, marginBottom: "4px", color: "#2D3748" }}>{lang === 'ja' ? pokemon.nameJa : pokemon.nameEn}</div>
-              <div style={{ fontSize: isSmallScreen ? "11px" : "13px", color: "#8B7B5E", marginBottom: "4px", minHeight: isSmallScreen ? "14px" : "17px" }}>{lang === 'ja' ? (pokemon.genus || "\u00A0") : (pokemon.genusEn || "\u00A0")}</div>
               <div style={{ fontSize: isSmallScreen ? "12px" : "14px", color: "#9B8B6E", marginBottom: "10px" }}>No.{pokemon.id} ・ {t.genLabel(pokemon.generation)}</div>
               <div style={{ display: "flex", gap: "8px" }}>
                 {pokemon.types.map(typeKey => (
@@ -563,31 +562,39 @@ export default function PokemonVote() {
               >
                 {expandedCard === idx ? (lang === 'ja' ? '▲ 閉じる' : '▲ Close') : (lang === 'ja' ? '▼ 詳しい情報' : '▼ Details')}
               </button>
-              {expandedCard === idx && (() => {
-                const statKeys = ['hp','attack','defense','special-attack','special-defense','speed'];
-                const statLabels = { hp:{ja:'HP',en:'HP'}, attack:{ja:'攻撃',en:'Atk'}, defense:{ja:'防御',en:'Def'}, 'special-attack':{ja:'特攻',en:'SpA'}, 'special-defense':{ja:'特防',en:'SpD'}, speed:{ja:'素早',en:'Spe'} };
-                const statColors = { hp:'#ff5555', attack:'#f08030', defense:'#f8d030', 'special-attack':'#6890f0', 'special-defense':'#78c850', speed:'#f85888' };
-                const total = statKeys.reduce((s,k) => s + (pokemon.stats?.[k] || 0), 0);
-                return (
-                  <div style={{ marginTop: "12px", width: "100%", textAlign: "left" }} onClick={(e) => e.stopPropagation()}>
-                    {statKeys.map(stat => {
-                      const val = pokemon.stats?.[stat] || 0;
-                      return (
-                        <div key={stat} style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "4px" }}>
-                          <span style={{ fontSize: "10px", color: "#8B7B5E", width: isSmallScreen ? "26px" : "30px", flexShrink: 0 }}>{statLabels[stat][lang]}</span>
-                          <span style={{ fontSize: "11px", fontWeight: 700, color: "#2D3748", width: "26px", textAlign: "right", flexShrink: 0 }}>{val}</span>
-                          <div style={{ flex: 1, height: "5px", background: "#f0e8d0", borderRadius: "3px", overflow: "hidden" }}>
-                            <div style={{ width: `${Math.min(100,(val/255)*100)}%`, height: "100%", background: statColors[stat], borderRadius: "3px" }} />
-                          </div>
-                        </div>
-                      );
-                    })}
-                    <div style={{ marginTop: "5px", fontSize: "10px", color: "#8B7B5E", textAlign: "right" }}>
-                      {lang === 'ja' ? `合計 ${total}` : `Total ${total}`}
+              {expandedCard === idx && (
+                <div style={{ marginTop: "14px", width: "100%", textAlign: "left" }} onClick={(e) => e.stopPropagation()}>
+                  {/* 分類 */}
+                  {(lang === 'ja' ? pokemon.genus : pokemon.genusEn) && (
+                    <div style={{ fontSize: isSmallScreen ? "13px" : "14px", color: "#8B7B5E", marginBottom: "10px", fontWeight: 600 }}>
+                      {lang === 'ja' ? pokemon.genus : pokemon.genusEn}
                     </div>
-                  </div>
-                );
-              })()}
+                  )}
+                  {/* 身長・体重 */}
+                  {pokemon.height && (
+                    <div style={{ display: "flex", gap: "16px", marginBottom: "12px" }}>
+                      <div style={{ fontSize: isSmallScreen ? "12px" : "13px", color: "#8B7B5E" }}>
+                        📏 {lang === 'ja' ? '身長' : 'Height'} <strong style={{ color: "#2D3748" }}>{pokemon.height}m</strong>
+                      </div>
+                      <div style={{ fontSize: isSmallScreen ? "12px" : "13px", color: "#8B7B5E" }}>
+                        ⚖️ {lang === 'ja' ? '体重' : 'Weight'} <strong style={{ color: "#2D3748" }}>{pokemon.weight}kg</strong>
+                      </div>
+                    </div>
+                  )}
+                  {/* 図鑑説明文 */}
+                  {(lang === 'ja' ? pokemon.flavorJa : pokemon.flavorEn) && (
+                    <div style={{ fontSize: isSmallScreen ? "12px" : "13px", color: "#4A5568", lineHeight: "1.8", padding: "10px 12px", background: "rgba(255,203,5,0.08)", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.2)" }}>
+                      {lang === 'ja' ? pokemon.flavorJa : pokemon.flavorEn}
+                    </div>
+                  )}
+                  {/* データがまだない場合 */}
+                  {!pokemon.height && !pokemon.flavorJa && (
+                    <div style={{ fontSize: "12px", color: "#B0A080", textAlign: "center" }}>
+                      {lang === 'ja' ? 'データ読み込み中...' : 'Loading data...'}
+                    </div>
+                  )}
+                </div>
+              )}
             </div>
           );
         })}

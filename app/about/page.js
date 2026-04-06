@@ -46,7 +46,7 @@ export default function AboutPage() {
         { q: 'スキップはできますか？', a: 'はい、「この組み合わせをスキップ」ボタンで別の組み合わせに切り替えられます。' },
       ],
       operatorTitle: '運営について',
-      operatorDesc: 'このサイトは東海オンエアの公認切り抜きチャンネル「東海ランキング」が運営しています。ポケモンに関する著作権はすべて株式会社ポケモン・任天堂に帰属します。本サイトはファンによる非公式のランキングサービスです。',
+      operatorDesc: 'ポケモンに関する著作権はすべて株式会社ポケモン・任天堂に帰属します。本サイトはファンによる非公式のランキングサービスです。',
       lastUpdate: '最終更新: 2026年4月',
     },
     en: {
@@ -71,7 +71,7 @@ export default function AboutPage() {
         { q: 'Can I skip a matchup?', a: 'Yes! Tap "Skip this matchup" to get a different pair of Pokémon.' },
       ],
       operatorTitle: 'About the Operator',
-      operatorDesc: 'This site is operated by "東海ランキング," an officially licensed clip channel of Tokai on Air. All Pokémon-related copyrights belong to The Pokémon Company and Nintendo. This is an unofficial fan ranking service.',
+      operatorDesc: 'All Pokémon-related copyrights belong to The Pokémon Company and Nintendo. This is an unofficial fan ranking service.',
       lastUpdate: 'Last updated: April 2026',
     },
   };
