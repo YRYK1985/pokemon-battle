@@ -471,7 +471,7 @@ export default function PokemonVote() {
   if (!a || !b) return null;
 
   const cardStyle = (isWinner, isLoser, isHovered) => ({
-    flex: 1,
+    flex: isSmallScreen ? "0 0 calc(50% - 4px)" : 1,
     minWidth: isSmallScreen ? 0 : "320px",
     maxWidth: "460px",
     background: "#fff",
@@ -675,8 +675,8 @@ export default function PokemonVote() {
           <p style={{ margin: "0 0 10px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? '遊び方' : 'How to Play'}</p>
           <p style={{ margin: 0 }}>
             {lang === 'ja'
-              ? '2体のポケモンが表示されたら「どっちが好き？」を直感で選んでタップするだけ。特別な知識は必要ありません。5回投票するとランキング画面が解放され、全世代または世代別のランキングを確認できます。「詳しい情報」ボタンを押すと、各ポケモンの種族値（HP・攻撃・防御など）も投票画面から確認できます。'
-              : 'When two Pokémon appear, just tap the one you prefer — no special knowledge needed. After 5 votes, the full ranking is unlocked. You can view rankings for all generations or filter by specific region. Tap the "Details" button on each card to check base stats like HP, Attack, and Defense without leaving the vote screen.'}
+              ? '2体のポケモンが表示されたら「どっちが好き？」を直感で選んでタップするだけ。特別な知識は必要ありません。5回投票するとランキング画面が解放され、全世代または世代別のランキングを確認できます。「詳しい情報」ボタンを押すと、各ポケモンの分類・身長・体重・図鑑説明文も投票画面から確認できます。'
+              : 'When two Pokémon appear, just tap the one you prefer — no special knowledge needed. After 5 votes, the full ranking is unlocked. You can view rankings for all generations or filter by specific region. Tap the "Details" button on each card to check the Pokémon\'s classification, height, weight, and Pokédex entry without leaving the vote screen.'}
           </p>
         </div>
         {/* Eloレーティング */}
