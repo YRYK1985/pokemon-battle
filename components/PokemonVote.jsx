@@ -146,7 +146,7 @@ export default function PokemonVote() {
     }
     return 'ja';
   });
-  const [expandedCard, setExpandedCard] = useState(null);
+  const [expandedCard, setExpandedCard] = useState(false);
 
   const changeLang = (l) => {
     setLang(l);
@@ -177,7 +177,7 @@ export default function PokemonVote() {
     setPair(Math.random() < 0.5 ? [a, b] : [b, a]);
     setVotedState(null);
     setPhase('idle');
-    setExpandedCard(null);
+    setExpandedCard(false);
   }, [voteGen]);
 
   useEffect(() => { pickPair(); }, [pickPair]);
@@ -557,12 +557,12 @@ export default function PokemonVote() {
               </div>
               {/* 詳細展開ボタン */}
               <button
-                onClick={(e) => { e.stopPropagation(); setExpandedCard(expandedCard === idx ? null : idx); }}
+                onClick={(e) => { e.stopPropagation(); setExpandedCard(!expandedCard); }}
                 style={{ marginTop: "10px", padding: "6px 18px", background: "transparent", border: "1px solid rgba(59,76,202,0.25)", borderRadius: "14px", color: "#3B4CCA", fontSize: "13px", fontWeight: 700, cursor: "pointer", fontFamily: FONT }}
               >
-                {expandedCard === idx ? (lang === 'ja' ? '▲ 閉じる' : '▲ Close') : (lang === 'ja' ? '▼ 詳しい情報' : '▼ Details')}
+                {expandedCard ? (lang === 'ja' ? '▲ 閉じる' : '▲ Close') : (lang === 'ja' ? '▼ 詳しい情報' : '▼ Details')}
               </button>
-              {expandedCard === idx && (
+              {expandedCard && (
                 <div style={{ marginTop: "14px", width: "100%", textAlign: "left" }} onClick={(e) => e.stopPropagation()}>
                   {/* 分類 */}
                   {(lang === 'ja' ? pokemon.genus : pokemon.genusEn) && (
