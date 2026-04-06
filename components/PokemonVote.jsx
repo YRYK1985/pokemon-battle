@@ -471,9 +471,9 @@ export default function PokemonVote() {
   if (!a || !b) return null;
 
   const cardStyle = (isWinner, isLoser, isHovered) => ({
-    flex: isSmallScreen ? "0 0 158px" : 1,
-    minWidth: isSmallScreen ? "158px" : "320px",
-    maxWidth: isSmallScreen ? "158px" : "460px",
+    flex: 1,
+    minWidth: isSmallScreen ? 0 : "320px",
+    maxWidth: "460px",
     background: "#fff",
     borderRadius: "20px",
     overflow: "hidden",
@@ -563,7 +563,7 @@ export default function PokemonVote() {
                 {expandedCard ? (lang === 'ja' ? '▲ 閉じる' : '▲ Close') : (lang === 'ja' ? '▼ 詳しい情報' : '▼ Details')}
               </button>
               {expandedCard && (
-                <div style={{ marginTop: "14px", marginBottom: "-4px", width: "100%", textAlign: "left" }} onClick={(e) => e.stopPropagation()}>
+                <div style={{ marginTop: "14px", marginBottom: "-4px", width: "100%", maxWidth: "100%", overflow: "hidden", textAlign: "left" }} onClick={(e) => e.stopPropagation()}>
                   {/* 分類 */}
                   {(lang === 'ja' ? pokemon.genus : pokemon.genusEn) && (
                     <div style={{ fontSize: "14px", color: "#8B7B5E", marginBottom: "12px", fontWeight: 600 }}>
@@ -572,7 +572,7 @@ export default function PokemonVote() {
                   )}
                   {/* 身長・体重 */}
                   {pokemon.height && (
-                    <div style={{ display: "flex", gap: "20px", marginBottom: "14px" }}>
+                    <div style={{ display: "flex", gap: "12px", marginBottom: "14px", width: "100%", flexWrap: "wrap" }}>
                       <div style={{ fontSize: "14px", color: "#8B7B5E" }}>
                         📏 {lang === 'ja' ? '身長' : 'Height'} <strong style={{ color: "#2D3748" }}>{pokemon.height}m</strong>
                       </div>
