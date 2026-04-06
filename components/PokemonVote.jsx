@@ -471,9 +471,9 @@ export default function PokemonVote() {
   if (!a || !b) return null;
 
   const cardStyle = (isWinner, isLoser, isHovered) => ({
-    width: "100%",
-    minWidth: 0,
-    maxWidth: "100%",
+    width: isSmallScreen ? "calc(50vw - 8px)" : "100%",
+    minWidth: isSmallScreen ? "calc(50vw - 8px)" : "320px",
+    maxWidth: isSmallScreen ? "calc(50vw - 8px)" : "460px",
     boxSizing: "border-box",
     background: "#fff",
     borderRadius: "20px",
