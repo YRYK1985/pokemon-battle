@@ -27,30 +27,52 @@ export default function AboutPage() {
     ja: {
       backLink: '← トップに戻る',
       title: 'ポケモン 人気バトルについて',
-      intro: '「ポケモン 人気バトル」は、全1025体のポケモンの中から2体がランダムに登場し、「どっちが好き？」を選んで投票するファン参加型の人気ランキングサイトです。',
+      intro: '「ポケモン 人気バトル」は、全1,025体のポケモンの中から2体がランダムに登場し、「どっちが好き？」を選んで投票するファン参加型の人気ランキングサイトです。投票には統計的に信頼性の高いEloレーティングシステムを採用しており、少ない投票数でも公平な順位を算出できます。',
+      howTitle: '遊び方',
+      howDesc: '①投票画面に2体のポケモンが表示されます。②好きな方をタップするだけで投票完了。③5回投票するとランキング画面が解放されます。④「詳しい情報」ボタンで種族値も確認できます。世代フィルターを切り替えれば、カントーだけ・ジョウトだけといった絞り込み投票も楽しめます。',
       eloTitle: 'Eloレーティングとは',
-      eloDesc: 'チェスなどの対戦競技で使われるレーティングシステムです。強い（人気の高い）ポケモンに勝つとレーティングが大きく上がり、弱い相手に勝っても少ししか上がりません。すべてのポケモンは初期レーティング1200からスタートします。',
+      eloDesc: 'チェスや将棋などの対戦競技で広く使われる統計的なレーティングシステムです。強い（人気の高い）ポケモンに勝つとレーティングが大きく上がり、格下の相手に勝っても少ししか上がりません。全ポケモンは初期レーティング1,200からスタートし、投票が積み重なるほど信頼性の高い順位が算出されます。勝率・対戦数も個別ページで確認できます。',
       pokemonTitle: '対象ポケモン',
-      pokemonDesc: '第1世代（カントー）から第9世代（パルデア）までの全1025体が対象です。メガシンカ・リージョンフォーム・キョダイマックスなどのフォーム違いは含まれていません。',
+      pokemonDesc: '第1世代（カントー・151体）から第9世代（パルデア・120体）までの全1,025体が対象です。メガシンカ・リージョンフォーム・キョダイマックスなどのフォルム違いは含まれていません。ポケモンのデータ（名前・タイプ・種族値・画像・分類など）はPokéAPI（pokeapi.co）から取得しています。',
       filterTitle: '世代フィルター',
-      filterDesc: 'ランキングは全世代一覧のほか、世代（地方）ごとに絞り込んで閲覧できます。カントー、ジョウト、ホウエン、シンオウ、イッシュ、カロス、アローラ、ガラル、パルデアの9地方に対応しています。',
-      dataTitle: 'データについて',
-      dataDesc: 'ポケモンのデータ（名前・タイプ・種族値・画像など）はPokéAPI（pokeapi.co）から取得しています。投票データはリアルタイムで集計され、ランキングに反映されます。',
-      lastUpdate: '最終更新: 2026年3月28日',
+      filterDesc: 'ランキングは全世代一覧のほか、世代（地方）ごとに絞り込んで閲覧できます。カントー（第1世代）・ジョウト（第2世代）・ホウエン（第3世代）・シンオウ（第4世代）・イッシュ（第5世代）・カロス（第6世代）・アローラ（第7世代）・ガラル（第8世代）・パルデア（第9世代）の9地方に対応しています。投票も同様に世代ごとに絞り込んで楽しめます。',
+      statsTitle: '種族値について',
+      statsDesc: '各ポケモンの詳細ページや投票カードの「詳しい情報」ボタンから、HP・攻撃・防御・特攻・特防・素早さの6つの種族値を確認できます。種族値はポケモンの基本的な強さを示す数値で、最大値は255です。種族値の合計値も表示しています。',
+      faqTitle: 'よくある質問',
+      faq: [
+        { q: '投票は何回でもできますか？', a: 'はい、何回でも投票できます。投票するたびにランキングが更新されていきます。' },
+        { q: 'ランキングは全ユーザーの投票結果ですか？', a: 'はい、全ユーザーの投票を集計したグローバルランキングです。あなたの投票がリアルタイムで反映されます。' },
+        { q: '気に入ったポケモンを詳しく調べるには？', a: 'ランキングページや詳細ページでポケモン名をタップすると、個別ページでランキング順位・勝率・種族値などを確認できます。' },
+        { q: 'スキップはできますか？', a: 'はい、「この組み合わせをスキップ」ボタンで別の組み合わせに切り替えられます。' },
+      ],
+      operatorTitle: '運営について',
+      operatorDesc: 'このサイトは東海オンエアの公認切り抜きチャンネル「東海ランキング」が運営しています。ポケモンに関する著作権はすべて株式会社ポケモン・任天堂に帰属します。本サイトはファンによる非公式のランキングサービスです。',
+      lastUpdate: '最終更新: 2026年4月',
     },
     en: {
       backLink: '← Back to Top',
       title: 'About Pokémon Popularity Battle',
-      intro: 'Pokémon Popularity Battle is a fan-driven ranking site where two Pokémon are randomly selected from all 1025 Pokémon, and you vote on which one you prefer.',
+      intro: 'Pokémon Popularity Battle is a fan-driven ranking site where two Pokémon are randomly selected from all 1,025 Pokémon, and you vote on which one you prefer. We use the Elo rating system to produce statistically reliable rankings even with relatively few votes.',
+      howTitle: 'How to Play',
+      howDesc: '① Two Pokémon appear on screen. ② Tap the one you like more to vote. ③ After 5 votes, the full ranking is unlocked. ④ Tap the "Details" button on each card to check base stats without leaving the vote screen. You can also filter by generation to vote only among Kanto, Johto, or any other region.',
       eloTitle: 'What is the Elo Rating?',
-      eloDesc: 'The Elo rating system is used in competitive games like chess. When you vote for a popular Pokémon, its rating increases significantly. When you vote for a less popular one, the increase is smaller. All Pokémon start with an initial rating of 1200.',
+      eloDesc: 'The Elo rating system is widely used in competitive games like chess. Beating a highly-rated (popular) Pokémon gives a large rating boost, while beating a lower-rated one gives little. All Pokémon start at 1,200, and rankings become more reliable as votes accumulate. Win rate and match count are also visible on individual Pokémon pages.',
       pokemonTitle: 'Pokémon Included',
-      pokemonDesc: 'All 1025 Pokémon from Generation 1 (Kanto) to Generation 9 (Paldea) are included. Mega Evolution forms, Regional forms, and Gigantamax forms are not included.',
+      pokemonDesc: 'All 1,025 Pokémon from Generation 1 (Kanto, 151) to Generation 9 (Paldea, 120) are included. Mega Evolutions, Regional Forms, and Gigantamax forms are not included. Pokémon data (names, types, base stats, images, classification, etc.) is sourced from PokéAPI (pokeapi.co).',
       filterTitle: 'Generation Filter',
-      filterDesc: 'You can view the ranking of all generations, or filter by specific regions. The 9 regions supported are Kanto, Johto, Hoenn, Sinnoh, Unova, Kalos, Alola, Galar, and Paldea.',
-      dataTitle: 'About the Data',
-      dataDesc: 'Pokémon data (names, types, base stats, images, etc.) is obtained from PokéAPI (pokeapi.co). Vote data is collected in real-time and reflected in the rankings.',
-      lastUpdate: 'Last updated: March 28, 2026',
+      filterDesc: 'You can view all generations at once, or filter by specific region: Kanto (Gen 1), Johto (Gen 2), Hoenn (Gen 3), Sinnoh (Gen 4), Unova (Gen 5), Kalos (Gen 6), Alola (Gen 7), Galar (Gen 8), and Paldea (Gen 9). The same filter applies to voting, so you can vote within a single generation.',
+      statsTitle: 'About Base Stats',
+      statsDesc: 'On each Pokémon\'s detail page, or by tapping "Details" on a voting card, you can check the six base stats: HP, Attack, Defense, Sp. Atk, Sp. Def, and Speed. These values represent a Pokémon\'s fundamental strength, with a maximum of 255 per stat. The total base stat is also shown.',
+      faqTitle: 'FAQ',
+      faq: [
+        { q: 'Can I vote as many times as I want?', a: 'Yes! You can vote as many times as you like. Rankings update with every vote.' },
+        { q: 'Is the ranking based on all users\' votes?', a: 'Yes, it\'s a global ranking aggregating all user votes, updated in real time.' },
+        { q: 'How can I see more details about a Pokémon?', a: 'Tap a Pokémon\'s name on the ranking or detail page to view its individual stats, rank, win rate, and more.' },
+        { q: 'Can I skip a matchup?', a: 'Yes! Tap "Skip this matchup" to get a different pair of Pokémon.' },
+      ],
+      operatorTitle: 'About the Operator',
+      operatorDesc: 'This site is operated by "東海ランキング," an officially licensed clip channel of Tokai on Air. All Pokémon-related copyrights belong to The Pokémon Company and Nintendo. This is an unofficial fan ranking service.',
+      lastUpdate: 'Last updated: April 2026',
     },
   };
 
@@ -154,30 +176,39 @@ export default function AboutPage() {
 
         <div style={s.card}>
           <h1 style={s.title}>{c.title}</h1>
+          <p style={s.text}>{c.intro}</p>
 
-          <p style={s.text}>
-            {c.intro}
-          </p>
+          <h2 style={s.sectionTitle}>{c.howTitle}</h2>
+          <p style={s.text}>{c.howDesc}</p>
 
           <h2 style={s.sectionTitle}>{c.eloTitle}</h2>
-          <p style={s.text}>
-            {c.eloDesc}
-          </p>
+          <p style={s.text}>{c.eloDesc}</p>
 
           <h2 style={s.sectionTitle}>{c.pokemonTitle}</h2>
-          <p style={s.text}>
-            {c.pokemonDesc}
-          </p>
+          <p style={s.text}>{c.pokemonDesc}</p>
 
           <h2 style={s.sectionTitle}>{c.filterTitle}</h2>
-          <p style={s.text}>
-            {c.filterDesc}
-          </p>
+          <p style={s.text}>{c.filterDesc}</p>
 
-          <h2 style={s.sectionTitle}>{c.dataTitle}</h2>
-          <p style={s.text}>
-            {c.dataDesc}
-          </p>
+          <h2 style={s.sectionTitle}>{c.statsTitle}</h2>
+          <p style={s.text}>{c.statsDesc}</p>
+        </div>
+
+        {/* FAQ */}
+        <div style={s.card}>
+          <h2 style={{ ...s.title, fontSize: 20, marginBottom: 16 }}>{c.faqTitle}</h2>
+          {c.faq.map((item, i) => (
+            <div key={i} style={{ marginBottom: i < c.faq.length - 1 ? 16 : 0 }}>
+              <p style={{ ...s.text, fontWeight: 700, color: '#3B4CCA', margin: '0 0 4px' }}>Q. {item.q}</p>
+              <p style={{ ...s.text, margin: 0, paddingLeft: 12 }}>A. {item.a}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* 運営について */}
+        <div style={s.card}>
+          <h2 style={{ ...s.title, fontSize: 20, marginBottom: 12 }}>{c.operatorTitle}</h2>
+          <p style={s.text}>{c.operatorDesc}</p>
         </div>
 
         <div style={{ textAlign: 'center', padding: '24px 0', fontSize: 12, color: '#A0926E' }}>

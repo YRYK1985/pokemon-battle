@@ -146,6 +146,7 @@ export default function PokemonVote() {
     }
     return 'ja';
   });
+  const [expandedCard, setExpandedCard] = useState(null);
 
   const changeLang = (l) => {
     setLang(l);
@@ -176,6 +177,7 @@ export default function PokemonVote() {
     setPair(Math.random() < 0.5 ? [a, b] : [b, a]);
     setVotedState(null);
     setPhase('idle');
+    setExpandedCard(null);
   }, [voteGen]);
 
   useEffect(() => { pickPair(); }, [pickPair]);
@@ -554,6 +556,38 @@ export default function PokemonVote() {
                   </span>
                 ))}
               </div>
+              {/* 詳細展開ボタン */}
+              <button
+                onClick={(e) => { e.stopPropagation(); setExpandedCard(expandedCard === idx ? null : idx); }}
+                style={{ marginTop: "10px", padding: "4px 14px", background: "transparent", border: "1px solid rgba(59,76,202,0.25)", borderRadius: "12px", color: "#3B4CCA", fontSize: "11px", fontWeight: 700, cursor: "pointer", fontFamily: FONT }}
+              >
+                {expandedCard === idx ? (lang === 'ja' ? '▲ 閉じる' : '▲ Close') : (lang === 'ja' ? '▼ 詳しい情報' : '▼ Details')}
+              </button>
+              {expandedCard === idx && (() => {
+                const statKeys = ['hp','attack','defense','special-attack','special-defense','speed'];
+                const statLabels = { hp:{ja:'HP',en:'HP'}, attack:{ja:'攻撃',en:'Atk'}, defense:{ja:'防御',en:'Def'}, 'special-attack':{ja:'特攻',en:'SpA'}, 'special-defense':{ja:'特防',en:'SpD'}, speed:{ja:'素早',en:'Spe'} };
+                const statColors = { hp:'#ff5555', attack:'#f08030', defense:'#f8d030', 'special-attack':'#6890f0', 'special-defense':'#78c850', speed:'#f85888' };
+                const total = statKeys.reduce((s,k) => s + (pokemon.stats?.[k] || 0), 0);
+                return (
+                  <div style={{ marginTop: "12px", width: "100%", textAlign: "left" }} onClick={(e) => e.stopPropagation()}>
+                    {statKeys.map(stat => {
+                      const val = pokemon.stats?.[stat] || 0;
+                      return (
+                        <div key={stat} style={{ display: "flex", alignItems: "center", gap: "6px", marginBottom: "4px" }}>
+                          <span style={{ fontSize: "10px", color: "#8B7B5E", width: isSmallScreen ? "26px" : "30px", flexShrink: 0 }}>{statLabels[stat][lang]}</span>
+                          <span style={{ fontSize: "11px", fontWeight: 700, color: "#2D3748", width: "26px", textAlign: "right", flexShrink: 0 }}>{val}</span>
+                          <div style={{ flex: 1, height: "5px", background: "#f0e8d0", borderRadius: "3px", overflow: "hidden" }}>
+                            <div style={{ width: `${Math.min(100,(val/255)*100)}%`, height: "100%", background: statColors[stat], borderRadius: "3px" }} />
+                          </div>
+                        </div>
+                      );
+                    })}
+                    <div style={{ marginTop: "5px", fontSize: "10px", color: "#8B7B5E", textAlign: "right" }}>
+                      {lang === 'ja' ? `合計 ${total}` : `Total ${total}`}
+                    </div>
+                  </div>
+                );
+              })()}
             </div>
           );
         })}
@@ -623,13 +657,45 @@ export default function PokemonVote() {
         )}
       </div>
 
-      <div style={{ textAlign: "center", padding: "32px 16px 100px", color: "#8B7B5E", fontSize: "13px", lineHeight: "1.8" }}>
-        <p style={{ margin: "0 0 12px", maxWidth: "600px", marginLeft: "auto", marginRight: "auto", textAlign: "left" }}>{t.siteDescription.replace('{count}', POKEMON.length)}</p>
-        <p style={{ margin: "12px 0 0" }}>
+      <div style={{ padding: "32px 16px 100px", color: "#8B7B5E", fontSize: "13px", lineHeight: "1.9", maxWidth: "640px", margin: "0 auto" }}>
+        {/* サイト概要 */}
+        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
+          <p style={{ margin: "0 0 10px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? 'ポケモン 人気バトルとは' : 'About Pokémon Popularity Battle'}</p>
+          <p style={{ margin: 0 }}>{t.siteDescription.replace('{count}', POKEMON.length)}</p>
+        </div>
+        {/* 遊び方 */}
+        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
+          <p style={{ margin: "0 0 10px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? '遊び方' : 'How to Play'}</p>
+          <p style={{ margin: 0 }}>
+            {lang === 'ja'
+              ? '2体のポケモンが表示されたら「どっちが好き？」を直感で選んでタップするだけ。特別な知識は必要ありません。5回投票するとランキング画面が解放され、全世代または世代別のランキングを確認できます。「詳しい情報」ボタンを押すと、各ポケモンの種族値（HP・攻撃・防御など）も投票画面から確認できます。'
+              : 'When two Pokémon appear, just tap the one you prefer — no special knowledge needed. After 5 votes, the full ranking is unlocked. You can view rankings for all generations or filter by specific region. Tap the "Details" button on each card to check base stats like HP, Attack, and Defense without leaving the vote screen.'}
+          </p>
+        </div>
+        {/* Eloレーティング */}
+        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
+          <p style={{ margin: "0 0 10px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? 'Eloレーティングとは' : 'What is Elo Rating?'}</p>
+          <p style={{ margin: 0 }}>
+            {lang === 'ja'
+              ? 'チェスや将棋などの対戦競技で使われる統計的なレーティングシステムです。強い（人気の高い）ポケモンに勝つとレーティングが大きく上昇し、弱い相手に勝っても少ししか上がりません。全ポケモンは初期レーティング1200からスタートし、投票が積み重なるほど統計的に信頼性の高い順位が算出されます。'
+              : 'The Elo rating system is used in competitive games like chess. Beating a highly-rated (popular) Pokémon gives a big rating boost, while beating a low-rated one gives little. All Pokémon start at 1200, and rankings become statistically more reliable as votes accumulate.'}
+          </p>
+        </div>
+        {/* 世代ガイド */}
+        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
+          <p style={{ margin: "0 0 10px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? '対応している世代' : 'Supported Generations'}</p>
+          <p style={{ margin: 0 }}>
+            {lang === 'ja'
+              ? '第1世代カントー（151体）・第2世代ジョウト（100体）・第3世代ホウエン（135体）・第4世代シンオウ（107体）・第5世代イッシュ（156体）・第6世代カロス（72体）・第7世代アローラ（88体）・第8世代ガラル（96体）・第9世代パルデア（120体）の計1,025体が対象です。メガシンカ・リージョンフォーム・キョダイマックスなどのフォルム違いは含まれていません。'
+              : 'All 1,025 Pokémon across 9 generations are included: Kanto (Gen 1, 151), Johto (Gen 2, 100), Hoenn (Gen 3, 135), Sinnoh (Gen 4, 107), Unova (Gen 5, 156), Kalos (Gen 6, 72), Alola (Gen 7, 88), Galar (Gen 8, 96), and Paldea (Gen 9, 120). Mega Evolutions, Regional Forms, and Gigantamax forms are not included.'}
+          </p>
+        </div>
+        {/* フッターリンク */}
+        <div style={{ textAlign: "center", paddingTop: "16px" }}>
           <a href="/about" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>{t.about}</a>
           <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
           <a href="/privacy" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>{t.privacy}</a>
-        </p>
+        </div>
       </div>
 
       {/* 下固定バナー — 一時停止（AdSense審査対策） */}
