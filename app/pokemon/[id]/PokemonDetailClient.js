@@ -338,14 +338,24 @@ export default function PokemonDetailClient({ data }) {
           <div style={s.grid}>
             <div style={s.dataItem}>
               <div style={s.dataLabel}>{c.height}</div>
-              <div style={{ ...s.dataValue, fontSize: 16 }}>{(pokemon.height / 10).toFixed(1)} m</div>
+              <div style={{ ...s.dataValue, fontSize: 16 }}>{pokemon.height} m</div>
             </div>
             <div style={s.dataItem}>
               <div style={s.dataLabel}>{c.weight}</div>
-              <div style={{ ...s.dataValue, fontSize: 16 }}>{(pokemon.weight / 10).toFixed(1)} kg</div>
+              <div style={{ ...s.dataValue, fontSize: 16 }}>{pokemon.weight} kg</div>
             </div>
           </div>
         </div>
+
+        {/* Flavor Text */}
+        {(lang === 'ja' ? pokemon.flavorJa : pokemon.flavorEn) && (
+          <div style={{ ...s.card, lineHeight: 1.9 }}>
+            <div style={s.sectionTitle}>{lang === 'ja' ? '図鑑説明' : 'Pokédex Entry'}</div>
+            <p style={{ margin: 0, fontSize: 14, color: '#4A5568' }}>
+              {lang === 'ja' ? pokemon.flavorJa : pokemon.flavorEn}
+            </p>
+          </div>
+        )}
 
         {/* Neighboring Rankings */}
         <div style={s.card}>
