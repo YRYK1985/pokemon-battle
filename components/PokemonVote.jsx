@@ -471,7 +471,7 @@ export default function PokemonVote() {
   if (!a || !b) return null;
 
   const cardStyle = (isWinner, isLoser, isHovered) => ({
-    flex: isSmallScreen ? "0 0 calc(50% - 4px)" : 1,
+    flex: isSmallScreen ? "0 0 calc(48% - 4px)" : 1,
     minWidth: isSmallScreen ? 0 : "320px",
     maxWidth: "460px",
     background: "#fff",
@@ -544,7 +544,7 @@ export default function PokemonVote() {
               <img
                 src={pokemon.image}
                 alt={lang === 'ja' ? pokemon.nameJa : pokemon.nameEn}
-                style={{ width: isSmallScreen ? "130px" : "200px", height: isSmallScreen ? "130px" : "200px", objectFit: "contain", marginBottom: "14px" }}
+                style={{ width: isSmallScreen ? "120px" : "200px", height: isSmallScreen ? "120px" : "200px", objectFit: "contain", marginBottom: "14px" }}
               />
               <div style={{ fontSize: isSmallScreen ? "20px" : "26px", fontWeight: 800, marginBottom: "4px", color: "#2D3748" }}>{lang === 'ja' ? pokemon.nameJa : pokemon.nameEn}</div>
               <div style={{ fontSize: isSmallScreen ? "12px" : "14px", color: "#9B8B6E", marginBottom: "10px" }}>No.{pokemon.id} ・ {t.genLabel(pokemon.generation)}</div>
