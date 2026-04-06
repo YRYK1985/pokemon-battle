@@ -471,9 +471,8 @@ export default function PokemonVote() {
   if (!a || !b) return null;
 
   const cardStyle = (isWinner, isLoser, isHovered) => ({
-    flex: 1,
     minWidth: isSmallScreen ? 0 : "320px",
-    maxWidth: "460px",
+    maxWidth: isSmallScreen ? "100%" : "460px",
     background: "#fff",
     borderRadius: "20px",
     overflow: "hidden",
@@ -528,7 +527,7 @@ export default function PokemonVote() {
         </div>
       </div>
 
-      <div style={{ display: "flex", justifyContent: "center", alignItems: "stretch", gap: isSmallScreen ? "8px" : "28px", padding: "20px 16px 12px", maxWidth: "1000px", margin: "0 auto", opacity: phase === 'exit' ? 0 : 1, transition: "opacity 0.15s ease", flexDirection: "row" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: isSmallScreen ? "8px" : "28px", padding: "20px 16px 12px", maxWidth: "1000px", margin: "0 auto", opacity: phase === 'exit' ? 0 : 1, transition: "opacity 0.15s ease" }}>
         {[a, b].map((pokemon, idx) => {
           const isWinner = phase === 'voted' && votedState?.winnerId === pokemon.id;
           const isLoser = phase === 'voted' && votedState?.loserId === pokemon.id;
