@@ -567,13 +567,13 @@ export default function PokemonVote() {
                 <div style={{ marginTop: "14px", marginBottom: "-4px", width: "100%", maxWidth: "100%", overflow: "hidden", textAlign: "left" }} onClick={(e) => e.stopPropagation()}>
                   {/* 分類 */}
                   {(lang === 'ja' ? pokemon.genus : pokemon.genusEn) && (
-                    <div style={{ fontSize: "14px", color: "#8B7B5E", marginBottom: "12px", fontWeight: 600 }}>
+                    <div style={{ fontSize: "14px", color: "#8B7B5E", marginBottom: "12px", fontWeight: 600, textAlign: "center" }}>
                       {lang === 'ja' ? pokemon.genus : pokemon.genusEn}
                     </div>
                   )}
                   {/* 身長・体重 */}
                   {pokemon.height && (
-                    <div style={{ display: "flex", gap: "12px", marginBottom: "14px", width: "100%", flexWrap: "wrap" }}>
+                    <div style={{ display: "flex", gap: "12px", marginBottom: "14px", width: "100%", flexWrap: "wrap", justifyContent: "center" }}>
                       <div style={{ fontSize: "14px", color: "#8B7B5E" }}>
                         📏 {lang === 'ja' ? '身長' : 'Height'} <strong style={{ color: "#2D3748" }}>{pokemon.height}m</strong>
                       </div>
