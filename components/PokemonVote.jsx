@@ -295,6 +295,14 @@ export default function PokemonVote() {
           </h1>
           <p style={{ color: "#8B7B5E", fontSize: "14px", marginTop: "8px" }}>{t.usersAndVotes(formatNum(Math.floor(matchCount / 5), lang), formatNum(matchCount, lang))}</p>
         </div>
+
+        {/* ランキング上部の説明テキスト（AdSense審査対策 — 承認後フッターに戻す） */}
+        <div style={{ maxWidth: "600px", margin: "0 auto 8px", padding: "12px 18px", background: "rgba(255,255,255,0.6)", borderRadius: "12px", lineHeight: "1.9", border: "1px solid rgba(255,203,5,0.08)" }}>
+          <p style={{ color: "#8B7B5E", fontSize: "13px", margin: 0 }}>
+            {t.siteDescription.replace('{count}', POKEMON.length)}
+          </p>
+        </div>
+
         <div style={{ padding: "8px 16px 16px" }}>
           <button
             style={{ display: "block", margin: "0 auto 16px", padding: "12px 32px", background: "#fff", border: "1px solid #E8D89C", borderRadius: "30px", color: "#CC3333", fontSize: "15px", cursor: "pointer", fontFamily: FONT, fontWeight: 700 }}
@@ -444,12 +452,6 @@ export default function PokemonVote() {
           >
             {t.viewRandomPokemon(rankGen)}
           </button>
-
-          <div style={{ maxWidth: "600px", margin: "0 auto 24px", padding: "16px 18px", background: "rgba(255,255,255,0.6)", borderRadius: "12px", lineHeight: "1.9", border: "1px solid rgba(255,203,5,0.08)" }}>
-            <p style={{ color: "#8B7B5E", fontSize: "13px", margin: 0 }}>
-              {t.siteDescription.replace('{count}', POKEMON.length)}
-            </p>
-          </div>
 
           <div style={{ textAlign: "center", padding: "16px 16px 100px", color: "#8B7B5E", fontSize: "13px", lineHeight: "1.8" }}>
             <p style={{ margin: "0 0 8px" }}>{t.footerDescription.replace('{count}', POKEMON.length)}</p>

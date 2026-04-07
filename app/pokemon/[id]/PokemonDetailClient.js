@@ -259,9 +259,14 @@ export default function PokemonDetailClient({ data }) {
       </div>
 
       <div style={s.container}>
-        <div style={{ display: 'flex', gap: 16, marginBottom: 20, marginTop: 30 }}>
+        <div style={{ display: 'flex', gap: 16, marginBottom: 12, marginTop: 30 }}>
           <a href="/" style={s.backLink}>{c.backToVoting}</a>
           <a href="/#ranking" style={{ ...s.backLink, color: '#CC3333' }}>{c.backToRanking}</a>
+        </div>
+
+        {/* サイト説明テキスト（AdSense審査対策 — 承認後フッターに戻す） */}
+        <div style={{ padding: '12px 18px', fontSize: 13, lineHeight: 1.8, color: '#8B7B5E', background: 'rgba(255,255,255,0.6)', borderRadius: 12, marginBottom: 16, border: '1px solid rgba(255,203,5,0.15)' }}>
+          {c.description(lang === 'ja' ? pokemon.nameJa : pokemon.nameEn, pokemon.id, null, POKEMON.length)}
         </div>
 
         {/* Header Card */}
@@ -390,11 +395,6 @@ export default function PokemonDetailClient({ data }) {
               </a>
             )}
           </div>
-        </div>
-
-        {/* Description for SEO / AdSense */}
-        <div style={{ padding: '20px 24px', fontSize: 13, lineHeight: 1.8, color: '#8B7B5E' }}>
-          {c.description(lang === 'ja' ? pokemon.nameJa : pokemon.nameEn, pokemon.id, null, POKEMON.length)}
         </div>
 
         {/* Footer */}
