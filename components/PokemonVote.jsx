@@ -730,6 +730,8 @@ export default function PokemonVote() {
         <a href="/about" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>{t.about}</a>
         <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
         <a href="/privacy" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>{t.privacy}</a>
+        <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
+        <a href="/contact" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>{lang === 'ja' ? 'お問い合わせ' : 'Contact'}</a>
       </div>
 
       {/* 下固定バナー — 一時停止（AdSense審査対策） */}
