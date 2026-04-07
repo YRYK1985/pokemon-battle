@@ -511,6 +511,11 @@ export default function PokemonVote() {
           <span style={{ color: "#CC3333" }}>{t.title}</span>
         </h1>
         <p style={{ color: "#3B4CCA", fontSize: isSmallScreen ? "16px" : "19px", fontWeight: 700, letterSpacing: "0.05em", marginTop: "12px", lineHeight: "1.6" }}>{t.subtitle}</p>
+        <p style={{ color: "#8B7B5E", fontSize: isSmallScreen ? "12px" : "14px", marginTop: "10px", lineHeight: "1.8", maxWidth: "560px", margin: "10px auto 0" }}>
+          {lang === 'ja'
+            ? `全${POKEMON.length}体のポケモンをEloレーティングで順位付けするファン投票ランキングサイト。2体のポケモンを見比べて好きな方を選ぶだけで、あなたの投票がランキングに反映されます。5回投票すると全世代・世代別のリアルタイムランキングが解放されます。`
+            : `A fan voting ranking site that ranks all ${POKEMON.length} Pokémon using the Elo rating system. Simply choose your favorite between two Pokémon — your vote updates the live rankings instantly. After 5 votes, unlock the full all-generation and region-specific rankings.`}
+        </p>
         <p style={{ color: "#8B7B5E", fontSize: isSmallScreen ? "13px" : "15px", marginTop: "12px", lineHeight: "1.6" }}>
           {t.voteCount(myVoteCount.toLocaleString())} ・ {t.totalVotes(formatNum(matchCount, lang))} ・ {voteGen === 'all' ? t.pokemonCount(POKEMON.length) : t.regionLabel(voteGen, POKEMON.filter(p => p.generation === voteGen).length)}
         </p>
