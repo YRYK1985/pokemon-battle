@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
         <meta name="google-site-verification" content="L90GJBdnwvlCOhmrKA90OE6mdE8H0DuS_6UAAJYz8Uk" />
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9862215132601373" crossOrigin="anonymous"></script>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-2V19NHYH1C"
           strategy="afterInteractive"
