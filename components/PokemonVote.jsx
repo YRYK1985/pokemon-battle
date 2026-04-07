@@ -703,6 +703,26 @@ export default function PokemonVote() {
               : 'All 1,025 Pokémon across 9 generations are included: Kanto (Gen 1, 151), Johto (Gen 2, 100), Hoenn (Gen 3, 135), Sinnoh (Gen 4, 107), Unova (Gen 5, 156), Kalos (Gen 6, 72), Alola (Gen 7, 88), Galar (Gen 8, 96), and Paldea (Gen 9, 120). Mega Evolutions, Regional Forms, and Gigantamax forms are not included.'}
           </p>
         </div>
+        {/* よくある質問 */}
+        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
+          <p style={{ margin: "0 0 14px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? 'よくある質問' : 'FAQ'}</p>
+          {(lang === 'ja' ? [
+            { q: '投票は何回でもできますか？', a: 'はい、何回でも投票できます。投票するたびにリアルタイムでランキングが更新されます。' },
+            { q: 'ランキングはいつ見られますか？', a: '5回投票するとランキング画面が解放されます。その後は何度でも確認できます。全世代ランキングと世代別ランキングを切り替えることもできます。' },
+            { q: 'お気に入りのポケモンを詳しく調べるには？', a: 'ランキングや詳細ページでポケモン名をタップすると、個別ページで種族値・勝率・ランキング順位を確認できます。' },
+            { q: 'スキップはできますか？', a: 'はい、「この組み合わせをスキップ」ボタンで別の組み合わせに切り替えられます。スキップしても投票数にはカウントされません。' },
+          ] : [
+            { q: 'Can I vote as many times as I want?', a: 'Yes! You can vote as many times as you like. Rankings update in real time with every vote.' },
+            { q: 'When can I see the ranking?', a: 'After 5 votes, the full ranking is unlocked. You can switch between all-generation and region-specific rankings.' },
+            { q: 'How can I see more details about a Pokémon?', a: 'Tap a Pokémon\'s name on the ranking or detail page to view its individual stats, rank, and win rate.' },
+            { q: 'Can I skip a matchup?', a: 'Yes! Tap "Skip this matchup" to get a different pair. Skipping does not count as a vote.' },
+          ]).map((item, i, arr) => (
+            <div key={i} style={{ marginBottom: i < arr.length - 1 ? "14px" : 0 }}>
+              <p style={{ margin: "0 0 4px", fontWeight: 700, color: "#3B4CCA", fontSize: "13px" }}>Q. {item.q}</p>
+              <p style={{ margin: 0, fontSize: "13px", paddingLeft: "8px" }}>A. {item.a}</p>
+            </div>
+          ))}
+        </div>
         {/* フッターリンク */}
         <div style={{ textAlign: "center", paddingTop: "16px" }}>
           <a href="/about" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>{t.about}</a>
