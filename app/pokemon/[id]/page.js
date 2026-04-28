@@ -137,5 +137,36 @@ export default async function PokemonPage({ params }) {
     POKEMON,
   };
 
-  return <PokemonDetailClient data={pageData} />;
+  // JSON-LD 構造化データ
+  const typeJa = pokemon.types
+    ? pokemon.types.map((t) => TYPE_MAP[t]?.ja || t).join('・')
+    : '';
+  const genNameJa = GEN_NAMES[pokemon.generation]?.ja || '';
+  const winRateText = winRate !== null ? `勝率${winRate}%（${pokemonMatches}戦）` : `${pokemonMatches}戦`;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemPage',
+    name: `${pokemon.nameJa}（No.${pokemon.id}）のランキング | ポケモン 人気バトル`,
+    description: `${pokemon.nameJa}（No.${pokemon.id}）は第${pokemon.generation}世代・${genNameJa}地方の${typeJa}タイプのポケモンです。Eloレーティング${elo}、全体${overallRank}位/${POKEMON.length}体、世代内${genRank}/${genPokemon.length}位。${winRateText}、種族値合計${totalStats}。`,
+    url: `https://www.poke-vote.com/pokemon/${pokemon.id}`,
+    image: pokemon.image,
+    mainEntity: {
+      '@type': 'Thing',
+      name: pokemon.nameJa,
+      alternateName: pokemon.nameEn,
+      description: `${pokemon.nameJa}は${pokemon.genus || typeJa + 'タイプ'}。第${pokemon.generation}世代（${genNameJa}地方）。`,
+      image: pokemon.image,
+      url: `https://www.poke-vote.com/pokemon/${pokemon.id}`,
+    },
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <PokemonDetailClient data={pageData} />
+    </>
+  );
 }
