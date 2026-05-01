@@ -536,62 +536,6 @@ export default function PokemonVote() {
         </div>
       </div>
 
-      {/* コンテンツブロック（AdSense審査対策 — 承認後フッターに戻す） */}
-      <div style={{ padding: "20px 16px 8px", color: "#8B7B5E", fontSize: "13px", lineHeight: "1.9", maxWidth: "640px", margin: "0 auto" }}>
-        {/* サイト概要 */}
-        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
-          <p style={{ margin: "0 0 10px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? 'ポケモン 人気バトルとは' : 'About Pokémon Popularity Battle'}</p>
-          <p style={{ margin: 0 }}>{t.siteDescription.replace('{count}', POKEMON.length)}</p>
-        </div>
-        {/* 遊び方 */}
-        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
-          <p style={{ margin: "0 0 10px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? '遊び方' : 'How to Play'}</p>
-          <p style={{ margin: 0 }}>
-            {lang === 'ja'
-              ? '2体のポケモンが表示されたら「どっちが好き？」を直感で選んでタップするだけ。特別な知識は必要ありません。5回投票するとランキング画面が解放され、全世代または世代別のランキングを確認できます。「詳しい情報」ボタンを押すと、各ポケモンの分類・身長・体重・図鑑説明文も投票画面から確認できます。'
-              : 'When two Pokémon appear, just tap the one you prefer — no special knowledge needed. After 5 votes, the full ranking is unlocked. You can view rankings for all generations or filter by specific region. Tap the "Details" button on each card to check the Pokémon\'s classification, height, weight, and Pokédex entry without leaving the vote screen.'}
-          </p>
-        </div>
-        {/* Eloレーティング */}
-        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
-          <p style={{ margin: "0 0 10px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? 'Eloレーティングとは' : 'What is Elo Rating?'}</p>
-          <p style={{ margin: 0 }}>
-            {lang === 'ja'
-              ? 'チェスや将棋などの対戦競技で使われる統計的なレーティングシステムです。強い（人気の高い）ポケモンに勝つとレーティングが大きく上昇し、弱い相手に勝っても少ししか上がりません。全ポケモンは初期レーティング1200からスタートし、投票が積み重なるほど統計的に信頼性の高い順位が算出されます。'
-              : 'The Elo rating system is used in competitive games like chess. Beating a highly-rated (popular) Pokémon gives a big rating boost, while beating a low-rated one gives little. All Pokémon start at 1200, and rankings become statistically more reliable as votes accumulate.'}
-          </p>
-        </div>
-        {/* 世代ガイド */}
-        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
-          <p style={{ margin: "0 0 10px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? '対応している世代' : 'Supported Generations'}</p>
-          <p style={{ margin: 0 }}>
-            {lang === 'ja'
-              ? '第1世代カントー（151体）・第2世代ジョウト（100体）・第3世代ホウエン（135体）・第4世代シンオウ（107体）・第5世代イッシュ（156体）・第6世代カロス（72体）・第7世代アローラ（88体）・第8世代ガラル（96体）・第9世代パルデア（120体）の計1,025体が対象です。メガシンカ・リージョンフォーム・キョダイマックスなどのフォルム違いは含まれていません。'
-              : 'All 1,025 Pokémon across 9 generations are included: Kanto (Gen 1, 151), Johto (Gen 2, 100), Hoenn (Gen 3, 135), Sinnoh (Gen 4, 107), Unova (Gen 5, 156), Kalos (Gen 6, 72), Alola (Gen 7, 88), Galar (Gen 8, 96), and Paldea (Gen 9, 120). Mega Evolutions, Regional Forms, and Gigantamax forms are not included.'}
-          </p>
-        </div>
-        {/* よくある質問 */}
-        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
-          <p style={{ margin: "0 0 14px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? 'よくある質問' : 'FAQ'}</p>
-          {(lang === 'ja' ? [
-            { q: '投票は何回でもできますか？', a: 'はい、何回でも投票できます。投票するたびにリアルタイムでランキングが更新されます。' },
-            { q: 'ランキングはいつ見られますか？', a: '5回投票するとランキング画面が解放されます。その後は何度でも確認できます。全世代ランキングと世代別ランキングを切り替えることもできます。' },
-            { q: 'お気に入りのポケモンを詳しく調べるには？', a: 'ランキングや詳細ページでポケモン名をタップすると、個別ページで種族値・勝率・ランキング順位を確認できます。' },
-            { q: 'スキップはできますか？', a: 'はい、「この組み合わせをスキップ」ボタンで別の組み合わせに切り替えられます。スキップしても投票数にはカウントされません。' },
-          ] : [
-            { q: 'Can I vote as many times as I want?', a: 'Yes! You can vote as many times as you like. Rankings update in real time with every vote.' },
-            { q: 'When can I see the ranking?', a: 'After 5 votes, the full ranking is unlocked. You can switch between all-generation and region-specific rankings.' },
-            { q: 'How can I see more details about a Pokémon?', a: 'Tap a Pokémon\'s name on the ranking or detail page to view its individual stats, rank, and win rate.' },
-            { q: 'Can I skip a matchup?', a: 'Yes! Tap "Skip this matchup" to get a different pair. Skipping does not count as a vote.' },
-          ]).map((item, i, arr) => (
-            <div key={i} style={{ marginBottom: i < arr.length - 1 ? "14px" : 0 }}>
-              <p style={{ margin: "0 0 4px", fontWeight: 700, color: "#3B4CCA", fontSize: "13px" }}>Q. {item.q}</p>
-              <p style={{ margin: 0, fontSize: "13px", paddingLeft: "8px" }}>A. {item.a}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: isSmallScreen ? "8px" : "28px", padding: isSmallScreen ? "20px 4px 12px" : "20px 16px 12px", maxWidth: "1000px", margin: "0 auto", opacity: phase === 'exit' ? 0 : 1, transition: "opacity 0.15s ease" }}>
         {[a, b].map((pokemon, idx) => {
           const isWinner = phase === 'voted' && votedState?.winnerId === pokemon.id;
@@ -706,26 +650,87 @@ export default function PokemonVote() {
         )}
 
         {myVoteCount < 5 && (
-          <>
-            <p style={{ textAlign: "center", color: "#2D3748", fontSize: isSmallScreen ? "15px" : "16px", margin: 0, lineHeight: "1.6", fontWeight: 700 }}>
-              {t.votesRemaining(5 - myVoteCount)}
-            </p>
-            {matchCount > 0 && (
-              <div style={{ margin: "8px auto 0", padding: "0 16px" }}>
-                <p style={{ textAlign: "center", color: "#8B7B5E", fontSize: "12px", marginBottom: "10px" }}>{t.currentTop3}</p>
-                <div style={{ display: "flex", justifyContent: "center", gap: "16px" }}>
-                  {ranking.slice(0, 3).map((p, i) => (
-                    <div key={p.id} style={{ position: "relative", width: isSmallScreen ? "25vw" : "110px", textAlign: "center" }}>
-                      <div style={{ position: "absolute", top: "-6px", left: "-4px", zIndex: 1, width: "24px", height: "24px", borderRadius: "50%", background: i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : "#cd7f32", color: "#000", fontSize: "13px", fontWeight: 900, display: "flex", alignItems: "center", justifyContent: "center" }}>{i + 1}</div>
-                      <img src={p.image} alt={lang === 'ja' ? p.nameJa : p.nameEn} style={{ width: isSmallScreen ? "60px" : "80px", height: isSmallScreen ? "60px" : "80px", objectFit: "contain" }} />
-                      <div style={{ fontSize: "12px", color: "#2D3748", marginTop: "4px", fontWeight: 700 }}>{lang === 'ja' ? p.nameJa : p.nameEn}</div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </>
+          <p style={{ textAlign: "center", color: "#2D3748", fontSize: isSmallScreen ? "15px" : "16px", margin: 0, lineHeight: "1.6", fontWeight: 700 }}>
+            {t.votesRemaining(5 - myVoteCount)}
+          </p>
         )}
+      </div>
+
+      {/* ランキング上位5本 — 常時表示（AdSense審査対策） */}
+      <div style={{ padding: "8px 16px 16px", maxWidth: "640px", margin: "0 auto", width: "100%" }}>
+        <p style={{ textAlign: "center", color: "#8B7B5E", fontSize: "13px", marginBottom: "10px", fontWeight: 700 }}>
+          {lang === 'ja' ? '現在のランキング上位5体' : 'Current Top 5 Rankings'}
+        </p>
+        {ranking.slice(0, 5).map((p, i) => (
+          <a key={p.id} href={`/pokemon/${p.id}`} style={{ display: "flex", alignItems: "center", gap: "10px", padding: "10px 14px", background: "rgba(255,255,255,0.7)", borderRadius: "12px", marginBottom: "8px", textDecoration: "none", color: "inherit", border: "1px solid rgba(255,203,5,0.2)", boxShadow: "0 1px 4px rgba(0,0,0,0.05)" }}>
+            <span style={{ fontWeight: 900, fontSize: "16px", width: "28px", textAlign: "center", flexShrink: 0, color: i === 0 ? "#ffd700" : i === 1 ? "#c0c0c0" : i === 2 ? "#cd7f32" : "#8B7B5E" }}>
+              {i + 1}
+            </span>
+            <img src={p.image} alt={lang === 'ja' ? p.nameJa : p.nameEn} style={{ width: "48px", height: "48px", objectFit: "contain", flexShrink: 0 }} />
+            <div style={{ flex: 1, minWidth: 0 }}>
+              <div style={{ fontSize: "14px", fontWeight: 700, color: "#2D3748" }}>{lang === 'ja' ? p.nameJa : p.nameEn}</div>
+              <div style={{ fontSize: "12px", color: "#8B7B5E", marginTop: "2px" }}>
+                Elo {p.elo} ・ {lang === 'ja' ? `第${p.generation}世代` : `Gen ${p.generation}`} ・ {p.types.map(typeKey => lang === 'ja' ? TYPE_MAP[typeKey]?.ja : TYPE_MAP[typeKey]?.en).join('/')}
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      {/* コンテンツブロック（AdSense審査対策 — 承認後フッターに戻す） */}
+      <div style={{ padding: "0 16px 8px", color: "#8B7B5E", fontSize: "13px", lineHeight: "1.9", maxWidth: "640px", margin: "0 auto" }}>
+        {/* サイト概要 */}
+        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
+          <p style={{ margin: "0 0 10px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? 'ポケモン 人気バトルとは' : 'About Pokémon Popularity Battle'}</p>
+          <p style={{ margin: 0 }}>{t.siteDescription.replace('{count}', POKEMON.length)}</p>
+        </div>
+        {/* 遊び方 */}
+        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
+          <p style={{ margin: "0 0 10px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? '遊び方' : 'How to Play'}</p>
+          <p style={{ margin: 0 }}>
+            {lang === 'ja'
+              ? '2体のポケモンが表示されたら「どっちが好き？」を直感で選んでタップするだけ。特別な知識は必要ありません。5回投票するとランキング画面が解放され、全世代または世代別のランキングを確認できます。「詳しい情報」ボタンを押すと、各ポケモンの分類・身長・体重・図鑑説明文も投票画面から確認できます。'
+              : 'When two Pokémon appear, just tap the one you prefer — no special knowledge needed. After 5 votes, the full ranking is unlocked. You can view rankings for all generations or filter by specific region. Tap the "Details" button on each card to check the Pokémon\'s classification, height, weight, and Pokédex entry without leaving the vote screen.'}
+          </p>
+        </div>
+        {/* Eloレーティング */}
+        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
+          <p style={{ margin: "0 0 10px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? 'Eloレーティングとは' : 'What is Elo Rating?'}</p>
+          <p style={{ margin: 0 }}>
+            {lang === 'ja'
+              ? 'チェスや将棋などの対戦競技で使われる統計的なレーティングシステムです。強い（人気の高い）ポケモンに勝つとレーティングが大きく上昇し、弱い相手に勝っても少ししか上がりません。全ポケモンは初期レーティング1200からスタートし、投票が積み重なるほど統計的に信頼性の高い順位が算出されます。'
+              : 'The Elo rating system is used in competitive games like chess. Beating a highly-rated (popular) Pokémon gives a big rating boost, while beating a low-rated one gives little. All Pokémon start at 1200, and rankings become statistically more reliable as votes accumulate.'}
+          </p>
+        </div>
+        {/* 世代ガイド */}
+        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
+          <p style={{ margin: "0 0 10px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? '対応している世代' : 'Supported Generations'}</p>
+          <p style={{ margin: 0 }}>
+            {lang === 'ja'
+              ? '第1世代カントー（151体）・第2世代ジョウト（100体）・第3世代ホウエン（135体）・第4世代シンオウ（107体）・第5世代イッシュ（156体）・第6世代カロス（72体）・第7世代アローラ（88体）・第8世代ガラル（96体）・第9世代パルデア（120体）の計1,025体が対象です。メガシンカ・リージョンフォーム・キョダイマックスなどのフォルム違いは含まれていません。'
+              : 'All 1,025 Pokémon across 9 generations are included: Kanto (Gen 1, 151), Johto (Gen 2, 100), Hoenn (Gen 3, 135), Sinnoh (Gen 4, 107), Unova (Gen 5, 156), Kalos (Gen 6, 72), Alola (Gen 7, 88), Galar (Gen 8, 96), and Paldea (Gen 9, 120). Mega Evolutions, Regional Forms, and Gigantamax forms are not included.'}
+          </p>
+        </div>
+        {/* よくある質問 */}
+        <div style={{ background: "rgba(255,255,255,0.7)", borderRadius: "14px", padding: "18px 20px", marginBottom: "12px", border: "1px solid rgba(255,203,5,0.15)" }}>
+          <p style={{ margin: "0 0 14px", fontWeight: 700, color: "#2D3748", fontSize: "14px" }}>{lang === 'ja' ? 'よくある質問' : 'FAQ'}</p>
+          {(lang === 'ja' ? [
+            { q: '投票は何回でもできますか？', a: 'はい、何回でも投票できます。投票するたびにリアルタイムでランキングが更新されます。' },
+            { q: 'ランキングはいつ見られますか？', a: '5回投票するとランキング画面が解放されます。その後は何度でも確認できます。全世代ランキングと世代別ランキングを切り替えることもできます。' },
+            { q: 'お気に入りのポケモンを詳しく調べるには？', a: 'ランキングや詳細ページでポケモン名をタップすると、個別ページで種族値・勝率・ランキング順位を確認できます。' },
+            { q: 'スキップはできますか？', a: 'はい、「この組み合わせをスキップ」ボタンで別の組み合わせに切り替えられます。スキップしても投票数にはカウントされません。' },
+          ] : [
+            { q: 'Can I vote as many times as I want?', a: 'Yes! You can vote as many times as you like. Rankings update in real time with every vote.' },
+            { q: 'When can I see the ranking?', a: 'After 5 votes, the full ranking is unlocked. You can switch between all-generation and region-specific rankings.' },
+            { q: 'How can I see more details about a Pokémon?', a: 'Tap a Pokémon\'s name on the ranking or detail page to view its individual stats, rank, and win rate.' },
+            { q: 'Can I skip a matchup?', a: 'Yes! Tap "Skip this matchup" to get a different pair. Skipping does not count as a vote.' },
+          ]).map((item, i, arr) => (
+            <div key={i} style={{ marginBottom: i < arr.length - 1 ? "14px" : 0 }}>
+              <p style={{ margin: "0 0 4px", fontWeight: 700, color: "#3B4CCA", fontSize: "13px" }}>Q. {item.q}</p>
+              <p style={{ margin: 0, fontSize: "13px", paddingLeft: "8px" }}>A. {item.a}</p>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div style={{ padding: "16px 16px 100px", textAlign: "center" }}>
