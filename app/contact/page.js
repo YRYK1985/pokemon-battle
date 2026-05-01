@@ -31,11 +31,8 @@ export default function ContactPage() {
       xTitle: 'X（Twitter）でのお問い合わせ',
       xDesc: '最も迅速に対応できる方法です。DMまたはリプライでお気軽にどうぞ。',
       xLink: 'Xアカウントに移動する →',
-      youtubeTitle: 'YouTubeコミュニティからのお問い合わせ',
-      youtubeDesc: '東海ランキング【公認】のYouTubeチャンネルのコミュニティ投稿にてご連絡いただくことも可能です。',
-      youtubeLink: 'YouTubeチャンネルに移動する →',
       noteTitle: 'ご注意',
-      noteDesc: '本サイトはポケモンの公式サイトではありません。ポケモンに関する公式のお問い合わせは、株式会社ポケモンの公式サイトをご利用ください。',
+      noteDesc: '本サイトはポケモンの公式サイトではありません。',
       lastUpdate: '最終更新: 2026年4月',
     },
     en: {
@@ -45,11 +42,8 @@ export default function ContactPage() {
       xTitle: 'Contact via X (Twitter)',
       xDesc: 'This is the fastest way to get a response. Feel free to DM or reply.',
       xLink: 'Go to X account →',
-      youtubeTitle: 'Contact via YouTube Community',
-      youtubeDesc: 'You can also contact us through the community posts on the Tokai Ranking official YouTube channel.',
-      youtubeLink: 'Go to YouTube channel →',
       noteTitle: 'Note',
-      noteDesc: 'This site is not an official Pokémon site. For official Pokémon inquiries, please visit The Pokémon Company\'s official website.',
+      noteDesc: 'This site is not an official Pokémon site.',
       lastUpdate: 'Last updated: April 2026',
     },
   }[lang];
@@ -85,9 +79,6 @@ export default function ContactPage() {
           <p style={s.text}>{c.xDesc}</p>
           <a href="https://x.com/RankingQQQ" target="_blank" rel="noopener noreferrer" style={s.link}>{c.xLink}</a>
 
-          <h2 style={s.sectionTitle}>{c.youtubeTitle}</h2>
-          <p style={s.text}>{c.youtubeDesc}</p>
-          <a href="https://www.youtube.com/@TokaiRanking" target="_blank" rel="noopener noreferrer" style={{ ...s.link, background: '#CC0000', marginLeft: 8 }}>{c.youtubeLink}</a>
         </div>
 
         <div style={s.noteBox}>
