@@ -41,7 +41,7 @@ const GEN_NAMES = {
 };
 
 export const dynamicParams = true;
-export const revalidate = 60;
+export const revalidate = 3600; // 1時間（Fast Origin Transfer節約）
 
 export function generateStaticParams() {
   return [];
