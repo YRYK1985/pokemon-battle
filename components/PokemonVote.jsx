@@ -752,6 +752,8 @@ export default function PokemonVote() {
           <a href="/pokemon-type-stats" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? 'タイプ別種族値' : 'Type Stats'}</a>
           <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
           <a href="/pokemon-size" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? '身長・体重' : 'Size Ranking'}</a>
+          <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
+          <a href="/pokemon-gen1-vs-gen9" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? '第1世代vs第9世代' : 'Gen1 vs Gen9'}</a>
         </div>
       </div>
 
