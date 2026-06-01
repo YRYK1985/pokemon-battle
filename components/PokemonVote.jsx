@@ -741,6 +741,14 @@ export default function PokemonVote() {
         <a href="/privacy" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>{t.privacy}</a>
         <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
         <a href="/contact" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>{lang === 'ja' ? 'お問い合わせ' : 'Contact'}</a>
+        <br />
+        <div style={{ marginTop: "8px" }}>
+          <a href="/pokemon-types" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? 'タイプ別一覧' : 'By Type'}</a>
+          <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
+          <a href="/pokemon-stats" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? '種族値ランキング' : 'Base Stats'}</a>
+          <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
+          <a href="/pokemon-generations" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? '世代別データ' : 'By Generation'}</a>
+        </div>
       </div>
 
       {/* 下固定バナー — 一時停止（AdSense審査対策） */}
