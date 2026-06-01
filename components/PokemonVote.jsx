@@ -748,6 +748,10 @@ export default function PokemonVote() {
           <a href="/pokemon-stats" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? '種族値ランキング' : 'Base Stats'}</a>
           <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
           <a href="/pokemon-generations" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? '世代別データ' : 'By Generation'}</a>
+          <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
+          <a href="/pokemon-type-stats" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? 'タイプ別種族値' : 'Type Stats'}</a>
+          <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
+          <a href="/pokemon-size" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? '身長・体重' : 'Size Ranking'}</a>
         </div>
       </div>
 
