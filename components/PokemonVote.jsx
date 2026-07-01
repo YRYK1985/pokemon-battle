@@ -460,6 +460,42 @@ export default function PokemonVote() {
               <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
               <a href="/privacy" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{t.privacy}</a>
             </p>
+            <div style={{ marginTop: "16px", textAlign: "left" }}>
+              <p style={{ textAlign: "center", color: "#8B7B5E", fontSize: "12px", fontWeight: 700, marginBottom: "10px" }}>
+                {lang === 'ja' ? '📊 データ記事' : '📊 Data Articles'}
+              </p>
+              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "7px" }}>
+                <a href="/pokemon-types" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? 'タイプ別一覧' : 'By Type'}</div>
+                  <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '18タイプの体数ランキング' : 'Count by type'}</div>
+                </a>
+                <a href="/pokemon-stats" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '種族値ランキング' : 'Base Stats TOP30'}</div>
+                  <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '合計種族値TOP30' : 'Top base stat totals'}</div>
+                </a>
+                <a href="/pokemon-generations" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '世代別データ' : 'By Generation'}</div>
+                  <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '第1〜第9世代の比較' : 'Gen 1-9 comparison'}</div>
+                </a>
+                <a href="/pokemon-type-stats" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? 'タイプ別種族値' : 'Type Stats'}</div>
+                  <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? 'タイプ別平均種族値' : 'Avg stats by type'}</div>
+                </a>
+                <a href="/pokemon-size" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '身長・体重' : 'Size Ranking'}</div>
+                  <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '最も大きい・重いポケモン' : 'Tallest & heaviest'}</div>
+                </a>
+                <a href="/pokemon-gen1-vs-gen9" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '第1世代vs第9世代' : 'Gen1 vs Gen9'}</div>
+                  <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? 'カントーとパルデアの比較' : 'Kanto vs Paldea'}</div>
+                </a>
+              </div>
+              <p style={{ textAlign: "center", marginTop: "10px" }}>
+                <a href="/articles" style={{ color: "#9B8B6E", fontSize: "11px", textDecoration: "none" }}>
+                  {lang === 'ja' ? '記事一覧を見る →' : 'View all articles →'}
+                </a>
+              </p>
+            </div>
           </div>
         </div>
 
@@ -742,18 +778,41 @@ export default function PokemonVote() {
         <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
         <a href="/contact" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "13px" }}>{lang === 'ja' ? 'お問い合わせ' : 'Contact'}</a>
         <br />
-        <div style={{ marginTop: "8px" }}>
-          <a href="/pokemon-types" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? 'タイプ別一覧' : 'By Type'}</a>
-          <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
-          <a href="/pokemon-stats" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? '種族値ランキング' : 'Base Stats'}</a>
-          <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
-          <a href="/pokemon-generations" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? '世代別データ' : 'By Generation'}</a>
-          <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
-          <a href="/pokemon-type-stats" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? 'タイプ別種族値' : 'Type Stats'}</a>
-          <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
-          <a href="/pokemon-size" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? '身長・体重' : 'Size Ranking'}</a>
-          <span style={{ color: "#E8D89C", margin: "0 8px" }}>|</span>
-          <a href="/pokemon-gen1-vs-gen9" style={{ color: "#9B8B6E", textDecoration: "none", fontSize: "12px" }}>{lang === 'ja' ? '第1世代vs第9世代' : 'Gen1 vs Gen9'}</a>
+        <div style={{ marginTop: "16px", textAlign: "left" }}>
+          <p style={{ textAlign: "center", color: "#8B7B5E", fontSize: "12px", fontWeight: 700, marginBottom: "10px" }}>
+            {lang === 'ja' ? '📊 ポケモン データ記事' : '📊 Data Articles'}
+          </p>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "7px" }}>
+            <a href="/pokemon-types" style={{ display: "block", padding: "10px 12px", background: "rgba(255,255,255,0.7)", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.25)", textDecoration: "none" }}>
+              <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? 'タイプ別一覧' : 'By Type'}</div>
+              <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '18タイプの体数ランキング' : 'Count by type'}</div>
+            </a>
+            <a href="/pokemon-stats" style={{ display: "block", padding: "10px 12px", background: "rgba(255,255,255,0.7)", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.25)", textDecoration: "none" }}>
+              <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '種族値ランキング' : 'Base Stats TOP30'}</div>
+              <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '合計種族値TOP30' : 'Top base stat totals'}</div>
+            </a>
+            <a href="/pokemon-generations" style={{ display: "block", padding: "10px 12px", background: "rgba(255,255,255,0.7)", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.25)", textDecoration: "none" }}>
+              <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '世代別データ' : 'By Generation'}</div>
+              <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '第1〜第9世代の比較' : 'Gen 1-9 comparison'}</div>
+            </a>
+            <a href="/pokemon-type-stats" style={{ display: "block", padding: "10px 12px", background: "rgba(255,255,255,0.7)", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.25)", textDecoration: "none" }}>
+              <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? 'タイプ別種族値' : 'Type Stats'}</div>
+              <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? 'タイプ別平均種族値' : 'Avg stats by type'}</div>
+            </a>
+            <a href="/pokemon-size" style={{ display: "block", padding: "10px 12px", background: "rgba(255,255,255,0.7)", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.25)", textDecoration: "none" }}>
+              <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '身長・体重' : 'Size Ranking'}</div>
+              <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '最も大きい・重いポケモン' : 'Tallest & heaviest'}</div>
+            </a>
+            <a href="/pokemon-gen1-vs-gen9" style={{ display: "block", padding: "10px 12px", background: "rgba(255,255,255,0.7)", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.25)", textDecoration: "none" }}>
+              <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '第1世代vs第9世代' : 'Gen1 vs Gen9'}</div>
+              <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? 'カントーとパルデアの比較' : 'Kanto vs Paldea'}</div>
+            </a>
+          </div>
+          <p style={{ textAlign: "center", marginTop: "10px" }}>
+            <a href="/articles" style={{ color: "#9B8B6E", fontSize: "11px", textDecoration: "none" }}>
+              {lang === 'ja' ? '記事一覧を見る →' : 'View all articles →'}
+            </a>
+          </p>
         </div>
       </div>
 
