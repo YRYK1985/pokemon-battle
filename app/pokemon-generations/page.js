@@ -1,5 +1,7 @@
 import pokemons from '../../lib/pokemon.json';
 import Link from 'next/link';
+import AdSense from '../../components/AdSense';
+import ArticleFooter from '../../components/ArticleFooter';
 
 export const metadata = {
   title: 'ポケモン 世代別完全データ 第1〜第9世代 | ポケモン 人気バトル',
@@ -166,6 +168,7 @@ export default function PokemonGenerationsPage() {
   return (
     <div style={s.page}>
       <div style={s.container}>
+        <AdSense />
         <h1 style={s.h1}>ポケモン 世代別完全データ 第1〜第9世代</h1>
         <p style={s.lead}>
           第1世代（カントー地方）から第9世代（パルデア地方）まで、各世代の体数・タイプ傾向・種族値データ・対応ゲームタイトルをまとめています。<br />
@@ -205,25 +208,23 @@ export default function PokemonGenerationsPage() {
           </div>
         ))}
 
-        <div style={{ marginTop: "32px", paddingTop: "20px", borderTop: "1px solid rgba(255,203,5,0.3)" }}>
-          <p style={{ fontSize: "13px", fontWeight: 800, color: "#3B4CCA", marginBottom: "12px" }}>関連記事</p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px", marginBottom: "8px" }}>
-            <a href="/pokemon-gen1-vs-gen9" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>第1世代vs第9世代</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>カントーとパルデアの比較</div>
-            </a>
-            <a href="/pokemon-types" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>タイプ別一覧</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>18タイプの体数ランキング</div>
-            </a>
-            <a href="/pokemon-stats" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>種族値ランキング</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>合計種族値TOP30</div>
-            </a>
-          </div>
-          <a href="/articles" style={{ color: "#A0926E", fontSize: "12px", textDecoration: "none" }}>← 記事一覧</a>
-        </div>
-        <Link href="/" style={s.backLink}>← トップに戻る</Link>
+        <h2 style={{ fontSize: '16px', fontWeight: 800, color: '#3B4CCA', marginTop: '32px', marginBottom: '12px' }}>世代データの楽しみ方</h2>
+        <p style={{ marginBottom: '16px', color: '#5a5240', fontSize: '14px', lineHeight: 1.9 }}>
+          世代ごとの登場数を見ると、第1世代の151体と第5世代の156体が突出しています。
+          第5世代は「全ポケモン一新」を掲げた意欲作で、
+          初代を超える新規数はシリーズ史上この世代だけ。
+          一方、第6世代は72体と歴代最少ですが、3Dへの移行という
+          大きな技術的挑戦があった世代でもあります。
+          数の増減の裏にある開発の事情を想像しながら読むのも、
+          世代別データの醍醐味です。
+          平均種族値の世代変化を深掘りした
+          <a href="/generation-power" style={{ color: '#3B4CCA' }}>世代別インフレ検証</a>や、
+          初代と最新世代を直接比べた
+          <a href="/pokemon-gen1-vs-gen9" style={{ color: '#3B4CCA' }}>第1世代vs第9世代比較</a>も
+          合わせてどうぞ。
+        </p>
+
+        <ArticleFooter slug="pokemon-generations" />
       </div>
     </div>
   );

@@ -1,5 +1,7 @@
 import pokemons from '../../lib/pokemon.json';
 import Link from 'next/link';
+import AdSense from '../../components/AdSense';
+import ArticleFooter from '../../components/ArticleFooter';
 
 export const metadata = {
   title: 'ポケモン タイプ別一覧・数ランキング | ポケモン 人気バトル',
@@ -63,6 +65,7 @@ export default function PokemonTypesPage() {
   return (
     <div style={style.page}>
       <div style={style.container}>
+        <AdSense />
         <h1 style={style.h1}>ポケモン タイプ別体数ランキング</h1>
         <p style={style.note}>
           対象：全{pokemons.length.toLocaleString()}体（第1〜第9世代）<br />
@@ -96,25 +99,30 @@ export default function PokemonTypesPage() {
           </tbody>
         </table>
 
-        <div style={{ marginTop: "32px", paddingTop: "20px", borderTop: "1px solid rgba(255,203,5,0.3)" }}>
-          <p style={{ fontSize: "13px", fontWeight: 800, color: "#3B4CCA", marginBottom: "12px" }}>関連記事</p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px", marginBottom: "8px" }}>
-            <a href="/pokemon-type-stats" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>タイプ別種族値</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>タイプ別平均種族値</div>
-            </a>
-            <a href="/pokemon-generations" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>世代別データ</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>第1〜第9世代の比較</div>
-            </a>
-            <a href="/pokemon-gen1-vs-gen9" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>第1世代vs第9世代</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>カントーとパルデアの比較</div>
-            </a>
-          </div>
-          <a href="/articles" style={{ color: "#A0926E", fontSize: "12px", textDecoration: "none" }}>← 記事一覧</a>
-        </div>
-        <Link href="/" style={style.backLink}>← トップに戻る</Link>
+        <h2 style={{ fontSize: '16px', fontWeight: 800, color: '#3B4CCA', marginTop: '32px', marginBottom: '12px' }}>タイプ分布から見えるデザインの意図</h2>
+        <p style={{ marginBottom: '16px', color: '#5a5240', fontSize: '14px', lineHeight: 1.9 }}>
+          最多の{TYPE_JA[sorted[0][0]]}タイプ（{sorted[0][1]}体）と
+          最少の{TYPE_JA[sorted[sorted.length - 1][0]]}タイプ（{sorted[sorted.length - 1][1]}体）では、
+          体数に{Math.round(sorted[0][1] / sorted[sorted.length - 1][1])}倍近い開きがあります。
+          これは偶然ではなく、世界観の反映です。
+          水辺・草むら・洞窟など「どこにでもいる」生き物のタイプは自然と数が多くなり、
+          ドラゴンやゴーストのような「特別な存在」は希少性を保つよう意図的に絞られています。
+          希少タイプは1体あたりの存在感が強く、ファンの記憶にも残りやすい——
+          数の少なさ自体がキャラクター性になっているのです。
+        </p>
+        <p style={{ marginBottom: '16px', color: '#5a5240', fontSize: '14px', lineHeight: 1.9 }}>
+          また、このランキングは複合タイプを両方にカウントしているため、
+          「サブタイプとして使われやすいタイプ」も上位に来ます。
+          ひこうタイプが典型で、単タイプのひこうポケモンはごく僅かなのに、
+          サブタイプとしての採用数で上位に食い込んでいます。
+          タイプごとの「強さ」の違いは
+          <a href="/pokemon-type-stats" style={{ color: '#3B4CCA' }}>タイプ別平均種族値ランキング</a>で、
+          単タイプと複合タイプの構造的な違いは
+          <a href="/monotype-dual" style={{ color: '#3B4CCA' }}>単タイプvs複合タイプ比較</a>で
+          詳しく分析しています。
+        </p>
+
+        <ArticleFooter slug="pokemon-types" />
       </div>
     </div>
   );

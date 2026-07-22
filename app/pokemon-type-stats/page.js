@@ -1,5 +1,7 @@
 import pokemons from '../../lib/pokemon.json';
 import Link from 'next/link';
+import AdSense from '../../components/AdSense';
+import ArticleFooter from '../../components/ArticleFooter';
 
 export const metadata = {
   title: 'ポケモン タイプ別 平均種族値ランキング | ポケモン 人気バトル',
@@ -87,6 +89,7 @@ export default function PokemonTypeStatsPage() {
   return (
     <div style={s.page}>
       <div style={s.container}>
+        <AdSense />
         <h1 style={s.h1}>ポケモン タイプ別 平均種族値ランキング</h1>
         <p style={s.lead}>
           全{pokemons.length.toLocaleString()}体のポケモンを18タイプ別に分類し、タイプごとの平均合計種族値を集計しています。<br />
@@ -132,25 +135,25 @@ export default function PokemonTypeStatsPage() {
           </div>
         ))}
 
-        <div style={{ marginTop: "32px", paddingTop: "20px", borderTop: "1px solid rgba(255,203,5,0.3)" }}>
-          <p style={{ fontSize: "13px", fontWeight: 800, color: "#3B4CCA", marginBottom: "12px" }}>関連記事</p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px", marginBottom: "8px" }}>
-            <a href="/pokemon-types" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>タイプ別一覧</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>18タイプの体数ランキング</div>
-            </a>
-            <a href="/pokemon-stats" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>種族値ランキング</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>合計種族値TOP30</div>
-            </a>
-            <a href="/pokemon-generations" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>世代別データ</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>第1〜第9世代の比較</div>
-            </a>
-          </div>
-          <a href="/articles" style={{ color: "#A0926E", fontSize: "12px", textDecoration: "none" }}>← 記事一覧</a>
-        </div>
-        <Link href="/" style={s.backLink}>← トップに戻る</Link>
+        <h2 style={{ fontSize: '16px', fontWeight: 800, color: '#3B4CCA', marginTop: '32px', marginBottom: '12px' }}>「強いタイプ」の正体</h2>
+        <p style={{ marginBottom: '16px', color: '#5a5240', fontSize: '14px', lineHeight: 1.9 }}>
+          平均種族値の上位に来るタイプには共通点があります。
+          それは<strong style={{ color: '#3B4CCA' }}>伝説ポケモンの比率が高い</strong>こと。
+          ドラゴンやはがねが上位に来るのは、タイプ自体が強いというより、
+          種族値600超の伝説級がこれらのタイプに集中しているためです。
+          逆に、むしやノーマルのような下位タイプは序盤に登場する進化前ポケモンが多く、
+          平均値が構造的に下がります。つまりこのランキングは
+          「タイプの強さ」であると同時に「タイプの役割」を映す鏡でもあるのです。
+          序盤の草むらで会うポケモンと、ストーリー終盤の伝説では、
+          担っている仕事がまるで違うということですね。
+        </p>
+        <p style={{ marginBottom: '16px', color: '#5a5240', fontSize: '14px', lineHeight: 1.9 }}>
+          タイプごとの体数は<a href="/pokemon-types" style={{ color: '#3B4CCA' }}>タイプ別体数ランキング</a>、
+          個々のステータスの頂点は<a href="/stat-extremes" style={{ color: '#3B4CCA' }}>ステータス別No.1大全</a>で
+          確認できます。データ上の強さと投票での人気がどれだけズレるかも、ぜひ見比べてみてください。
+        </p>
+
+        <ArticleFooter slug="pokemon-type-stats" />
       </div>
     </div>
   );

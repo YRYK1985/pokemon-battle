@@ -1,5 +1,7 @@
 import pokemons from '../../lib/pokemon.json';
 import Link from 'next/link';
+import AdSense from '../../components/AdSense';
+import ArticleFooter from '../../components/ArticleFooter';
 
 export const metadata = {
   title: 'ポケモン 種族値ランキング TOP30 | ポケモン 人気バトル',
@@ -44,6 +46,7 @@ export default function PokemonStatsPage() {
   return (
     <div style={style.page}>
       <div style={style.container}>
+        <AdSense />
         <h1 style={style.h1}>ポケモン 合計種族値ランキング TOP30</h1>
         <p style={style.note}>
           対象：全{pokemons.length.toLocaleString()}体（第1〜第9世代）<br />
@@ -85,25 +88,29 @@ export default function PokemonStatsPage() {
           </tbody>
         </table>
 
-        <div style={{ marginTop: "32px", paddingTop: "20px", borderTop: "1px solid rgba(255,203,5,0.3)" }}>
-          <p style={{ fontSize: "13px", fontWeight: 800, color: "#3B4CCA", marginBottom: "12px" }}>関連記事</p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px", marginBottom: "8px" }}>
-            <a href="/pokemon-type-stats" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>タイプ別種族値</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>タイプ別平均種族値</div>
-            </a>
-            <a href="/pokemon-generations" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>世代別データ</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>第1〜第9世代の比較</div>
-            </a>
-            <a href="/pokemon-size" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>身長・体重</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>最も大きい・重いポケモン</div>
-            </a>
-          </div>
-          <a href="/articles" style={{ color: "#A0926E", fontSize: "12px", textDecoration: "none" }}>← 記事一覧</a>
-        </div>
-        <Link href="/" style={style.backLink}>← トップに戻る</Link>
+        <h2 style={{ fontSize: '16px', fontWeight: 800, color: '#3B4CCA', marginTop: '32px', marginBottom: '12px' }}>TOP30から読み取れること</h2>
+      <p style={{ marginBottom: '16px', color: '#5a5240', fontSize: '14px', lineHeight: 1.9 }}>
+        頂点に立つのは合計種族値720の<strong style={{ color: '#3B4CCA' }}>アルセウス</strong>。
+        「創造神」の設定にふさわしく、全ステータスが120で完全に均等という
+        美しい配分を持っています。上位30体はほぼすべてが伝説・幻のポケモンで占められており、
+        種族値600が「伝説級」の目安であることがはっきり分かります。
+        一般ポケモンでこのラインに食い込むのは、600族と呼ばれる
+        カイリュー・バンギラス・メタグロスなどのごく一部だけ。
+        彼らが対戦環境で長年愛され続けている理由も、この数字が物語っています。
+      </p>
+      <p style={{ marginBottom: '16px', color: '#5a5240', fontSize: '14px', lineHeight: 1.9 }}>
+        ただし、合計種族値はあくまで「総合力」の指標です。
+        同じ500でも、均等配分か一点特化かで実際の使い勝手はまるで違います。
+        各ステータスに全振りした個性派たちは
+        <a href="/stat-extremes" style={{ color: '#3B4CCA' }}>ステータス別No.1大全</a>で、
+        世代ごとの種族値の変化は
+        <a href="/generation-power" style={{ color: '#3B4CCA' }}>世代別インフレ検証</a>で紹介しています。
+        そして「強さ」と「人気」は別物——
+        あなたの推しが投票でどこまで上がれるかは
+        <a href="/" style={{ color: '#3B4CCA' }}>投票バトル</a>で確かめてください。
+      </p>
+
+      <ArticleFooter slug="pokemon-stats" />
       </div>
     </div>
   );

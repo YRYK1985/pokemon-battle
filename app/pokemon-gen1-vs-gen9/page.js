@@ -1,5 +1,7 @@
 import pokemons from '../../lib/pokemon.json';
 import Link from 'next/link';
+import AdSense from '../../components/AdSense';
+import ArticleFooter from '../../components/ArticleFooter';
 
 export const metadata = {
   title: '第1世代と第9世代のポケモンデータ比較 | ポケモン 人気バトル',
@@ -71,6 +73,7 @@ export default function PokemonGen1VsGen9Page() {
   return (
     <div style={s.page}>
       <div style={s.container}>
+        <AdSense />
         <h1 style={s.h1}>第1世代と第9世代のポケモンデータ比較</h1>
         <p style={s.lead}>
           1996年に登場した第1世代（カントー地方・151体）と、2022年に登場した第9世代（パルデア地方・120体）のポケモンデータを体数・種族値・タイプ・身長・体重の観点から比較します。<br />
@@ -194,25 +197,22 @@ export default function PokemonGen1VsGen9Page() {
           </div>
         </div>
 
-        <div style={{ marginTop: "32px", paddingTop: "20px", borderTop: "1px solid rgba(255,203,5,0.3)" }}>
-          <p style={{ fontSize: "13px", fontWeight: 800, color: "#3B4CCA", marginBottom: "12px" }}>関連記事</p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px", marginBottom: "8px" }}>
-            <a href="/pokemon-generations" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>世代別データ</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>第1〜第9世代の比較</div>
-            </a>
-            <a href="/pokemon-types" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>タイプ別一覧</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>18タイプの体数ランキング</div>
-            </a>
-            <a href="/pokemon-type-stats" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>タイプ別種族値</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>タイプ別平均種族値</div>
-            </a>
-          </div>
-          <a href="/articles" style={{ color: "#A0926E", fontSize: "12px", textDecoration: "none" }}>← 記事一覧</a>
-        </div>
-        <Link href="/" style={s.backLink}>← トップに戻る</Link>
+        <h2 style={{ fontSize: '16px', fontWeight: 800, color: '#3B4CCA', marginTop: '32px', marginBottom: '12px' }}>26年の進化が意味するもの</h2>
+        <p style={{ marginBottom: '16px', color: '#5a5240', fontSize: '14px', lineHeight: 1.9 }}>
+          カントーとパルデア、26年を隔てた2つの世代を並べると、
+          単なる数字の変化以上のものが見えてきます。
+          種族値の底上げは「ゲームバランスの洗練」を、
+          複合タイプの増加は「デザインの複雑化」を、
+          サイズの多様化は「表現力の拡大」を映しています。
+          それでいて、御三家の種族値がほぼ同じ水準に保たれているように、
+          変えない部分は頑固に変えない——
+          この「変化と伝統のバランス」こそ、シリーズが26年続いた理由でしょう。
+          全世代を通したトレンドは<a href="/generation-power" style={{ color: '#3B4CCA' }}>世代別インフレ検証</a>で、
+          歴代御三家の詳細比較は<a href="/starters" style={{ color: '#3B4CCA' }}>御三家種族値比較</a>で
+          さらに掘り下げています。
+        </p>
+
+        <ArticleFooter slug="pokemon-gen1-vs-gen9" />
       </div>
     </div>
   );

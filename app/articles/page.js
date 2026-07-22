@@ -1,50 +1,14 @@
 import Link from 'next/link';
+import AdSense from '../../components/AdSense';
+import { ARTICLES } from '../../lib/articles';
 
 export const metadata = {
   title: 'ポケモン データ記事一覧 | ポケモン 人気バトル',
-  description: '全1,025体のポケモンデータを分析した記事の一覧です。タイプ別・世代別・種族値ランキングなど。',
+  description:
+    '全1,025体のポケモンデータを分析した全12記事の一覧。種族値ランキング・世代別インフレ検証・御三家比較・タイプ分析など。',
 };
 
 const FONT = "'M PLUS Rounded 1c', system-ui, sans-serif";
-
-const ARTICLES = [
-  {
-    href: '/pokemon-types',
-    title: 'タイプ別一覧・数ランキング',
-    desc: '全1,025体のポケモンを18タイプで集計。最も多いタイプ・最も少ないタイプ・各タイプの代表ポケモンをまとめたデータ記事。',
-    tag: 'タイプ',
-  },
-  {
-    href: '/pokemon-stats',
-    title: '種族値ランキング TOP30',
-    desc: '全ポケモンを合計種族値で順位付けしたランキング。HP・攻撃・防御・特攻・特防・素早さの合計値TOP30を掲載。',
-    tag: 'ランキング',
-  },
-  {
-    href: '/pokemon-generations',
-    title: '世代別ポケモンデータ',
-    desc: '第1世代カントーから第9世代パルデアまで、各世代のポケモン体数・平均種族値・タイプ傾向をまとめたデータ記事。',
-    tag: '世代',
-  },
-  {
-    href: '/pokemon-type-stats',
-    title: 'タイプ別 平均種族値ランキング',
-    desc: '18タイプごとに平均合計種族値を算出してランキング。HP・攻撃など各ステータスの平均値も掲載。',
-    tag: 'タイプ',
-  },
-  {
-    href: '/pokemon-size',
-    title: '身長・体重ランキング',
-    desc: '最も背が高いポケモン・最も重いポケモン・最も軽いポケモンのTOP15。全1,025体の身長・体重データを集計。',
-    tag: 'ランキング',
-  },
-  {
-    href: '/pokemon-gen1-vs-gen9',
-    title: '第1世代と第9世代のデータ比較',
-    desc: '1996年の第1世代（カントー・151体）と2022年の第9世代（パルデア・120体）を体数・種族値・タイプ・身長・体重の観点から比較。',
-    tag: '比較',
-  },
-];
 
 export default function ArticlesPage() {
   const s = {
@@ -63,14 +27,17 @@ export default function ArticlesPage() {
   return (
     <div style={s.page}>
       <div style={s.container}>
+        <AdSense />
         <h1 style={s.h1}>ポケモン データ記事一覧</h1>
         <p style={s.lead}>
-          全1,025体のポケモンのデータをPokéAPI（pokeapi.co）から取得し、タイプ・世代・種族値・身長・体重などの観点で分析した記事の一覧です。
+          全1,025体のポケモンのデータをPokéAPI（pokeapi.co）から取得し、
+          種族値・タイプ・世代・身長・体重などの観点で分析した全{ARTICLES.length}記事の一覧です。
+          データは定期的に更新されます。
         </p>
         <div style={s.grid}>
-          {ARTICLES.map(({ href, title, desc, tag }) => (
-            <a key={href} href={href} style={s.card}>
-              <div style={s.tag}>{tag}</div>
+          {ARTICLES.map(({ slug, title, desc, category }) => (
+            <a key={slug} href={`/${slug}`} style={s.card}>
+              <div style={s.tag}>{category}</div>
               <div style={s.cardTitle}>{title}</div>
               <div style={s.cardDesc}>{desc}</div>
             </a>

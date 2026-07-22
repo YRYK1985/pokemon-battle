@@ -30,7 +30,7 @@ export default function PrivacyClient() {
       cookieTitle: 'Cookieの使用',
       cookieDesc: '当サイトでは、サービスの提供および改善のためにCookieを使用する場合があります。ブラウザの設定でCookieを無効にすることが可能ですが、一部機能が利用できなくなる場合があります。',
       adsTitle: '広告について',
-      adsDesc: '当サイトでは、Google AdSenseなどの第三者配信事業者による広告を掲載する場合があります。これらの事業者は、ユーザーの興味に基づく広告を表示するためにCookieを使用することがあります。Google AdSenseの詳細については、Googleのプライバシーポリシーをご確認ください。',
+      adsDesc: '当サイトでは、Google AdSenseなどの第三者配信事業者による広告を掲載する場合があります。Googleなどの第三者配信事業者はCookieを使用し、ユーザーが当サイトや他のウェブサイトに過去にアクセスした際の情報に基づいて広告を配信します。ユーザーはGoogleの広告設定（adssettings.google.com）でパーソナライズ広告を無効にできるほか、aboutads.info で第三者配信事業者のCookieを無効にできます。詳細はGoogleのポリシーと規約をご確認ください。',
       analyticsTitle: 'アクセス解析',
       analyticsDesc: '当サイトでは、アクセス状況を把握するためにGoogle Analyticsを使用する場合があります。Google Analyticsはデータ収集のためにCookieを使用しますが、収集されるデータは匿名であり、個人を特定するものではありません。',
       disclaimerTitle: '免責事項',
@@ -39,7 +39,7 @@ export default function PrivacyClient() {
       copyrightDesc: 'ポケモンの画像および名称等は、株式会社ポケモン、任天堂株式会社、株式会社ゲームフリーク、株式会社クリーチャーズの著作物です。当サイトはファンサイトであり、これらの企業とは一切関係がありません。ポケモンのデータはPokéAPI（pokeapi.co）から取得しています。',
       changeTitle: 'ポリシーの変更',
       changeDesc: '本ポリシーは予告なく変更される場合があります。変更後のポリシーは当ページに掲載された時点で効力を持ちます。',
-      lastUpdate: '最終更新: 2026年3月28日',
+      lastUpdate: '最終更新: 2026年7月10日',
     },
     en: {
       backLink: '← Back to Top',
@@ -50,7 +50,7 @@ export default function PrivacyClient() {
       cookieTitle: 'Use of Cookies',
       cookieDesc: 'We may use cookies to provide and improve our service. You can disable cookies in your browser settings, but some features may not work properly.',
       adsTitle: 'About Advertising',
-      adsDesc: 'We may display advertisements from third-party ad networks such as Google AdSense. These providers may use cookies to display ads based on your interests. For more information about Google AdSense, please check Google\'s privacy policy.',
+      adsDesc: 'We may display advertisements from third-party ad networks such as Google AdSense. Third-party vendors, including Google, use cookies to serve ads based on your prior visits to this and other websites. You may opt out of personalized advertising by visiting Google Ads Settings (adssettings.google.com), or opt out of third-party vendors\' cookies at aboutads.info. For more information, please check Google\'s policies.',
       analyticsTitle: 'Access Analysis',
       analyticsDesc: 'We may use Google Analytics to understand site usage. Google Analytics uses cookies for data collection, but the data collected is anonymous and does not identify individuals.',
       disclaimerTitle: 'Disclaimer',
@@ -59,7 +59,7 @@ export default function PrivacyClient() {
       copyrightDesc: 'Pokémon images and names are copyrighted by The Pokémon Company, Nintendo, Game Freak, and Creatures. This is a fan site and has no affiliation with these companies. Pokémon data is obtained from PokéAPI (pokeapi.co).',
       changeTitle: 'Policy Changes',
       changeDesc: 'This policy may be changed without notice. Any changes take effect when posted on this page.',
-      lastUpdate: 'Last updated: March 28, 2026',
+      lastUpdate: 'Last updated: July 10, 2026',
     },
   };
 

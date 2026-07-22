@@ -489,6 +489,30 @@ export default function PokemonVote() {
                   <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '第1世代vs第9世代' : 'Gen1 vs Gen9'}</div>
                   <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? 'カントーとパルデアの比較' : 'Kanto vs Paldea'}</div>
                 </a>
+                <a href="/stat-extremes" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? 'ステータス別No.1' : 'Stat Records'}</div>
+                  <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '最速・最硬・最強はどの子？' : 'Top 5 per stat'}</div>
+                </a>
+                <a href="/generation-power" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '世代別インフレ検証' : 'Power Creep'}</div>
+                  <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '種族値は上がり続けている？' : 'Stats inflation by gen'}</div>
+                </a>
+                <a href="/monotype-dual" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '単タイプvs複合' : 'Mono vs Dual'}</div>
+                  <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? 'タイプ構成の意外な法則' : 'Type structure analysis'}</div>
+                </a>
+                <a href="/starters" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '歴代御三家比較' : 'Starters Ranked'}</div>
+                  <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '9世代の御三家、最強は？' : 'All starters compared'}</div>
+                </a>
+                <a href="/name-length" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '名前の文字数分析' : 'Name Lengths'}</div>
+                  <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '最長6文字・最短2文字' : 'Longest & shortest names'}</div>
+                </a>
+                <a href="/elo-guide" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? 'Elo解説' : 'How Elo Works'}</div>
+                  <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? 'ランキングの仕組み' : 'Ranking system explained'}</div>
+                </a>
               </div>
               <p style={{ textAlign: "center", marginTop: "10px" }}>
                 <a href="/articles" style={{ color: "#9B8B6E", fontSize: "11px", textDecoration: "none" }}>
@@ -806,6 +830,30 @@ export default function PokemonVote() {
             <a href="/pokemon-gen1-vs-gen9" style={{ display: "block", padding: "10px 12px", background: "rgba(255,255,255,0.7)", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.25)", textDecoration: "none" }}>
               <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '第1世代vs第9世代' : 'Gen1 vs Gen9'}</div>
               <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? 'カントーとパルデアの比較' : 'Kanto vs Paldea'}</div>
+            </a>
+            <a href="/stat-extremes" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+              <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? 'ステータス別No.1' : 'Stat Records'}</div>
+              <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '最速・最硬・最強はどの子？' : 'Top 5 per stat'}</div>
+            </a>
+            <a href="/generation-power" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+              <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '世代別インフレ検証' : 'Power Creep'}</div>
+              <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '種族値は上がり続けている？' : 'Stats inflation by gen'}</div>
+            </a>
+            <a href="/monotype-dual" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+              <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '単タイプvs複合' : 'Mono vs Dual'}</div>
+              <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? 'タイプ構成の意外な法則' : 'Type structure analysis'}</div>
+            </a>
+            <a href="/starters" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+              <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '歴代御三家比較' : 'Starters Ranked'}</div>
+              <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '9世代の御三家、最強は？' : 'All starters compared'}</div>
+            </a>
+            <a href="/name-length" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+              <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '名前の文字数分析' : 'Name Lengths'}</div>
+              <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '最長6文字・最短2文字' : 'Longest & shortest names'}</div>
+            </a>
+            <a href="/elo-guide" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
+              <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? 'Elo解説' : 'How Elo Works'}</div>
+              <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? 'ランキングの仕組み' : 'Ranking system explained'}</div>
             </a>
           </div>
           <p style={{ textAlign: "center", marginTop: "10px" }}>

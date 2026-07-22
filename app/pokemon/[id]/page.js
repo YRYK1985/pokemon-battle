@@ -50,9 +50,12 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const pokemon = POKEMON.find((p) => String(p.id) === String(id));
-  if (!pokemon) return { title: 'ポケモンが見つかりません' };
+  if (!pokemon) return { title: 'ポケモンが見つかりません', robots: { index: false, follow: false } };
 
   return {
+    // 薄いデータページの大量インデックスは「有用性の低いコンテンツ」判定の
+    // 主因になるため、個別ページはnoindex（ユーザー向け機能としては維持）
+    robots: { index: false, follow: true },
     title: `${pokemon.nameJa}（No.${pokemon.id}）のランキング | ポケモン 人気バトル`,
     description: `${pokemon.nameJa}（${pokemon.nameEn}）のEloレーティング・人気ランキング・勝率データ。全${POKEMON.length}体のポケモンの中での順位をチェック！`,
     openGraph: {

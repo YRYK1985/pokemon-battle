@@ -1,5 +1,7 @@
 import pokemons from '../../lib/pokemon.json';
 import Link from 'next/link';
+import AdSense from '../../components/AdSense';
+import ArticleFooter from '../../components/ArticleFooter';
 
 export const metadata = {
   title: 'ポケモン 身長・体重ランキング | ポケモン 人気バトル',
@@ -65,6 +67,7 @@ export default function PokemonSizePage() {
   return (
     <div style={s.page}>
       <div style={s.container}>
+        <AdSense />
         <h1 style={s.h1}>ポケモン 身長・体重ランキング</h1>
         <p style={s.lead}>
           全{pokemons.length.toLocaleString()}体のポケモンの身長・体重データを集計したランキングです。<br />
@@ -97,25 +100,28 @@ export default function PokemonSizePage() {
           <Table data={lightest} valueKey="weight" unit="kg" label="体重" />
         </div>
 
-        <div style={{ marginTop: "32px", paddingTop: "20px", borderTop: "1px solid rgba(255,203,5,0.3)" }}>
-          <p style={{ fontSize: "13px", fontWeight: 800, color: "#3B4CCA", marginBottom: "12px" }}>関連記事</p>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "8px", marginBottom: "8px" }}>
-            <a href="/pokemon-generations" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>世代別データ</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>第1〜第9世代の比較</div>
-            </a>
-            <a href="/pokemon-gen1-vs-gen9" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>第1世代vs第9世代</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>カントーとパルデアの比較</div>
-            </a>
-            <a href="/pokemon-stats" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none", boxShadow: "0 1px 4px rgba(255,203,5,0.1)" }}>
-              <div style={{ fontSize: "12px", fontWeight: 800, color: "#3B4CCA", marginBottom: "2px" }}>種族値ランキング</div>
-              <div style={{ fontSize: "11px", color: "#A0926E" }}>合計種族値TOP30</div>
-            </a>
-          </div>
-          <a href="/articles" style={{ color: "#A0926E", fontSize: "12px", textDecoration: "none" }}>← 記事一覧</a>
-        </div>
-        <Link href="/" style={s.backLink}>← トップに戻る</Link>
+        <h2 style={{ fontSize: '16px', fontWeight: 800, color: '#3B4CCA', marginTop: '32px', marginBottom: '12px' }}>サイズデータの面白さ</h2>
+      <p style={{ marginBottom: '16px', color: '#5a5240', fontSize: '14px', lineHeight: 1.9 }}>
+        最重量の{heaviest[0].nameJa}（{heaviest[0].weight}kg）と
+        最軽量の{lightest[0].nameJa}（{lightest[0].weight}kg）の差は、実に約1万倍。
+        身長も{tallest[0].nameJa}（{tallest[0].height}m）から
+        {shortest[0].nameJa}（{shortest[0].height}m）まで、
+        現実の生物では考えられないスケール差が同じ世界に共存しています。
+        図鑑の設定値とはいえ、この振れ幅こそポケモンという世界の懐の深さでしょう。
+      </p>
+      <p style={{ marginBottom: '16px', color: '#5a5240', fontSize: '14px', lineHeight: 1.9 }}>
+        データを眺めると、重量級には「岩・鋼タイプ」「伝説級」が、
+        軽量級には「ゴースト・ひこうタイプ」が並ぶ傾向がはっきり見えます。
+        ふわふわ浮いている設定のポケモンは体重0.1kg台が多く、
+        設定とデータがきちんと連動しているのが分かります。
+        ゲーム内では体重によって威力が変わる技もあるため、
+        この数字は意外と実戦にも関わる立派なパラメータ。
+        サイズ感の世代変化は<a href="/pokemon-gen1-vs-gen9" style={{ color: '#3B4CCA' }}>第1世代vs第9世代比較</a>で、
+        強さのデータは<a href="/pokemon-stats" style={{ color: '#3B4CCA' }}>種族値ランキング</a>で
+        合わせて楽しめます。
+      </p>
+
+      <ArticleFooter slug="pokemon-size" />
       </div>
     </div>
   );
