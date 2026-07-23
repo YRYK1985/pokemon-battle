@@ -73,6 +73,10 @@ function SiteIntro() {
 
         <h2 style={{ ...s.h2, marginTop: '32px' }}>データ分析記事 / Articles</h2>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px', marginBottom: '12px' }}>
+          <Link href="/ranking" style={{ ...s.card, border: '1px solid #3B4CCA' }}>
+            <div style={s.cardTitle}>🏆 ファン投票ランキング TOP100</div>
+            <div style={s.cardDesc}>投票で決まるリアルタイム順位・毎時更新</div>
+          </Link>
           <Link href="/pokemon-stats" style={s.card}>
             <div style={s.cardTitle}>合計種族値ランキング TOP30</div>
             <div style={s.cardDesc}>最も強いポケモンをデータで検証</div>

@@ -465,6 +465,10 @@ export default function PokemonVote() {
                 {lang === 'ja' ? '📊 データ記事' : '📊 Data Articles'}
               </p>
               <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "7px" }}>
+                <a href="/ranking" style={{ display: "block", padding: "10px 12px", background: "rgba(59,76,202,0.06)", borderRadius: "10px", border: "1px solid #3B4CCA", textDecoration: "none" }}>
+                  <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '🏆 投票ランキングTOP100' : '🏆 Live Vote Ranking'}</div>
+                  <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '投票結果のリアルタイム順位' : 'Real-time Elo results'}</div>
+                </a>
                 <a href="/pokemon-types" style={{ display: "block", padding: "10px 12px", background: "#fff", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.3)", textDecoration: "none" }}>
                   <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? 'タイプ別一覧' : 'By Type'}</div>
                   <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '18タイプの体数ランキング' : 'Count by type'}</div>
@@ -807,6 +811,10 @@ export default function PokemonVote() {
             {lang === 'ja' ? '📊 ポケモン データ記事' : '📊 Data Articles'}
           </p>
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "7px" }}>
+            <a href="/ranking" style={{ display: "block", padding: "10px 12px", background: "rgba(59,76,202,0.06)", borderRadius: "10px", border: "1px solid #3B4CCA", textDecoration: "none" }}>
+              <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? '🏆 投票ランキングTOP100' : '🏆 Live Vote Ranking'}</div>
+              <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '投票結果のリアルタイム順位' : 'Real-time Elo results'}</div>
+            </a>
             <a href="/pokemon-types" style={{ display: "block", padding: "10px 12px", background: "rgba(255,255,255,0.7)", borderRadius: "10px", border: "1px solid rgba(255,203,5,0.25)", textDecoration: "none" }}>
               <div style={{ fontSize: "12px", fontWeight: 700, color: "#3B4CCA", marginBottom: "2px" }}>{lang === 'ja' ? 'タイプ別一覧' : 'By Type'}</div>
               <div style={{ fontSize: "11px", color: "#A0926E" }}>{lang === 'ja' ? '18タイプの体数ランキング' : 'Count by type'}</div>
