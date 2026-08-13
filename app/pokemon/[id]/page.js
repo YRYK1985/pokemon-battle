@@ -41,7 +41,12 @@ const GEN_NAMES = {
 };
 
 export const dynamicParams = true;
-export const revalidate = 3600; // 1時間（Fast Origin Transfer節約）
+// ISR: 7日ごとに再生成
+// ポケモンページは1,025体分あるため、1時間ごとの再生成ではISR Writes/
+// Fast Origin Transferが無料枠を超過し、プロジェクトが停止していた。
+// これらはnoindexの補助ページなので更新頻度は低くてよい。
+// 最新の投票結果は /ranking（毎時更新）が担当する。
+export const revalidate = 604800;
 
 export function generateStaticParams() {
   return [];

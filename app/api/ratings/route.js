@@ -17,7 +17,8 @@ export async function GET() {
       matches: matches || {},
     }, {
       headers: {
-        'Cache-Control': 's-maxage=10, stale-while-revalidate=30',
+        // キャッシュを長めに取り、関数実行回数（Fluid Active CPU）を抑える
+        'Cache-Control': 's-maxage=60, stale-while-revalidate=300',
       },
     });
   } catch (error) {
